@@ -1,0 +1,16 @@
+# Compilação LaTeX
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+tex/*-res-*.tex
+tex/_cap-*
+tex/teste*
+tex/build/
+# Cache gerado (recortes de todos os cadernos, prévias)
+cache/
+__pycache__/

@@ -1,0 +1,5357 @@
+[
+ {
+  "id": "2009-136",
+  "primario": "v1c05",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Produtividade (passageiros/frota) lida no gráfico; estimar passageiros em outubro de 2008 com frota igual."
+ },
+ {
+  "id": "2009-137",
+  "primario": "v2c05",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Mapa de quadras com mãos de tráfego; tempo de ônibus de X a Y."
+ },
+ {
+  "id": "2009-138",
+  "primario": "v3c07",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Modelo exponencial y=363e^(0,03x); estimar população com 60 anos ou mais em 2030."
+ },
+ {
+  "id": "2009-139",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico ONU; probabilidade de sortear pessoa com 60+ anos em 2050 nos países desenvolvidos."
+ },
+ {
+  "id": "2009-140",
+  "primario": "v2c10",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Terreno retangular com quadrado de residência; condição de 94% preservado e área do quadrado."
+ },
+ {
+  "id": "2009-141",
+  "primario": "v1c06",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Biodiesel 4% da mistura consome 925 milhões L; consumo com 3% no mesmo volume."
+ },
+ {
+  "id": "2009-142",
+  "primario": "v1c05",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Gráfico cigarros por dia versus casos de câncer; tipo de relação entre grandezas."
+ },
+ {
+  "id": "2009-143",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico da população economicamente ativa; crescimento de 4% entre 05/09 e 06/09."
+ },
+ {
+  "id": "2009-144",
+  "primario": "v1c01",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Figuras musicais com durações fracionárias; preencher oito compassos 3/4 com notas."
+ },
+ {
+  "id": "2009-145",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Probabilidade de exatamente 2 de 4 celulares defeituosos com p=0,2%."
+ },
+ {
+  "id": "2009-146",
+  "primario": "v3c03",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Gráfico do valor da diária por dia; economia do pacote de oito dias."
+ },
+ {
+  "id": "2009-147",
+  "primario": "v2c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Quebra-cabeça: peça correta e giro necessário para preencher o espaço indicado."
+ },
+ {
+  "id": "2009-148",
+  "primario": "v3c03",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Tabela emissão de CO2 versus toneladas produzidas; taxa média de variação."
+ },
+ {
+  "id": "2009-149",
+  "primario": "v2c05",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Escolher o esboço que melhor representa os anéis de Borromeo entrelaçados."
+ },
+ {
+  "id": "2009-150",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Tabela de investimentos França-Brasil 2003-2007; diferença entre valores médios."
+ },
+ {
+  "id": "2009-151",
+  "primario": "v3c01",
+  "secundario": "v3c02",
+  "imagem_essencial": false,
+  "resumo": "Cotas de festa entre 50 e 55 pessoas; valor da cota final."
+ },
+ {
+  "id": "2009-152",
+  "primario": "v2c01",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Comparar capacidade do aquífero Guarani (km³) com reservatório de 20 milhões de litros."
+ },
+ {
+  "id": "2009-153",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Plano paralelo à face de um prisma interceptando escultura de prismas; figuras na seção."
+ },
+ {
+  "id": "2009-154",
+  "primario": "v2c06",
+  "secundario": "v2c07",
+  "imagem_essencial": false,
+  "resumo": "Rampa: altura total 2,2 m; após 3,2 m subiu 0,8 m; distância restante."
+ },
+ {
+  "id": "2009-155",
+  "primario": "v3c05",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Preço do álcool com desconto em centavos; expressão da receita V em função de x."
+ },
+ {
+  "id": "2009-156",
+  "primario": "v1c03",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Cálculo dos dígitos verificadores do CPF usando resto da divisão por 11."
+ },
+ {
+  "id": "2009-157",
+  "primario": "v2c12",
+  "secundario": "v2c11",
+  "imagem_essencial": false,
+  "resumo": "Caixa cúbica de 13.824 cm³ e esferas de raio 6 cm; máximo de esferas."
+ },
+ {
+  "id": "2009-158",
+  "primario": "v2c02",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Desenho do avião em escala 1:150 com margem de 1 cm; dimensões mínimas da folha."
+ },
+ {
+  "id": "2009-159",
+  "primario": "v3c04",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Quadro nível da água versus número de bolas; expressão algébrica da função."
+ },
+ {
+  "id": "2009-160",
+  "primario": "v1c05",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Colheita com 12 trabalhadores e 4 máquinas; ajustar proposta para 180 ha em 6 dias."
+ },
+ {
+  "id": "2009-161",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Mediana das notas da equipe com 10 alunos; efeito da nota do aluno ausente."
+ },
+ {
+  "id": "2009-162",
+  "primario": "v1c05",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Arrecadação de alimentos com mais alunos e horas diárias; total ao fim de 30 dias."
+ },
+ {
+  "id": "2009-163",
+  "primario": "v1c04",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Consumo 75 L/100 km, densidade 750 g/L; peso mínimo do carro após 16 voltas."
+ },
+ {
+  "id": "2009-164",
+  "primario": "v2c10",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Terreno retangular com quarto de círculo repartido em três; porcentagem da área de João."
+ },
+ {
+  "id": "2009-165",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Escolha de 4 times entre 12 e jogo de abertura; combinação ou arranjo."
+ },
+ {
+  "id": "2009-166",
+  "primario": "v2c03",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Mapa do Brasil; rotas aéreas com ângulos de 135 graus e reto; cidades de conexão."
+ },
+ {
+  "id": "2009-167",
+  "primario": "v2c01",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Área do Pantanal em km² expressa em campos de futebol de 120x90 m."
+ },
+ {
+  "id": "2009-168",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Tabela de cotações do ovo extra branco; calcular a mediana."
+ },
+ {
+  "id": "2009-169",
+  "primario": "v2c10",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Canaleta trapezoidal; vazão proporcional à área da seção após reforma."
+ },
+ {
+  "id": "2009-170",
+  "primario": "v2c01",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Câmera de 2 megapixels, 3 bytes por ponto, compressão de 95%; armazenar 150 fotos."
+ },
+ {
+  "id": "2009-171",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2009-172",
+  "primario": "v1c01",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Importações e exportações de petróleo em 2009 com junho-dezembro igual a 7/5; diferença de recursos."
+ },
+ {
+  "id": "2009-173",
+  "primario": "v2c12",
+  "secundario": "v2c06",
+  "imagem_essencial": true,
+  "resumo": "Vela em pirâmide formada por troncos; volume de parafina sem a pirâmide superior."
+ },
+ {
+  "id": "2009-174",
+  "primario": "v3c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Ponto P percorre arco d na circunferência; distância percorrida pela projeção Q no eixo x."
+ },
+ {
+  "id": "2009-175",
+  "primario": "v3c02",
+  "secundario": "v1c11",
+  "imagem_essencial": false,
+  "resumo": "Indicador média de TC e TA; dobrando NF cai de 0,6 para 0,5; achar NF."
+ },
+ {
+  "id": "2009-176",
+  "primario": "v1c01",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Tempo da rotina de musculação de Joana entre 10h30 e 11h07; cumprimento do programa."
+ },
+ {
+  "id": "2009-177",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Seção plana de pirâmide de base quadrada; justificar face pentagonal."
+ },
+ {
+  "id": "2009-178",
+  "primario": "v1c07",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Comparar quitar dívidas com descontos, renegociar em 18 parcelas ou empréstimo com 25% de juros."
+ },
+ {
+  "id": "2009-179",
+  "primario": "v2c01",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Volume de cisterna com acréscimo de 10% e chuva em mm; dimensões mínimas do telhado."
+ },
+ {
+  "id": "2009-180",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2010-136",
+  "primario": "v1c06",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Lousa preenchida com 40% do espaço; escolher representação equivalente à situação anterior."
+ },
+ {
+  "id": "2010-137",
+  "primario": "v1c04",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Razão entre o diâmetro do olho (2,1 cm) e o espelho do telescópio (42 m)."
+ },
+ {
+  "id": "2010-138",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Escolher a planificação do bebedouro 3 sem tampa a partir das figuras."
+ },
+ {
+  "id": "2010-139",
+  "primario": "v2c12",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Barra de chocolate paralelepípedo 3x18x4 cm e cubo de mesmo volume; aresta do cubo."
+ },
+ {
+  "id": "2010-140",
+  "primario": "v1c10",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Quadro de medalhas de 2004; nova classificação do Brasil com medalhas adicionais."
+ },
+ {
+  "id": "2010-141",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de pesquisa com estudantes; quantos dos 14.900 do Sudeste possuem celular."
+ },
+ {
+  "id": "2010-142",
+  "primario": "v3c03",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Escolher o gráfico altura versus idade conforme taxa de crescimento descrita."
+ },
+ {
+  "id": "2010-143",
+  "primario": "v1c11",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Desmatamento por estado em 2004 com aumento de 10,5% até 2009; média por estado."
+ },
+ {
+  "id": "2010-144",
+  "primario": "v1c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Figuras de resistência, comprimento e área da seção; tipos de proporcionalidade entre pares."
+ },
+ {
+  "id": "2010-145",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Taxa de desemprego em Porto Alegre aplicada a 250.000 pesquisados; número de desempregados."
+ },
+ {
+  "id": "2010-146",
+  "primario": "v2c01",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Produto de três dimensões de uma peça; identificar a grandeza resultante."
+ },
+ {
+  "id": "2010-147",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Rotas de duas vias com probabilidades de engarrafamento; trajeto de menor probabilidade."
+ },
+ {
+  "id": "2010-148",
+  "primario": "v1c10",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Gráfico do gasto militar dos EUA em bilhões; valor no início da guerra do Iraque."
+ },
+ {
+  "id": "2010-149",
+  "primario": "v1c08",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Sequência de figuras com quadrados; expressão da quantidade em função de Q."
+ },
+ {
+  "id": "2010-150",
+  "primario": "v2c10",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Custo de telas e molduras para 8 quadros; efeito de dobrar as dimensões."
+ },
+ {
+  "id": "2010-151",
+  "primario": "v2c12",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Volume de leiteira versus copinhos; água mínima para encher 20 copinhos pela metade."
+ },
+ {
+  "id": "2010-152",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2010-153",
+  "primario": "v2c12",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Escolher tanque cilíndrico pela relação área/capacidade de armazenamento, com π aproximadamente 3."
+ },
+ {
+  "id": "2010-154",
+  "primario": "v1c06",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Crescimento percentual do lucro de 2008 para 2009; classificação do desempenho."
+ },
+ {
+  "id": "2010-155",
+  "primario": "v1c01",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Selos de R$0,65, 0,60 e 0,20 com verba de R$1000; quantidade de selos de 0,65."
+ },
+ {
+  "id": "2010-156",
+  "primario": "v2c05",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Helicóptero percorre trajeto em coordenadas sobre mapa de relevo; altitude do pouso."
+ },
+ {
+  "id": "2010-157",
+  "primario": "v2c12",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Manilha cilíndrica envolvida por 20 cm de concreto; custo com π=3,1."
+ },
+ {
+  "id": "2010-158",
+  "primario": "v2c12",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Volume de toras cilíndricas e densidades; carga total em toneladas."
+ },
+ {
+  "id": "2010-159",
+  "primario": "v1c01",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "IMC de 25 e massa 64 kg; calcular RIP com raiz cúbica da massa."
+ },
+ {
+  "id": "2010-160",
+  "primario": "v2c08",
+  "secundario": "v2c06",
+  "imagem_essencial": true,
+  "resumo": "Balão visto sob 60° e 30° por duas pessoas a 1,8 e 5,5 km; altura."
+ },
+ {
+  "id": "2010-161",
+  "primario": "v2c10",
+  "secundario": "v2c06",
+  "imagem_essencial": true,
+  "resumo": "Triângulo retângulo com pontos médios dos lados; relação entre área calçada e triângulos."
+ },
+ {
+  "id": "2010-162",
+  "primario": "v1c06",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Propaganda com 4% da área da página; medida do lado do retângulo."
+ },
+ {
+  "id": "2010-163",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2010-164",
+  "primario": "v2c09",
+  "secundario": "v2c07",
+  "imagem_essencial": false,
+  "resumo": "Prisma triangular de base 6-8-10 com furo cilíndrico tangente às faces; raio."
+ },
+ {
+  "id": "2010-165",
+  "primario": "v3c03",
+  "secundario": "v3c05",
+  "imagem_essencial": true,
+  "resumo": "Função da temperatura do forno por partes; tempo entre 48 e 200 graus Celsius."
+ },
+ {
+  "id": "2010-166",
+  "primario": "v3c04",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Gráfico linear do número de favelas; projeção para 2016 mantendo o padrão de 2004/2010."
+ },
+ {
+  "id": "2010-167",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de gols dos artilheiros das Copas; calcular a mediana."
+ },
+ {
+  "id": "2010-168",
+  "primario": "v2c12",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Taça hemisférica cheia e taça cônica de mesmo volume; altura do champanhe no cone."
+ },
+ {
+  "id": "2010-169",
+  "primario": "v3c01",
+  "secundario": "v1c08",
+  "imagem_essencial": false,
+  "resumo": "Salto triplo, alcances caindo (1,2 m e 1,5 m); primeiro salto para totalizar 17,4 m."
+ },
+ {
+  "id": "2010-170",
+  "primario": "v1c12",
+  "secundario": "v1c11",
+  "imagem_essencial": true,
+  "resumo": "Quadro com média, mediana e desvio padrão de dois candidatos; quem tem pontuação mais regular."
+ },
+ {
+  "id": "2010-171",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Percentuais de cura em tratamentos sucessivos; cura dos inovadores em relação ao total inicial."
+ },
+ {
+  "id": "2010-172",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Produção de etanol com percentuais de Brasil e EUA; aumento percentual necessário do Brasil."
+ },
+ {
+  "id": "2010-173",
+  "primario": "v1c09",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Contar trajetos entre 5 cidades sem repetir simétricos e calcular o tempo total de verificação."
+ },
+ {
+  "id": "2010-174",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Quadro de calçados das funcionárias; probabilidade condicional de calçar 38 dado maior que 36."
+ },
+ {
+  "id": "2010-175",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Quadro gols por jogos; comparar média, mediana e moda."
+ },
+ {
+  "id": "2010-176",
+  "primario": "v1c01",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Quantas Terras cabem em Júpiter, dadas relações de volume entre planetas."
+ },
+ {
+  "id": "2010-177",
+  "primario": "v1c05",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "10 L de óleo contaminam 10^7 L de água; contaminação com 1000 L de óleo."
+ },
+ {
+  "id": "2010-178",
+  "primario": "v2c12",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Porta-lápis cúbico de aresta 12 cm com cubo interno vazio de 8 cm; volume."
+ },
+ {
+  "id": "2010-179",
+  "primario": "v1c08",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Caixas empilhadas em linhas numeradas; soma da 9ª linha pela propriedade da sequência."
+ },
+ {
+  "id": "2010-180",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2011-136",
+  "primario": "v1c02",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Escolher, entre diâmetros decimais, o mais próximo de 68 mm."
+ },
+ {
+  "id": "2011-137",
+  "primario": "v3c08",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Magnitude sísmica Mw=7,3 com fórmula logarítmica na imagem; determinar o momento sísmico M0."
+ },
+ {
+  "id": "2011-138",
+  "primario": "v2c01",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Medidas a e b de uma figura convertidas para metros."
+ },
+ {
+  "id": "2011-139",
+  "primario": "v1c01",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Leitura de relógio medidor de energia em kWh, número de 4 algarismos pelos ponteiros."
+ },
+ {
+  "id": "2011-140",
+  "primario": "v2c10",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Cinco terrenos com restrições da prefeitura; escolher o de maior área."
+ },
+ {
+  "id": "2011-141",
+  "primario": "v1c05",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Atividades físicas com calorias por tempo; tempo extra para gastar 200 calorias em cada."
+ },
+ {
+  "id": "2011-142",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Tabela de temperaturas; calcular média, mediana e moda."
+ },
+ {
+  "id": "2011-143",
+  "primario": "v2c02",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Quadra de 28 m por 12 m em maquete na escala 1:250; medidas em cm."
+ },
+ {
+  "id": "2011-144",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Cubo cortado de O às arestas formando pirâmide; formatos dos quatro sólidos descartados."
+ },
+ {
+  "id": "2011-145",
+  "primario": "v2c01",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "331 bilhões de xícaras de 120 mL com aumento de 1/5; consumo em litros."
+ },
+ {
+  "id": "2011-146",
+  "primario": "v2c02",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Distância real 2000 km e 8 cm no mapa; escala do mapa."
+ },
+ {
+  "id": "2011-147",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Identificar o nome da superfície de revolução representada na figura."
+ },
+ {
+  "id": "2011-148",
+  "primario": "v2c01",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Converter metros em pés (1 m = 3,3 pés); diferença entre altitudes liberadas."
+ },
+ {
+  "id": "2011-149",
+  "primario": "v1c01",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "IAC (fórmula na imagem) com IMC e quadris; comparar com faixa de normalidade usando raízes."
+ },
+ {
+  "id": "2011-150",
+  "primario": "v3c10",
+  "secundario": "v3c11",
+  "imagem_essencial": false,
+  "resumo": "Reta y=x+4 e hospital em P(-5,5); estação a no máximo 5 km do hospital."
+ },
+ {
+  "id": "2011-151",
+  "primario": "v2c05",
+  "secundario": "v2c04",
+  "imagem_essencial": true,
+  "resumo": "Polígono da calçada invariante por rotações; menor ângulo de rotação."
+ },
+ {
+  "id": "2011-152",
+  "primario": "v3c04",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Fruta a R$1,75 por kg; escolher gráfico do preço m em função de n."
+ },
+ {
+  "id": "2011-153",
+  "primario": "v1c05",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Dicas de quantidades por convidado; quantidades para 30 convidados."
+ },
+ {
+  "id": "2011-154",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Tabela da OBMEP 2005-2009; percentual médio de medalhistas de ouro do Nordeste."
+ },
+ {
+  "id": "2011-155",
+  "primario": "v2c08",
+  "secundario": "v2c07",
+  "imagem_essencial": true,
+  "resumo": "Barco com ângulo de 30 graus e AB=2000 m; menor distância ao ponto fixo P."
+ },
+ {
+  "id": "2011-156",
+  "primario": "v3c04",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Contratações crescendo 4300 por mês, 880.605 em fevereiro; expressão de y em função de x."
+ },
+ {
+  "id": "2011-157",
+  "primario": "v1c07",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Comparar poupança e CDB em um mês com taxas da imagem; aplicação mais vantajosa."
+ },
+ {
+  "id": "2011-158",
+  "primario": "v1c10",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Tabela de tarifas de energia antes e depois; diferença do custo por kWh entre consumidores."
+ },
+ {
+  "id": "2011-159",
+  "primario": "v3c01",
+  "secundario": "v3c04",
+  "imagem_essencial": false,
+  "resumo": "Duas empresas com custo por km e valor fixo; equação que torna indiferente a escolha."
+ },
+ {
+  "id": "2011-160",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Perda de 30% e recuperação de 20% do perdido; valor inicial dado montante de R$3800."
+ },
+ {
+  "id": "2011-161",
+  "primario": "v1c04",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "20 milhões de habitantes em 800 mil km²; densidade demográfica da caatinga."
+ },
+ {
+  "id": "2011-162",
+  "primario": "v1c08",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Passagens vendidas crescem 1500 por mês a partir de 33.000; vendas em julho."
+ },
+ {
+  "id": "2011-163",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Tabela de regiões e recomendações médicas; probabilidade de escolher região adequada ao acaso."
+ },
+ {
+  "id": "2011-164",
+  "primario": "v1c05",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Chuveiro de 4,8 kW/h; dois banhos de 10 min diários; consumo em sete dias."
+ },
+ {
+  "id": "2011-165",
+  "primario": "v2c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Pista com raias; qual raia beneficia o corredor numa volta completa partindo do mesmo ponto."
+ },
+ {
+  "id": "2011-166",
+  "primario": "v1c05",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Internações por AVC: acréscimo de 8 mil para mulheres e mesma proporção para homens."
+ },
+ {
+  "id": "2011-167",
+  "primario": "v2c12",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Copo cilíndrico 10 cm x 4 cm de diâmetro; água na mistura 1:5."
+ },
+ {
+  "id": "2011-168",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": false,
+  "resumo": "Sinuca com bolas de 1 a 15; comparar pares com somas 12, 17 e 22."
+ },
+ {
+  "id": "2011-169",
+  "primario": "v1c01",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Dados biométricos de Duílio e Sandra; calcular IMC e categoria na escala."
+ },
+ {
+  "id": "2011-170",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Dados de posto de vacinação; probabilidade de a pessoa ser portadora de doença crônica."
+ },
+ {
+  "id": "2011-171",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de conexões domiciliares; probabilidade de banda larga de pelo menos 1 Mbps."
+ },
+ {
+  "id": "2011-172",
+  "primario": "v2c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Mapa com pontos K a F; caminho sem repetir pontos conforme a figura."
+ },
+ {
+  "id": "2011-173",
+  "primario": "v1c10",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Gráfico da participação do agronegócio no PIB; período de queda."
+ },
+ {
+  "id": "2011-174",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Números de 5 algarismos ímpares distintos em ordem crescente; posição do número 75 913."
+ },
+ {
+  "id": "2011-175",
+  "primario": "v1c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de enquete com respostas sim e não; quantidade de internautas que responderam não."
+ },
+ {
+  "id": "2011-176",
+  "primario": "v1c01",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Tabela de estrelas; ordem de grandeza da luminosidade para temperatura 5 vezes a solar."
+ },
+ {
+  "id": "2011-177",
+  "primario": "v1c07",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Comparar rentabilidades anuais de três investimentos com juros compostos usando tabela de potências de 1,03."
+ },
+ {
+  "id": "2011-178",
+  "primario": "v1c05",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Figura da viga; expressão algébrica da resistência S em função de b e d."
+ },
+ {
+  "id": "2011-179",
+  "primario": "v3c03",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Dois planos telefônicos com franquia e minuto excedente; gráfico do valor pago."
+ },
+ {
+  "id": "2011-180",
+  "primario": "v3c01",
+  "secundario": "v3c04",
+  "imagem_essencial": false,
+  "resumo": "Lucro como faturamento menos custo (funções lineares): quantidade mínima para não haver prejuízo."
+ },
+ {
+  "id": "2012-136",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Percurso de 420 km representado por pista de 60 cm; escala."
+ },
+ {
+  "id": "2012-137",
+  "primario": "v2c10",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Losango com circunferências tangentes; aumento do perímetro ao dobrar dois raios."
+ },
+ {
+  "id": "2012-138",
+  "primario": "v1c05",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Divisão proporcional de laranjas em duas etapas (6:5:4 e 4:4:2); achar quantidades da segunda parte."
+ },
+ {
+  "id": "2012-139",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de enquete do blog; probabilidade de votante ter marcado Chato."
+ },
+ {
+  "id": "2012-140",
+  "primario": "v1c07",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Comparar cinco formas de pagar terreno com aplicação rendendo 10% ao semestre."
+ },
+ {
+  "id": "2012-141",
+  "primario": "v3c01",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Forro retangular encolhe após lavagem; expressão da área perdida em x e y."
+ },
+ {
+  "id": "2012-142",
+  "primario": "v1c01",
+  "secundario": "v2c10",
+  "imagem_essencial": false,
+  "resumo": "Capacidade mínima de ar-condicionado por área, pessoas e aparelhos em sala de 4x5 m."
+ },
+ {
+  "id": "2012-143",
+  "primario": "v1c05",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Figura da viga de madeira; expressão da resistência S com proporcionalidades."
+ },
+ {
+  "id": "2012-144",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "5 objetos, 6 personagens e 9 cômodos; alunos além das respostas distintas possíveis."
+ },
+ {
+  "id": "2012-145",
+  "primario": "v2c02",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Árvores desenhadas em quadriculado com escalas diferentes; qual tem maior altura real."
+ },
+ {
+  "id": "2012-146",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Duas urnas com bolas coloridas; cor de maior probabilidade após transferir uma bola."
+ },
+ {
+  "id": "2012-147",
+  "primario": "v2c01",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Leitura de hidrômetro com m³, centenas, dezenas, litros e décimos; consumo em litros."
+ },
+ {
+  "id": "2012-148",
+  "primario": "v1c10",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Gráfico de vendas mensais em 2011; meses de maior e menor venda."
+ },
+ {
+  "id": "2012-149",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Planificações de sólidos; identificar cilindro, prismas, pirâmides ou troncos obtidos."
+ },
+ {
+  "id": "2012-150",
+  "primario": "v1c08",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Sete colunas de 1 a 7 cartas em baralho de 52; cartas do monte."
+ },
+ {
+  "id": "2012-151",
+  "primario": "v1c10",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Gráfico da extensão de gelo marítimo por ano; ano de maior aquecimento global."
+ },
+ {
+  "id": "2012-152",
+  "primario": "v2c09",
+  "secundario": "v2c07",
+  "imagem_essencial": true,
+  "resumo": "Base quadrada de lado L sobre plataforma circular de raio R; relação R-L."
+ },
+ {
+  "id": "2012-153",
+  "primario": "v2c11",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Globo da morte com foco em B; projeção no chão da circunferência percorrida."
+ },
+ {
+  "id": "2012-154",
+  "primario": "v1c02",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Escolher alturas de tomadas e interruptores adequadas a cadeirante segundo referenciais da figura."
+ },
+ {
+  "id": "2012-155",
+  "primario": "v1c10",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de atividades de jovens de 12 a 18 anos; horas semanais em atividades escolares."
+ },
+ {
+  "id": "2012-156",
+  "primario": "v3c03",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Escolher o gráfico de salário (fixo mais comissão com taxa maior após 100 vendas)."
+ },
+ {
+  "id": "2012-157",
+  "primario": "v1c08",
+  "secundario": "v1c03",
+  "imagem_essencial": false,
+  "resumo": "Maquinista viaja a cada 4 dias com férias em junho; número máximo de viagens."
+ },
+ {
+  "id": "2012-158",
+  "primario": "v2c12",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Tanque com água e objeto de 2400 cm³; variação do nível da água."
+ },
+ {
+  "id": "2012-159",
+  "primario": "v2c10",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Áreas de ambientes da planta (retângulos e trapézio) para escolher aquecedores de menor consumo."
+ },
+ {
+  "id": "2012-160",
+  "primario": "v2c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Vitral quadrado com pontos médios e partes de materiais de preços diferentes; custo total."
+ },
+ {
+  "id": "2012-161",
+  "primario": "v1c01",
+  "secundario": "v1c03",
+  "imagem_essencial": false,
+  "resumo": "Protocolo 13_982 07 com algarismo faltante; identificar a ordem posicional do algarismo."
+ },
+ {
+  "id": "2012-162",
+  "primario": "v1c10",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Gráfico do valor da ação por hora e tabela de compras e vendas; melhor negócio."
+ },
+ {
+  "id": "2012-163",
+  "primario": "v1c10",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de reclamações recebidas e resolvidas por dia; dias com resolvidas excedendo recebidas."
+ },
+ {
+  "id": "2012-164",
+  "primario": "v1c05",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Dosagem de 5 gotas por 2 kg; massa do menino para 30 gotas."
+ },
+ {
+  "id": "2012-165",
+  "primario": "v2c05",
+  "secundario": "v2c11",
+  "imagem_essencial": true,
+  "resumo": "Deslocamento A-E, E-M, M-C sobre uma pirâmide; desenho correspondente que Bruno deve fazer."
+ },
+ {
+  "id": "2012-166",
+  "primario": "v3c01",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Equações de oferta e demanda em função de P; preço de equilíbrio."
+ },
+ {
+  "id": "2012-167",
+  "primario": "v1c05",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Brinquedo custa R$3 por período e dá 20 tíquetes; custo para 9.200 tíquetes."
+ },
+ {
+  "id": "2012-168",
+  "primario": "v1c01",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Área corporal A=k m^(2/3); efeito de multiplicar a massa por 8."
+ },
+ {
+  "id": "2012-169",
+  "primario": "v1c11",
+  "secundario": "v3c02",
+  "imagem_essencial": true,
+  "resumo": "Tabela de notas e pesos; matriz pela qual multiplicar para obter as médias ponderadas."
+ },
+ {
+  "id": "2012-170",
+  "primario": "v3c05",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "P=R i^2 e energia proporcional à potência; gráfico da energia em função da corrente."
+ },
+ {
+  "id": "2012-171",
+  "primario": "v2c01",
+  "secundario": "v2c03",
+  "imagem_essencial": false,
+  "resumo": "Longitude 124 graus 3 minutos; converter para forma decimal."
+ },
+ {
+  "id": "2012-172",
+  "primario": "v1c01",
+  "secundario": "v2c01",
+  "imagem_essencial": true,
+  "resumo": "Asteroide a 325 mil km da Terra; distância em notação científica."
+ },
+ {
+  "id": "2012-173",
+  "primario": "v1c05",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Bacia ecológica 6 L e comum 15 L por descarga; economia diária de 60 L."
+ },
+ {
+  "id": "2012-174",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Tabela de receita bruta anual; duas empresas de maior média dos três anos."
+ },
+ {
+  "id": "2012-175",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Glicose de 300 mg/dL reduzida em 30% e depois 10%; categoria na tabela."
+ },
+ {
+  "id": "2012-176",
+  "primario": "v1c12",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Desvio padrão de 90 kg por talhão de 3 ha; variância em sacas/ha ao quadrado."
+ },
+ {
+  "id": "2012-177",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Símbolos de cores primárias, secundárias, preto e branco; total de cores representáveis."
+ },
+ {
+  "id": "2012-178",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": false,
+  "resumo": "Soma de dois dados igual a 7, 4 ou 8; quem tem maior probabilidade."
+ },
+ {
+  "id": "2012-179",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de empregos formais mensais; parte inteira da mediana."
+ },
+ {
+  "id": "2012-180",
+  "primario": "v2c12",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Contração linear de 20% em cubo de argila; variação percentual do volume."
+ },
+ {
+  "id": "2013-136",
+  "primario": "v2c08",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Torres inclinadas 15° com a vertical: usar tangente para obter a área da base quadrada."
+ },
+ {
+  "id": "2013-137",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Média aritmética de notas de gráfico, antes e depois de descartar maior e menor nota."
+ },
+ {
+  "id": "2013-138",
+  "primario": "v1c09",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Razão entre quantidade de senhas de 6 símbolos com 62 caracteres e com 10 algarismos."
+ },
+ {
+  "id": "2013-139",
+  "primario": "v1c04",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Torneira pinga 0,2 mL a cada 3 s durante 6 horas: volume desperdiçado em litros."
+ },
+ {
+  "id": "2013-140",
+  "primario": "v1c02",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Escolher tipos de produto de menor custo-benefício, com aproveitamento de 100% ou 90%."
+ },
+ {
+  "id": "2013-141",
+  "primario": "v2c09",
+  "secundario": "v2c07",
+  "imagem_essencial": true,
+  "resumo": "Circunferências tangentes com medidas 30 cm e 10 cm; raio R usando √3 = 1,7."
+ },
+ {
+  "id": "2013-142",
+  "primario": "v1c04",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Calcular índice de eficiência (produto dividido por meses) de cinco vacas na tabela e comparar."
+ },
+ {
+  "id": "2013-143",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": true,
+  "resumo": "Trajeto em escala 1:25 000 repetido por cinco dias: quilômetros percorridos."
+ },
+ {
+  "id": "2013-144",
+  "primario": "v1c10",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de crescimento da indústria; diferença entre maior e menor percentual."
+ },
+ {
+  "id": "2013-145",
+  "primario": "v1c04",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Cadeiras reservadas do setor 3 na figura; razão entre reservadas e total do setor."
+ },
+ {
+  "id": "2013-146",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de compradores de A e B; probabilidade de ambos sorteados serem de fevereiro."
+ },
+ {
+  "id": "2013-147",
+  "primario": "v2c10",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Perímetro de terreno com lado no rio: mínimo de rolos de tela de 48 m."
+ },
+ {
+  "id": "2013-148",
+  "primario": "v1c05",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Caminhão carrega 1500 telhas ou 1200 tijolos; tijolos extras com 900 telhas."
+ },
+ {
+  "id": "2013-149",
+  "primario": "v1c08",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Tabela de produção de arroz crescendo 1,25 t ao ano; total de 2012 a 2021."
+ },
+ {
+  "id": "2013-150",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "1200 alunos, inglês e espanhol; probabilidade de falar espanhol dado não falar inglês."
+ },
+ {
+  "id": "2013-151",
+  "primario": "v3c10",
+  "secundario": "v3c11",
+  "imagem_essencial": true,
+  "resumo": "Circunferência, parábola, quadrados e ponto no plano cartesiano; figura correta desenhada."
+ },
+ {
+  "id": "2013-152",
+  "primario": "v3c05",
+  "secundario": "v3c10",
+  "imagem_essencial": true,
+  "resumo": "Taça com parábola de vértice no eixo x e lei dada; altura do líquido."
+ },
+ {
+  "id": "2013-153",
+  "primario": "v1c05",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Cubo da área proporcional ao quadrado da massa; expressão de S em função de M."
+ },
+ {
+  "id": "2013-154",
+  "primario": "v1c05",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Lei da gravitação com cinco satélites de mesma massa em órbitas diferentes; gráfico das forças."
+ },
+ {
+  "id": "2013-155",
+  "primario": "v1c05",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Reservatório de 900 m³ esvazia em 6 h; ralos para 500 m³ em 4 h."
+ },
+ {
+  "id": "2013-156",
+  "primario": "v2c10",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Placas quadradas com lado triplicado mantendo a área coberta S; nova quantidade por caixa."
+ },
+ {
+  "id": "2013-157",
+  "primario": "v2c12",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Piscina cilíndrica de 12 m³ com ilha cilíndrica: raio máximo para sobrar 4 m³."
+ },
+ {
+  "id": "2013-158",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Imposto de 15% sobre lucro de ações vendidas por R$34 mil e custadas R$26 mil."
+ },
+ {
+  "id": "2013-159",
+  "primario": "v1c04",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Concreto na proporção 1:4:2 em caminhão de 14 m³; volume de cimento."
+ },
+ {
+  "id": "2013-160",
+  "primario": "v1c04",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Lucro médio anual (lucro acumulado por tempo) de cinco empresas na tabela: escolher a maior."
+ },
+ {
+  "id": "2013-161",
+  "primario": "v3c03",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico em degraus do custo de cartas por massa: somar custo total de postagem."
+ },
+ {
+  "id": "2013-162",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Mediana das diárias de hotéis a partir de gráfico de áreas com percentuais."
+ },
+ {
+  "id": "2013-163",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Remarcação de 20% e desconto adicional de 10% com cartão; economia em produto de R$50."
+ },
+ {
+  "id": "2013-164",
+  "primario": "v2c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Identificar figura simétrica à original em relação a um ponto O (simetria central)."
+ },
+ {
+  "id": "2013-165",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Contar joias losangulares com três cores de pedras, vértices consecutivos de cores diferentes."
+ },
+ {
+  "id": "2013-166",
+  "primario": "v3c08",
+  "secundario": "v3c07",
+  "imagem_essencial": false,
+  "resumo": "Meia-vida do césio-137 em função exponencial: tempo para reduzir a 10%, com log 2."
+ },
+ {
+  "id": "2013-167",
+  "primario": "v1c06",
+  "secundario": "v2c10",
+  "imagem_essencial": false,
+  "resumo": "Base retangular 30 por 15 cm com lados reduzidos em 20%; redução percentual da área."
+ },
+ {
+  "id": "2013-168",
+  "primario": "v1c13",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Probabilidade de parafuso defeituoso com duas máquinas; classificar desempenho pelo quadro."
+ },
+ {
+  "id": "2013-169",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": true,
+  "resumo": "Tabela de preço de cartelas por quantidade de números; apostadores com maior probabilidade de ganhar."
+ },
+ {
+  "id": "2013-170",
+  "primario": "v2c01",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Lata de 355 mL convertida para onças fluidas (1 fl oz = 2,95 cL)."
+ },
+ {
+  "id": "2013-171",
+  "primario": "v3c01",
+  "secundario": "v3c04",
+  "imagem_essencial": false,
+  "resumo": "Semáforo: amarelo 5 s, verde 2/3 do vermelho; relação entre X e Y."
+ },
+ {
+  "id": "2013-172",
+  "primario": "v3c05",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Temperatura T(t) = -t^2/4 + 400; tempo para atingir 39 graus."
+ },
+ {
+  "id": "2013-173",
+  "primario": "v1c03",
+  "secundario": "v1c08",
+  "imagem_essencial": false,
+  "resumo": "Ciclos solares de 11 anos desde 1755; número do ciclo em 2101."
+ },
+ {
+  "id": "2013-174",
+  "primario": "v2c02",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Mapa do Brasil 1:25.000.000 e estado ampliado 1:4.000.000; quantas vezes a área foi ampliada."
+ },
+ {
+  "id": "2013-175",
+  "primario": "v3c10",
+  "secundario": "v3c11",
+  "imagem_essencial": true,
+  "resumo": "Antenas A, B e C no plano cartesiano; torre equidistante das três."
+ },
+ {
+  "id": "2013-176",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Figura com duas formas tridimensionais; identificar quais são."
+ },
+ {
+  "id": "2013-177",
+  "primario": "v1c10",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de notas no PISA e horas de estudo; abaixo da média, maior carga horária."
+ },
+ {
+  "id": "2013-178",
+  "primario": "v2c09",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Bandeja com copos de diâmetros AC=7/5 BD; menor razão l/BD para quatro copos."
+ },
+ {
+  "id": "2013-179",
+  "primario": "v2c06",
+  "secundario": "v2c07",
+  "imagem_essencial": true,
+  "resumo": "Hastes de 4 m e 6 m com cabos cruzados; comprimento da haste EF."
+ },
+ {
+  "id": "2013-180",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Gangorra em movimento; projeção ortogonal da trajetória dos pontos A e B no chão."
+ },
+ {
+  "id": "2014-136",
+  "primario": "v1c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Calcular taxa de desemprego aberto de dezembro a partir de tabela e hipóteses percentuais."
+ },
+ {
+  "id": "2014-137",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Projetar a taxa de fecundidade em 2020 repetindo a variação percentual de 2000 a 2010."
+ },
+ {
+  "id": "2014-138",
+  "primario": "v1c10",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Identificar regiões com percentual de doadores por habitantes menor ou igual ao do país."
+ },
+ {
+  "id": "2014-139",
+  "primario": "v1c05",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Porta com altura aumentada e mesmo material: razão entre larguras nova e anterior."
+ },
+ {
+  "id": "2014-140",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Percentuais de uso de água e quadro de consumo moderado: economia média diária em litros."
+ },
+ {
+  "id": "2014-141",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Determinar o candidato com maior mediana das notas em quatro disciplinas."
+ },
+ {
+  "id": "2014-142",
+  "primario": "v2c12",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Volume de silo em forma de tronco e massa máxima de forragem armazenada."
+ },
+ {
+  "id": "2014-143",
+  "primario": "v3c03",
+  "secundario": "v2c12",
+  "imagem_essencial": true,
+  "resumo": "Escolher o gráfico da altura da água em escultura, com vazão constante."
+ },
+ {
+  "id": "2014-144",
+  "primario": "v2c11",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Adesivo que reveste cone de sinalização até metade da altura: escolher a forma planificada correta."
+ },
+ {
+  "id": "2014-145",
+  "primario": "v3c05",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Função polinomial de grau menor que 3 determinada por três notas (0, 5 e 10)."
+ },
+ {
+  "id": "2014-146",
+  "primario": "v1c03",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Número de divisores de N = 2^x·5^y·7^z, múltiplo de 10 e não de 7."
+ },
+ {
+  "id": "2014-147",
+  "primario": "v2c07",
+  "secundario": "v2c06",
+  "imagem_essencial": true,
+  "resumo": "Máximo de triângulos não congruentes construídos com varetas dadas (desigualdade triangular)."
+ },
+ {
+  "id": "2014-148",
+  "primario": "v3c11",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Função cujo gráfico é a trajetória circular do assento de um balanço."
+ },
+ {
+  "id": "2014-149",
+  "primario": "v1c05",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "45 000 ingressos, 20 catracas, uma pessoa a cada 2 s: tempo mínimo de entrada."
+ },
+ {
+  "id": "2014-150",
+  "primario": "v2c11",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Planificação de caixa paralelepipédica: maior x para soma das dimensões até 115 cm."
+ },
+ {
+  "id": "2014-151",
+  "primario": "v2c12",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Redução percentual da altura de lata cuja base cresce 25%, mantendo o volume."
+ },
+ {
+  "id": "2014-152",
+  "primario": "v1c06",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Esgoto tratado 36%; sem tratamento cai de 8 para 4 bilhões de litros: novo percentual."
+ },
+ {
+  "id": "2014-153",
+  "primario": "v1c10",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Gráficos de folha salarial e de funcionários: aumento de receita para manter o lucro mensal."
+ },
+ {
+  "id": "2014-154",
+  "primario": "v1c04",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Comparar jogadores de boliche pela razão entre vezes que derrubaram todos os pinos e jogadas."
+ },
+ {
+  "id": "2014-155",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Menor nota na prova final de química para o candidato II vencer (média ponderada)."
+ },
+ {
+  "id": "2014-156",
+  "primario": "v2c02",
+  "secundario": "v2c12",
+  "imagem_essencial": false,
+  "resumo": "Armário de 3x1x2 cm em projeto na escala 1:100: volume real em cm³."
+ },
+ {
+  "id": "2014-157",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Determinar cor e numeração de sapatos com mais reclamações usando média e moda."
+ },
+ {
+  "id": "2014-158",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Calcular a sensibilidade de um teste diagnóstico a partir do quadro de resultados."
+ },
+ {
+  "id": "2014-159",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2014-160",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Projeção ortogonal, sobre o piso, do caminho percorrido pela mão de uma pessoa."
+ },
+ {
+  "id": "2014-161",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Tabela de cinco reagentes em cinco experimentos: qual tem mais resultados acima da própria média."
+ },
+ {
+  "id": "2014-162",
+  "primario": "v1c06",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Consumo máximo de energia para reduzir em 10% o custo total, incluindo Cosip por faixa."
+ },
+ {
+  "id": "2014-163",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Contar formas de alugar 16 filmes em pares (ação-comédia, depois ação-drama) sem repetição."
+ },
+ {
+  "id": "2014-164",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": false,
+  "resumo": "Probabilidade de o teste terminar na quinta pergunta (segundo erro), com erro de probabilidade 0,20."
+ },
+ {
+  "id": "2014-165",
+  "primario": "v1c04",
+  "secundario": "v2c01",
+  "imagem_essencial": true,
+  "resumo": "Velocidade média máxima entre dois radares para tempo mínimo de 1 min 24 s."
+ },
+ {
+  "id": "2014-166",
+  "primario": "v3c04",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Plano telefônico com maior tempo de chamada para gasto fixo de R$ 30,00."
+ },
+ {
+  "id": "2014-167",
+  "primario": "v2c12",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Pílula cilíndrica com semiesferas: redução de volume ao diminuir o raio."
+ },
+ {
+  "id": "2014-168",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Percentual da área de agricultura em relação à área total do território brasileiro."
+ },
+ {
+  "id": "2014-169",
+  "primario": "v2c02",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Escala de reprodução de gravura em folha retangular com margens livres."
+ },
+ {
+  "id": "2014-170",
+  "primario": "v2c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Lado da folha de papel enrolada em cilindro de diâmetro d para fazer o diploma."
+ },
+ {
+  "id": "2014-171",
+  "primario": "v1c06",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Carga de 12 t em três apoios, 60% no central, resto igualmente dividido."
+ },
+ {
+  "id": "2014-172",
+  "primario": "v1c03",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Converter para base decimal o número representado em um quipus."
+ },
+ {
+  "id": "2014-173",
+  "primario": "v2c01",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Converter 8 hectares (1 hm² por hectare) em metros quadrados."
+ },
+ {
+  "id": "2014-174",
+  "primario": "v1c01",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "16 galões de 4 L divididos em 200 recipientes iguais: escolher a capacidade do recipiente."
+ },
+ {
+  "id": "2014-175",
+  "primario": "v1c06",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Transparência do vidro (70% a 90%) e da película (50% a 70%): intervalo de P."
+ },
+ {
+  "id": "2014-176",
+  "primario": "v1c10",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Dia em que a soma das bactérias das duas espécies foi máxima."
+ },
+ {
+  "id": "2014-177",
+  "primario": "v1c05",
+  "secundario": "v2c12",
+  "imagem_essencial": true,
+  "resumo": "Tempo para a torneira encher o restante do depósito."
+ },
+ {
+  "id": "2014-178",
+  "primario": "v2c07",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Células solares com diagonal 6x8 cm a 24 Wh/cm: ajustar número de células ao consumo."
+ },
+ {
+  "id": "2014-179",
+  "primario": "v3c01",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Preço sobe 20% e o dinheiro levado compra duas unidades a menos: quantia semanal."
+ },
+ {
+  "id": "2014-180",
+  "primario": "v1c01",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Voo de 6 h entre fusos diferentes: horário limite de saída para chegar às 13h."
+ },
+ {
+  "id": "2015-136",
+  "primario": "v1c10",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Quantas operações o investidor fez no dia a partir do gráfico de cotações."
+ },
+ {
+  "id": "2015-137",
+  "primario": "v2c09",
+  "secundario": "v2c04",
+  "imagem_essencial": false,
+  "resumo": "Tampo circular que cubra base triangular equilátera de lado 30 cm: escolher menor raio disponível."
+ },
+ {
+  "id": "2015-138",
+  "primario": "v3c03",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Intervalos de distância em que o preço da locadora Q não supera o da P."
+ },
+ {
+  "id": "2015-139",
+  "primario": "v1c01",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Cartas da mão equivalentes à carta da mesa (frações, decimais e porcentagens)."
+ },
+ {
+  "id": "2015-140",
+  "primario": "v1c10",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Escolher meios de promoção que atinjam mais consumidores nas classes A/B e C/D."
+ },
+ {
+  "id": "2015-141",
+  "primario": "v2c12",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Embalagem de sorvete 10x20x10 cm com mistura que expande 25%: volume máximo do sabor morango."
+ },
+ {
+  "id": "2015-142",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Probabilidade de sortear senha de 1 a 20 entre 100 senhas."
+ },
+ {
+  "id": "2015-143",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Mediana dos tempos apresentados no quadro."
+ },
+ {
+  "id": "2015-144",
+  "primario": "v2c10",
+  "secundario": "v2c04",
+  "imagem_essencial": true,
+  "resumo": "Variação da área do garrafão ao trocar o formato trapezoidal por retangular."
+ },
+ {
+  "id": "2015-145",
+  "primario": "v1c03",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Distribuir 400 e 320 ingressos igualmente: número mínimo de escolas (MDC)."
+ },
+ {
+  "id": "2015-146",
+  "primario": "v2c12",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Nova cisterna cilíndrica de 81 m³ com mesma altura: aumento necessário do raio."
+ },
+ {
+  "id": "2015-147",
+  "primario": "v1c09",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Configurações de notas do jurado B que tornariam campeã a Escola II."
+ },
+ {
+  "id": "2015-148",
+  "primario": "v2c12",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Altura mínima da pilha de contêineres que preenche a área delimitada sem sobras."
+ },
+ {
+  "id": "2015-149",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Cubo com cortes planos nos oito cantos: número de faces do poliedro, ou cores usadas."
+ },
+ {
+  "id": "2015-150",
+  "primario": "v3c05",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Demanda q = 400 − 100p, arrecadação mínima R$ 300: faixa de preço promocional."
+ },
+ {
+  "id": "2015-151",
+  "primario": "v1c13",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Vacina de 98% de eficácia contra HPV: menor cobertura para risco de no máximo 5,9%."
+ },
+ {
+  "id": "2015-152",
+  "primario": "v3c07",
+  "secundario": "v1c08",
+  "imagem_essencial": false,
+  "resumo": "Produção de 8 000 unidades crescendo 50% ao ano: expressão de P(t)."
+ },
+ {
+  "id": "2015-153",
+  "primario": "v2c04",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Polígonos regulares divididos em regiões; verificar qual permite áreas proporcionais a 60%, 10% e 30%."
+ },
+ {
+  "id": "2015-154",
+  "primario": "v3c08",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Altura h do vidro em função da base n, com curva y = log x."
+ },
+ {
+  "id": "2015-155",
+  "primario": "v2c09",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Ampliação da área de cobertura com nova antena tangente a circunferências menores."
+ },
+ {
+  "id": "2015-156",
+  "primario": "v1c07",
+  "secundario": "v1c08",
+  "imagem_essencial": false,
+  "resumo": "Financiamento com amortização de R$ 500 mais 1% de juros sobre o saldo: décima prestação."
+ },
+ {
+  "id": "2015-157",
+  "primario": "v1c01",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Escrever em quilogramas, em notação científica, 4,129 milhões de toneladas de soja."
+ },
+ {
+  "id": "2015-158",
+  "primario": "v3c01",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Dose do medicamento X para criança, usando fórmula com idade e dose do medicamento Y."
+ },
+ {
+  "id": "2015-159",
+  "primario": "v1c06",
+  "secundario": "v1c11",
+  "imagem_essencial": false,
+  "resumo": "Diferença entre renda média dos 10% mais ricos e dos 10% mais pobres."
+ },
+ {
+  "id": "2015-160",
+  "primario": "v2c02",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Dimensões reais da pegada a partir da imagem em escala."
+ },
+ {
+  "id": "2015-161",
+  "primario": "v2c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Valor de d para malha de proteção solar com taxa de cobertura de 75%."
+ },
+ {
+  "id": "2015-162",
+  "primario": "v1c03",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Cortar tábuas de 540, 810 e 1080 cm em peças iguais menores que 2 m."
+ },
+ {
+  "id": "2015-163",
+  "primario": "v2c01",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Número máximo de aplicações por refil de insulina, com unidade de 0,01 mL."
+ },
+ {
+  "id": "2015-164",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Número de formas de acomodar a família nas poltronas do voo."
+ },
+ {
+  "id": "2015-165",
+  "primario": "v2c10",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Maior raio R para a nova piscina ter área menor que a existente."
+ },
+ {
+  "id": "2015-166",
+  "primario": "v2c01",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Beber 150 mL a cada meia hora por 10 horas: escolher duas garrafas iguais adequadas."
+ },
+ {
+  "id": "2015-167",
+  "primario": "v2c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Forma da bandeirinha ao abrir folha dobrada e recortada (simetria)."
+ },
+ {
+  "id": "2015-168",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Probabilidade de ao menos um entre três alunos entender inglês, sendo 30% a chance individual."
+ },
+ {
+  "id": "2015-169",
+  "primario": "v1c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Quantidade de PET reciclado destinada a tecidos e malhas, a partir de dois gráficos."
+ },
+ {
+  "id": "2015-170",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Ordem de classificação final do concurso por média ponderada das notas."
+ },
+ {
+  "id": "2015-171",
+  "primario": "v2c12",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Lata cilíndrica com um terço da capacidade cheia de chuva: calcular índice pluviométrico em mm."
+ },
+ {
+  "id": "2015-172",
+  "primario": "v3c10",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Coordenadas do ponto T equidistante, ao longo do percurso, de P e Q."
+ },
+ {
+  "id": "2015-173",
+  "primario": "v1c02",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Escolher a espessura de lente (decimais) mais próxima de 3 mm."
+ },
+ {
+  "id": "2015-174",
+  "primario": "v3c05",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Temperatura T(h) = −h² + 22h − 85: classificar a temperatura máxima pela tabela."
+ },
+ {
+  "id": "2015-175",
+  "primario": "v3c01",
+  "secundario": "v2c12",
+  "imagem_essencial": false,
+  "resumo": "Elipsoide com a − b = b/2: volume 4ab² em função de b."
+ },
+ {
+  "id": "2015-176",
+  "primario": "v3c03",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Escolher o gráfico do valor mensal de plano telefônico definido por faixas de ligações."
+ },
+ {
+  "id": "2015-177",
+  "primario": "v1c05",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Dose de 250 mg por m²: área do felino de 3 kg no quadro."
+ },
+ {
+  "id": "2015-178",
+  "primario": "v2c01",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Reservatório para 10 pessoas por 20 dias a 0,08 m³ diários: capacidade em litros."
+ },
+ {
+  "id": "2015-179",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": false,
+  "resumo": "Comparar probabilidades de um atleta ser escolhido em três modos de sorteio para antidoping."
+ },
+ {
+  "id": "2015-180",
+  "primario": "v3c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Preço P(x) = 8 + 5cos((πx − π)/6): mês da safra, de preço mínimo."
+ },
+ {
+  "id": "2016-136",
+  "primario": "v2c12",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Número mínimo de viagens do caminhão para transportar os grãos do silo."
+ },
+ {
+  "id": "2016-137",
+  "primario": "v2c02",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Guarda-roupa em escala 1:8, impressão reduzida em 20%: dimensões do desenho impresso."
+ },
+ {
+  "id": "2016-138",
+  "primario": "v2c01",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Converter o diâmetro da Roda do Milênio de pés para metros."
+ },
+ {
+  "id": "2016-139",
+  "primario": "v3c03",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Vazão da bomba ligada no início da segunda hora, a partir do gráfico."
+ },
+ {
+  "id": "2016-140",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Determinar a primeira luta pela média das três pesagens dos atletas."
+ },
+ {
+  "id": "2016-141",
+  "primario": "v1c04",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Código de pneu radial (altura é razão com largura): escolher o pneu de menor altura."
+ },
+ {
+  "id": "2016-142",
+  "primario": "v2c05",
+  "secundario": "v3c10",
+  "imagem_essencial": true,
+  "resumo": "Encontrar o cruzamento de ruas equidistante, em malha, de três locais."
+ },
+ {
+  "id": "2016-143",
+  "primario": "v3c01",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Terreno retangular x por x + 7 com mesma área de terreno irregular: medidas."
+ },
+ {
+  "id": "2016-144",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Mês cujo lucro mais se aproxima da média mensal de lucros."
+ },
+ {
+  "id": "2016-145",
+  "primario": "v1c06",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Número mínimo de contratações para cumprir cota percentual de pessoas com deficiência."
+ },
+ {
+  "id": "2016-146",
+  "primario": "v1c06",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Picolés a R$ 16 a caixa, lucro 20% maior que no dia anterior: preço."
+ },
+ {
+  "id": "2016-147",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Escolher dois tenistas entre 10, sendo 4 canhotos, sem serem ambos canhotos."
+ },
+ {
+  "id": "2016-148",
+  "primario": "v1c03",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Número representado por disposição de figuras em sistema de numeração posicional."
+ },
+ {
+  "id": "2016-149",
+  "primario": "v3c10",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Variação do coeficiente angular da reta de trajetória do projétil B."
+ },
+ {
+  "id": "2016-150",
+  "primario": "v1c05",
+  "secundario": "v3c06",
+  "imagem_essencial": false,
+  "resumo": "Custo de isolamento com espessura inversamente proporcional a D² e custo proporcional ao volume."
+ },
+ {
+  "id": "2016-151",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Aumento percentual da altura de uma menina, com leitura da curva de crescimento."
+ },
+ {
+  "id": "2016-152",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": true,
+  "resumo": "Probabilidade de chegar à área IV por caminhos ao acaso em ramificações."
+ },
+ {
+  "id": "2016-153",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Número de funcionários a contratar conforme casos acima ou abaixo da média."
+ },
+ {
+  "id": "2016-154",
+  "primario": "v1c04",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Escolher a marca de pão com maior concentração de fibras (razões)."
+ },
+ {
+  "id": "2016-155",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Esboço obtido pelos alunos a partir de sólido e projeção descritos."
+ },
+ {
+  "id": "2016-156",
+  "primario": "v1c04",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Densidade de 4 pessoas por m², chegada de 120000 por hora, 1 policial por 2000."
+ },
+ {
+  "id": "2016-157",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Lucro mínimo em junho para a média semestral permitir ao gerente continuar."
+ },
+ {
+  "id": "2016-158",
+  "primario": "v3c03",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Tempo para o reservatório zerar após o sexto mês, a partir do gráfico."
+ },
+ {
+  "id": "2016-159",
+  "primario": "v1c11",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Média de vacinas aplicadas em cinco meses define estoque de 12 médias: quantas comprar."
+ },
+ {
+  "id": "2016-160",
+  "primario": "v3c08",
+  "secundario": "v3c07",
+  "imagem_essencial": false,
+  "resumo": "Liga a 3 000 °C perde 1% a cada 30 min: tempo até 30 °C."
+ },
+ {
+  "id": "2016-161",
+  "primario": "v2c12",
+  "secundario": "v2c01",
+  "imagem_essencial": true,
+  "resumo": "Volume de petróleo derramado após furo no compartimento C do petroleiro."
+ },
+ {
+  "id": "2016-162",
+  "primario": "v1c10",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Mês de plantio de flor rara escolhido a partir de gráfico."
+ },
+ {
+  "id": "2016-163",
+  "primario": "v1c04",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Densidade (massa/volume) de três corpos com relações de massa e volume: ordenar densidades."
+ },
+ {
+  "id": "2016-164",
+  "primario": "v1c04",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Máxima distância percorrível até reabastecer, com consumo e combustível no tanque."
+ },
+ {
+  "id": "2016-165",
+  "primario": "v1c08",
+  "secundario": "v1c03",
+  "imagem_essencial": false,
+  "resumo": "Andares reformados por João e Pedro em passos diferentes, 20 em comum: total de andares."
+ },
+ {
+  "id": "2016-166",
+  "primario": "v2c09",
+  "secundario": "v2c07",
+  "imagem_essencial": true,
+  "resumo": "Menor tempo de construção de galeria em segmento ou semicircunferência."
+ },
+ {
+  "id": "2016-167",
+  "primario": "v3c05",
+  "secundario": "v2c10",
+  "imagem_essencial": false,
+  "resumo": "Arco de parábola y = 9 − x² e área 2/3 do retângulo."
+ },
+ {
+  "id": "2016-168",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Número de senhas com dois algarismos e duas letras, maiúsculas ou minúsculas."
+ },
+ {
+  "id": "2016-169",
+  "primario": "v2c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Percentual da massa salarial dos 10% maiores salários para atingir Gini 0,3."
+ },
+ {
+  "id": "2016-170",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Moda do número de pessoas no elevador na subida do térreo ao quinto andar."
+ },
+ {
+  "id": "2016-171",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Aumento percentual da população das capitais da Região Nordeste, a partir de tabela."
+ },
+ {
+  "id": "2016-172",
+  "primario": "v2c09",
+  "secundario": "v2c04",
+  "imagem_essencial": true,
+  "resumo": "Escolher a serra copo adequada usando √2 e √3 aproximados."
+ },
+ {
+  "id": "2016-173",
+  "primario": "v3c03",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de níveis de A e B em 24 h: contar cruzamentos acima do mínimo."
+ },
+ {
+  "id": "2016-174",
+  "primario": "v1c04",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Soro de 4000 mL, 40% nas 4 primeiras horas, 12 gotas por mL: gotas/min."
+ },
+ {
+  "id": "2016-175",
+  "primario": "v2c11",
+  "secundario": "v2c04",
+  "imagem_essencial": false,
+  "resumo": "Polígonos obtidos por seção plana de pirâmide regular de base quadrada."
+ },
+ {
+  "id": "2016-176",
+  "primario": "v3c03",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Intervalo de tempo em que o reservatório enche com vazão constante."
+ },
+ {
+  "id": "2016-177",
+  "primario": "v1c06",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Bairro com maior índice LIRAa, comparando percentuais de imóveis com focos."
+ },
+ {
+  "id": "2016-178",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Projeção ortogonal, no plano α, do caminho traçado no globo."
+ },
+ {
+  "id": "2016-179",
+  "primario": "v1c04",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Cinco filtros com massa de contaminantes por dia: descartar o de maior razão massa/dias."
+ },
+ {
+  "id": "2016-180",
+  "primario": "v3c08",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Magnitude de terremotos na escala Richter, M = log(E/E0): relação entre energias E1 e E2."
+ },
+ {
+  "id": "2017-136",
+  "primario": "v1c07",
+  "secundario": "v1c08",
+  "imagem_essencial": false,
+  "resumo": "Expressão do valor total pago ao quitar empréstimo na 6ª de oito parcelas."
+ },
+ {
+  "id": "2017-137",
+  "primario": "v3c08",
+  "secundario": "v1c07",
+  "imagem_essencial": true,
+  "resumo": "Menor número de parcelas cujo valor respeita o limite, usando logaritmos e fórmula dada."
+ },
+ {
+  "id": "2017-138",
+  "primario": "v2c08",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Percentual da intensidade máxima de luz a 30°, com I = k·sen x."
+ },
+ {
+  "id": "2017-139",
+  "primario": "v3c03",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Minutos em que o veículo ficou imóvel, a partir do gráfico velocidade-tempo."
+ },
+ {
+  "id": "2017-140",
+  "primario": "v2c10",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Área mínima da bandeja retangular para quatro taças circulares alinhadas."
+ },
+ {
+  "id": "2017-141",
+  "primario": "v1c04",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Redução no preço da polpa de morango para manter o custo do suco."
+ },
+ {
+  "id": "2017-142",
+  "primario": "v2c12",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Caixa com menor espaço livre que comporta objeto cúbico de 80 cm."
+ },
+ {
+  "id": "2017-143",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Modelos distintos de caminhão-cegonha pintando dez carrinhos com quatro cores."
+ },
+ {
+  "id": "2017-144",
+  "primario": "v2c12",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Quantidade de produto a adicionar à piscina de dimensões dadas, por proporção."
+ },
+ {
+  "id": "2017-145",
+  "primario": "v1c02",
+  "secundario": "v1c12",
+  "imagem_essencial": true,
+  "resumo": "Escolher a pesquisa cuja margem de erro é menor que 0,02, usando fórmula e tabela."
+ },
+ {
+  "id": "2017-146",
+  "primario": "v1c04",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Diferença entre as partidas de dois bondinhos que se cruzam a velocidades iguais."
+ },
+ {
+  "id": "2017-147",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Profundidade do rio às 16 h, com leitura de gráfico e redução de 10%."
+ },
+ {
+  "id": "2017-148",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Forma geométrica da superfície cujas arestas sustentam a cabana."
+ },
+ {
+  "id": "2017-149",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Quadrado do campo minado com menor probabilidade de conter mina."
+ },
+ {
+  "id": "2017-150",
+  "primario": "v2c03",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Ângulo e sentido de giro para recolocar a tela na posição original."
+ },
+ {
+  "id": "2017-151",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Nota mínima em disciplina I para obter avaliação desejada (média ponderada por créditos)."
+ },
+ {
+  "id": "2017-152",
+  "primario": "v3c03",
+  "secundario": "v2c12",
+  "imagem_essencial": true,
+  "resumo": "Gráfico da altura da água no reservatório 1 em função do volume total."
+ },
+ {
+  "id": "2017-153",
+  "primario": "v2c07",
+  "secundario": "v2c04",
+  "imagem_essencial": true,
+  "resumo": "Altura mínima do viaduto para passar caminhão com três tubos empilhados, com margem."
+ },
+ {
+  "id": "2017-154",
+  "primario": "v2c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Localizar a padaria no mapa seguindo instruções de direção e giros."
+ },
+ {
+  "id": "2017-155",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Alunos reprovados por média aritmética das cinco provas menor que 6."
+ },
+ {
+  "id": "2017-156",
+  "primario": "v2c07",
+  "secundario": "v2c08",
+  "imagem_essencial": true,
+  "resumo": "Raio de circunferência desenhada com compasso de hastes 10 cm e abertura de 120°."
+ },
+ {
+  "id": "2017-157",
+  "primario": "v1c02",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Escolher a pérola de diâmetro mais próximo de 4 mm entre valores decimais."
+ },
+ {
+  "id": "2017-158",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Volume do monumento original a partir da escala 1:400 e volume da miniatura."
+ },
+ {
+  "id": "2017-159",
+  "primario": "v1c04",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Escolher a combinação de engrenagens que dá o menor número de voltas da roda."
+ },
+ {
+  "id": "2017-160",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Maneiras de pintar a logomarca com quatro cores, regiões vizinhas diferentes."
+ },
+ {
+  "id": "2017-161",
+  "primario": "v3c05",
+  "secundario": "v2c10",
+  "imagem_essencial": false,
+  "resumo": "Dimensões X e Y que maximizam a área da base com 100 m de tela."
+ },
+ {
+  "id": "2017-162",
+  "primario": "v3c06",
+  "secundario": "v3c03",
+  "imagem_essencial": false,
+  "resumo": "Tipo de curva da equação de Hill (p + a)(v + b) = K."
+ },
+ {
+  "id": "2017-163",
+  "primario": "v1c01",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Menor custo para visitar os topos de dois mirantes e voltar ao solo."
+ },
+ {
+  "id": "2017-164",
+  "primario": "v1c05",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Razão entre distâncias percorridas às cegas por dois motoristas, com tempos proporcionais."
+ },
+ {
+  "id": "2017-165",
+  "primario": "v1c04",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Diferença entre razões das alturas das colunas B e A em gráficos cortado e original."
+ },
+ {
+  "id": "2017-166",
+  "primario": "v3c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Função P(t) = a + b·cos(ct) que descreve o gráfico periódico dado."
+ },
+ {
+  "id": "2017-167",
+  "primario": "v2c07",
+  "secundario": "v2c12",
+  "imagem_essencial": true,
+  "resumo": "Altura h da calota cortada do melão esférico para atender aos objetivos do chefe."
+ },
+ {
+  "id": "2017-168",
+  "primario": "v2c06",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Altura H por semelhança de triângulos entre as figuras 1 e 2."
+ },
+ {
+  "id": "2017-169",
+  "primario": "v3c03",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Site com maior taxa de aumento do tempo de acesso entre sexta e sábado."
+ },
+ {
+  "id": "2017-170",
+  "primario": "v1c01",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Ler a temperatura máxima registrada em termômetro de duas colunas com escalas opostas."
+ },
+ {
+  "id": "2017-171",
+  "primario": "v2c09",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Velocidades das torres de um pivô de irrigação para uma volta em 25 horas."
+ },
+ {
+  "id": "2017-172",
+  "primario": "v1c10",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Número de horas em que os dois reservatórios têm a mesma quantidade de água."
+ },
+ {
+  "id": "2017-173",
+  "primario": "v1c04",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Litros de gasolina de densidade 750 g/L usados no reabastecimento."
+ },
+ {
+  "id": "2017-174",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Mediana da taxa de desemprego de março de 2008 a abril de 2009."
+ },
+ {
+  "id": "2017-175",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": false,
+  "resumo": "Dez semáforos independentes, verde com certa probabilidade: chance de exatamente um verde."
+ },
+ {
+  "id": "2017-176",
+  "primario": "v3c01",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Área de painéis térmicos para dobrar a economia diária de energia na segunda fase."
+ },
+ {
+  "id": "2017-177",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Escolher o formato de senha cujo total de senhas atende à demanda de clientes."
+ },
+ {
+  "id": "2017-178",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Número de partidas em campeonato com 8 jogadores, conforme regra apresentada."
+ },
+ {
+  "id": "2017-179",
+  "primario": "v1c13",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Probabilidade de atraso dependendo de chuva (50% ou 25%) com chuva prevista de 30%."
+ },
+ {
+  "id": "2017-180",
+  "primario": "v1c04",
+  "secundario": "v3c04",
+  "imagem_essencial": false,
+  "resumo": "Piscina com chuva constante e ralo de vazão constante: instante em que esvazia completamente."
+ },
+ {
+  "id": "2018-136",
+  "primario": "v1c10",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Banco que transferiu a maior quantia via TED, lendo a matriz de valores."
+ },
+ {
+  "id": "2018-137",
+  "primario": "v3c08",
+  "secundario": "v1c07",
+  "imagem_essencial": true,
+  "resumo": "Primeira parcela antecipável com desconto superior a 25%, usando juros compostos e ln."
+ },
+ {
+  "id": "2018-138",
+  "primario": "v3c11",
+  "secundario": "v3c10",
+  "imagem_essencial": false,
+  "resumo": "Equação (reta ou circunferência) por A que fornece maior pontuação no jogo."
+ },
+ {
+  "id": "2018-139",
+  "primario": "v2c09",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Menor percurso, em malha de circunferências e semirretas, entre dois pontos."
+ },
+ {
+  "id": "2018-140",
+  "primario": "v2c12",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Caixa que armazena mais potes cilíndricos empilhados, dadas dimensões internas."
+ },
+ {
+  "id": "2018-141",
+  "primario": "v1c08",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Custo máximo dos postes espaçados de 20 m (progressão aritmética) a R$ 8 000 cada."
+ },
+ {
+  "id": "2018-142",
+  "primario": "v1c05",
+  "secundario": "v3c06",
+  "imagem_essencial": true,
+  "resumo": "Comparar forças gravitacionais em satélites a partir de pontos (m; r) no gráfico."
+ },
+ {
+  "id": "2018-143",
+  "primario": "v1c04",
+  "secundario": "v3c02",
+  "imagem_essencial": false,
+  "resumo": "Gramas de prata e cobre a fundir com prata 925 para obter prata 950."
+ },
+ {
+  "id": "2018-144",
+  "primario": "v1c01",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Máquina de raio-X com menor tempo de espera, dados tempos e filas."
+ },
+ {
+  "id": "2018-145",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Média de acidentes por funcionário em amostra com quadro de frequências."
+ },
+ {
+  "id": "2018-146",
+  "primario": "v1c04",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Ordenar distâncias percorridas por três equipes dadas velocidades médias e tempos."
+ },
+ {
+  "id": "2018-147",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Classificar o LDL após reduções sucessivas de 25% e 20% sobre 280 mg/dL."
+ },
+ {
+  "id": "2018-148",
+  "primario": "v3c01",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Expressão do número de pessoas alcançadas por gastos X em rádio e Y em panfletos."
+ },
+ {
+  "id": "2018-149",
+  "primario": "v1c06",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Ajustar o nível da garagem para rampa ter inclinação máxima de 20%."
+ },
+ {
+  "id": "2018-150",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Opção de urna com maior probabilidade de tirar duas bolas pretas sem reposição."
+ },
+ {
+  "id": "2018-151",
+  "primario": "v2c10",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Novo tamanho de fonte para reduzir a área pintada, mantendo a proporção das letras."
+ },
+ {
+  "id": "2018-152",
+  "primario": "v3c10",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Conjunto de pares ordenados que descreve a região triangular do logotipo."
+ },
+ {
+  "id": "2018-153",
+  "primario": "v2c09",
+  "secundario": "v2c07",
+  "imagem_essencial": true,
+  "resumo": "Área do passeio circular a partir da corda AB = 16 m tangente ao chafariz."
+ },
+ {
+  "id": "2018-154",
+  "primario": "v1c13",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Menor dimensão do tabuleiro para probabilidade da zona de combate ser inferior ao valor dado."
+ },
+ {
+  "id": "2018-155",
+  "primario": "v2c04",
+  "secundario": "v2c03",
+  "imagem_essencial": true,
+  "resumo": "Classificar o triângulo formado por dois remos iguais com ângulo de 170°."
+ },
+ {
+  "id": "2018-156",
+  "primario": "v1c11",
+  "secundario": "v1c13",
+  "imagem_essencial": false,
+  "resumo": "Probabilidade máxima de ônibus antes de 6h21, dadas moda e mediana dos horários."
+ },
+ {
+  "id": "2018-157",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Distância real em quilômetros, dada escala 1:58 000 000 e medida de 7,6 cm."
+ },
+ {
+  "id": "2018-158",
+  "primario": "v1c04",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Área mínima a comprar para aumentar a produção de milho em 15%, usando produtividade."
+ },
+ {
+  "id": "2018-159",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Formato da peça que completa o cubo 4×4×4 de cubinhos empilhados."
+ },
+ {
+  "id": "2018-160",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Média anual de carros vendidos pela marca A nos anos do gráfico."
+ },
+ {
+  "id": "2018-161",
+  "primario": "v3c11",
+  "secundario": "v3c10",
+  "imagem_essencial": false,
+  "resumo": "Maior distância entre bombeiros cuja distância ao foco A é o dobro da ao B."
+ },
+ {
+  "id": "2018-162",
+  "primario": "v1c08",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Número de partidas em torneio eliminatório com 128 tenistas (soma de potências de 2)."
+ },
+ {
+  "id": "2018-163",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2018-164",
+  "primario": "v1c01",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Último andar do edifício a partir de subidas e descidas sucessivas do elevador."
+ },
+ {
+  "id": "2018-165",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Expressão do número de maneiras de compor dois estandes com carros e caminhonetes."
+ },
+ {
+  "id": "2018-166",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Nota mínima na quarta avaliação para média ponderada de no mínimo 60 pontos."
+ },
+ {
+  "id": "2018-167",
+  "primario": "v1c13",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Perguntas fáceis a acrescentar para a probabilidade de sorteá-las ser 75%."
+ },
+ {
+  "id": "2018-168",
+  "primario": "v3c04",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Cobertura de vacinação em 2014 por variação linear entre 2013 e 2015."
+ },
+ {
+  "id": "2018-169",
+  "primario": "v2c02",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Valores possíveis de X na escala 1:X, com restrições de tamanho no desenho."
+ },
+ {
+  "id": "2018-170",
+  "primario": "v3c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Roda-gigante: escolher a função seno ou cosseno da altura da cadeira a partir do gráfico."
+ },
+ {
+  "id": "2018-171",
+  "primario": "v2c03",
+  "secundario": "v2c05",
+  "imagem_essencial": false,
+  "resumo": "Mudança de sentido para reposicionar a câmera no Noroeste após três rotações."
+ },
+ {
+  "id": "2018-172",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Poesia vencedora pelo Método de Borda a partir dos rankings dos juízes."
+ },
+ {
+  "id": "2018-173",
+  "primario": "v3c03",
+  "secundario": "v2c07",
+  "imagem_essencial": true,
+  "resumo": "Gráfico da distância do ponto médio da viga ao ponto O em função do tempo."
+ },
+ {
+  "id": "2018-174",
+  "primario": "v3c08",
+  "secundario": "v3c07",
+  "imagem_essencial": false,
+  "resumo": "Ano em que a densidade de transistores dobrando a cada dois anos atinge 100 bilhões."
+ },
+ {
+  "id": "2018-175",
+  "primario": "v3c02",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Número N de parcelas, dadas variações no prazo e no valor das parcelas."
+ },
+ {
+  "id": "2018-176",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Salto com maior probabilidade de dar nota que leve o atleta ao primeiro lugar."
+ },
+ {
+  "id": "2018-177",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Porcentagem de pessoas dos grupos de risco já vacinadas, a partir da tabela."
+ },
+ {
+  "id": "2018-178",
+  "primario": "v3c02",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Quantidade de alunos que compraram somente um bilhete de rifa."
+ },
+ {
+  "id": "2018-179",
+  "primario": "v2c07",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Lado do quadrado montado com triângulos retângulos isósceles, menor com catetos de 2 cm."
+ },
+ {
+  "id": "2018-180",
+  "primario": "v2c08",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Altura do cilindro decorado por faixa com diagonal de 30°, raio 6/π."
+ },
+ {
+  "id": "2019-136",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Identificar a sombra ortogonal projetada no solo por escultura de letras suspensas."
+ },
+ {
+  "id": "2019-137",
+  "primario": "v3c08",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Concentração de H+ para pH inferior a 8 usando pH = -log x."
+ },
+ {
+  "id": "2019-138",
+  "primario": "v1c06",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Maior percentual de recompensa dado custo de transporte de 1/5 e gasto total limitado."
+ },
+ {
+  "id": "2019-139",
+  "primario": "v3c03",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Escolher gráfico do valor da conta de água por faixas de consumo (função por partes)."
+ },
+ {
+  "id": "2019-140",
+  "primario": "v1c01",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Escrever 0,00011 mm em notação científica."
+ },
+ {
+  "id": "2019-141",
+  "primario": "v1c05",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Calcular forças de ataque e defesa, diretamente proporcionais a nível e experiência, e a diferença."
+ },
+ {
+  "id": "2019-142",
+  "primario": "v2c10",
+  "secundario": "v2c09",
+  "imagem_essencial": false,
+  "resumo": "Área da coroa circular ao ampliar o diâmetro de 6 m para 14 m."
+ },
+ {
+  "id": "2019-143",
+  "primario": "v3c03",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de kcal por tempo; atividade com maior consumo por minuto (maior inclinação)."
+ },
+ {
+  "id": "2019-144",
+  "primario": "v1c10",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Matriz de acertos por aluno e dia; dia com maior soma de acertos."
+ },
+ {
+  "id": "2019-145",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2019-146",
+  "primario": "v1c10",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de temperatura e umidade em 15 dias: verificar quais alertas foram emitidos corretamente."
+ },
+ {
+  "id": "2019-147",
+  "primario": "v2c10",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Área de dez placas formadas por retângulo e círculo, com pi = 3,14."
+ },
+ {
+  "id": "2019-148",
+  "primario": "v2c01",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Embalagens mínimas para encher 80% de banheira de 0,3 m³, com rendimento de 2,7 L."
+ },
+ {
+  "id": "2019-149",
+  "primario": "v1c08",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Extrapolar número de acidentes em 2018 com redução absoluta constante vista no quadro."
+ },
+ {
+  "id": "2019-150",
+  "primario": "v1c07",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Valor à vista de compra em duas parcelas com juros compostos de 1% ao mês."
+ },
+ {
+  "id": "2019-151",
+  "primario": "v1c05",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Dividir R$ 1,8 milhão entre sócios proporcionalmente ao total investido; calcular percentuais."
+ },
+ {
+  "id": "2019-152",
+  "primario": "v1c05",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Dividir R$ 31 000 de forma inversamente proporcional à idade de três máquinas."
+ },
+ {
+  "id": "2019-153",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Rendimento médio em 2020 após aumento de 7,2% e depois de 10%."
+ },
+ {
+  "id": "2019-154",
+  "primario": "v3c08",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Calcular magnitude Ms = 3,30 + log(A.f) de terremoto e classificá-lo pelo quadro."
+ },
+ {
+  "id": "2019-155",
+  "primario": "v1c03",
+  "secundario": "v1c08",
+  "imagem_essencial": false,
+  "resumo": "Identificar o 2.015º termo de sequência periódica por blocos repetidos."
+ },
+ {
+  "id": "2019-156",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Formar quatro duplas com oito amigos, sem duas com os dois canhotos."
+ },
+ {
+  "id": "2019-157",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Faces de um tetraedro truncado por cortes a um terço das arestas."
+ },
+ {
+  "id": "2019-158",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Volume do reservatório real a partir de maquete 1:200 e dias de abastecimento."
+ },
+ {
+  "id": "2019-159",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Número mínimo de placas para probabilidade de perceber ao menos uma superior a 99/100."
+ },
+ {
+  "id": "2019-160",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Nova média de altura após trocar jogador por outro 0,20 m mais baixo."
+ },
+ {
+  "id": "2019-161",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Média diária de garrafas fora da especificação a partir de quadro de frequências."
+ },
+ {
+  "id": "2019-162",
+  "primario": "v2c01",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Converter unidades (pé em polegadas) usando quadro de equivalências."
+ },
+ {
+  "id": "2019-163",
+  "primario": "v1c02",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Comparar valores de IDH com X entre 0 e 1 e funções de X."
+ },
+ {
+  "id": "2019-164",
+  "primario": "v2c12",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Volume de laje de 5 cm de espessura e menor número de caminhões de concreto."
+ },
+ {
+  "id": "2019-165",
+  "primario": "v1c04",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Expressão de q e m para concentração de álcool no sangue superior a 0,4 g/L."
+ },
+ {
+  "id": "2019-166",
+  "primario": "v2c07",
+  "secundario": "v2c04",
+  "imagem_essencial": true,
+  "resumo": "Medida do segmento AE após dobradura de folha 18 cm por 12 cm."
+ },
+ {
+  "id": "2019-167",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Deduzir grupos de alunos a partir de média, mediana e moda das alturas."
+ },
+ {
+  "id": "2019-168",
+  "primario": "v3c04",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Expressão do gasto semanal Y em função do número X de funcionários."
+ },
+ {
+  "id": "2019-169",
+  "primario": "v3c10",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Bar em que P teria match com Q, R e S, pelos raios no gráfico."
+ },
+ {
+  "id": "2019-170",
+  "primario": "v1c05",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Dosagem de 500 mg por kg, 20 kg, 5 dias; volume do frasco a comprar."
+ },
+ {
+  "id": "2019-171",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Expressão em combinações para montar trens com vagões de quatro cores."
+ },
+ {
+  "id": "2019-172",
+  "primario": "v1c10",
+  "secundario": "v1c08",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de vendas, média e redução constante; mês em que vendas ficam abaixo de julho."
+ },
+ {
+  "id": "2019-173",
+  "primario": "v1c13",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Probabilidade condicional (Bayes): declaração inconsistente dado que é fraudulenta."
+ },
+ {
+  "id": "2019-174",
+  "primario": "v1c10",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Comparar taxas de urbanização (urbana/total) de cinco municípios a partir de gráficos."
+ },
+ {
+  "id": "2019-175",
+  "primario": "v2c12",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Altura da água em reservatórios cilíndricos comunicantes após igualar os níveis."
+ },
+ {
+  "id": "2019-176",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Percentual de desconto nos custos fixos para reduzir orçamento total em 10%."
+ },
+ {
+  "id": "2019-177",
+  "primario": "v3c09",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Menor beta inteiro para a altura do pistão h(t)=4+4sen(βt/2-π/2) atingir 6 cm três vezes."
+ },
+ {
+  "id": "2019-178",
+  "primario": "v1c10",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Estimar vendas da próxima semana a partir do gráfico e calcular quantidade extra de pastéis."
+ },
+ {
+  "id": "2019-179",
+  "primario": "v3c03",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Relacionar gráfico de consumo acumulado de energia e planta com a sequência de cômodos."
+ },
+ {
+  "id": "2019-180",
+  "primario": "v1c02",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Escolher destino de menor custo diário em real usando câmbio e gasto estimado."
+ },
+ {
+  "id": "2020-136",
+  "primario": "v1c04",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Dimensões modulares da bandeira com tecido 180x150; lado do menor quadrado azul do círculo."
+ },
+ {
+  "id": "2020-137",
+  "primario": "v1c04",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Razão entre assentos vendidos e total de assentos, lida na imagem do ônibus."
+ },
+ {
+  "id": "2020-138",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Escala de maquete a partir do volume real em litros e dimensões da maquete."
+ },
+ {
+  "id": "2020-139",
+  "primario": "v1c10",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Dia de maior eficiência (peças por hora) a partir de dois gráficos."
+ },
+ {
+  "id": "2020-140",
+  "primario": "v2c10",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Número de caixas de porcelanato para piso retangular com menor sobra e menor preço."
+ },
+ {
+  "id": "2020-141",
+  "primario": "v1c09",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Quantidade de peças do algarismo 2 para numerar quartos de 100 a 399."
+ },
+ {
+  "id": "2020-142",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": true,
+  "resumo": "Probabilidade de João ser o sétimo a receber restituição, com empates por sorteio."
+ },
+ {
+  "id": "2020-143",
+  "primario": "v1c08",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Ano em que o tempo médio de estudo atinge 70% de 16 anos."
+ },
+ {
+  "id": "2020-144",
+  "primario": "v2c01",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Torneira gotejando enche balde: tempo em horas com notação científica."
+ },
+ {
+  "id": "2020-145",
+  "primario": "v2c02",
+  "secundario": "v2c12",
+  "imagem_essencial": true,
+  "resumo": "Altura da caixa de vidro para a maior miniatura de troféu em escala."
+ },
+ {
+  "id": "2020-146",
+  "primario": "v3c01",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Inequação modular das regras da escada com h = 16: intervalo da profundidade b."
+ },
+ {
+  "id": "2020-147",
+  "primario": "v1c04",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Converter consumo X litros por 100 km em km por litro."
+ },
+ {
+  "id": "2020-148",
+  "primario": "v1c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Jovens que trabalham, a partir de percentuais do gráfico e do total de 363 mil."
+ },
+ {
+  "id": "2020-149",
+  "primario": "v3c08",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Relação entre Y = log f e X = log r na lei de Zipf."
+ },
+ {
+  "id": "2020-150",
+  "primario": "v3c08",
+  "secundario": "v3c07",
+  "imagem_essencial": true,
+  "resumo": "Idade de fósseis pela fórmula com logaritmo e meia-vida do carbono 14."
+ },
+ {
+  "id": "2020-151",
+  "primario": "v2c11",
+  "secundario": "v2c04",
+  "imagem_essencial": false,
+  "resumo": "Figuras planas das faces de um tronco reto de pirâmide de base quadrada."
+ },
+ {
+  "id": "2020-152",
+  "primario": "v1c06",
+  "secundario": "v2c12",
+  "imagem_essencial": true,
+  "resumo": "Relação entre alturas y e x com aumentos sucessivos de 15% e 10% do volume."
+ },
+ {
+  "id": "2020-153",
+  "primario": "v1c04",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Comparar tempos de ônibus (2 km) e bicicleta (3 km) usando velocidades médias do quadro."
+ },
+ {
+  "id": "2020-154",
+  "primario": "v1c01",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Escrever 100 micrômetros em metros, em notação científica."
+ },
+ {
+  "id": "2020-155",
+  "primario": "v1c08",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Lado do centésimo quadrado numa sequência em que cada lado é metade do anterior."
+ },
+ {
+  "id": "2020-156",
+  "primario": "v1c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Perfume de maior arrecadação a partir de gráficos de preço unitário e percentual vendido."
+ },
+ {
+  "id": "2020-157",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2020-158",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Contar caminhos na malha de A até B, só direita/cima, sem passar por C."
+ },
+ {
+  "id": "2020-159",
+  "primario": "v1c02",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Depósito mais econômico para 15 sacos de cimento considerando preço e frete."
+ },
+ {
+  "id": "2020-160",
+  "primario": "v1c05",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Combustível mínimo a reabastecer no posto Estrela, com consumo de 5 L por 100 km."
+ },
+ {
+  "id": "2020-161",
+  "primario": "v2c12",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Raio da caixa-d'água B de mesmo volume e altura 25% da altura da A."
+ },
+ {
+  "id": "2020-162",
+  "primario": "v2c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Verificar qual casa atende afastamentos e ocupação de 40% a 50% do lote."
+ },
+ {
+  "id": "2020-163",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Anagramas de \"I AM POTTER\" com vogais e consoantes intercaladas."
+ },
+ {
+  "id": "2020-164",
+  "primario": "v3c03",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Horas em que o ruído esteve acima de 55 dB, lidas no gráfico."
+ },
+ {
+  "id": "2020-165",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Média mínima dos três novos jogadores para elevar a média da equipe a 1,99 m."
+ },
+ {
+  "id": "2020-166",
+  "primario": "v3c03",
+  "secundario": "v2c11",
+  "imagem_essencial": true,
+  "resumo": "Gráfico da altura do líquido em função do tempo ao encher garrafa de vazão constante."
+ },
+ {
+  "id": "2020-167",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Redução percentual da mesada para manter o gasto total após acréscimos de 20% e 10%."
+ },
+ {
+  "id": "2020-168",
+  "primario": "v2c12",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Bolinhas submersas elevam água em paralelepípedo: número mínimo de bolinhas."
+ },
+ {
+  "id": "2020-169",
+  "primario": "v1c09",
+  "secundario": "v3c02",
+  "imagem_essencial": false,
+  "resumo": "Número de pessoas de sangue tipo A, dados antígenos A, B e nenhum (conjuntos)."
+ },
+ {
+  "id": "2020-170",
+  "primario": "v1c05",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Fração do capital que Antônio compra de cada sócio para igualar as partes."
+ },
+ {
+  "id": "2020-171",
+  "primario": "v2c04",
+  "secundario": "v2c03",
+  "imagem_essencial": true,
+  "resumo": "Formatos de azulejo que preenchem espaços entre octógonos regulares num painel."
+ },
+ {
+  "id": "2020-172",
+  "primario": "v2c07",
+  "secundario": "v2c12",
+  "imagem_essencial": false,
+  "resumo": "Raio da base de cone de 20 mangueiras (100 m) a 3 m de altura."
+ },
+ {
+  "id": "2020-173",
+  "primario": "v2c08",
+  "secundario": "v2c06",
+  "imagem_essencial": true,
+  "resumo": "Altura das vigas do pergolado para que sol a 30° reduza a luz pela metade."
+ },
+ {
+  "id": "2020-174",
+  "primario": "v2c10",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Estimar participantes de manifestação por densidade em trechos de via, descontando carros de som."
+ },
+ {
+  "id": "2020-175",
+  "primario": "v3c04",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Gráfico do lucro (receita menos custo) em função da quantidade, a partir de dois gráficos."
+ },
+ {
+  "id": "2020-176",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Escolher figura com sólido de quatro cubos e suas projeções ortogonais."
+ },
+ {
+  "id": "2020-177",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Planta do telhado com três caídas e sentido do escoamento da água."
+ },
+ {
+  "id": "2020-178",
+  "primario": "v1c13",
+  "secundario": "v1c11",
+  "imagem_essencial": false,
+  "resumo": "Escolher pneu de maior CRC (valor esperado) com 70% de chance de chuva."
+ },
+ {
+  "id": "2020-179",
+  "primario": "v1c04",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Densidade superficial do papel A4: quilogramas de papel por eucalipto."
+ },
+ {
+  "id": "2020-180",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Empresa com maior média ponderada das notas, com pesos do quadro."
+ },
+ {
+  "id": "2021-136",
+  "primario": "v3c01",
+  "secundario": "v1c08",
+  "imagem_essencial": true,
+  "resumo": "Escrever potência ρ^7 na forma aρ+b usando ρ²=ρ+1 e padrão do quadro."
+ },
+ {
+  "id": "2021-137",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Projeção no solo do trajeto por arestas e diagonais de cubo apoiado por um vértice."
+ },
+ {
+  "id": "2021-138",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2021-139",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Lanche de maior média de vendas por franquia, a partir de quadro."
+ },
+ {
+  "id": "2021-140",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Média de faturamento mensal de supermercado e tipo de comissão correspondente."
+ },
+ {
+  "id": "2021-141",
+  "primario": "v3c01",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Expressão do preço da hospedagem com diárias, taxa de limpeza e taxa percentual de serviço."
+ },
+ {
+  "id": "2021-142",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Número mínimo de dardos para probabilidade de pontuar maior ou igual a 9/10."
+ },
+ {
+  "id": "2021-143",
+  "primario": "v1c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Reservatório de maior volume de água a partir de gráfico de nível de ocupação."
+ },
+ {
+  "id": "2021-144",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Média das idades de alunos a partir de gráfico de frequências."
+ },
+ {
+  "id": "2021-145",
+  "primario": "v1c11",
+  "secundario": "v3c02",
+  "imagem_essencial": true,
+  "resumo": "Percentuais x e y de faixas etárias a partir de médias de tempo de leitura."
+ },
+ {
+  "id": "2021-146",
+  "primario": "v1c12",
+  "secundario": "v1c11",
+  "imagem_essencial": false,
+  "resumo": "Média mínima da amostra para coeficiente de variação menor que o da ração atual."
+ },
+ {
+  "id": "2021-147",
+  "primario": "v1c10",
+  "secundario": "v1c03",
+  "imagem_essencial": true,
+  "resumo": "Histograma de frequências de letras e cifra de substituição cíclica: letras mais frequentes após codificar."
+ },
+ {
+  "id": "2021-148",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Mediana do número anual de terremotos de magnitude maior ou igual a 7."
+ },
+ {
+  "id": "2021-149",
+  "primario": "v1c10",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Maior lucro mensal (receita menos despesa) até maio, lido em gráfico."
+ },
+ {
+  "id": "2021-150",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Aumento percentual das vendas de antidepressivos de 2005 a 2009, lido no gráfico."
+ },
+ {
+  "id": "2021-151",
+  "primario": "v1c10",
+  "secundario": "v1c11",
+  "imagem_essencial": true,
+  "resumo": "Menor preço abaixo do qual há pelo menos 50% dos apartamentos, em histograma."
+ },
+ {
+  "id": "2021-152",
+  "primario": "v3c01",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Soma das duas maiores soluções de equação com operações definidas, com b = 1."
+ },
+ {
+  "id": "2021-153",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Escala da réplica a partir das medidas real (38,4 m) e da maquete (160 cm)."
+ },
+ {
+  "id": "2021-154",
+  "primario": "v1c04",
+  "secundario": "v1c11",
+  "imagem_essencial": true,
+  "resumo": "Médicos por mil habitantes em 2020, projetando variações médias das décadas anteriores."
+ },
+ {
+  "id": "2021-155",
+  "primario": "v1c06",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Redução percentual de frango para manter custo após alta de 50% da batata-doce."
+ },
+ {
+  "id": "2021-156",
+  "primario": "v3c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Expressão trigonométrica P(t) da mola a partir do gráfico de posição versus tempo."
+ },
+ {
+  "id": "2021-157",
+  "primario": "v1c10",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Região de maior fluxo de entrada de famílias, pela soma das colunas da matriz."
+ },
+ {
+  "id": "2021-158",
+  "primario": "v1c06",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Consumo de combustível da aeronave B em relação à A com variações de 10%."
+ },
+ {
+  "id": "2021-159",
+  "primario": "v1c05",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Tempo de troca de pneus quando um grupo tem uma pessoa a menos (grandezas inversas)."
+ },
+ {
+  "id": "2021-160",
+  "primario": "v1c02",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Suplemento de menor custo que supre a falta dos minerais A, B e C."
+ },
+ {
+  "id": "2021-161",
+  "primario": "v3c05",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Gráfico da arrecadação em função do desconto no ingresso (função quadrática)."
+ },
+ {
+  "id": "2021-162",
+  "primario": "v3c03",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Escolher gráfico que representa a relação entre preço e imposto devido do quadro."
+ },
+ {
+  "id": "2021-163",
+  "primario": "v2c01",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Unidade do módulo volumétrico, proporcional ao quadrado da velocidade e à densidade."
+ },
+ {
+  "id": "2021-164",
+  "primario": "v3c02",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Montar sistema com massas de itens de duas viagens; máximo de camisetas na mala."
+ },
+ {
+  "id": "2021-165",
+  "primario": "v1c04",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Rendimento de 16 km/L e economia de 0,1 L a cada 20 km: novo rendimento."
+ },
+ {
+  "id": "2021-166",
+  "primario": "v2c12",
+  "secundario": "v2c10",
+  "imagem_essencial": false,
+  "resumo": "Variação das quantidades de tinta para paredes e piso ao dobrar comprimento e largura."
+ },
+ {
+  "id": "2021-167",
+  "primario": "v2c12",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Altura mínima de reservatório cilíndrico para 100 habitantes durante sete dias."
+ },
+ {
+  "id": "2021-168",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Faces opostas à face cinza ao montar octaedro regular a partir da planificação."
+ },
+ {
+  "id": "2021-169",
+  "primario": "v2c07",
+  "secundario": "v2c04",
+  "imagem_essencial": true,
+  "resumo": "Perímetro do triângulo equilátero de altura h, com raiz de 3 aproximada por 1,7."
+ },
+ {
+  "id": "2021-170",
+  "primario": "v2c12",
+  "secundario": "v2c01",
+  "imagem_essencial": true,
+  "resumo": "Capacidade em mL de caneca em forma de tronco de cone."
+ },
+ {
+  "id": "2021-171",
+  "primario": "v2c10",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Cartão de maior área impressa com custo de até R$ 0,80 (R$ 0,01 por cm²)."
+ },
+ {
+  "id": "2021-172",
+  "primario": "v1c06",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Trechos com frequência cardíaca entre 65% e 85% da máxima, aos 61 anos."
+ },
+ {
+  "id": "2021-173",
+  "primario": "v1c02",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Menor número de lavagens (R$ 20 e R$ 35) para receita mínima de R$ 300."
+ },
+ {
+  "id": "2021-174",
+  "primario": "v1c06",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Combinar farmácias com descontos de 20% para minimizar o gasto com três medicamentos."
+ },
+ {
+  "id": "2021-175",
+  "primario": "v2c11",
+  "secundario": "v2c04",
+  "imagem_essencial": true,
+  "resumo": "Estrutura de hastes formando cubo dentro de cubo: contar figuras planas (trapézios e quadrados) formadas."
+ },
+ {
+  "id": "2021-176",
+  "primario": "v1c03",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Converter numeral romano MCDLXIX e calcular anos de fundação em 2050."
+ },
+ {
+  "id": "2021-177",
+  "primario": "v1c03",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Somar 9 + 12 na base binária seguindo o algoritmo do quadro."
+ },
+ {
+  "id": "2021-178",
+  "primario": "v2c01",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Receita de loteamento com área em hectares, terrenos de 300 m² e preço promocional."
+ },
+ {
+  "id": "2021-179",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Quantidade de fantasias escolhendo 2 de 6 tecidos e 5 de 15 pedras (combinações)."
+ },
+ {
+  "id": "2021-180",
+  "primario": "v1c04",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Economia por usuário do laboratório B em relação ao A em 4 anos."
+ },
+ {
+  "id": "2022-136",
+  "primario": "v3c03",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Contar vezes em que V = T^2 - 4 se anula, lendo gráfico de temperatura."
+ },
+ {
+  "id": "2022-137",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": true,
+  "resumo": "Probabilidade de o campeão ser quem venceu a primeira partida em série melhor de sete."
+ },
+ {
+  "id": "2022-138",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Mediana dos lucros mensais (receita menos despesa) lidos em gráfico."
+ },
+ {
+  "id": "2022-139",
+  "primario": "v2c02",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Altura e largura máximas do refrigerador pela planta 1:50 e folgas de 10 cm."
+ },
+ {
+  "id": "2022-140",
+  "primario": "v1c09",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Número mínimo de dias de torneio com 32 equipes e descanso mínimo de 3 dias."
+ },
+ {
+  "id": "2022-141",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2022-142",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Número mínimo de cores para superar 1 000 configurações de carro (princípio multiplicativo)."
+ },
+ {
+  "id": "2022-143",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Planificação de cubo com três quadrados pintados que compartilham um vértice."
+ },
+ {
+  "id": "2022-144",
+  "primario": "v1c03",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Dígito verificador de agência bancária via soma ponderada e resto da divisão por 11."
+ },
+ {
+  "id": "2022-145",
+  "primario": "v1c05",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Moedas a inserir em pacote especial mantendo a proporção gemas por moedas do básico."
+ },
+ {
+  "id": "2022-146",
+  "primario": "v3c02",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Sistema com voltas em dois circuitos; maior número de voltas totalizando 5 000 m."
+ },
+ {
+  "id": "2022-147",
+  "primario": "v1c05",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Aumento de compradores após investimento extra, com proporcionalidade e percentuais encadeados."
+ },
+ {
+  "id": "2022-148",
+  "primario": "v1c05",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Relação entre luminosidades de duas estrelas com L proporcional a R² e T⁴."
+ },
+ {
+  "id": "2022-149",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Mediana do número de crianças por família a partir de quadro de frequências."
+ },
+ {
+  "id": "2022-150",
+  "primario": "v3c05",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Altura máxima da bola em saque descrito por parábola e ginásios com saque invalidado."
+ },
+ {
+  "id": "2022-151",
+  "primario": "v1c05",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Duração da atividade para ingestão de 1,7 L ser 40% acima da perda de massa."
+ },
+ {
+  "id": "2022-152",
+  "primario": "v1c04",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Quantidade de fileiras em sala de cinema ampliada conforme normas de distância à tela."
+ },
+ {
+  "id": "2022-153",
+  "primario": "v2c12",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Raio da base de cone de chocolate com volume 19% menor e altura 10 cm."
+ },
+ {
+  "id": "2022-154",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Número de vagas em jan/2012 sabendo da queda de 75% até jan/2013."
+ },
+ {
+  "id": "2022-155",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Maneiras de escolher 2 apartamentos do mesmo andar com sol da manhã garantido."
+ },
+ {
+  "id": "2022-156",
+  "primario": "v2c05",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Figura obtida ao desdobrar papel dobrado e recortado por arco de circunferência."
+ },
+ {
+  "id": "2022-157",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2022-158",
+  "primario": "v3c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Mês de maior número de infectados em p(t) = -t² + 10t + 24."
+ },
+ {
+  "id": "2022-159",
+  "primario": "v1c03",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Sequência de treinos e repousos em ciclo repetido: treino da 24ª semana."
+ },
+ {
+  "id": "2022-160",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Projeção ortogonal do trajeto de robô que alterna conversões sobre as faces de um cubo."
+ },
+ {
+  "id": "2022-161",
+  "primario": "v2c02",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Área real de varanda em L a partir de medidas da planta na escala 1:50."
+ },
+ {
+  "id": "2022-162",
+  "primario": "v3c04",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Extrapolar linearmente vendas até o dia 30 e calcular quanto falta para a meta."
+ },
+ {
+  "id": "2022-163",
+  "primario": "v1c11",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Maior reajuste dos doutores para limitar o salário médio, com mestres tendo 25%."
+ },
+ {
+  "id": "2022-164",
+  "primario": "v1c05",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Quantidade de inseticida por acionamento: 360 mL em 60 dias, acionado a cada 48 minutos."
+ },
+ {
+  "id": "2022-165",
+  "primario": "v1c05",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Duração do ano do planeta Z em dias dele, dadas relações com a Terra."
+ },
+ {
+  "id": "2022-166",
+  "primario": "v3c03",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Gráfico distância versus tempo de cinco carros: ultrapassagens feitas pelo último colocado."
+ },
+ {
+  "id": "2022-167",
+  "primario": "v1c06",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Valor da loja (preço normal 10% maior, desconto de 2%) comparado ao calculado pela cliente."
+ },
+ {
+  "id": "2022-168",
+  "primario": "v2c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Descrever trajeto poligonal na malha de ruas por sequência de viradas E, F e D."
+ },
+ {
+  "id": "2022-169",
+  "primario": "v2c12",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Comparar volumes de cilindros com profundidade e base alteradas em relação ao modelo I."
+ },
+ {
+  "id": "2022-170",
+  "primario": "v1c10",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Ano de maior rentabilidade do aluguel (razão aluguel/valor do imóvel) lida em dois gráficos."
+ },
+ {
+  "id": "2022-171",
+  "primario": "v1c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Pontuação mínima no quinto jogo para igualar a média de 18 pontos, com quadro."
+ },
+ {
+  "id": "2022-172",
+  "primario": "v2c12",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Projeto de piscina de 90 000 L com menor área de revestimento."
+ },
+ {
+  "id": "2022-173",
+  "primario": "v1c04",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Total de candidatos a partir do número de candidatos por vaga em cada curso."
+ },
+ {
+  "id": "2022-174",
+  "primario": "v2c12",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Esferas de 1 cm de diâmetro obtidas fundindo cilindro de 4 cm de raio."
+ },
+ {
+  "id": "2022-175",
+  "primario": "v1c01",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Escrever com todos os algarismos o valor R$ 1,35 bilhão."
+ },
+ {
+  "id": "2022-176",
+  "primario": "v3c10",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Ponto de conexão das rodovias que minimiza o percurso entre duas cidades no plano cartesiano."
+ },
+ {
+  "id": "2022-177",
+  "primario": "v1c02",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Operário de menor custo total com valor por hora, transporte diário e tempo de serviço."
+ },
+ {
+  "id": "2022-178",
+  "primario": "v2c12",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Porções de massa para docinhos de 4 cm, se uma rende 50 de 2 cm."
+ },
+ {
+  "id": "2022-179",
+  "primario": "v1c08",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Esperança de vida em 2014 supondo cada ano igual à média dos vizinhos (progressão aritmética)."
+ },
+ {
+  "id": "2022-180",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Vista superior da projeção ortogonal de trajetórias em meridianos e equador do globo."
+ },
+ {
+  "id": "2023-136",
+  "primario": "v2c12",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Massa de escultura em tronco de cone com furo cilíndrico, madeira de 0,6 g/cm³."
+ },
+ {
+  "id": "2023-137",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Média ponderada dos salários de 100 funcionários em dois setores, dada no quadro."
+ },
+ {
+  "id": "2023-138",
+  "primario": "v1c13",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Bolinhas brancas a acrescentar na urna B para probabilidade de voucher até 1%."
+ },
+ {
+  "id": "2023-139",
+  "primario": "v1c08",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Mês em que vendas do produto I superam as do II, mantida a variação."
+ },
+ {
+  "id": "2023-140",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Comparar média, mediana e moda de viagens por motorista em gráfico de barras."
+ },
+ {
+  "id": "2023-141",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Cartões por ano (1, 2 e 3): probabilidade de o vencedor ser do terceiro ano."
+ },
+ {
+  "id": "2023-142",
+  "primario": "v2c12",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Reservatório cilíndrico para 75 moradores: economia diária por pessoa para durar 10 dias."
+ },
+ {
+  "id": "2023-143",
+  "primario": "v1c06",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Salas a construir para reduzir a lista de espera em 25% após aumento de 10%."
+ },
+ {
+  "id": "2023-144",
+  "primario": "v1c04",
+  "secundario": "v2c12",
+  "imagem_essencial": true,
+  "resumo": "Vazão que abasteceu cisterna cilíndrica de 3 m² de base, com alturas do quadro."
+ },
+ {
+  "id": "2023-145",
+  "primario": "v2c09",
+  "secundario": "v2c03",
+  "imagem_essencial": true,
+  "resumo": "Jogador com ângulo AQnB igual ao do jogador com a bola (ângulos inscritos)."
+ },
+ {
+  "id": "2023-146",
+  "primario": "v1c08",
+  "secundario": "v3c01",
+  "imagem_essencial": true,
+  "resumo": "Triângulo mágico com vértices em PA de razão 2: possíveis somas dos lados."
+ },
+ {
+  "id": "2023-147",
+  "primario": "v1c05",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Pacotes de pão para 1 g de carboidrato por minuto de caminhada em 30 dias."
+ },
+ {
+  "id": "2023-148",
+  "primario": "v2c08",
+  "secundario": "v2c07",
+  "imagem_essencial": true,
+  "resumo": "Menor cabo de aço entre três opções de altura h e ângulo com o chão."
+ },
+ {
+  "id": "2023-149",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": true,
+  "resumo": "Escala da tela de voo sabendo que a maior altitude real foi 5 km."
+ },
+ {
+  "id": "2023-150",
+  "primario": "v1c06",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Expressão da concentração C igual a 90% da quantidade de álcool q ingerida."
+ },
+ {
+  "id": "2023-151",
+  "primario": "v3c03",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Contar instantes em que criptomoeda A valia mais que B, em gráfico de duas curvas."
+ },
+ {
+  "id": "2023-152",
+  "primario": "v3c08",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Classificar ruído de nova máquina pelo nível N = 10 log(I/I0) em decibéis."
+ },
+ {
+  "id": "2023-153",
+  "primario": "v1c02",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Caixa de menor tempo de espera, dados tempo de atendimento e tamanho da fila."
+ },
+ {
+  "id": "2023-154",
+  "primario": "v2c09",
+  "secundario": "v2c04",
+  "imagem_essencial": true,
+  "resumo": "Forma da parte da lua escondida por telhado triangular equilátero com vértice no centro."
+ },
+ {
+  "id": "2023-155",
+  "primario": "v2c10",
+  "secundario": "v2c02",
+  "imagem_essencial": true,
+  "resumo": "Área da calçada de 5 m ao redor de piscina quadrada de 400 m²."
+ },
+ {
+  "id": "2023-156",
+  "primario": "v3c03",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Minutos sem sinal de internet, lidos em gráfico de intensidade do sinal por tempo."
+ },
+ {
+  "id": "2023-157",
+  "primario": "v1c10",
+  "secundario": "v1c11",
+  "imagem_essencial": true,
+  "resumo": "Percentual de estudantes com massa abaixo e altura acima da média, em gráfico de dispersão."
+ },
+ {
+  "id": "2023-158",
+  "primario": "v3c01",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Mínimo de ajudantes para lucro diário de R$ 800, com custos e repasse de 4%."
+ },
+ {
+  "id": "2023-159",
+  "primario": "v3c07",
+  "secundario": "v1c08",
+  "imagem_essencial": false,
+  "resumo": "Dias até larvas, que multiplicam por 10 a cada 3 dias, chegarem a um milhão."
+ },
+ {
+  "id": "2023-160",
+  "primario": "v1c09",
+  "secundario": "v1c13",
+  "imagem_essencial": false,
+  "resumo": "Comparar probabilidades de acertar senhas de três tipos de estrutura (contagem)."
+ },
+ {
+  "id": "2023-161",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2023-162",
+  "primario": "v3c04",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Expressão do preço do concreto bombeado: taxa de R$ 500 mais R$ 250 por m³."
+ },
+ {
+  "id": "2023-163",
+  "primario": "v3c03",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Escolher vista superior da trajetória a partir do gráfico de distância à base por tempo."
+ },
+ {
+  "id": "2023-164",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2023-165",
+  "primario": "v2c10",
+  "secundario": "v2c12",
+  "imagem_essencial": true,
+  "resumo": "Área de cerâmica para revestir pisos, espelhos e paredes laterais de escada de três degraus."
+ },
+ {
+  "id": "2023-166",
+  "primario": "v1c10",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Dia da semana de maior gasto calórico combinando horas diárias por atividade e cal/h."
+ },
+ {
+  "id": "2023-167",
+  "primario": "v1c05",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Desconto necessário na compra de papel proporcional ao número de alunos, com R$ 220."
+ },
+ {
+  "id": "2023-168",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": true,
+  "resumo": "Probabilidades de sortear inscrições 50 e 02 em sorteio em duas etapas com urnas."
+ },
+ {
+  "id": "2023-169",
+  "primario": "v3c07",
+  "secundario": "v1c08",
+  "imagem_essencial": true,
+  "resumo": "Intensidade luminosa a 6 m de profundidade com decréscimo percentual constante por metro."
+ },
+ {
+  "id": "2023-170",
+  "primario": "v3c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Menor montante diário de V(x)=x²/4-10x+105 (vértice da parábola) e classificação do desempenho."
+ },
+ {
+  "id": "2023-171",
+  "primario": "v1c05",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Converter 20 ciclos de 52 anos Haab em anos Tzolkim (365 e 260 dias)."
+ },
+ {
+  "id": "2023-172",
+  "primario": "v2c07",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Área de pizza maior que a soma das outras duas conforme o ângulo a."
+ },
+ {
+  "id": "2023-173",
+  "primario": "v2c01",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Unidade de medida da economia de corrida: mL por minuto por kg."
+ },
+ {
+  "id": "2023-174",
+  "primario": "v2c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Mapa de poltronas do cinema: localizar a poltrona seguindo orientações."
+ },
+ {
+  "id": "2023-175",
+  "primario": "v3c02",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Preço de cartela de tíquetes vermelhos a partir de duas relações entre preços de tíquetes."
+ },
+ {
+  "id": "2023-176",
+  "primario": "v1c08",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Oitavo número figurado pentagonal a partir do padrão das figuras."
+ },
+ {
+  "id": "2023-177",
+  "primario": "v3c09",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Gráfico da altura de cadeira de roda-gigante em função do tempo (movimento periódico)."
+ },
+ {
+  "id": "2023-178",
+  "primario": "v3c03",
+  "secundario": "v3c04",
+  "imagem_essencial": true,
+  "resumo": "Gráfico do volume acumulado de água de torneira com ciclos de liberação e pausa."
+ },
+ {
+  "id": "2023-179",
+  "primario": "v1c03",
+  "secundario": "v1c08",
+  "imagem_essencial": true,
+  "resumo": "Representar numerais cinco e sete em povo que conta em base dois."
+ },
+ {
+  "id": "2023-180",
+  "primario": "v1c11",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Dois meses consecutivos de maior média de precipitação para decidir o plantio."
+ },
+ {
+  "id": "2024-136",
+  "primario": "v2c01",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Hemácias de 0,007 mm, limite visual de 100 micrômetros: menor lente objetiva suficiente do microscópio."
+ },
+ {
+  "id": "2024-137",
+  "primario": "v1c11",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Média de 4 notas dividida erradamente por 5, ficando 1 unidade menor: média correta."
+ },
+ {
+  "id": "2024-138",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Senhas de 2 algarismos distintos e 3 letras diferentes em teclado alfanumérico: contar possibilidades."
+ },
+ {
+  "id": "2024-139",
+  "primario": "v1c02",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Preços de componentes em duas lojas: menor custo de enfeite com 2X e 1Y."
+ },
+ {
+  "id": "2024-140",
+  "primario": "v1c06",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "João acertou 75% de 200 questões e Felipe 30% a menos: conceitos por faixa percentual."
+ },
+ {
+  "id": "2024-141",
+  "primario": "v3c03",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Dois gráficos lineares por partes ligam grandezas I, II e III: máximo da III."
+ },
+ {
+  "id": "2024-142",
+  "primario": "v1c08",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Mensagem dobra a cada etapa de copiar e colar: total de figuras na 20ª etapa."
+ },
+ {
+  "id": "2024-143",
+  "primario": "v1c06",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Evento com meias-entradas acima do previsto e lucro de 60% em bebidas: gasto médio."
+ },
+ {
+  "id": "2024-144",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Trapézio retângulo girado em torno de um dos lados: identificar o sólido de revolução obtido."
+ },
+ {
+  "id": "2024-145",
+  "primario": "v2c10",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Campo retangular reduzido de 110x75 m para 105x68 m: diminuição da área em m²."
+ },
+ {
+  "id": "2024-146",
+  "primario": "v3c05",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Galinheiro com telas de preços diferentes e gasto máximo de R$ 6 000: maior lado."
+ },
+ {
+  "id": "2024-147",
+  "primario": "v1c01",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Identificar no visor da máquina caça-números os valores racionais que representam a mesma quantidade."
+ },
+ {
+  "id": "2024-148",
+  "primario": "v3c07",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Temperatura da caneca T(t) = a + 80·b^t pelo gráfico: constantes a e b."
+ },
+ {
+  "id": "2024-149",
+  "primario": "v2c12",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Embalagem cúbica com 80% da capacidade de cilindro de raio 3 e altura 15: aresta."
+ },
+ {
+  "id": "2024-150",
+  "primario": "v3c01",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Colunas cilíndricas com vão máximo de 15 cm em sala de 3 m: menor custo."
+ },
+ {
+  "id": "2024-151",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Área de 1 672 m² em maquete na escala 1:200: área na maquete em cm²."
+ },
+ {
+  "id": "2024-152",
+  "primario": "v1c10",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de exportações e importações: ordenar os saldos da balança comercial em três meses."
+ },
+ {
+  "id": "2024-153",
+  "primario": "v1c06",
+  "secundario": "v1c01",
+  "imagem_essencial": false,
+  "resumo": "Crescimento populacional de 135,25%: representação decimal da taxa percentual."
+ },
+ {
+  "id": "2024-154",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Quadro com tempo de leitura de contratos de seis serviços: tempo médio aproximado."
+ },
+ {
+  "id": "2024-155",
+  "primario": "v2c09",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Setor circular de cobertura de sensor: sensor mais barato que cubra pelo menos 70 m²."
+ },
+ {
+  "id": "2024-156",
+  "primario": "v3c01",
+  "secundario": "v3c04",
+  "imagem_essencial": false,
+  "resumo": "Aplicativo cobra tarifa fixa, valor por minuto e por quilômetro: expressão do valor V."
+ },
+ {
+  "id": "2024-157",
+  "primario": "v3c01",
+  "secundario": "v3c04",
+  "imagem_essencial": false,
+  "resumo": "Taxa de entrega sobe de R$ 10 para R$ 15, total de 5 porções igual."
+ },
+ {
+  "id": "2024-158",
+  "primario": "v1c02",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Defensivos A e B com promoção de máscara: menor gasto para tratar 20 ha."
+ },
+ {
+  "id": "2024-159",
+  "primario": "v2c01",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Fluxo diretamente proporcional à vazão e inversamente proporcional à área: unidade de medida do fluxo."
+ },
+ {
+  "id": "2024-160",
+  "primario": "v1c04",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Vazão da segunda piscina para enchê-la em tempo 20% maior que a primeira piscina."
+ },
+ {
+  "id": "2024-161",
+  "primario": "v3c03",
+  "secundario": "v2c12",
+  "imagem_essencial": true,
+  "resumo": "Tanque com anteparos e vazão constante: gráfico da maior altura de coluna de água."
+ },
+ {
+  "id": "2024-162",
+  "primario": "v1c08",
+  "secundario": "v1c07",
+  "imagem_essencial": false,
+  "resumo": "Parcelas em PG com as do mês de aniversário grátis: melhor mês para comprar."
+ },
+ {
+  "id": "2024-163",
+  "primario": "v2c09",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Comprimento de correia tensionada sobre duas polias circulares, com trechos retos tangentes."
+ },
+ {
+  "id": "2024-164",
+  "primario": "v2c09",
+  "secundario": "v2c07",
+  "imagem_essencial": true,
+  "resumo": "Postos em triângulo equilátero de lado 10 km e hospital equidistante: distância hospital-posto."
+ },
+ {
+  "id": "2024-165",
+  "primario": "v1c13",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Probabilidade de ônibus encontrar dois semáforos vermelhos (independentes): reduzir tempo de vermelho para nova probabilidade."
+ },
+ {
+  "id": "2024-166",
+  "primario": "v1c04",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Região Q com 3/4 da área e metade dos habitantes de R: relação entre densidades."
+ },
+ {
+  "id": "2024-167",
+  "primario": "v1c01",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Diferença entre telas de 4 5/6 e 3 1/2 polegadas, com uma casa decimal."
+ },
+ {
+  "id": "2024-168",
+  "primario": "v3c09",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Amortecedor com oscilação de amplitude constante, menor no asfalto que no chão: escolher o gráfico."
+ },
+ {
+  "id": "2024-169",
+  "primario": "v1c13",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Probabilidade de descobrir o padrão da Cifra de César só na terceira tentativa, sem repetir."
+ },
+ {
+  "id": "2024-170",
+  "primario": "v3c08",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Escala Richter: M1 = 6,9 e E1 é um décimo de E2; achar M2."
+ },
+ {
+  "id": "2024-171",
+  "primario": "v2c10",
+  "secundario": "v2c04",
+  "imagem_essencial": false,
+  "resumo": "Cerca de mesmo comprimento formando triângulo equilátero, quadrado ou hexágono regular: forma de maior área."
+ },
+ {
+  "id": "2024-172",
+  "primario": "v1c04",
+  "secundario": "v1c01",
+  "imagem_essencial": true,
+  "resumo": "Ônibus a 250 e 150 m/min em percurso de 9 000 m: câmera do encontro."
+ },
+ {
+  "id": "2024-173",
+  "primario": "v1c10",
+  "secundario": "v1c13",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de funcionários por setor e faixa etária: faixa com maior probabilidade no sorteio."
+ },
+ {
+  "id": "2024-174",
+  "primario": "v2c11",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Trajetória no espaço entre planos paralelos: escolher sua projeção ortogonal no plano da base."
+ },
+ {
+  "id": "2024-175",
+  "primario": "v2c12",
+  "secundario": "v2c09",
+  "imagem_essencial": false,
+  "resumo": "Folha 10 cm por 20 cm enrolada em cilindro nos dois sentidos: maior volume."
+ },
+ {
+  "id": "2024-176",
+  "primario": "v3c04",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de receitas anuais com reta de tendência: estimar a receita de 2026."
+ },
+ {
+  "id": "2024-177",
+  "primario": "v3c04",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Custo total linear dado em tabela para três quantidades: custo de 80 mochilas."
+ },
+ {
+  "id": "2024-178",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Quadro de médias mensais de umidade do ar em seis meses: calcular a mediana."
+ },
+ {
+  "id": "2024-179",
+  "primario": "v1c05",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "40% de R$ 71 250 dividido proporcionalmente às horas de três engenheiros: maior diferença."
+ },
+ {
+  "id": "2024-180",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Equipe de 5 entre 7 cardiologistas e 6 neurologistas, com pelo menos 3 cardiologistas."
+ },
+ {
+  "id": "2025-136",
+  "primario": "v1c05",
+  "secundario": "v1c02",
+  "imagem_essencial": false,
+  "resumo": "Carro a GNV roda 30 km/dia, 13 km por m³: menor cilindro semanal."
+ },
+ {
+  "id": "2025-137",
+  "primario": "v1c13",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Infográfico sobre redes sociais de internautas: probabilidade de sortear um homem que acessa certa rede."
+ },
+ {
+  "id": "2025-138",
+  "primario": "v2c05",
+  "secundario": "v2c11",
+  "imagem_essencial": true,
+  "resumo": "Cubo deslocado em direções dos eixos coordenados: escolher figura com suas projeções ortogonais nos planos."
+ },
+ {
+  "id": "2025-139",
+  "primario": "v2c09",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Lagoa circular de raio 1 km, policiais cobrindo 200 m cada lado: número mínimo."
+ },
+ {
+  "id": "2025-140",
+  "primario": "v1c06",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "10 L de solução com 99,95% de S1: quanto retirar para chegar a 99,90%."
+ },
+ {
+  "id": "2025-141",
+  "primario": "v1c05",
+  "secundario": "v3c04",
+  "imagem_essencial": false,
+  "resumo": "Caminhão descarta volume fixo de combustível: quanto enviar para entregar o dobro do pedido."
+ },
+ {
+  "id": "2025-142",
+  "primario": "v1c11",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Mediana das velocidades de referência de internet em dez cidades, dadas em quadro."
+ },
+ {
+  "id": "2025-143",
+  "primario": "v1c02",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Rótulos com sódio por porção e porções por pacote: escolher o menor total."
+ },
+ {
+  "id": "2025-144",
+  "primario": "v2c11",
+  "secundario": "v2c04",
+  "imagem_essencial": false,
+  "resumo": "Protótipo formado por prisma hexagonal e tronco de pirâmide: contar cores para faces não congruentes."
+ },
+ {
+  "id": "2025-145",
+  "primario": "v3c03",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Gráfico da frequência respiratória no tempo durante a meditação: identificar o comportamento da função."
+ },
+ {
+  "id": "2025-146",
+  "primario": "v1c01",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Diferença entre 10,00 s e o recorde de 9,58 s nos 100 metros rasos."
+ },
+ {
+  "id": "2025-147",
+  "primario": "v1c10",
+  "secundario": "v1c06",
+  "imagem_essencial": true,
+  "resumo": "Pizza (2023) e barras (2024) de matrículas: estimar matrículas de francês em 2025."
+ },
+ {
+  "id": "2025-148",
+  "primario": "v2c02",
+  "secundario": "v2c01",
+  "imagem_essencial": true,
+  "resumo": "Telas de controle remoto com escala ajustável: escolher o deslocamento de maior comprimento real."
+ },
+ {
+  "id": "2025-149",
+  "primario": "v2c11",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Poliedro de Johnson dado por figuras e planificação: contar seus vértices."
+ },
+ {
+  "id": "2025-150",
+  "primario": "v1c05",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "3 funcionários por 6 h produzem 720 tijolos: produção com 5 funcionários por 9 h."
+ },
+ {
+  "id": "2025-151",
+  "primario": "v1c01",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Montar código de 7 dígitos de visitante (andar, setor, funcionário, período) conforme regra dada."
+ },
+ {
+  "id": "2025-152",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": false,
+  "resumo": "Quatro celulares devolvidos aleatoriamente: probabilidade de todos receberem o seu próprio."
+ },
+ {
+  "id": "2025-153",
+  "primario": "v3c10",
+  "secundario": "v2c04",
+  "imagem_essencial": true,
+  "resumo": "Trajetória equidistante de dois vilões no plano cartesiano: equação da reta mediatriz."
+ },
+ {
+  "id": "2025-154",
+  "primario": "v1c10",
+  "secundario": "v1c02",
+  "imagem_essencial": true,
+  "resumo": "Gráfico de estoque e demanda de livros por gênero: gênero que necessita de encomenda."
+ },
+ {
+  "id": "2025-155",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Diretoria com três cargos entre 10 casais, no máximo uma pessoa por casal: contar diretorias."
+ },
+ {
+  "id": "2025-156",
+  "primario": "v2c02",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Desenho de esboço com medida ampliada para 30 m na areia: escala do desenho."
+ },
+ {
+  "id": "2025-157",
+  "primario": "v1c04",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Cortisol em dia de trabalho é 1,59 vez o de folga: relação T e F."
+ },
+ {
+  "id": "2025-158",
+  "primario": "v1c06",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Estacionamento com 120 vagas, seguro 20% maior e lucro de R$ 10 000: mensalidade reajustada."
+ },
+ {
+  "id": "2025-159",
+  "primario": "v2c01",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Pote de 20 000 cm³ servido em taças de 250 mL: número de taças."
+ },
+ {
+  "id": "2025-160",
+  "primario": "v3c09",
+  "secundario": "v3c03",
+  "imagem_essencial": true,
+  "resumo": "Nível de água modelado por D = k + tg[p(T+m)] com assíntotas: achar a expressão."
+ },
+ {
+  "id": "2025-161",
+  "primario": "v2c05",
+  "secundario": null,
+  "imagem_essencial": true,
+  "resumo": "Mapa de quarteirões e instruções de direção (oeste, norte, esquerda): localizar a casa de João."
+ },
+ {
+  "id": "2025-162",
+  "primario": "v3c01",
+  "secundario": "v1c06",
+  "imagem_essencial": false,
+  "resumo": "Reciclar custa 5% do plástico de petróleo: toneladas recicladas para reduzir o custo em 50%."
+ },
+ {
+  "id": "2025-163",
+  "primario": "v1c10",
+  "secundario": "v1c05",
+  "imagem_essencial": true,
+  "resumo": "Barras por série e pizza de modalidades com basquete conhecido: total de estudantes."
+ },
+ {
+  "id": "2025-164",
+  "primario": "v2c07",
+  "secundario": "v2c05",
+  "imagem_essencial": true,
+  "resumo": "Rota de barco com direção errada, bússola e cos 50°: direção e tempo de correção."
+ },
+ {
+  "id": "2025-165",
+  "primario": "v1c12",
+  "secundario": "v1c11",
+  "imagem_essencial": true,
+  "resumo": "Quadro de idades por grupo (média, DP): qual certamente concentra idades entre 20 e 30."
+ },
+ {
+  "id": "2025-166",
+  "primario": "v1c11",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Pace médio em trechos de 1 km: tempo do 5º trecho para repetir o melhor."
+ },
+ {
+  "id": "2025-167",
+  "primario": "v3c03",
+  "secundario": "v1c04",
+  "imagem_essencial": true,
+  "resumo": "Gráficos de rendimento por velocidade (GNV e gasolina): diferença de gasto em 240 km."
+ },
+ {
+  "id": "2025-168",
+  "primario": "v1c02",
+  "secundario": "v1c10",
+  "imagem_essencial": true,
+  "resumo": "Três autoescolas com valores de aulas e aluguel em quadro: escolher a de menor custo."
+ },
+ {
+  "id": "2025-169",
+  "primario": "v1c10",
+  "secundario": "v2c01",
+  "imagem_essencial": true,
+  "resumo": "Quadro de área e produtividade de soja em cinco safras: gráfico da produção em toneladas."
+ },
+ {
+  "id": "2025-170",
+  "primario": "v2c12",
+  "secundario": "v2c01",
+  "imagem_essencial": false,
+  "resumo": "Caixa de descarga 2,5x1,5x2 dm e garrafas de 300 mL: máximo mantendo 5 L."
+ },
+ {
+  "id": "2025-171",
+  "primario": "v2c09",
+  "secundario": "v2c11",
+  "imagem_essencial": false,
+  "resumo": "Tortas de raio até 16 cm em caixas de base quadrada com folga: aresta mínima."
+ },
+ {
+  "id": "2025-172",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2025-173",
+  "primario": "v2c10",
+  "secundario": "v2c09",
+  "imagem_essencial": true,
+  "resumo": "Dois projetos de túnel com seções semicirculares: comparar áreas da seção e escolher o menor."
+ },
+ {
+  "id": "2025-174",
+  "primario": null,
+  "secundario": null,
+  "imagem_essencial": null,
+  "resumo": "anulada"
+ },
+ {
+  "id": "2025-175",
+  "primario": "v1c09",
+  "secundario": null,
+  "imagem_essencial": false,
+  "resumo": "Distribuir oito presentes entre três filhos (3, 3 e 2), com restrição sobre dois presentes."
+ },
+ {
+  "id": "2025-176",
+  "primario": "v1c04",
+  "secundario": "v1c05",
+  "imagem_essencial": false,
+  "resumo": "Jogador percorreu 4,5 km no segundo tempo e manteve a velocidade na prorrogação: distância total."
+ },
+ {
+  "id": "2025-177",
+  "primario": "v2c12",
+  "secundario": "v2c10",
+  "imagem_essencial": true,
+  "resumo": "Medalha cilíndrica de 6 cm de diâmetro, 3 mm, prisma vazado: volume de ouro."
+ },
+ {
+  "id": "2025-178",
+  "primario": "v1c13",
+  "secundario": "v1c09",
+  "imagem_essencial": false,
+  "resumo": "Dois dados de Artur contra um de João, empate favorece João: comparar probabilidades de vitória."
+ },
+ {
+  "id": "2025-179",
+  "primario": "v2c01",
+  "secundario": "v1c04",
+  "imagem_essencial": false,
+  "resumo": "Luminância como razão entre intensidade luminosa (cd) e quadrado da distância (m): unidade de medida."
+ },
+ {
+  "id": "2025-180",
+  "primario": "v1c08",
+  "secundario": "v3c01",
+  "imagem_essencial": false,
+  "resumo": "Quatro jogadores trocam moedas a cada rodada: moedas do jogador na posição 1."
+ }
+]

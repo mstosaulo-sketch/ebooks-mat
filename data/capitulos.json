@@ -1,0 +1,44 @@
+{
+ "v1": {"titulo": "Números, Contagem, Estatística e Probabilidade", "capitulos": [
+  ["v1c01", "Conjuntos numéricos e operações", "naturais, inteiros, racionais, reais; frações, decimais, potências, raízes, notação científica, ordem de grandeza, arredondamento, cálculo com números no cotidiano (contas, cardápios, troco, tempo)"],
+  ["v1c02", "Desigualdades, comparações e estimativas", "comparar e ordenar números/frações/decimais, intervalos reais, inequações simples no contexto numérico, escolha da opção mais vantajosa por comparação, estimativas e razoabilidade de resultados"],
+  ["v1c03", "Divisibilidade, fatoração, MDC e MMC", "múltiplos e divisores, critérios de divisibilidade, números primos, fatoração, MDC, MMC, resto da divisão, ciclos e periodicidade, sistemas de numeração"],
+  ["v1c04", "Razões e proporções", "razão, proporção, densidade, velocidade média, consumo, taxas, razões de mistura, propriedades das proporções"],
+  ["v1c05", "Grandezas proporcionais e regra de três", "relação de dependência entre grandezas, diretamente e inversamente proporcionais, regra de três simples e composta, divisão proporcional"],
+  ["v1c06", "Porcentagem", "porcentagem, aumentos e descontos, variação percentual, aumentos/descontos sucessivos, pontos percentuais"],
+  ["v1c07", "Juros e matemática financeira", "juros simples, juros compostos, montante, financiamentos, parcelamentos, inflação, comparação de planos de pagamento"],
+  ["v1c08", "Sequências e progressões", "padrões numéricos e figurais, sequências, progressão aritmética, progressão geométrica, soma de termos"],
+  ["v1c09", "Princípios de contagem", "princípio fundamental da contagem, permutações, arranjos, combinações, anagramas, permutação com repetição, senhas e placas"],
+  ["v1c10", "Representação e análise de dados", "leitura e interpretação de tabelas, gráficos de barras, linhas, setores, pictogramas, histogramas, infográficos, inferências a partir de dados"],
+  ["v1c11", "Medidas de tendência central", "média aritmética, média ponderada, mediana, moda"],
+  ["v1c12", "Medidas de dispersão", "amplitude, desvio, desvio médio, variância, desvio padrão, regularidade/homogeneidade"],
+  ["v1c13", "Probabilidade", "probabilidade clássica, evento complementar, união, probabilidade condicional, eventos independentes, experimentos sucessivos"]
+ ]},
+ "v2": {"titulo": "Geometria e Medidas", "capitulos": [
+  ["v2c01", "Grandezas e unidades de medida", "unidades de comprimento, área, volume, capacidade, massa, tempo; conversões; prefixos; avaliação de medições"],
+  ["v2c02", "Escalas", "escala em mapas, plantas e maquetes; razão entre áreas e volumes em escala"],
+  ["v2c03", "Ângulos e posições de retas", "ângulos, retas paralelas e perpendiculares, transversais, ângulos em polígonos, ângulos no relógio, giros e rotações em graus"],
+  ["v2c04", "Figuras planas: polígonos e quadriláteros", "características de figuras planas, triângulos, quadriláteros, polígonos regulares, ladrilhamentos, classificação"],
+  ["v2c05", "Simetrias, transformações e localização", "simetria axial e central, reflexão, rotação, translação, homotetia, localização e movimentação no plano e no espaço, trajetórias, coordenadas em mapas e malhas"],
+  ["v2c06", "Congruência, semelhança e Teorema de Tales", "congruência e semelhança de triângulos, razão de semelhança, Teorema de Tales, sombras e alturas"],
+  ["v2c07", "Relações métricas nos triângulos", "Teorema de Pitágoras, relações métricas no triângulo retângulo, desigualdade triangular, lei dos senos e cossenos"],
+  ["v2c08", "Trigonometria do ângulo agudo", "seno, cosseno e tangente no triângulo retângulo, ângulos notáveis, rampas, inclinações, alturas inacessíveis"],
+  ["v2c09", "Circunferência e círculo", "elementos da circunferência, comprimento, arcos, setor circular, polígonos inscritos e circunscritos, rodas e engrenagens"],
+  ["v2c10", "Perímetros e áreas", "perímetro e área de figuras planas, figuras compostas, razão entre áreas, pisos e revestimentos, terrenos"],
+  ["v2c11", "Sólidos geométricos, planificações e vistas", "poliedros, relação de Euler, corpos redondos, planificações, vistas ortogonais, projeções, seções planas"],
+  ["v2c12", "Volumes e áreas de superfície", "volume e capacidade de prismas, cilindros, pirâmides, cones, esferas e sólidos compostos; área de superfície; embalagens; reservatórios"]
+ ]},
+ "v3": {"titulo": "Álgebra, Funções e Geometria Analítica", "capitulos": [
+  ["v3c01", "Equações e inequações", "equações e inequações do 1.º e do 2.º grau, modelagem algébrica de situações-problema, expressões algébricas"],
+  ["v3c02", "Sistemas de equações", "sistemas lineares 2x2 e 3x3, modelagem com duas ou mais incógnitas, interpretação de soluções"],
+  ["v3c03", "Gráficos e funções", "conceito de função, domínio e imagem, leitura e interpretação de gráficos cartesianos, crescimento e decrescimento, taxa de variação, funções definidas por partes"],
+  ["v3c04", "Função afim", "função polinomial do 1.º grau, coeficiente angular e linear, gráfico, modelagem de custos, tarifas e planos"],
+  ["v3c05", "Função quadrática", "função polinomial do 2.º grau, raízes, vértice, máximo e mínimo, parábolas, trajetórias"],
+  ["v3c06", "Funções polinomiais e racionais", "funções polinomiais de grau maior que 2, funções racionais, proporcionalidade inversa e hipérbole, assíntotas intuitivas"],
+  ["v3c07", "Função exponencial", "potências, função exponencial, crescimento e decaimento, juros como função, meia-vida, populações"],
+  ["v3c08", "Logaritmos e função logarítmica", "definição e propriedades de logaritmos, equações exponenciais via log, escalas logarítmicas (Richter, pH, decibéis)"],
+  ["v3c09", "Ciclo trigonométrico e funções trigonométricas", "radianos, ciclo trigonométrico, seno e cosseno no ciclo, funções trigonométricas, período, amplitude, fenômenos periódicos"],
+  ["v3c10", "Plano cartesiano e retas", "coordenadas, distância entre pontos, ponto médio, equação da reta, coeficiente angular, paralelismo e perpendicularidade, regiões do plano"],
+  ["v3c11", "Circunferência na geometria analítica", "equação da circunferência, centro e raio, posições relativas entre ponto, reta e circunferência"]
+ ]}
+}

@@ -1,0 +1,1270 @@
+\capitulo{v2c12}
+% =====================================================================
+%  Capítulo v2c12 · Volumes e áreas de superfície
+% =====================================================================
+\tikzset{
+  v2c12 aresta/.style={draw=ebookDark,line width=.85pt,line join=round,line cap=round},
+  v2c12 oculta/.style={draw=ebookDark,line width=.55pt,dash pattern=on 2.6pt off 2pt},
+  v2c12 fina/.style={draw=ebookMuted,line width=.5pt,line join=round},
+  v2c12 cota/.style={draw=ebookMuted,line width=.5pt,{Stealth[length=4pt]}-{Stealth[length=4pt]}},
+  v2c12 rot/.style={font=\small,text=ebookText},
+}
+
+\section{Volume e capacidade: prismas e cilindros}
+
+Quantos litros cabem em uma caixa-d'água? Quantos caminhões de concreto são
+necessários para uma laje? Em quantos dias um reservatório se esvazia? Quase todo
+ano o ENEM traz ao menos uma questão em que é preciso medir o \textbf{espaço
+ocupado} por um objeto — e ela quase sempre vem disfarçada de situação do
+cotidiano: embalagens, piscinas, silos, latas, sorvetes, velas, contêineres.
+
+A boa notícia é que poucas ideias resolvem quase tudo: \emph{contar camadas}
+(área da base $\times$ altura), \emph{o fator $\frac13$} das pirâmides e dos cones,
+\emph{a fórmula da esfera} e \emph{a semelhança} entre sólidos. Neste capítulo
+você vai dominar essas ideias e aprender a reconhecer quando a pergunta é sobre
+volume e quando é sobre área de superfície.
+
+\subsection{Volume é contar cubinhos em camadas}
+
+\begin{definicao}[Volume e capacidade]
+O \textbf{volume} de um sólido é a medida do espaço que ele ocupa. Medir um volume
+é contar quantos \textbf{cubos unitários} cabem dentro dele — por exemplo, cubos de
+1~cm de aresta, cada um com volume de $1\ \text{cm}^3$.
+
+A \textbf{capacidade} de um recipiente é o volume do seu \emph{interior}, isto é,
+quanto de líquido ou de material ele comporta. Ela costuma ser expressa em
+litros (L) ou mililitros (mL).
+\end{definicao}
+
+\noindent
+\begin{minipage}[c]{0.50\linewidth}
+Na figura ao lado, cabem 4 cubinhos no comprimento e 3 na largura: cada
+\textbf{camada} tem $4\cdot 3 = 12$ cubinhos, que é exatamente a \textbf{área da
+base}. Como há 2 camadas, o bloco tem $12\cdot 2 = 24$ cubinhos.
+
+Esse raciocínio — \emph{área da base vezes o número de camadas} — é a ideia que
+sustenta quase todas as fórmulas de volume deste capítulo.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.46\linewidth}
+\centering
+\begin{tikzpicture}[x={(0.72cm,0cm)},y={(0.36cm,0.26cm)},z={(0cm,0.72cm)},line join=round]
+  \fill[ebookLight] (0,0,0)--(4,0,0)--(4,0,2)--(0,0,2)--cycle;
+  \fill[ebookPrim!22] (0,0,2)--(4,0,2)--(4,3,2)--(0,3,2)--cycle;
+  \fill[ebookPrim!42] (4,0,0)--(4,3,0)--(4,3,2)--(4,0,2)--cycle;
+  \begin{scope}[draw=ebookPrim,line width=.4pt]
+    \foreach \i in {1,2,3}{\draw (\i,0,0)--(\i,0,2)--(\i,3,2);}
+    \draw (0,0,1)--(4,0,1)--(4,3,1);
+    \foreach \j in {1,2}{\draw (0,\j,2)--(4,\j,2)--(4,\j,0);}
+  \end{scope}
+  \draw[v2c12 aresta] (0,0,0)--(4,0,0)--(4,3,0)--(4,3,2)--(0,3,2)--(0,0,2)--cycle
+    (0,0,2)--(4,0,2)--(4,0,0) (4,0,2)--(4,3,2);
+  \draw[decorate,decoration={brace,mirror,amplitude=4pt},ebookMuted]
+    (0,0,-0.12)--(4,0,-0.12) node[midway,below=5pt,v2c12 rot]{$a = 4$};
+  \draw[decorate,decoration={brace,mirror,amplitude=4pt},ebookMuted]
+    (4.12,0,-0.05)--(4.12,3,-0.05) node[midway,right=6pt,v2c12 rot]{$b = 3$};
+  \draw[decorate,decoration={brace,amplitude=4pt},ebookMuted]
+    (-0.12,0,0)--(-0.12,0,2) node[midway,left=5pt,v2c12 rot]{$c = 2$};
+\end{tikzpicture}
+\captionof{figure}{Bloco formado por $4\cdot3\cdot2 = 24$ cubos unitários.}
+\end{minipage}
+
+\begin{formula}[Paralelepípedo reto-retângulo e cubo]
+$\displaystyle V_{\text{paralelepípedo}} = a\cdot b\cdot c
+\qquad\qquad V_{\text{cubo}} = a^3$
+\end{formula}
+
+\subsection{Unidades: de metro cúbico para litro}
+
+Como $1\ \text{m} = 10\ \text{dm}$, um cubo de 1~m de aresta comporta
+$10\cdot 10\cdot 10 = 1000$ cubos de 1~dm de aresta. E um cubo de 1~dm de aresta
+tem capacidade de exatamente 1~litro. Daí vêm as relações mais usadas do capítulo:
+
+\begin{formula}[Volume e capacidade]
+$1\ \text{m}^3 = 1000\ \text{L}\qquad\qquad
+1\ \text{dm}^3 = 1\ \text{L}\qquad\qquad
+1\ \text{cm}^3 = 1\ \text{mL}$
+\end{formula}
+
+Repare: a cada “degrau” de unidade de volume (m$^3$ → dm$^3$ → cm$^3$), o número
+fica \textbf{1000 vezes} maior, e não 10 vezes, porque são três dimensões.
+
+\begin{exemplo}[Caixa-d'água de uma casa]
+Uma caixa-d'água tem a forma de um paralelepípedo reto-retângulo com dimensões
+internas de 1,5~m, 1,0~m e 0,8~m. Uma família de 4 pessoas consome, em média,
+150~L de água por pessoa por dia. Estando a caixa cheia e sem reabastecimento,
+por quantos dias ela atende a família?
+\solucao
+O volume interno é $V = 1{,}5\cdot 1{,}0\cdot 0{,}8 = 1{,}2\ \text{m}^3$. Como
+$1\ \text{m}^3 = 1000\ \text{L}$, a capacidade é $1{,}2\cdot 1000 = 1200\ \text{L}$.
+O consumo diário da família é $4\cdot 150 = 600\ \text{L}$. Logo, a caixa dura
+$1200 \div 600 = 2$ dias.
+
+\textbf{Ligação com o ENEM:} questões de reservatório quase sempre combinam
+\emph{volume} com \emph{conversão para litros} e com uma \emph{taxa} (consumo por
+dia, vazão por hora). Faça uma coisa de cada vez e anote as unidades.
+\end{exemplo}
+
+\subsection{O princípio de Cavalieri (sem complicação)}
+
+Pegue uma pilha de moedas iguais e empurre-a de lado, deixando-a torta. A forma
+mudou, mas o volume não mudou: continuam sendo as mesmas moedas! Essa observação
+simples é o \textbf{princípio de Cavalieri}, e é ele que garante que a ideia de
+“área da base vezes altura” vale para \emph{qualquer} prisma ou cilindro, reto ou
+inclinado.
+
+\begin{center}
+\begin{tikzpicture}[scale=.82]
+  \newcommand\vdcmoeda[2]{%
+    \filldraw[fill=ebookAcc!38,draw=ebookAcc!70!black,line width=.4pt]
+      (#1-1,#2) arc[start angle=180,end angle=360,x radius=1,y radius=.26]
+      -- ++(0,.15) arc[start angle=0,end angle=180,x radius=1,y radius=.26] -- cycle;
+    \filldraw[fill=ebookAcc!18,draw=ebookAcc!70!black,line width=.4pt]
+      (#1,#2+.15) ellipse[x radius=1,y radius=.26];}
+  \foreach \i in {0,...,11}{\vdcmoeda{0}{.19*\i}}
+  \foreach \i/\dx in {0/0,1/.18,2/.28,3/.45,4/.62,5/.70,6/.88,7/1.05,8/1.12,9/1.30,10/1.48,11/1.58}
+    {\vdcmoeda{4.2+\dx}{.19*\i}}
+  \draw[ebookPrim,line width=.8pt,dash pattern=on 4pt off 2.5pt] (-1.6,1.42)--(7.6,1.42)
+    node[right,font=\footnotesize,text=ebookPrim,align=left]{mesmo nível:\\seções de\\mesma área};
+  \node[font=\footnotesize,text=ebookMuted] at (0,-.65) {pilha reta};
+  \node[font=\footnotesize,text=ebookMuted] at (5.0,-.65) {pilha inclinada};
+  \draw[v2c12 cota] (-1.35,0)--(-1.35,2.24) node[midway,left,v2c12 rot]{$h$};
+\end{tikzpicture}
+\captionof{figure}{Mesmas moedas, mesma altura: mesmo volume.}
+\end{center}
+
+\begin{definicao}[Princípio de Cavalieri]
+Se dois sólidos têm a mesma altura e \emph{todo} plano paralelo à base os corta
+em seções de \textbf{mesma área}, então eles têm o \textbf{mesmo volume}.
+\end{definicao}
+
+Assim, um prisma (ou um cilindro) cuja base tem área $A_b$ e cuja altura é $h$
+tem o mesmo volume que um paralelepípedo de base com área $A_b$ e altura $h$:
+cada fatia horizontal de um tem a mesma área que a fatia correspondente do
+outro. Para o cilindro, a base é um círculo de área $\pi r^2$.
+
+\begin{formula}[Prisma e cilindro (retos ou oblíquos)]
+$\displaystyle V_{\text{prisma}} = A_b\cdot h
+\qquad\qquad V_{\text{cilindro}} = \pi r^2 h$
+\end{formula}
+
+\begin{center}
+\begin{tikzpicture}[scale=.95]
+  % ---------- prisma hexagonal
+  \def\R{1.15}\def\H{2.3}\def\k{.36}
+  \fill[ebookLight] ({\R*cos(180)},{\k*\R*sin(180)})
+    \foreach \t in {240,300,360}{ -- ({\R*cos(\t)},{\k*\R*sin(\t)}) }
+    \foreach \t in {360,300,240,180}{ -- ({\R*cos(\t)},{\k*\R*sin(\t)+\H}) } -- cycle;
+  \fill[ebookPrim!30] ({\R},{\H}) \foreach \t in {60,120,...,300}{ -- ({\R*cos(\t)},{\k*\R*sin(\t)+\H}) } -- cycle;
+  \draw[v2c12 oculta] ({\R*cos(0)},0) \foreach \t in {60,120,180}{ -- ({\R*cos(\t)},{\k*\R*sin(\t)}) };
+  \foreach \t in {60,120}{\draw[v2c12 oculta] ({\R*cos(\t)},{\k*\R*sin(\t)}) -- ({\R*cos(\t)},{\k*\R*sin(\t)+\H});}
+  \draw[v2c12 aresta] ({\R*cos(180)},0) \foreach \t in {240,300,360}{ -- ({\R*cos(\t)},{\k*\R*sin(\t)}) };
+  \draw[v2c12 aresta] ({\R},{\H}) \foreach \t in {60,120,...,300}{ -- ({\R*cos(\t)},{\k*\R*sin(\t)+\H}) } -- cycle;
+  \foreach \t in {0,180,240,300}{\draw[v2c12 aresta] ({\R*cos(\t)},{\k*\R*sin(\t)}) -- ({\R*cos(\t)},{\k*\R*sin(\t)+\H});}
+  \node[font=\small,text=ebookDark] at (0,\H) {$A_b$};
+  \draw[v2c12 cota] (\R+.35,0)--(\R+.35,\H) node[midway,right,v2c12 rot]{$h$};
+  \node[font=\footnotesize,text=ebookMuted] at (0,-.85) {prisma: $V = A_b\cdot h$};
+  % ---------- cilindro
+  \begin{scope}[xshift=4.6cm]
+    \def\r{1.05}\def\ry{.36}
+    \fill[ebookLight] (-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=\ry]
+      -- (\r,\H) arc[start angle=0,end angle=-180,x radius=\r,y radius=\ry] -- cycle;
+    \fill[ebookPrim!30] (0,\H) ellipse[x radius=\r,y radius=\ry];
+    \draw[v2c12 aresta] (0,\H) ellipse[x radius=\r,y radius=\ry];
+    \draw[v2c12 aresta] (-\r,0)--(-\r,\H) (\r,0)--(\r,\H);
+    \draw[v2c12 aresta] (-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=\ry];
+    \draw[v2c12 oculta] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=\ry];
+    \fill[ebookDark] (0,\H) circle (1.1pt);
+    \draw[ebookDark,line width=.6pt] (0,\H)--(\r,\H) node[midway,above,font=\small]{$r$};
+    \draw[v2c12 cota] (\r+.35,0)--(\r+.35,\H) node[midway,right,v2c12 rot]{$h$};
+    \node[font=\footnotesize,text=ebookMuted] at (0,-.85) {cilindro: $V = \pi r^2 h$};
+  \end{scope}
+  % ---------- prisma oblíquo
+  \begin{scope}[xshift=9cm,x={(1cm,0cm)},y={(.42cm,.3cm)},z={(0cm,1cm)}]
+    \def\s{.75}
+    \fill[ebookLight] (0,0,0)--(1.5,0,0)--(1.5+\s,0,\H)--(\s,0,\H)--cycle;
+    \fill[ebookLight!60!ebookPrim!40] (1.5,0,0)--(1.5,1.4,0)--(1.5+\s,1.4,\H)--(1.5+\s,0,\H)--cycle;
+    \fill[ebookPrim!30] (\s,0,\H)--(1.5+\s,0,\H)--(1.5+\s,1.4,\H)--(\s,1.4,\H)--cycle;
+    \draw[v2c12 oculta] (0,0,0)--(0,1.4,0)--(1.5,1.4,0) (0,1.4,0)--(\s,1.4,\H);
+    \draw[v2c12 aresta] (0,0,0)--(1.5,0,0)--(1.5,1.4,0)--(1.5+\s,1.4,\H)--(\s,1.4,\H)--(\s,0,\H)--cycle
+      (\s,0,\H)--(1.5+\s,0,\H)--(1.5,0,0) (1.5+\s,0,\H)--(1.5+\s,1.4,\H);
+    \draw[ebookAcc,line width=.7pt,dash pattern=on 2pt off 1.5pt] (1.5+\s,0,\H)--(1.5+\s,0,0)
+      node[pos=.5,right,font=\small,text=ebookAcc]{$h$};
+    \draw[ebookAcc,line width=.5pt] (1.5+\s,0,0.18)--(1.5+\s-.18,0,0.18)--(1.5+\s-.18,0,0);
+    \draw[ebookMuted,line width=.4pt] (1.5,0,0)--(1.5+\s,0,0);
+    \node[font=\footnotesize,text=ebookMuted,align=center] at (1.1,0,-.85) {oblíquo: $V = A_b\cdot h$\\($h$ é a distância\\entre as bases)};
+  \end{scope}
+\end{tikzpicture}
+\captionof{figure}{Prisma, cilindro e prisma oblíquo: em todos, volume = área da base $\times$ altura.}
+\end{center}
+
+\begin{exemplo}[A lata de óleo]
+Uma lata de óleo tem a forma de um cilindro circular reto com 8~cm de diâmetro e
+18~cm de altura (medidas internas). Usando $\pi \approx 3{,}14$, verifique se ela
+comporta 900~mL de óleo.
+\solucao
+O raio é a \emph{metade} do diâmetro: $r = 4$~cm. Então
+\[
+V = \pi r^2 h \approx 3{,}14\cdot 4^2\cdot 18 = 3{,}14\cdot 288 = 904{,}32\ \text{cm}^3 .
+\]
+Como $1\ \text{cm}^3 = 1\ \text{mL}$, a lata comporta cerca de 904~mL, ou seja,
+cabem os 900~mL, com uma pequena folga de uns 4~mL (o espaço do “ar” no topo).
+Repare que o primeiro passo foi transformar diâmetro em raio — esquecer isso é
+o erro mais comum em questões de cilindro.
+\end{exemplo}
+
+\begin{contexto}[Chuva medida em milímetros]
+Quando a previsão do tempo informa que choveu 30~mm, isso quer dizer que a água
+da chuva formaria uma lâmina de 30~mm de altura sobre uma superfície plana e
+horizontal. Em $1\ \text{m}^2$ de área, isso dá
+$V = 1\ \text{m}^2\cdot 0{,}03\ \text{m} = 0{,}03\ \text{m}^3 = 30\ \text{L}$.
+Por isso, \textbf{1~mm de chuva corresponde a 1~litro por metro quadrado} — uma
+conta de prisma que já apareceu no ENEM (índice pluviométrico).
+\end{contexto}
+
+% =====================================================================
+\section{Pirâmides, cones e esferas}
+
+Sólidos que “afinam” até um ponto, como a pirâmide e o cone, ocupam menos espaço
+do que o prisma ou o cilindro de mesma base e mesma altura. Quanto menos?
+Exatamente \textbf{um terço}. Se você encher de areia uma pirâmide oca e despejar o
+conteúdo em um prisma oco de mesma base e mesma altura, vai precisar repetir a
+operação \emph{três vezes} para encher o prisma. O mesmo acontece com o cone e o
+cilindro.
+
+\begin{center}
+\begin{tikzpicture}[scale=.95]
+  % ---------- pirâmide dentro do prisma
+  \begin{scope}[x={(1cm,0cm)},y={(.5cm,.36cm)},z={(0cm,1cm)}]
+    \def\H{2.4}
+    \fill[ebookPrim!28] (1,1,\H)--(0,0,0)--(2,0,0)--cycle;
+    \fill[ebookPrim!48] (1,1,\H)--(2,0,0)--(2,2,0)--cycle;
+    \draw[v2c12 fina,dash pattern=on 2pt off 1.6pt] (0,0,0)--(0,2,0)--(2,2,0) (0,2,0)--(0,2,\H);
+    \draw[v2c12 fina] (0,0,0)--(2,0,0)--(2,2,0)--(2,2,\H)--(0,2,\H)--(0,0,\H)--cycle
+      (0,0,\H)--(2,0,\H)--(2,0,0) (2,0,\H)--(2,2,\H);
+    \draw[v2c12 oculta] (1,1,\H)--(0,2,0) (0,0,0)--(0,2,0)--(2,2,0);
+    \draw[v2c12 aresta] (0,0,0)--(2,0,0)--(2,2,0) (1,1,\H)--(0,0,0) (1,1,\H)--(2,0,0) (1,1,\H)--(2,2,0);
+    \draw[ebookAcc,line width=.7pt,dash pattern=on 2pt off 1.5pt] (1,1,\H)--(1,1,0) node[pos=.55,right,font=\small,text=ebookAcc]{$h$};
+    \fill[ebookDark] (1,1,\H) circle (1.2pt);
+    \node[font=\footnotesize,text=ebookMuted,align=center] at (1.1,0,-.75) {pirâmide $=\frac13$ do prisma};
+  \end{scope}
+  % ---------- cone dentro do cilindro
+  \begin{scope}[xshift=5.2cm]
+    \def\r{1.1}\def\ry{.36}\def\H{2.6}
+    \draw[v2c12 fina] (0,\H) ellipse[x radius=\r,y radius=\ry];
+    \draw[v2c12 fina] (-\r,0)--(-\r,\H) (\r,0)--(\r,\H);
+    \fill[ebookPrim!32] (0,\H)--(-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=\ry] -- cycle;
+    \draw[v2c12 oculta] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=\ry];
+    \draw[v2c12 aresta] (-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=\ry];
+    \draw[v2c12 aresta] (-\r,0)--(0,\H)--(\r,0);
+    \draw[ebookAcc,line width=.7pt,dash pattern=on 2pt off 1.5pt] (0,\H)--(0,0) node[pos=.5,left,font=\small,text=ebookAcc]{$h$};
+    \draw[ebookAcc,line width=.7pt] (0,0)--(\r,0) node[midway,below,font=\small,text=ebookAcc]{$r$};
+    \draw[ebookAcc,line width=.5pt] (0,.16)--(.16,.16)--(.16,0);
+    \node[font=\small,text=ebookDark] at (.78,1.55) {$g$};
+    \fill[ebookDark] (0,\H) circle (1.2pt);
+    \node[font=\footnotesize,text=ebookMuted,align=center] at (0,-.8) {cone $=\frac13$ do cilindro};
+  \end{scope}
+\end{tikzpicture}
+\captionof{figure}{Pirâmide e cone ocupam $\frac13$ do prisma e do cilindro de mesma base e mesma altura.}
+\end{center}
+
+\begin{formula}[Pirâmide e cone]
+$\displaystyle V_{\text{pirâmide}} = \frac{1}{3}\,A_b\cdot h
+\qquad\qquad V_{\text{cone}} = \frac{1}{3}\,\pi r^2 h$
+\end{formula}
+
+No cone circular reto, a \textbf{geratriz} $g$ (segmento do vértice até a borda
+da base), a altura $h$ e o raio $r$ formam um triângulo retângulo; por isso,
+$g^2 = h^2 + r^2$. Na pirâmide regular, o mesmo papel é feito pelo
+\textbf{apótema da pirâmide} $m$ (altura de cada face triangular): se a base é um
+quadrado de lado $\ell$, então $m^2 = h^2 + \left(\frac{\ell}{2}\right)^2$. Você
+vai precisar dessas relações para calcular áreas.
+
+\begin{exemplo}[Velas decorativas]
+Uma fábrica produz dois modelos de vela maciça, ambos com 10~cm de altura: um em
+forma de pirâmide quadrangular regular com base de 6~cm de lado e outro em forma
+de cone circular reto com 6~cm de diâmetro da base. Usando $\pi\approx 3$, qual
+modelo gasta mais parafina, e quanto a mais?
+\solucao
+Pirâmide: $V = \frac13\cdot 6^2\cdot 10 = \frac13\cdot 360 = 120\ \text{cm}^3$.
+Cone (raio 3~cm): $V = \frac13\cdot 3\cdot 3^2\cdot 10 = 90\ \text{cm}^3$.
+
+A pirâmide gasta $120 - 90 = 30\ \text{cm}^3$ a mais. Faz sentido: as duas têm
+a mesma altura, e o círculo de diâmetro 6~cm cabe dentro do quadrado de lado
+6~cm, ou seja, a base do cone é menor ($27\ \text{cm}^2$ contra $36\ \text{cm}^2$).
+Com a mesma altura, os volumes ficam na mesma razão das áreas das bases.
+\end{exemplo}
+
+\subsection{A esfera}
+
+\begin{formula}[Esfera de raio $r$]
+$\displaystyle V_{\text{esfera}} = \frac{4}{3}\,\pi r^3
+\qquad\qquad V_{\text{hemisfério}} = \frac{1}{2}\cdot\frac43\pi r^3 = \frac{2}{3}\,\pi r^3$
+\end{formula}
+
+Uma forma elegante de lembrar a fórmula vem de Arquimedes. Pegue um cilindro e
+um cone, ambos com raio $r$ e altura $2r$, e uma esfera de raio $r$ (que cabe
+exatamente dentro do cilindro). Os volumes são:
+
+\begin{center}
+\begin{tikzpicture}[scale=.95]
+  \def\r{.85}\def\ry{.27}
+  % cone
+  \fill[ebookPrim!30] (0,2*\r)--(-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=\ry] -- cycle;
+  \draw[v2c12 oculta] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=\ry];
+  \draw[v2c12 aresta] (-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=\ry];
+  \draw[v2c12 aresta] (-\r,0)--(0,2*\r)--(\r,0);
+  \node[font=\small] at (0,-.7) {$\dfrac{2}{3}\pi r^3$};
+  \node[font=\footnotesize,text=ebookMuted] at (0,-1.3) {cone};
+  % esfera
+  \begin{scope}[xshift=3.2cm]
+    \shade[ball color=ebookPrim!35,opacity=.9] (0,\r) circle (\r);
+    \draw[v2c12 aresta] (0,\r) circle (\r);
+    \draw[v2c12 oculta] (\r,\r) arc[start angle=0,end angle=180,x radius=\r,y radius=\ry];
+    \draw[v2c12 aresta] (-\r,\r) arc[start angle=180,end angle=360,x radius=\r,y radius=\ry];
+    \fill[ebookDark] (0,\r) circle (1.1pt);
+    \draw[ebookDark,line width=.6pt] (0,\r)--(\r,\r) node[midway,above,font=\small]{$r$};
+    \node[font=\small] at (0,-.7) {$\dfrac{4}{3}\pi r^3$};
+    \node[font=\footnotesize,text=ebookMuted] at (0,-1.3) {esfera};
+  \end{scope}
+  % cilindro
+  \begin{scope}[xshift=6.4cm]
+    \fill[ebookPrim!18] (-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=\ry]
+      -- (\r,2*\r) arc[start angle=0,end angle=-180,x radius=\r,y radius=\ry] -- cycle;
+    \fill[ebookPrim!30] (0,2*\r) ellipse[x radius=\r,y radius=\ry];
+    \draw[v2c12 aresta] (0,2*\r) ellipse[x radius=\r,y radius=\ry];
+    \draw[v2c12 aresta] (-\r,0)--(-\r,2*\r) (\r,0)--(\r,2*\r);
+    \draw[v2c12 aresta] (-\r,0) arc[start angle=180,end angle=360,x radius=\r,y radius=\ry];
+    \draw[v2c12 oculta] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=\ry];
+    \draw[v2c12 cota] (\r+.3,0)--(\r+.3,2*\r) node[midway,right,v2c12 rot]{$2r$};
+    \node[font=\small] at (0,-.7) {$2\pi r^3 = \dfrac{6}{3}\pi r^3$};
+    \node[font=\footnotesize,text=ebookMuted] at (0,-1.3) {cilindro};
+  \end{scope}
+  \node[font=\titlefont\Large,text=ebookAcc] at (10.2,.9) {1 : 2 : 3};
+\end{tikzpicture}
+\captionof{figure}{Cone, esfera e cilindro de mesmo raio e mesma altura $2r$: volumes na razão $1:2:3$.}
+\end{center}
+
+Ou seja: a esfera ocupa $\frac23$ do cilindro que a envolve, e o cone ocupa
+$\frac13$. Esse fato é muito útil em questões de embalagens (bolas em latas,
+docinhos em formas).
+
+\begin{contexto}[O túmulo de Arquimedes]
+Arquimedes (século III a.C.) considerava a relação entre a esfera e o cilindro a
+sua maior descoberta e pediu que ela fosse gravada em seu túmulo. Mais de um
+século depois, o político romano Cícero relatou ter encontrado, na Sicília, um
+túmulo abandonado com a figura de uma esfera dentro de um cilindro — e o
+identificou como o de Arquimedes.
+\end{contexto}
+
+\begin{exemplo}[Casquinha de sorvete]
+Uma casquinha tem a forma de um cone circular reto com 6~cm de diâmetro na boca
+e 10~cm de altura. Ela é totalmente preenchida com sorvete e, por cima, recebe uma
+“bola” em forma de hemisfério, com o mesmo diâmetro da boca. Usando
+$\pi\approx 3$, quantas casquinhas completas podem ser servidas com um pote de
+2~L de sorvete?
+\solucao
+O raio é $r = 3$~cm. Parte cônica:
+$V_1 = \frac13\cdot 3\cdot 3^2\cdot 10 = 90\ \text{cm}^3$.
+Hemisfério: $V_2 = \frac23\cdot 3\cdot 3^3 = 54\ \text{cm}^3$.
+Cada casquinha leva $90 + 54 = 144\ \text{cm}^3 = 144\ \text{mL}$.
+
+Como $2\ \text{L} = 2000\ \text{mL}$, temos $2000\div 144 \approx 13{,}9$. Só é
+possível servir \textbf{13 casquinhas completas} (a 14.ª ficaria incompleta).
+Atenção ao arredondamento: aqui se arredonda para \emph{baixo}; em perguntas do
+tipo “quantas viagens” ou “quantas latas comprar”, arredonda-se para \emph{cima}.
+\end{exemplo}
+
+% =====================================================================
+\section{Áreas de superfície e embalagens}
+
+Volume responde à pergunta \emph{quanto cabe}. A \textbf{área de superfície}
+responde à pergunta \emph{quanto material é preciso para fabricar ou cobrir}:
+papelão de uma caixa, alumínio de uma lata, tinta de um tanque, azulejos de uma
+piscina, lona de uma barraca. No ENEM, as palavras \emph{pintar, revestir,
+forrar, embalar, chapa, rótulo} são sinal de área — e a área é medida em
+unidades quadradas (cm$^2$, m$^2$), nunca em litros.
+
+\begin{definicao}[Área de superfície]
+A \textbf{área total} $A_t$ de um sólido é a soma das áreas de todas as
+superfícies que o limitam — é a área da sua \textbf{planificação}. Costumamos
+separá-la em \textbf{área da base} (ou das bases) e \textbf{área lateral} $A_\ell$.
+\end{definicao}
+
+A planificação mostra de onde vêm as fórmulas dos corpos redondos. Ao
+“desenrolar” a lateral de um cilindro, obtemos um \textbf{retângulo} cuja altura é
+$h$ e cujo comprimento é o contorno da base, $2\pi r$. Já a lateral do cone vira
+um \textbf{setor circular} de raio $g$ e arco $2\pi r$.
+
+\begin{center}
+\begin{tikzpicture}[scale=.92]
+  % ---------- cilindro planificado
+  \def\r{.6}\def\h{1.8}
+  \pgfmathsetmacro\w{2*pi*\r}
+  \fill[ebookPrim!20] (0,0) rectangle (\w,\h);
+  \draw[v2c12 aresta] (0,0) rectangle (\w,\h);
+  \fill[ebookPrim!35] (\w/2,\h+\r) circle (\r);
+  \fill[ebookPrim!35] (\w/2,-\r) circle (\r);
+  \draw[v2c12 aresta] (\w/2,\h+\r) circle (\r) (\w/2,-\r) circle (\r);
+  \draw[ebookDark,line width=.6pt] (\w/2,\h+\r)--(\w/2+\r,\h+\r) node[midway,above,font=\footnotesize]{$r$};
+  \draw[v2c12 cota] (0,\h+.25)--(\w/2-\r-.1,\h+.25);
+  \draw[v2c12 cota] (\w/2+\r+.1,\h+.25)--(\w,\h+.25);
+  \node[font=\small,fill=white,inner sep=1pt] at (\w/2,\h/2) {$A_\ell = 2\pi r\cdot h$};
+  \node[font=\footnotesize,text=ebookMuted] at (\w*.82,\h+.5) {$2\pi r$};
+  \draw[v2c12 cota] (\w+.3,0)--(\w+.3,\h) node[midway,right,v2c12 rot]{$h$};
+  \node[font=\footnotesize,text=ebookMuted] at (\w/2,-1.65) {cilindro: retângulo $+$ 2 círculos};
+  % ---------- cone planificado
+  \begin{scope}[xshift=8.2cm,yshift=1.95cm]
+    \def\g{2.1}\def\rb{.7}
+    \pgfmathsetmacro\ang{360*\rb/\g}
+    \fill[ebookPrim!20] (0,0) -- ({270-\ang/2}:\g) arc[start angle={270-\ang/2},end angle={270+\ang/2},radius=\g] -- cycle;
+    \draw[v2c12 aresta] (0,0) -- ({270-\ang/2}:\g) arc[start angle={270-\ang/2},end angle={270+\ang/2},radius=\g] -- cycle;
+    \fill[ebookPrim!35] (0,-\g-\rb) circle (\rb);
+    \draw[v2c12 aresta] (0,-\g-\rb) circle (\rb);
+    \draw[ebookDark,line width=.6pt] (0,-\g-\rb)--(\rb,-\g-\rb) node[midway,above,font=\footnotesize]{$r$};
+    \node[font=\small] at ({270+\ang/2+14}:{\g*.55}) {$g$};
+    \node[font=\footnotesize,text=ebookMuted] at ({270-\ang/2-12}:{\g+.15}) {arco $2\pi r$};
+    \node[font=\small,fill=white,inner sep=1pt] at (0,-1.25) {$A_\ell = \pi r g$};
+    \node[font=\footnotesize,text=ebookMuted] at (0,-3.6) {cone: setor $+$ círculo};
+  \end{scope}
+\end{tikzpicture}
+\captionof{figure}{Planificações do cilindro e do cone.}
+\end{center}
+
+\begin{formula}[Áreas de superfície]
+\renewcommand\arraystretch{1.45}
+\begin{tabular}{lll}
+\textbf{Paralelepípedo} & $A_t = 2(ab + ac + bc)$ & cubo: $A_t = 6a^2$\\
+\textbf{Prisma}         & $A_t = 2A_b + A_\ell$  & $A_\ell$ = soma dos retângulos laterais\\
+\textbf{Cilindro}       & $A_\ell = 2\pi r h$    & $A_t = 2\pi r^2 + 2\pi r h$\\
+\textbf{Pirâmide}       & $A_t = A_b + A_\ell$   & $A_\ell$ = soma dos triângulos (altura $m$)\\
+\textbf{Cone}           & $A_\ell = \pi r g$     & $A_t = \pi r^2 + \pi r g$\\
+\textbf{Esfera}         & $A = 4\pi r^2$         & \\
+\end{tabular}
+\end{formula}
+
+Nem sempre se usa a área total: um tanque apoiado no chão não tem o fundo
+pintado; uma piscina não tem “tampa”; um telhado de pirâmide não tem base. Antes
+de somar, liste \emph{quais} superfícies o problema pede.
+
+\begin{exemplo}[Mesma capacidade, gasto diferente]
+Uma empresa vai lançar um suco em embalagem de 1~L e estuda duas caixas de
+papelão: um cubo de 10~cm de aresta e um paralelepípedo de
+$5\ \text{cm}\times 10\ \text{cm}\times 20\ \text{cm}$. Desprezando as dobras,
+qual delas gasta menos papelão?
+\solucao
+As duas têm a mesma capacidade:
+$10^3 = 5\cdot 10\cdot 20 = 1000\ \text{cm}^3 = 1\ \text{L}$. Mas as áreas são
+diferentes:
+\[
+A_{\text{cubo}} = 6\cdot 10^2 = 600\ \text{cm}^2,\qquad
+A_{\text{caixa}} = 2(5\cdot 10 + 5\cdot 20 + 10\cdot 20) = 2\cdot 350 = 700\ \text{cm}^2 .
+\]
+O cubo gasta $100\ \text{cm}^2$ a menos, cerca de 14\% de economia.
+
+Esse resultado é geral: com o volume fixo, quanto mais “compacta” a forma, menor a
+área. Entre as caixas, o cubo é a mais econômica; entre as latas cilíndricas
+fechadas, a mais econômica tem altura igual ao diâmetro ($h = 2r$) — uma lata
+assim, de 1~L, gastaria cerca de $554\ \text{cm}^2$ de material.
+\end{exemplo}
+
+\begin{contexto}[Por que as latas não são “ótimas”?]
+Uma lata de refrigerante de 350~mL tem cerca de 6,6~cm de diâmetro e 12,2~cm de
+altura, bem mais alta do que larga. O motivo: a tampa e o fundo são feitos de
+chapa mais grossa (e mais cara) que a lateral, a lata precisa caber na mão e ser
+empilhada com eficiência. Na vida real, a “melhor” embalagem equilibra
+matemática, custo e uso.
+\end{contexto}
+
+% =====================================================================
+\section{Semelhança, troncos e sólidos compostos}
+
+\subsection{Sólidos semelhantes: k, k² e k³}
+
+Dois sólidos são \textbf{semelhantes} quando um é uma ampliação ou redução do
+outro: \emph{todas} as medidas lineares (arestas, alturas, raios, diâmetros)
+ficam multiplicadas pelo mesmo número $k$, chamado \textbf{razão de semelhança}.
+Esferas são sempre semelhantes entre si; cubos também.
+
+\noindent
+\begin{minipage}[c]{0.50\linewidth}
+Veja o que acontece ao dobrar a aresta de um cubo ($k = 2$): cada face passa a
+ter $2\cdot 2 = 4$ quadradinhos (área $\times 4$) e o cubo passa a ter
+$2\cdot 2\cdot 2 = 8$ cubinhos (volume $\times 8$). Isso acontece porque a área
+envolve \emph{duas} medidas lineares e o volume envolve \emph{três}.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.46\linewidth}
+\centering
+\begin{tikzpicture}[x={(.62cm,0cm)},y={(.3cm,.22cm)},z={(0cm,.62cm)},line join=round]
+  \def\cubo#1#2{%
+    \fill[ebookLight] (#1,0,0)--(#1+#2,0,0)--(#1+#2,0,#2)--(#1,0,#2)--cycle;
+    \fill[ebookPrim!22] (#1,0,#2)--(#1+#2,0,#2)--(#1+#2,#2,#2)--(#1,#2,#2)--cycle;
+    \fill[ebookPrim!42] (#1+#2,0,0)--(#1+#2,#2,0)--(#1+#2,#2,#2)--(#1+#2,0,#2)--cycle;}
+  \cubo{0}{1}
+  \draw[v2c12 aresta] (0,0,0)--(1,0,0)--(1,1,0)--(1,1,1)--(0,1,1)--(0,0,1)--cycle (0,0,1)--(1,0,1)--(1,0,0) (1,0,1)--(1,1,1);
+  \node[font=\footnotesize] at (.5,0,-.55) {aresta $a$};
+  \cubo{2.2}{2}
+  \begin{scope}[draw=ebookPrim,line width=.4pt]
+    \draw (3.2,0,0)--(3.2,0,2)--(3.2,2,2) (2.2,0,1)--(4.2,0,1)--(4.2,2,1) (2.2,1,2)--(4.2,1,2)--(4.2,1,0);
+  \end{scope}
+  \draw[v2c12 aresta] (2.2,0,0)--(4.2,0,0)--(4.2,2,0)--(4.2,2,2)--(2.2,2,2)--(2.2,0,2)--cycle (2.2,0,2)--(4.2,0,2)--(4.2,0,0) (4.2,0,2)--(4.2,2,2);
+  \node[font=\footnotesize] at (3.2,0,-.55) {aresta $2a$};
+\end{tikzpicture}
+\captionof{figure}{$k=2$: área $\times 4$, volume $\times 8$.}
+\end{minipage}
+
+\begin{formula}[Razão de semelhança $k$]
+$\displaystyle \frac{\text{comprimentos}}{\text{comprimentos}} = k
+\qquad \frac{\text{áreas}}{\text{áreas}} = k^2
+\qquad \frac{\text{volumes}}{\text{volumes}} = k^3$
+\end{formula}
+
+Como massa, capacidade e quantidade de material maciço são proporcionais ao
+volume, todas elas também variam com $k^3$. Já tinta, papel de embrulho,
+cobertura fina e rótulo variam com $k^2$.
+
+\begin{exemplo}[Miniatura de perfume]
+Um perfume é vendido em frasco de 100~mL. A fábrica vai produzir miniaturas
+\emph{semelhantes} ao frasco original, com todas as medidas reduzidas a 40\% das
+originais. Qual é a capacidade da miniatura? E, se o rótulo original tem área de
+$30\ \text{cm}^2$, qual será a área do rótulo da miniatura?
+\solucao
+A razão de semelhança é $k = 0{,}4$. Então:
+\begin{itemize}[nosep,leftmargin=1.2em]
+  \item capacidade: $100\cdot k^3 = 100\cdot 0{,}064 = 6{,}4\ \text{mL}$;
+  \item rótulo: $30\cdot k^2 = 30\cdot 0{,}16 = 4{,}8\ \text{cm}^2$.
+\end{itemize}
+Note como a capacidade “despenca”: reduzir as medidas a 40\% deixa só 6,4\% do
+volume. Quem responde 40~mL (usando $k$) ou 16~mL (usando $k^2$) cai nas
+armadilhas típicas desse tipo de questão.
+\end{exemplo}
+
+\subsection{Troncos de pirâmide e de cone}
+
+Ao cortar uma pirâmide ou um cone por um plano \emph{paralelo à base}, obtemos, em
+cima, uma pirâmide (ou um cone) menor, \textbf{semelhante} à original, e, embaixo,
+um \textbf{tronco}. Baldes, vasos, copos, canecas e abajures costumam ter a forma
+de troncos de cone. O caminho mais seguro para o volume é:
+\[
+V_{\text{tronco}} = V_{\text{sólido grande}} - V_{\text{sólido pequeno}},
+\]
+usando a semelhança para descobrir a altura que falta.
+
+\noindent
+\begin{minipage}[c]{0.40\linewidth}
+\centering
+\begin{tikzpicture}[scale=.5]
+  \def\ry{.3}
+  \fill[ebookPrim!25] (-1.5*2,4.8) arc[start angle=180,end angle=360,x radius=3,y radius=.45]
+    -- (2,0) arc[start angle=0,end angle=-180,x radius=2,y radius=\ry] -- cycle;
+  \fill[ebookPrim!25] (-1.5*2,4.8) -- (-2,0) arc[start angle=180,end angle=360,x radius=2,y radius=\ry] -- (3,4.8)
+    arc[start angle=360,end angle=180,x radius=3,y radius=.45] -- cycle;
+  \fill[ebookPrim!40] (0,4.8) ellipse[x radius=3,y radius=.45];
+  \draw[v2c12 aresta] (0,4.8) ellipse[x radius=3,y radius=.45];
+  \draw[v2c12 aresta] (-3,4.8)--(-2,0) (3,4.8)--(2,0);
+  \draw[v2c12 aresta] (-2,0) arc[start angle=180,end angle=360,x radius=2,y radius=\ry];
+  \draw[v2c12 oculta] (2,0) arc[start angle=0,end angle=180,x radius=2,y radius=\ry];
+  \draw[ebookMuted,line width=.6pt,dash pattern=on 3pt off 2pt] (-2,0)--(0,-9.6)--(2,0);
+  \draw[ebookMuted,line width=.5pt,dash pattern=on 1.5pt off 1.5pt] (0,4.8)--(0,-9.6);
+  \fill[ebookDark] (0,-9.6) circle (2.4pt);
+  \draw[ebookDark,line width=.6pt] (0,4.8)--(3,4.8) node[midway,above,font=\footnotesize]{$R = 15$};
+  \draw[ebookDark,line width=.6pt] (0,0)--(2,0) node[midway,below,font=\footnotesize]{$r = 10$};
+  \draw[v2c12 cota] (3.7,0)--(3.7,4.8) node[midway,right,v2c12 rot]{$24$};
+  \draw[v2c12 cota] (3.7,-9.6)--(3.7,0) node[midway,right,v2c12 rot]{$x$};
+\end{tikzpicture}
+\captionof{figure}{Balde (tronco de cone) completado até o vértice. Medidas em cm.}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.56\linewidth}
+\begin{exemplo}[O balde]
+Um balde tem a forma de um tronco de cone com 20~cm de diâmetro no fundo,
+30~cm de diâmetro na boca e 24~cm de altura. Usando $\pi\approx 3$, qual é a sua
+capacidade?
+\solucao
+Complete o tronco até formar um cone (figura). O cone pequeno, de raio 10, é
+semelhante ao cone grande, de raio 15, com $k = \frac{10}{15} = \frac23$. Se $x$ é
+a altura do cone pequeno:
+\[
+\frac{x}{x + 24} = \frac23 \;\Rightarrow\; 3x = 2x + 48 \;\Rightarrow\; x = 48 .
+\]
+O cone grande tem altura 72. Assim,
+\[
+V = \tfrac13\cdot 3\,(15^2\cdot 72 - 10^2\cdot 48) = 16\,200 - 4\,800 = 11\,400\ \text{cm}^3,
+\]
+ou seja, \textbf{11,4~L}.
+\end{exemplo}
+\end{minipage}
+
+Se preferir, existe uma fórmula pronta para o tronco de cone de raios $R$ e $r$ e
+altura $h$, que dá o mesmo resultado:
+\[
+V_{\text{tronco}} = \frac{\pi h}{3}\left(R^2 + Rr + r^2\right)
+\quad\Rightarrow\quad \frac{3\cdot 24}{3}\,(225 + 150 + 100) = 24\cdot 475 = 11\,400\ \text{cm}^3 .
+\]
+
+\subsection{Sólidos compostos e deslocamento de líquido}
+
+Silos (cilindro + cone), pílulas (cilindro + duas semiesferas), casquinhas (cone +
+hemisfério), peças vazadas (prisma $-$ cilindro)\ldots{} A estratégia é sempre a
+mesma: \textbf{decomponha} o objeto em sólidos conhecidos, \textbf{some} o que foi
+acrescentado e \textbf{subtraia} o que foi retirado. Cuidado para usar, em cada
+parte, a \emph{sua} altura e o \emph{seu} raio.
+
+Outra situação clássica é o \textbf{nível de água que sobe} quando um objeto é
+mergulhado. Em um recipiente de paredes verticais, a água “extra” forma um
+prisma (ou cilindro) com a mesma base do recipiente e altura igual à subida
+$\Delta h$. Como o objeto submerso ocupa exatamente esse espaço:
+
+\begin{formula}[Deslocamento de líquido]
+$\displaystyle V_{\text{objeto submerso}} = A_{\text{base do recipiente}}\cdot \Delta h$
+\end{formula}
+
+\noindent
+\begin{minipage}[c]{0.44\linewidth}
+\centering
+\begin{tikzpicture}[x={(.78cm,0cm)},y={(.36cm,.26cm)},z={(0cm,.78cm)},line join=round]
+  \def\L{5}\def\P{3}\def\A{3}\def\hi{1.5}\def\hf{2.0}
+  \draw[v2c12 fina] (0,\P,0)--(0,\P,\A) (0,\P,0)--(\L,\P,0) (0,0,0)--(0,\P,0);
+  % pedra
+  \fill[ebookMuted!70] (1.3,.6,0) .. controls (1.2,.6,.6) and (1.9,.6,.95) .. (2.4,.6,.7)
+    .. controls (2.9,.6,.5) and (2.8,.6,0) .. (2.4,.6,0) -- cycle;
+  % água
+  \fill[contextoC!22,opacity=.85] (0,0,0)--(\L,0,0)--(\L,0,\hf)--(0,0,\hf)--cycle;
+  \fill[contextoC!32,opacity=.85] (\L,0,0)--(\L,\P,0)--(\L,\P,\hf)--(\L,0,\hf)--cycle;
+  \fill[contextoC!40,opacity=.8] (0,0,\hf)--(\L,0,\hf)--(\L,\P,\hf)--(0,\P,\hf)--cycle;
+  \draw[contextoC,line width=.7pt] (0,0,\hf)--(\L,0,\hf)--(\L,\P,\hf);
+  \draw[ebookAcc,line width=.7pt,dash pattern=on 3pt off 2pt] (0,0,\hi)--(\L,0,\hi)--(\L,\P,\hi);
+  \draw[v2c12 aresta] (0,0,0)--(\L,0,0)--(\L,\P,0)--(\L,\P,\A)--(0,\P,\A)--(0,0,\A)--cycle
+    (0,0,\A)--(\L,0,\A)--(\L,0,0) (\L,0,\A)--(\L,\P,\A);
+  \draw[v2c12 cota] (\L+.25,0,\hi)--(\L+.25,0,\hf);
+  \node[font=\small,text=ebookAcc,anchor=west] at (\L+.3,0,1.75) {$\Delta h$};
+  \node[font=\footnotesize,text=ebookMuted,anchor=east] at (-.1,0,\hi) {nível inicial};
+\end{tikzpicture}
+\captionof{figure}{A pedra empurra a água para cima: $V_{\text{pedra}} = A_b\cdot\Delta h$.}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.52\linewidth}
+\begin{exemplo}[Volume de uma pedra]
+Um aquário tem base retangular de $50\ \text{cm}\times 30\ \text{cm}$. Ao
+mergulhar totalmente uma pedra, o nível da água sobe 0,8~cm, sem transbordar.
+Qual é o volume da pedra? Se ela tem massa de 3~kg, qual é a sua densidade?
+\solucao
+$V = 50\cdot 30\cdot 0{,}8 = 1200\ \text{cm}^3$. A densidade é
+$\frac{3000\ \text{g}}{1200\ \text{cm}^3} = 2{,}5\ \text{g/cm}^3$.
+
+A forma irregular da pedra não importa: só a área da base do aquário e a
+subida do nível.
+\end{exemplo}
+\end{minipage}
+
+% =====================================================================
+\section{Dicas e macetes}
+
+\begin{dica}[Volume ou área? Leia o verbo]
+Antes de qualquer conta, decida \emph{o que} está sendo medido. \textbf{Caber,
+encher, comportar, armazenar, derreter, despejar, transportar} indicam
+\textbf{volume}. \textbf{Pintar, revestir, forrar, embalar, gastar chapa ou
+papelão} indicam \textbf{área}. Metade dos erros em questões de sólidos vem de
+calcular a grandeza errada com a fórmula certa.
+\end{dica}
+
+\begin{dica}[Ache a “base que se repete”]
+$V = A_b\cdot h$ vale para \emph{qualquer} prisma ou cilindro, mesmo deitado. A
+base é a face que se repete ao longo do sólido, que nem sempre fica embaixo: em
+um silo trapezoidal deitado, a base é o trapézio, e a “altura” do prisma é o
+comprimento do silo.
+\end{dica}
+
+\begin{dica}[Deixe o $\pi$ para o fim]
+Ao comparar cilindros, cones e esferas, o $\pi$ aparece em todos os volumes e se
+cancela. E, quando o enunciado manda usar $\pi\approx 3$, use exatamente 3 —
+as alternativas foram calculadas assim. Se as alternativas trazem o símbolo
+$\pi$, não substitua nada.
+\end{dica}
+
+\begin{dica}[Nível que sobe ou desce]
+Em recipientes de paredes verticais, a variação de volume é sempre
+$\Delta V = A_b\cdot\Delta h$. Isso resolve objetos mergulhados, bolinhas
+jogadas na água, consumo de reservatórios (“o nível baixou 30~cm”) e vazão
+(“subiu 0,6~m em 2~h”).
+\end{dica}
+
+\begin{macete}[A escada do volume]
+\[
+\text{m}^3 \xrightarrow{\ \times 1000\ } \text{dm}^3 = \text{L}
+\xrightarrow{\ \times 1000\ } \text{cm}^3 = \text{mL}
+\]
+Desceu um degrau, multiplique por 1000; subiu, divida por 1000. Um jeito
+rápido: converta todas as medidas lineares para \textbf{decímetros} antes de
+multiplicar, e o resultado já sai em litros.
+\end{macete}
+
+\begin{macete}[$k$, $k^2$, $k^3$]
+Se as medidas lineares são multiplicadas por $k$, a área fica multiplicada por
+$k^2$ e o volume (ou a massa) por $k^3$. Tabela relâmpago:
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+Medidas & $k$ & Área ($k^2$) & Volume ($k^3$)\\
+\midrule
+dobram & 2 & $\times 4$ & $\times 8$\\
+triplicam & 3 & $\times 9$ & $\times 27$\\
+aumentam 50\% & 1,5 & $\times 2{,}25$ & $\times 3{,}375$\\
+diminuem 20\% & 0,8 & $\times 0{,}64$ & $\times 0{,}512$\\
+caem à metade & 0,5 & $\times 0{,}25$ & $\times 0{,}125$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{macete}
+
+\begin{macete}[Cilindro: o raio pesa ao quadrado]
+Em $V = \pi r^2 h$, dobrar a altura dobra o volume, mas dobrar o raio
+\emph{quadruplica} o volume. Para manter o volume quando o raio é multiplicado
+por $k$, a altura deve ser dividida por $k^2$. Ex.: raio 2 vezes maior
+$\Rightarrow$ altura 4 vezes menor.
+\end{macete}
+
+\begin{atencao}[Raio ou diâmetro?]
+O ENEM costuma informar o \textbf{diâmetro} (“cano de 10~cm”, “lata de 8~cm de
+diâmetro”). As fórmulas usam o \textbf{raio}. Usar o diâmetro no lugar do raio
+multiplica a área da base por 4 — e esse valor errado quase sempre está entre
+as alternativas.
+\end{atencao}
+
+\begin{atencao}[O $\frac13$ é só dos “pontudos”]
+Pirâmide e cone levam $\frac13$; prisma e cilindro, não. O hemisfério é
+\emph{metade} da esfera: $\frac23\pi r^3$, e não $\frac43\pi r^3$. E a área
+lateral do cone usa a \emph{geratriz} $g$, não a altura $h$ — assim como a área
+da face de uma pirâmide usa o apótema $m$, não a altura da pirâmide.
+\end{atencao}
+
+\begin{atencao}[Metade da altura não é metade do volume]
+Em uma taça cônica (vértice para baixo), encher até a metade da altura coloca
+só $\left(\frac12\right)^3 = \frac18$ do volume! O líquido forma um cone
+\emph{semelhante} ao da taça. Para ter metade do volume, a altura do líquido
+deve ser $\sqrt[3]{0{,}5}\approx 0{,}79$ da altura total.
+\end{atencao}
+
+\begin{resumo}
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt]
+  \item \textbf{Prisma e cilindro:} $V = A_b\cdot h$ \quad ($V_{\text{cilindro}} = \pi r^2 h$). Vale também para os oblíquos (Cavalieri).
+  \item \textbf{Pirâmide e cone:} $V = \frac13 A_b\cdot h$ \quad ($V_{\text{cone}} = \frac13\pi r^2 h$); \quad $g^2 = h^2 + r^2$.
+  \item \textbf{Esfera:} $V = \frac43\pi r^3$, \ $A = 4\pi r^2$; hemisfério: $\frac23\pi r^3$. Cone : esfera : cilindro $= 1:2:3$.
+  \item \textbf{Áreas:} cilindro $2\pi r^2 + 2\pi r h$; cone $\pi r^2 + \pi r g$; paralelepípedo $2(ab+ac+bc)$. Some só as faces pedidas.
+  \item \textbf{Unidades:} $1\ \text{m}^3 = 1000\ \text{L}$, \ $1\ \text{dm}^3 = 1\ \text{L}$, \ $1\ \text{cm}^3 = 1\ \text{mL}$.
+  \item \textbf{Semelhança:} comprimentos $\times k$, áreas $\times k^2$, volumes e massas $\times k^3$.
+  \item \textbf{Tronco} $=$ sólido grande $-$ sólido pequeno (use a semelhança para achar a altura que falta).
+  \item \textbf{Compostos:} decomponha, some e subtraia. \textbf{Nível da água:} $\Delta V = A_b\cdot\Delta h$.
+  \item \textbf{Arredonde com bom senso:} viagens e latas para cima; unidades completas produzidas para baixo.
+\end{itemize}
+\end{resumo}
+
+% =====================================================================
+\secaoenem
+
+% ---------------------------------------------------------------------
+\questaoenem{2015-148}
+\begin{resolucao}{A}
+\passo{1. Entendendo o problema.} Cada contêiner é um paralelepípedo de
+$6{,}4\ \text{m}\times 2{,}5\ \text{m}\times 2{,}5\ \text{m}$. Eles devem ocupar a
+área de $10\ \text{m}\times 32\ \text{m}$ \emph{sem deixar espaços} e sem
+ultrapassá-la. Queremos a altura da pilha.
+
+\passo{2. Quantos contêineres cabem em cada camada.} Para não sobrar espaço, cada
+lado da área precisa ser um múltiplo exato da medida do contêiner naquela
+direção. Colocando o comprimento de 6,4~m ao longo dos 32~m:
+$32 \div 6{,}4 = 5$ (exato) e $10 \div 2{,}5 = 4$ (exato). Logo, cabem
+$5\cdot 4 = 20$ contêineres por camada, cobrindo a área inteira. (Na outra
+posição, $10\div 6{,}4$ não é inteiro e sobraria espaço.)
+
+\passo{3. Número de camadas e altura.} São $100 \div 20 = 5$ camadas, cada uma
+com 2,5~m de altura: $5\cdot 2{,}5 = 12{,}5$~m.
+
+\passo{4. Conferência pelo volume.} Volume total:
+$100\cdot(6{,}4\cdot 2{,}5\cdot 2{,}5) = 100\cdot 40 = 4000\ \text{m}^3$. Como
+$V = A_b\cdot h$, a altura é $h = 4000 \div (10\cdot 32) = 4000\div 320 = 12{,}5$~m.
+Item fácil ($b = 0{,}94$): é o “contar cubinhos em camadas” da teoria.
+
+\resposta{alternativa A — 12,5~m.}
+\begin{distratores}
+\alt{B} 17,5~m corresponde a 7 camadas; com 20 contêineres por camada, isso
+exigiria 140 contêineres, e não 100.
+\alt{C} 25,0~m é o dobro do correto: erro de quem considera cada camada com 5~m
+de altura (somando as duas medidas de 2,5~m) ou acha que só cabem 10 contêineres
+por camada.
+\alt{D} Erro de quem gira o contêiner, pondo os 6,4~m ao longo dos 10~m: caberia 1
+por fileira e 12 fileiras ($12\cdot 2{,}5 = 30$~m), isto é, 12 por camada e
+$\lceil 100/12\rceil = 9$ camadas, ou seja, $9\cdot 2{,}5 = 22{,}5$~m. Mas sobrariam
+faixas vazias de 3,6~m e de 2~m, o que a norma proíbe.
+\alt{E} 32,5~m seriam 13 camadas (260 contêineres); o valor provavelmente atrai
+quem se confunde com a medida de 32~m da área.
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\questaoenem{2022-169}
+\begin{resolucao}{E}
+\passo{1. A ideia.} Para um cilindro, $V = A_b\cdot P$ (área da base vezes
+profundidade). Vamos escrever cada modelo em função de $V_{\text{I}} = A_b\cdot P$.
+O ponto-chave é diferenciar “metade/dobro da \emph{área}” de “metade/dobro do
+\emph{raio}”: como $A_b = \pi r^2$, multiplicar o raio por $k$ multiplica a área
+da base por $k^2$.
+
+\passo{2. Modelo a modelo.}
+\begin{itemize}[nosep,leftmargin=1.2em]
+  \item II: $2P\cdot\frac{A_b}{2} = A_b P = V_{\text{I}}$;
+  \item III: raio pela metade $\Rightarrow$ área $\frac{A_b}{4}$; $\;2P\cdot\frac{A_b}{4} = \frac12 V_{\text{I}}$;
+  \item IV: $\frac{P}{2}\cdot 2A_b = A_b P = V_{\text{I}}$;
+  \item V: raio dobrado $\Rightarrow$ área $4A_b$; $\;\frac{P}{2}\cdot 4A_b = 2V_{\text{I}}$.
+\end{itemize}
+
+\passo{3. Conclusão.} O modelo V tem o dobro da capacidade do modelo I e é o
+maior. Item médio ($b = 1{,}89$): exige perceber que o raio “pesa ao quadrado”.
+
+\resposta{alternativa E — modelo V.}
+\begin{distratores}
+\alt{A} O modelo I empata com II e IV e perde para V ($2V_{\text{I}}$).
+\alt{B} O modelo II tem o mesmo volume do I: dobrar a profundidade e reduzir a
+área à metade se compensam. Atrai quem só olha o “dobro da profundidade”.
+\alt{C} O modelo III é, na verdade, o \emph{menor} ($\frac12 V_{\text{I}}$). Quem
+pensa que reduzir o raio à metade reduz a área só à metade acharia
+$2P\cdot\frac{A_b}{2} = V_{\text{I}}$, e ainda assim ele não seria o maior.
+\alt{D} O modelo IV tem o mesmo volume do I. Atrai quem confunde “dobro da área”
+com “dobro do raio”, que é o que acontece no modelo V.
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\questaoenem{2024-175}
+\begin{resolucao}{D}
+\passo{1. O que vira o quê.} Ao enrolar a folha, um dos lados vira a
+\textbf{altura} do cilindro e o outro vira o \textbf{comprimento da circunferência
+da base}, $2\pi r$. Esse lado \emph{não} é o diâmetro nem o raio.
+
+\passo{2. Embalagem 1} (altura 20~cm, contorno 10~cm):
+$2\pi r = 10 \Rightarrow r = \frac{5}{\pi}$. Então
+$V_1 = \pi\left(\frac{5}{\pi}\right)^2\cdot 20 = \pi\cdot\frac{25}{\pi^2}\cdot 20 = \frac{500}{\pi}\ \text{cm}^3$.
+
+\passo{3. Embalagem 2} (altura 10~cm, contorno 20~cm):
+$2\pi r = 20 \Rightarrow r = \frac{10}{\pi}$. Então
+$V_2 = \pi\cdot\frac{100}{\pi^2}\cdot 10 = \frac{1000}{\pi}\ \text{cm}^3$.
+
+\passo{4. Conclusão.} A maior capacidade é a da embalagem 2, com
+$\frac{1000}{\pi}\ \text{cm}^3$ (cerca de 318~mL). Note que as duas usam a mesma
+quantidade de alumínio na lateral, mas a “mais baixa e larga” guarda o dobro:
+o raio pesa ao quadrado no volume. Item médio ($b = 1{,}94$).
+
+\resposta{alternativa D — $\dfrac{1000}{\pi}\ \text{cm}^3$.}
+\begin{distratores}
+\alt{A} $4000\pi$: usou 20~cm como \emph{raio} e 10~cm como altura
+($\pi\cdot 20^2\cdot 10$).
+\alt{B} $2000\pi$: usou 10~cm como raio e 20~cm como altura
+($\pi\cdot 10^2\cdot 20$).
+\alt{C} $\frac{4000}{\pi}$: esqueceu o fator 2 da circunferência, fazendo
+$\pi r = 20$, ou seja, $r = \frac{20}{\pi}$ e
+$V = \pi\cdot\frac{400}{\pi^2}\cdot 10 = \frac{4000}{\pi}$.
+\alt{E} $\frac{500}{\pi}$ é o volume da embalagem 1, a de \emph{menor}
+capacidade.
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\questaoenem{2023-136}
+\begin{resolucao}{B}
+\passo{1. Plano.} Escultura $=$ cone grande $-$ cone pequeno (do topo) $-$
+cilindro (do furo). Depois, massa $=$ densidade $\times$ volume. Use $\pi = 3$.
+
+\passo{2. Altura do cone retirado (semelhança).} O cone grande tem raio 9~cm e
+altura 36~cm; o pequeno tem raio 3~cm. Como são semelhantes,
+$k = \frac39 = \frac13$, e a altura do cone pequeno é $\frac13\cdot 36 = 12$~cm.
+Logo, o tronco tem altura $36 - 12 = 24$~cm.
+
+\passo{3. Volumes.}
+\begin{itemize}[nosep,leftmargin=1.2em]
+  \item cone grande: $\frac13\cdot 3\cdot 9^2\cdot 36 = 2916\ \text{cm}^3$;
+  \item cone pequeno: $\frac13\cdot 3\cdot 3^2\cdot 12 = 108\ \text{cm}^3$;
+  \item cilindro do furo (raio 3, atravessa o tronco de base a base, altura 24):
+        $3\cdot 3^2\cdot 24 = 648\ \text{cm}^3$.
+\end{itemize}
+Volume da escultura: $2916 - 108 - 648 = 2160\ \text{cm}^3$.
+
+\passo{4. Massa.} $0{,}6\cdot 2160 = 1296$~g. Item difícil ($b = 2{,}45$): combina
+três sólidos, semelhança e densidade.
+
+\resposta{alternativa B — 1\,296,0~g.}
+\begin{distratores}
+\alt{A} 1\,198,8~g $= 0{,}6\cdot 1998$: o volume do tronco está certo (2\,808),
+mas o furo foi calculado com altura 30~cm ($36 - 6$, confundindo o diâmetro de
+6~cm com a altura do cone retirado): $2808 - 810 = 1998$.
+\alt{C} 1\,360,8~g $= 0{,}6\cdot 2268$: esqueceu de retirar o cone pequeno
+($2916 - 648$).
+\alt{D} 4\,665,6~g $= 0{,}6\cdot 7776$: esqueceu o $\frac13$ dos cones
+($8748 - 324 - 648$).
+\alt{E} 4\,860,0~g $= 0{,}6\cdot 8100$: esqueceu o $\frac13$ \emph{e} não retirou
+o cone pequeno ($8748 - 648$).
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\questaoenem{2022-178}
+\begin{resolucao}{E}
+\passo{1. Semelhança.} Todos os docinhos são esferas, e esferas são semelhantes.
+Passar de 2~cm para 4~cm de diâmetro é multiplicar as medidas lineares por
+$k = 2$; logo, o volume (e a massa) de cada docinho fica multiplicado por
+$k^3 = 8$.
+
+\passo{2. Contando em “docinhos pequenos”.} Cada docinho grande equivale a 8
+pequenos. A encomenda equivale a $150\cdot 8 = 1200$ docinhos pequenos.
+
+\passo{3. Porções.} Uma porção rende 50 pequenos:
+$1200 \div 50 = 24$ porções. Item difícil ($b = 2{,}57$): a intuição “dobrou o
+diâmetro, dobra a massa” é forte, e as alternativas exploram exatamente isso.
+
+\resposta{alternativa E — 24 porções.}
+\begin{distratores}
+\alt{A} 2: usou apenas a razão entre os diâmetros ($4\div 2$) e ignorou a
+quantidade de docinhos.
+\alt{B} 3: considerou só a quantidade ($150\div 50$), como se os docinhos não
+tivessem mudado de tamanho.
+\alt{C} 6: multiplicou por $k = 2$ (proporcionalidade linear): $3\cdot 2$.
+\alt{D} 12: multiplicou por $k^2 = 4$ (razão de áreas): $3\cdot 4$.
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\questaoenem{2010-168}
+\begin{resolucao}{B}
+\passo{1. Entendendo as taças.} A taça da Figura 1 é um \textbf{hemisfério}
+(meia esfera) de raio 3~cm, servida cheia. Na taça cônica, a figura indica que o
+champanhe forma um cone com raio 3~cm na superfície e altura $h$, que é o que
+queremos.
+
+\passo{2. Volume do hemisfério.}
+$V = \frac12\cdot\frac43\pi R^3 = \frac23\pi\cdot 3^3 = 18\pi\ \text{cm}^3$.
+
+\passo{3. Igualando ao cone.}
+$\frac13\pi\cdot 3^2\cdot h = 18\pi \Rightarrow 3\pi h = 18\pi \Rightarrow h = 6$~cm.
+Repare que o $\pi$ se cancela: nem é preciso substituir valor algum.
+
+Item muito difícil ($b = 3{,}29$), embora as fórmulas sejam dadas: é preciso
+perceber que a taça é \emph{meia} esfera e montar a igualdade de volumes; as
+alternativas exploram quem usa a esfera inteira ou responde com um volume em vez
+de uma altura.
+
+\resposta{alternativa B — 6,00~cm.}
+\begin{distratores}
+\alt{A} 1,33 $\approx \frac43$: resulta de se perder na simplificação e ficar só
+com o coeficiente da fórmula da esfera.
+\alt{C} 12,00: usou a esfera \emph{inteira}: $\frac43\pi\cdot 27 = 36\pi = 3\pi h
+\Rightarrow h = 12$.
+\alt{D} 56,52 $= 18\cdot 3{,}14$: é o \emph{volume} do hemisfério em cm$^3$, e não a
+altura pedida.
+\alt{E} 113,04 $= 36\cdot 3{,}14$: é o volume da esfera inteira.
+\end{distratores}
+\end{resolucao}
+
+% =====================================================================
+\secaoineditas
+
+% ---------------------------------------------------------------------
+\begin{questaoinedita}{1}{12}
+Aquários domésticos precisam de um espaço livre entre a superfície da água e a
+tampa, para facilitar a troca de gases e evitar que os peixes saltem para fora.
+Um aquário com a forma de um paralelepípedo reto-retângulo tem dimensões
+internas de 80~cm de comprimento, 40~cm de largura e 50~cm de altura. O
+fabricante recomenda que a água fique 5~cm abaixo da borda superior.
+
+\comando{Seguindo a recomendação do fabricante, a quantidade de água, em litro,
+que deve ser colocada nesse aquário é}
+\begin{alternativas*}[5]
+  \item 14,4.
+  \item 16,0.
+  \item 144,0.
+  \item 160,0.
+  \item 1\,440,0.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{C}
+\passo{1. Altura da água.} A água fica 5~cm abaixo da borda: $50 - 5 = 45$~cm.
+
+\passo{2. Volume.} $V = 80\cdot 40\cdot 45 = 144\,000\ \text{cm}^3$.
+
+\passo{3. Conversão.} Como $1\ \text{L} = 1000\ \text{cm}^3$,
+$144\,000 \div 1000 = 144$~L. (Atalho da escada: em decímetros,
+$8\cdot 4\cdot 4{,}5 = 144\ \text{dm}^3 = 144$~L.)
+
+\resposta{alternativa C — 144,0~L.}
+\begin{distratores}
+\alt{A} 14,4: dividiu por \num{10000} na conversão de cm$^3$ para litro.
+\alt{B} 16,0: calculou o volume da faixa \emph{vazia} de 5~cm
+($80\cdot 40\cdot 5 = 16\,000\ \text{cm}^3$).
+\alt{D} 160,0: calculou a capacidade total, com o aquário cheio até a borda.
+\alt{E} 1\,440,0: dividiu por 100, e não por 1000, na conversão.
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\begin{questaoinedita}{2}{8}
+Na fábula \emph{O corvo e o jarro}, atribuída a Esopo, um corvo com sede encontra
+um jarro com um pouco de água no fundo. Como não alcança a água com o bico, ele
+joga pedrinhas dentro do jarro, uma a uma, até o nível subir o suficiente.
+Experimentos com corvos reais mostraram que essas aves são, de fato, capazes de
+usar essa estratégia.
+
+Em uma montagem que reproduz a fábula, um jarro com a forma de um cilindro
+circular reto, de diâmetro interno 8~cm, contém água até a altura de 10~cm. A
+ave consegue beber quando o nível da água atinge 16~cm de altura. Cada pedrinha
+tem, em média, volume de $6\ \text{cm}^3$ e fica totalmente submersa.
+
+Use 3 como aproximação para $\pi$.
+
+\comando{O número mínimo de pedrinhas que devem ser colocadas no jarro para que
+a ave consiga beber a água é}
+\begin{alternativas*}[5]
+  \item 24.
+  \item 48.
+  \item 80.
+  \item 128.
+  \item 192.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. O que precisa ser ocupado.} O nível deve subir de 10~cm para 16~cm:
+$\Delta h = 6$~cm. As pedrinhas precisam ocupar o volume de um cilindro com a
+base do jarro e altura 6~cm (deslocamento de líquido).
+
+\passo{2. Volume.} Raio $= 8\div 2 = 4$~cm.
+$\Delta V = \pi r^2\cdot\Delta h = 3\cdot 4^2\cdot 6 = 288\ \text{cm}^3$.
+
+\passo{3. Número de pedrinhas.} $288\div 6 = 48$. Com 48 pedrinhas o nível chega
+exatamente a 16~cm.
+
+\resposta{alternativa B — 48 pedrinhas.}
+\begin{distratores}
+\alt{A} 24: usou o comprimento da circunferência ($2\pi r$) no lugar da área da
+base: $2\cdot 3\cdot 4\cdot 6 = 144$; $144\div 6 = 24$.
+\alt{C} 80: calculou o volume da água que já estava no jarro
+($3\cdot 16\cdot 10 = 480$; $480\div 6 = 80$).
+\alt{D} 128: usou a altura final de 16~cm em vez da variação de 6~cm
+($3\cdot 16\cdot 16 = 768$; $768\div 6 = 128$).
+\alt{E} 192: usou o diâmetro como raio ($3\cdot 8^2\cdot 6 = 1152$;
+$1152\div 6 = 192$).
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\begin{questaoinedita}{2}{14}
+Uma cooperativa rural armazena água em um tanque metálico com a forma de um
+cilindro circular reto, com 2~m de raio da base e 5~m de altura, apoiado sobre
+uma laje de concreto. Para protegê-lo da ferrugem, a cooperativa vai pintar toda
+a parte externa visível do tanque, isto é, a superfície lateral e a tampa; o
+fundo, apoiado na laje, não será pintado. A tinta escolhida rende
+$8\ \text{m}^2$ por litro, e uma única demão é suficiente.
+
+Use 3 como aproximação para $\pi$.
+
+\comando{A quantidade mínima de tinta, em litro, necessária para essa pintura é}
+\begin{alternativas*}[5]
+  \item 5,25.
+  \item 7,50.
+  \item 9,00.
+  \item 10,50.
+  \item 21,00.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{C}
+\passo{1. Quais superfícies?} Pintar é \emph{área}. Entram a lateral e a tampa
+(um círculo); o fundo fica de fora.
+
+\passo{2. Áreas.} Lateral: $2\pi r h = 2\cdot 3\cdot 2\cdot 5 = 60\ \text{m}^2$.
+Tampa: $\pi r^2 = 3\cdot 2^2 = 12\ \text{m}^2$. Total: $72\ \text{m}^2$.
+
+\passo{3. Tinta.} $72 \div 8 = 9$~L.
+
+\resposta{alternativa C — 9,00~L.}
+\begin{distratores}
+\alt{A} 5,25: usou $\pi r h$ para a lateral (esqueceu o 2):
+$(30 + 12)\div 8 = 5{,}25$.
+\alt{B} 7,50: pintou só a lateral ($60\div 8$), esquecendo a tampa.
+\alt{D} 10,50: incluiu também o fundo ($60 + 12 + 12 = 84$; $84\div 8$).
+\alt{E} 21,00: usou o diâmetro (4~m) como raio:
+$(2\cdot 3\cdot 4\cdot 5 + 3\cdot 4^2)\div 8 = 168\div 8 = 21$.
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\begin{questaoinedita}{3}{8}
+O telhado de um quiosque de praia terá o formato da superfície lateral de uma
+pirâmide quadrangular regular. A base dessa pirâmide é um quadrado de 6~m de
+lado, e o topo do telhado fica 4~m acima do centro desse quadrado, como mostra a
+figura.
+
+\begin{center}
+\begin{tikzpicture}[x={(.62cm,0cm)},y={(.3cm,.22cm)},z={(0cm,.62cm)},line join=round]
+  \fill[ebookAcc!30] (3,3,4)--(0,0,0)--(6,0,0)--cycle;
+  \fill[ebookAcc!50] (3,3,4)--(6,0,0)--(6,6,0)--cycle;
+  \draw[v2c12 oculta] (0,0,0)--(0,6,0)--(6,6,0) (3,3,4)--(0,6,0);
+  \draw[v2c12 oculta] (0,0,0)--(6,6,0) (6,0,0)--(0,6,0);
+  \draw[v2c12 aresta] (0,0,0)--(6,0,0)--(6,6,0)--(3,3,4)--cycle (3,3,4)--(6,0,0);
+  \draw[ebookPrim,line width=.7pt,dash pattern=on 2pt off 1.5pt] (3,3,4)--(3,3,0);
+  \node[font=\small,text=ebookPrim,anchor=west] at (3.05,3,2.1) {4 m};
+  \fill[ebookDark] (3,3,0) circle (1pt);
+  \draw[v2c12 cota] (0,-.6,0)--(6,-.6,0) node[midway,below,v2c12 rot]{6 m};
+  \draw[v2c12 cota] (6.6,0,0)--(6.6,6,0) node[midway,right=2pt,v2c12 rot]{6 m};
+\end{tikzpicture}
+\end{center}
+
+Para a cobertura, o fornecedor indica o uso de 16 telhas por metro quadrado de
+telhado.
+
+\comando{Desconsiderando perdas, o número mínimo de telhas necessárias para
+cobrir esse telhado é}
+\begin{alternativas*}[5]
+  \item 960.
+  \item 1\,120.
+  \item 1\,344.
+  \item 1\,536.
+  \item 1\,920.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{A}
+\passo{1. Qual área?} O telhado são as 4 faces triangulares (a base quadrada não
+é coberta). Cada face é um triângulo de base 6~m; a altura desse triângulo é o
+\textbf{apótema da pirâmide} $m$, e não os 4~m de altura da pirâmide — essa é a
+informação “escondida”.
+
+\passo{2. Apótema (Pitágoras).} O apótema liga o topo ao ponto médio de um lado da
+base. Ele é a hipotenusa de um triângulo retângulo com catetos 4~m (altura) e
+3~m (metade do lado): $m = \sqrt{4^2 + 3^2} = \sqrt{25} = 5$~m.
+
+\passo{3. Área do telhado.} $A = 4\cdot\frac{6\cdot 5}{2} = 60\ \text{m}^2$.
+
+\passo{4. Telhas.} $60\cdot 16 = 960$ telhas.
+
+\resposta{alternativa A — 960 telhas.}
+\begin{distratores}
+\alt{B} 1\,120: usou a aresta lateral ($\sqrt{3^2+3^2+4^2} = \sqrt{34}\approx 5{,}83$~m)
+como altura de cada triângulo: $4\cdot\frac{6\cdot 5{,}83}{2}\approx 70\ \text{m}^2$,
+e $70\cdot 16 = 1120$.
+\alt{C} 1\,344: somou os catetos em vez de usar Pitágoras ($m = 3 + 4 = 7$):
+$4\cdot\frac{6\cdot 7}{2} = 84\ \text{m}^2$; $84\cdot 16 = 1344$.
+\alt{D} 1\,536: incluiu a base quadrada ($60 + 36 = 96\ \text{m}^2$), que não faz
+parte do telhado.
+\alt{E} 1\,920: esqueceu de dividir por 2 a área de cada triângulo
+($4\cdot 6\cdot 5 = 120\ \text{m}^2$).
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\begin{questaoinedita}{3}{12}
+Uma confeitaria produz bombons esféricos com 3~cm de diâmetro, formados por um
+recheio coberto por uma fina camada de chocolate. Em cada bombom são usados
+12~g de recheio e 3~g de chocolate de cobertura. Para uma data comemorativa, a
+confeitaria lançará uma versão gigante do bombom, também esférica, com 6~cm de
+diâmetro e com a mesma espessura de cobertura.
+
+Considere que a massa de recheio é proporcional ao volume do bombom e que a
+massa de cobertura, por ser uma camada fina de espessura constante, é
+proporcional à área da superfície do bombom.
+
+\comando{A massa total, em grama, de cada bombom gigante será}
+\begin{alternativas*}[5]
+  \item 30.
+  \item 60.
+  \item 99.
+  \item 108.
+  \item 120.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{D}
+\passo{1. Razão de semelhança.} As esferas são semelhantes, com
+$k = \frac{6}{3} = 2$.
+
+\passo{2. Recheio (volume, $k^3$).} $12\cdot 2^3 = 12\cdot 8 = 96$~g.
+
+\passo{3. Cobertura (área, $k^2$).} $3\cdot 2^2 = 3\cdot 4 = 12$~g.
+
+\passo{4. Total.} $96 + 12 = 108$~g. A dificuldade está em perceber que as duas
+partes do bombom crescem em ritmos diferentes: o que “preenche” cresce com o
+volume; o que “reveste”, com a área.
+
+\resposta{alternativa D — 108~g.}
+\begin{distratores}
+\alt{A} 30: multiplicou tudo por $k = 2$ ($15\cdot 2$), como se a massa fosse
+proporcional ao diâmetro.
+\alt{B} 60: multiplicou tudo por $k^2 = 4$ ($15\cdot 4$), tratando o recheio como
+área.
+\alt{C} 99: aplicou $k^3$ ao recheio, mas esqueceu de ajustar a cobertura
+($96 + 3$).
+\alt{E} 120: multiplicou tudo por $k^3 = 8$ ($15\cdot 8$), tratando a cobertura
+como volume.
+\end{distratores}
+\end{resolucao}
+
+% ---------------------------------------------------------------------
+\begin{questaoinedita}{4}{14}
+Um bar serve licor em taças cuja parte interna tem a forma de um cone circular
+reto com o vértice voltado para baixo. O diâmetro da boca da taça mede 8~cm, e a
+altura interna, do vértice até a boca, mede 12~cm. Para padronizar o
+atendimento, o gerente decidiu gravar em todas as taças um anel indicando o
+nível correspondente a uma dose de 81~mL.
+
+\begin{center}
+\begin{tikzpicture}[scale=.3]
+  \def\ry{.9}
+  \fill[ebookAcc!25] (0,0)--(-3,9) arc[start angle=180,end angle=360,x radius=3,y radius=.68] -- cycle;
+  \fill[ebookAcc!45] (0,9) ellipse[x radius=3,y radius=.68];
+  \draw[v2c12 aresta] (-4,12)--(0,0)--(4,12);
+  \draw[v2c12 aresta] (0,12) ellipse[x radius=4,y radius=\ry];
+  \draw[ebookAcc!70!black,line width=.9pt] (-3,9) arc[start angle=180,end angle=360,x radius=3,y radius=.68];
+  \draw[ebookAcc!70!black,line width=.6pt,dash pattern=on 2pt off 1.5pt] (3,9) arc[start angle=0,end angle=180,x radius=3,y radius=.68];
+  \draw[v2c12 aresta] (0,0)--(0,-3);
+  \draw[v2c12 aresta] (0,-3) ellipse[x radius=2.6,y radius=.6];
+  \draw[v2c12 cota] (5.2,0)--(5.2,12) node[midway,right,v2c12 rot]{12 cm};
+  \draw[v2c12 cota] (-4,13.6)--(4,13.6) node[midway,above,v2c12 rot]{8 cm};
+  \draw[v2c12 cota] (-4.4,0)--(-4.4,9) node[midway,left,v2c12 rot]{?};
+  \node[font=\footnotesize,text=ebookAcc!70!black,anchor=west] at (3.3,8.2) {anel};
+\end{tikzpicture}
+\end{center}
+
+Considere $1\ \text{cm}^3 = 1\ \text{mL}$ e use 3 como aproximação para $\pi$.
+
+\comando{O anel deve ser gravado a que altura, em centímetro, medida a partir do
+vértice da taça?}
+\begin{alternativas*}[5]
+  \item 3,0.
+  \item 5,1.
+  \item 6,2.
+  \item 7,8.
+  \item 9,0.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{E}
+\passo{1. Capacidade da taça.} Raio da boca: 4~cm.
+$V = \frac13\cdot 3\cdot 4^2\cdot 12 = 192\ \text{cm}^3 = 192$~mL.
+
+\passo{2. O líquido é um cone semelhante.} Com o vértice para baixo, o licor
+forma um cone \emph{semelhante} ao da taça. Se a altura do licor é $x$, a razão
+de semelhança é $k = \frac{x}{12}$, e a razão entre os volumes é $k^3$:
+\[
+k^3 = \frac{81}{192} = \frac{27}{64} = \left(\frac34\right)^3
+\;\Rightarrow\; k = \frac34 .
+\]
+
+\passo{3. Altura do anel.} $x = \frac34\cdot 12 = 9$~cm, medidos a partir do
+vértice. Conferência: o licor forma um cone de raio $\frac34\cdot 4 = 3$~cm e
+altura 9~cm, com volume $\frac13\cdot 3\cdot 3^2\cdot 9 = 81$~mL.
+
+Item muito difícil: exige calcular a capacidade, perceber a semelhança, trabalhar
+com a raiz cúbica (raciocínio inverso) e não confundir “altura a partir do
+vértice” com “distância até a borda”.
+
+\resposta{alternativa E — 9,0~cm.}
+\begin{distratores}
+\alt{A} 3,0: é a distância do anel até a \emph{borda} ($12 - 9$), e não a altura
+pedida, medida a partir do vértice.
+\alt{B} 5,1: supôs que altura e volume são proporcionais:
+$12\cdot\frac{81}{192}\approx 5{,}06$.
+\alt{C} 6,2: esqueceu o $\frac13$ do cone (capacidade de 576~mL):
+$12\cdot\sqrt[3]{81/576} = 12\cdot\sqrt[3]{9/64}\approx 6{,}24$.
+\alt{D} 7,8: usou a raiz quadrada (razão de áreas) em vez da cúbica:
+$12\cdot\sqrt{27/64}\approx 7{,}79$.
+\end{distratores}
+\end{resolucao}

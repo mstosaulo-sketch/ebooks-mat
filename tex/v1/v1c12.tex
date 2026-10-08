@@ -1,0 +1,880 @@
+\capitulo{v1c12}
+
+% =====================================================================
+\section{Por que medir a dispersão?}
+% =====================================================================
+
+Imagine dois estudantes que fizeram cinco simulados e terminaram com a \textbf{mesma média}: 7,0.
+A primeira, Ana, tirou 6,5; 7,0; 7,5; 7,0 e 7,0. O segundo, Bruno, tirou 4,0; 10,0; 5,0; 9,0 e 7,0.
+Se você olhar só para a média, os dois parecem iguais. Mas qualquer professor diria que Ana é
+\textbf{muito mais regular}: as notas dela ficam coladas em 7, enquanto as de Bruno “pulam” de um
+extremo a outro.
+
+\begin{center}
+\begin{tikzpicture}[x=0.95cm,y=1cm]
+  \foreach \yy/\nome in {1.3/Ana, 0/Bruno}{
+    \draw[ebookMuted,line width=.6pt] (3.6,\yy) -- (10.4,\yy);
+    \foreach \t in {4,...,10}{\draw[ebookMuted] (\t,\yy-0.07) -- (\t,\yy+0.07);}
+    \node[anchor=east,font=\sffamily\small\bfseries,text=ebookDark] at (3.4,\yy) {\nome};
+  }
+  \foreach \t in {4,...,10}{\node[font=\sffamily\scriptsize,text=ebookMuted] at (\t,-0.4) {\t};}
+  % média
+  \draw[ebookAcc,dashed,line width=.9pt] (7,-0.25) -- (7,1.75);
+  \node[font=\sffamily\scriptsize\bfseries,text=ebookAcc,anchor=south] at (7,1.75) {média $=7$};
+  % Ana: 6,5 7 7,5 7 7
+  \foreach \v/\h in {6.5/0, 7/0, 7.5/0, 7/1, 7/2}{
+    \fill[ebookPrim] (\v,1.3+0.2*\h+0.13) circle (2.6pt);}
+  % Bruno: 4 10 5 9 7
+  \foreach \v in {4,10,5,9,7}{\fill[nivelD] (\v,0.13) circle (2.6pt);}
+\end{tikzpicture}
+\captionof{figure}{Mesma média, dispersões muito diferentes: as notas de Ana se concentram perto de 7; as de Bruno se espalham de 4 a 10.}
+\end{center}
+
+É exatamente isso que as \textbf{medidas de dispersão} medem. No ENEM, elas aparecem disfarçadas em
+palavras como \emph{regular}, \emph{homogêneo}, \emph{estável}, \emph{uniforme}, \emph{constante} ou
+\emph{com menor variação}. Sempre que o enunciado falar nisso, a média sozinha não resolve.
+
+\begin{definicao}[Medida de dispersão]
+É um número que indica o quanto os valores de um conjunto estão \textbf{espalhados} em torno de um
+valor central (em geral, a média).
+\begin{itemize}[nosep,leftmargin=1.2em]
+  \item Dispersão \textbf{pequena}: valores próximos entre si $\Rightarrow$ conjunto \textbf{homogêneo} (regular).
+  \item Dispersão \textbf{grande}: valores afastados entre si $\Rightarrow$ conjunto \textbf{heterogêneo} (irregular).
+  \item Dispersão \textbf{zero}: todos os valores são iguais.
+\end{itemize}
+\end{definicao}
+
+\subsection{Amplitude}
+
+A medida de dispersão mais simples é a diferença entre o maior e o menor valor do conjunto.
+
+\begin{formula}[Amplitude total]
+$A = x_{\text{máx}} - x_{\text{mín}}$
+\end{formula}
+
+Para Ana, $A = 7{,}5 - 6{,}5 = 1{,}0$; para Bruno, $A = 10 - 4 = 6{,}0$. A amplitude confirma o que a
+figura mostra: as notas de Bruno variam seis vezes mais.
+
+A amplitude é rápida de calcular, mas tem um defeito: ela só “enxerga” os dois valores extremos.
+Os conjuntos $\{10, 10, 10, 10, 30\}$ e $\{10, 15, 20, 25, 30\}$ têm a mesma amplitude (20), mas no
+primeiro quatro dos cinco valores são idênticos, enquanto no segundo eles se distribuem por todo o
+intervalo. Para medir a dispersão de \emph{todos} os valores, precisaremos do desvio padrão.
+
+\begin{exemplo}[Duas cidades, a mesma média]
+As temperaturas máximas (em °C) registradas durante uma semana em duas cidades foram:
+\begin{center}
+\begin{tabular}{lccccccc}
+\toprule
+Cidade & Dom & Seg & Ter & Qua & Qui & Sex & Sáb \\ \midrule
+P & 24 & 25 & 25 & 26 & 25 & 24 & 26 \\
+Q & 18 & 31 & 22 & 29 & 25 & 20 & 30 \\ \bottomrule
+\end{tabular}
+\end{center}
+Compare as médias e as amplitudes. Em qual cidade o clima foi mais estável?
+\solucao
+As somas são $24+25+25+26+25+24+26 = 175$ e $18+31+22+29+25+20+30 = 175$; logo, as duas médias são
+iguais: $175 \div 7 = 25$\,°C.
+As amplitudes, porém, são bem diferentes: na cidade P, $A = 26 - 24 = 2$\,°C; na cidade Q,
+$A = 31 - 18 = 13$\,°C.
+\resposta{o clima foi mais estável na cidade P. A média igual “esconde” que, em Q, houve dias muito
+mais frios e muito mais quentes.}
+\end{exemplo}
+
+% =====================================================================
+\section{Desvio e desvio médio}
+% =====================================================================
+
+Uma ideia natural para medir a dispersão é olhar \textbf{quanto cada valor se afasta da média}.
+Essa diferença tem nome.
+
+\begin{definicao}[Desvio]
+O \textbf{desvio} de um valor $x_i$ em relação à média $\bar{x}$ é $d_i = x_i - \bar{x}$.
+O desvio é positivo para valores acima da média, negativo para valores abaixo e zero para valores
+iguais à média.
+\end{definicao}
+
+Veja os desvios das notas de Bruno (média 7):
+
+\begin{center}
+\begin{tikzpicture}[x=1.05cm,y=1cm]
+  \draw[ebookMuted,line width=.6pt,-{Stealth[length=5pt]}] (3.4,0) -- (10.7,0);
+  \foreach \t in {4,...,10}{\draw[ebookMuted] (\t,-0.07) -- (\t,0.07);
+    \node[font=\sffamily\scriptsize,text=ebookMuted] at (\t,-0.35) {\t};}
+  \draw[ebookAcc,dashed,line width=.9pt] (7,-0.15) -- (7,2.3);
+  \node[font=\sffamily\scriptsize\bfseries,text=ebookAcc,anchor=south] at (7,2.3) {$\bar{x} = 7$};
+  % desvios negativos
+  \draw[nivelD,line width=1pt,-{Stealth[length=5pt]}] (7,1.8) -- (4,1.8) node[midway,above,font=\sffamily\scriptsize] {$-3$};
+  \draw[nivelD,line width=1pt,-{Stealth[length=5pt]}] (7,1.05) -- (5,1.05) node[midway,above,font=\sffamily\scriptsize] {$-2$};
+  % desvios positivos
+  \draw[ebookPrim,line width=1pt,-{Stealth[length=5pt]}] (7,1.8) -- (10,1.8) node[midway,above,font=\sffamily\scriptsize] {$+3$};
+  \draw[ebookPrim,line width=1pt,-{Stealth[length=5pt]}] (7,1.05) -- (9,1.05) node[midway,above,font=\sffamily\scriptsize] {$+2$};
+  \foreach \v in {4,5,7,9,10}{\fill[ebookDark] (\v,0.15) circle (2.4pt);}
+  \node[font=\sffamily\scriptsize,text=ebookMuted,anchor=west] at (7.1,0.42) {desvio $0$};
+\end{tikzpicture}
+\captionof{figure}{Desvios das notas de Bruno em relação à média: os negativos “equilibram” exatamente os positivos.}
+\end{center}
+
+Os desvios são $-3$, $+3$, $-2$, $+2$ e $0$. Somando: $(-3) + 3 + (-2) + 2 + 0 = 0$. Isso
+\textbf{não é coincidência}: a média é justamente o ponto de equilíbrio dos dados.
+
+\begin{formula}[Propriedade dos desvios]
+$\displaystyle \sum_{i=1}^{n} (x_i - \bar{x}) = 0 \quad\text{para qualquer conjunto de dados}$
+\end{formula}
+
+Por isso, a \emph{média dos desvios} é sempre zero e não serve para medir nada. Para que os desvios
+negativos não “cancelem” os positivos, há duas saídas: usar o \textbf{valor absoluto} (desvio médio) ou
+\textbf{elevar ao quadrado} (variância, na próxima seção).
+
+\begin{formula}[Desvio médio]
+$\displaystyle DM = \frac{|x_1 - \bar{x}| + |x_2 - \bar{x}| + \cdots + |x_n - \bar{x}|}{n}$
+\end{formula}
+
+Para Bruno: $DM = \dfrac{3 + 3 + 2 + 2 + 0}{5} = \dfrac{10}{5} = 2{,}0$. Para Ana, os desvios são
+$-0{,}5$; $0$; $+0{,}5$; $0$; $0$, e $DM = \dfrac{1{,}0}{5} = 0{,}2$. Em média, as notas de Bruno ficam
+a 2 pontos da média; as de Ana, a apenas 0,2 ponto.
+
+\begin{exemplo}[Tempo de espera numa fila]
+Em uma lotérica, o tempo de espera (em minutos) de cinco clientes foi 6, 9, 10, 12 e 18. Calcule o
+desvio médio e interprete o resultado.
+\solucao
+\passo{Média.} $\bar{x} = \dfrac{6 + 9 + 10 + 12 + 18}{5} = \dfrac{55}{5} = 11$ minutos.
+
+\passo{Desvios.} $6-11 = -5$;\ $9-11 = -2$;\ $10-11 = -1$;\ $12-11 = +1$;\ $18-11 = +7$.
+(Confira: $-5-2-1+1+7 = 0$.)
+
+\passo{Desvio médio.} $DM = \dfrac{5 + 2 + 1 + 1 + 7}{5} = \dfrac{16}{5} = 3{,}2$ minutos.
+\resposta{em média, o tempo de cada cliente se afasta 3,2 minutos da média de 11 minutos.}
+\end{exemplo}
+
+% =====================================================================
+\section{Variância e desvio padrão}
+% =====================================================================
+
+A medida de dispersão mais importante — e a que mais aparece no ENEM — usa os \textbf{quadrados}
+dos desvios. Elevar ao quadrado elimina os sinais e, além disso, “pesa mais” os valores muito
+afastados da média.
+
+\begin{definicao}[Variância e desvio padrão]
+A \textbf{variância} é a média dos quadrados dos desvios. O \textbf{desvio padrão} é a raiz quadrada
+da variância.
+\end{definicao}
+
+\begin{formula}[Variância e desvio padrão de $n$ valores]
+$\displaystyle \sigma^2 = \frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \cdots + (x_n - \bar{x})^2}{n}
+\qquad\qquad \sigma = \sqrt{\sigma^2}$
+\end{formula}
+
+Por que tirar a raiz? Por causa da \textbf{unidade}. Se as notas estão em “pontos”, a variância fica em
+“pontos ao quadrado”, que não tem interpretação prática. O desvio padrão volta à unidade original
+dos dados (pontos, kg, minutos, reais…) e pode ser comparado diretamente com eles.
+
+\subsection{Calculando passo a passo}
+
+\begin{enumerate}[nosep,leftmargin=1.6em,label=\textbf{\arabic*.}]
+  \item Calcule a média $\bar{x}$.
+  \item Calcule cada desvio $x_i - \bar{x}$ (e confira se a soma dá zero).
+  \item Eleve cada desvio ao quadrado e some.
+  \item Divida a soma por $n$: essa é a variância.
+  \item Tire a raiz quadrada: esse é o desvio padrão.
+\end{enumerate}
+
+Para Bruno: quadrados dos desvios $9, 9, 4, 4, 0$; soma $= 26$; variância $= 26 \div 5 = 5{,}2$;
+desvio padrão $= \sqrt{5{,}2} \approx 2{,}28$ pontos. Para Ana: quadrados $0{,}25;\ 0;\ 0{,}25;\ 0;\ 0$;
+soma $= 0{,}5$; variância $= 0{,}1$; desvio padrão $= \sqrt{0{,}1} \approx 0{,}32$ ponto.
+
+\begin{exemplo}[Gols por rodada]
+Um time marcou 2, 0, 3, 1 e 4 gols nas cinco primeiras rodadas de um campeonato. Calcule a variância e
+o desvio padrão do número de gols por rodada.
+\solucao
+Organize os cálculos em uma tabela:
+\begin{center}
+\begin{tabular}{cccccc|c}
+\toprule
+$x_i$ & 2 & 0 & 3 & 1 & 4 & Soma: 10 \\
+$x_i - \bar{x}$ & 0 & $-2$ & 1 & $-1$ & 2 & Soma: 0 \\
+$(x_i - \bar{x})^2$ & 0 & 4 & 1 & 1 & 4 & Soma: 10 \\ \bottomrule
+\end{tabular}
+\end{center}
+A média é $10 \div 5 = 2$ gols. A variância é $\sigma^2 = 10 \div 5 = 2$ (gols$^2$) e o desvio padrão é
+$\sigma = \sqrt{2} \approx 1{,}41$ gol.
+\resposta{variância 2 e desvio padrão $\approx 1{,}41$ gol por rodada.}
+\end{exemplo}
+
+\subsection{Um atalho: média dos quadrados menos quadrado da média}
+
+Fazendo as contas algébricas, chega-se a uma fórmula equivalente, muito útil quando os dados já vêm
+resumidos (média e desvio padrão de cada grupo, por exemplo):
+
+\begin{formula}[Fórmula alternativa da variância]
+$\displaystyle \sigma^2 = \underbrace{\frac{x_1^2 + x_2^2 + \cdots + x_n^2}{n}}_{\text{média dos quadrados}} \;-\; \underbrace{\bar{x}^{\,2}}_{\text{quadrado da média}}$
+\end{formula}
+
+Nos gols: a média dos quadrados é $(4 + 0 + 9 + 1 + 16) \div 5 = 6$, e $6 - 2^2 = 2$. Mesmo resultado!
+
+\begin{contexto}[Dividir por $n$ ou por $n-1$?]
+Em pesquisas, quando os dados são uma \emph{amostra} e se quer estimar a dispersão de toda a população,
+os estatísticos dividem a soma dos quadrados por $n - 1$ (é o \emph{desvio padrão amostral}, o que as
+calculadoras chamam de $s$). No ENEM, quando é preciso calcular, o enunciado costuma trazer a fórmula;
+se não trouxer, use a divisão por $n$, como neste capítulo. Para \emph{comparar} conjuntos de mesmo
+tamanho, as duas versões levam sempre à mesma conclusão.
+\end{contexto}
+
+\subsection{O que acontece com o desvio padrão quando os dados mudam}
+
+Muitas questões não pedem para recalcular tudo, mas para prever o efeito de uma mudança aplicada a
+\emph{todos} os valores.
+
+\begin{itemize}[leftmargin=1.4em]
+  \item \textbf{Somar (ou subtrair) uma constante} $c$ a todos os valores desloca o conjunto inteiro:
+  a média aumenta $c$, mas as distâncias entre os valores não mudam. O desvio padrão
+  \textbf{não se altera}.
+  \item \textbf{Multiplicar} todos os valores por uma constante $k > 0$ “estica” o conjunto: a média e o
+  desvio padrão ficam multiplicados por $k$, e a variância fica multiplicada por $k^2$.
+\end{itemize}
+
+\begin{formula}[Transformações]
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{lccc}
+Transformação & Média & Desvio padrão & Variância \\ \midrule
+$y = x + c$ & $\bar{x} + c$ & $\sigma$ & $\sigma^2$ \\
+$y = k\,x$ & $k\,\bar{x}$ & $k\,\sigma$ & $k^2\sigma^2$ \\
+$y = k\,x + c$ & $k\,\bar{x} + c$ & $k\,\sigma$ & $k^2\sigma^2$
+\end{tabular}
+\end{formula}
+
+\begin{exemplo}[Ajustando as notas de uma prova]
+As notas de uma turma (de 0 a 10) têm média 5,5 e desvio padrão 1,2.
+(a) Se o professor somar 1 ponto à nota de todos, quais serão a nova média e o novo desvio padrão?
+(b) Se as notas originais forem convertidas para a escala de 0 a 100 (multiplicando por 10), quais
+serão a nova média, o novo desvio padrão e a nova variância?
+\solucao
+(a) Somar 1 desloca todas as notas igualmente: média $5{,}5 + 1 = 6{,}5$; desvio padrão continua
+$1{,}2$.
+
+(b) Multiplicar por 10: média $55$; desvio padrão $1{,}2 \times 10 = 12$; variância
+$1{,}2^2 \times 10^2 = 1{,}44 \times 100 = 144$.
+\resposta{(a) média 6,5 e desvio padrão 1,2; (b) média 55, desvio padrão 12 e variância 144.}
+\end{exemplo}
+
+% =====================================================================
+\section{Regularidade, homogeneidade e coeficiente de variação}
+% =====================================================================
+
+\subsection{Interpretando o desvio padrão}
+
+O desvio padrão é uma espécie de “distância típica” dos dados até a média. A regra de leitura é
+simples:
+
+\begin{formula}
+\textbf{menor desvio padrão} $\;\Longleftrightarrow\;$ dados mais \textbf{concentrados} $\;\Longleftrightarrow\;$ mais \textbf{regular / homogêneo}
+\end{formula}
+
+Assim, se dois atletas têm a mesma média de tempo, o de menor desvio padrão é o mais regular; se duas
+máquinas enchem pacotes com a mesma média de massa, a de menor desvio padrão é a mais confiável.
+O desvio padrão nunca é negativo e só vale zero quando todos os valores são iguais.
+
+\subsection{Coeficiente de variação}
+
+Comparar desvios padrão diretamente só é justo quando os conjuntos têm médias parecidas e a mesma
+unidade. Um desvio de 5 kg é enorme para recém-nascidos, mas pequeno para caminhões! Nesses casos,
+usamos uma medida \emph{relativa}.
+
+\begin{formula}[Coeficiente de variação]
+$\displaystyle CV = \frac{\sigma}{\bar{x}} \qquad (\text{costuma ser expresso em porcentagem})$
+\end{formula}
+
+O $CV$ não tem unidade (as unidades de $\sigma$ e de $\bar{x}$ se cancelam), por isso permite comparar
+grupos com médias muito diferentes ou até medidos em unidades diferentes. Uma referência usual em
+livros de estatística: $CV \le 15\%$, baixa dispersão; entre $15\%$ e $30\%$, dispersão média;
+acima de $30\%$, alta dispersão. (No ENEM, quando um critério desse tipo for necessário, ele será dado.)
+
+\begin{exemplo}[Adultos ou crianças: quem é mais homogêneo?]
+Em uma unidade de saúde, as massas de um grupo de adultos têm média 70 kg e desvio padrão 7 kg; as de
+um grupo de crianças têm média 20 kg e desvio padrão 4 kg. Qual grupo é mais homogêneo em relação à
+massa?
+\solucao
+Olhando só o desvio padrão, os adultos parecem mais dispersos ($7 > 4$). Mas as médias são muito
+diferentes, então comparamos o $CV$:
+\[ CV_{\text{adultos}} = \frac{7}{70} = 0{,}10 = 10\% \qquad\qquad CV_{\text{crianças}} = \frac{4}{20} = 0{,}20 = 20\%. \]
+\resposta{o grupo de adultos é relativamente mais homogêneo: a variação típica corresponde a 10\% da
+média, contra 20\% nas crianças.}
+\end{exemplo}
+
+\subsection{Quão longe um dado pode ficar da média?}
+
+O desvio padrão também funciona como um “cercado” para os dados. Como a soma dos quadrados dos desvios
+vale $n\,\sigma^2$, \textbf{nenhum desvio sozinho} pode ter quadrado maior que esse total:
+$(x_j - \bar{x})^2 \le n\,\sigma^2$. Tirando a raiz:
+
+\begin{formula}[Teto para o afastamento de um valor]
+$|x_j - \bar{x}| \le \sigma\sqrt{n}\quad$ para todo valor $x_j$ do conjunto
+\end{formula}
+
+Na prática: se o desvio padrão é pequeno e o grupo não é enorme, \emph{nenhum} valor consegue ficar
+muito longe da média. (Se o desvio padrão for o amostral, troque $\sqrt{n}$ por $\sqrt{n-1}$.)
+
+\begin{exemplo}[Pacotes de café]
+Uma máquina encheu 9 pacotes de café. A massa média foi 500 g e o desvio padrão (calculado com divisão
+por $n$) foi 2 g. É possível que algum desses pacotes tenha 510 g?
+\solucao
+A soma dos quadrados dos desvios é $n\,\sigma^2 = 9 \times 2^2 = 36$. Um pacote de 510 g teria desvio
+$10$ e, sozinho, contribuiria com $10^2 = 100 > 36$ — impossível. Pelo teto,
+$|x_j - 500| \le 2\sqrt{9} = 6$, ou seja, todos os pacotes têm entre 494 g e 506 g.
+\resposta{não. Nenhum pacote pode passar de 506 g.}
+\end{exemplo}
+
+\subsection{A curva em forma de sino}
+
+Muitas grandezas do mundo real (altura de pessoas, massa de produtos fabricados, erros de medição)
+têm distribuição aproximadamente \textbf{normal}, em forma de sino. Nesses casos vale uma regra muito
+usada:
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=12cm,height=5.4cm,axis lines=none,domain=-3.6:3.6,samples=120,
+  ymin=-0.07,ymax=0.5,xmin=-3.8,xmax=3.8,clip=false]
+  \addplot[draw=none,fill=ebookLight,domain=-2:2] {exp(-x^2/2)/sqrt(2*pi)} \closedcycle;
+  \addplot[draw=none,fill=ebookPrim!45,domain=-1:1] {exp(-x^2/2)/sqrt(2*pi)} \closedcycle;
+  \addplot[ebookDark,line width=1.1pt] {exp(-x^2/2)/sqrt(2*pi)};
+  \draw[ebookMuted] (axis cs:-3.6,0) -- (axis cs:3.6,0);
+  \foreach \t/\r in {-2/{\bar{x}-2\sigma},-1/{\bar{x}-\sigma},0/{\bar{x}},1/{\bar{x}+\sigma},2/{\bar{x}+2\sigma}}{
+    \edef\temp{\noexpand\draw[ebookMuted] (axis cs:\t,0) -- (axis cs:\t,-0.012);}\temp
+  }
+  \node[font=\scriptsize,text=ebookText] at (axis cs:-2,-0.045) {$\bar{x}-2\sigma$};
+  \node[font=\scriptsize,text=ebookText] at (axis cs:-1,-0.045) {$\bar{x}-\sigma$};
+  \node[font=\scriptsize,text=ebookText] at (axis cs:0,-0.045) {$\bar{x}$};
+  \node[font=\scriptsize,text=ebookText] at (axis cs:1,-0.045) {$\bar{x}+\sigma$};
+  \node[font=\scriptsize,text=ebookText] at (axis cs:2,-0.045) {$\bar{x}+2\sigma$};
+  \node[font=\sffamily\small\bfseries,text=white] at (axis cs:0,0.15) {$\approx 68\%$};
+  \draw[ebookPrim,{Stealth[length=4pt]}-{Stealth[length=4pt]}] (axis cs:-2,0.30) -- (axis cs:2,0.30)
+    node[midway,above,font=\sffamily\scriptsize\bfseries,text=ebookPrim,fill=white,inner sep=1.5pt] {$\approx 95\%$ dos dados};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{Em distribuições em forma de sino, cerca de 68\% dos dados ficam a menos de um desvio padrão da média e cerca de 95\%, a menos de dois.}
+\end{center}
+
+\begin{contexto}[Margem de erro e controle de qualidade]
+O desvio padrão está por trás da \textbf{margem de erro} das pesquisas eleitorais: com nível de
+confiança de 95\%, ela é dada por $e = 1{,}96\,\dfrac{\sigma}{\sqrt{N}}$, em que $N$ é o número de
+entrevistados — repare que o erro diminui quando a amostra cresce. Na indústria, programas de
+qualidade como o “Seis Sigma” buscam processos tão regulares que os limites de tolerância fiquem a
+vários desvios padrão (sigmas) da média, tornando os defeitos raríssimos.
+\end{contexto}
+
+% =====================================================================
+\section{Dicas e macetes}
+% =====================================================================
+
+\begin{dica}[“Regular”, “homogêneo”, “estável” = pouca dispersão]
+Quando o enunciado pedir o mais \emph{regular}, \emph{homogêneo}, \emph{uniforme} ou \emph{com menor
+variação}, procure o \textbf{menor desvio padrão} (ou a menor variância). Média, mediana e moda medem
+\emph{onde} os dados estão, não \emph{quão espalhados} eles estão.
+\end{dica}
+
+\begin{dica}[Antes de calcular, leia o quadro]
+Em boa parte das questões do ENEM o desvio padrão já vem pronto em uma tabela e o desafio é
+\emph{interpretá-lo}. Só parta para a conta se o valor não for dado — e, nesse caso, os números serão
+pequenos e poucos.
+\end{dica}
+
+\begin{dica}[Médias muito diferentes? Use o $CV$]
+Para comparar a dispersão de grupos com médias diferentes (ou unidades diferentes), divida o desvio
+padrão pela média. Ganha quem tiver o \textbf{menor} $CV$. Antes de dividir, coloque $\sigma$ e
+$\bar{x}$ na \textbf{mesma unidade}.
+\end{dica}
+
+\begin{dica}[Confira a unidade pedida]
+O desvio padrão tem a unidade dos dados; a variância tem a unidade \textbf{ao quadrado}. Se as
+alternativas falam em “(sacas/hectare)$^2$” ou “cm$^2$”, a questão quer a \emph{variância}.
+\end{dica}
+
+\begin{macete}[Tabela de desvios com autocorreção]
+Monte três linhas: $x_i$, $x_i - \bar{x}$ e $(x_i - \bar{x})^2$. A linha dos desvios
+\textbf{tem de somar zero}; se não somar, há erro na média ou em algum desvio. É uma conferência
+gratuita!
+\end{macete}
+
+\begin{macete}[Transformações sem recalcular]
+Somou uma constante a todos? O desvio padrão \textbf{não muda}. Multiplicou todos por $k$? O desvio
+padrão é multiplicado por $k$ e a variância por $k^2$. Isso vale também para \textbf{mudança de
+unidade}: passar de kg para g multiplica o desvio padrão por 1\,000 e a variância por
+$1\,000^2 = 10^6$.
+\end{macete}
+
+\begin{macete}[O “cercado” do desvio padrão]
+Com $n$ valores e desvio padrão $\sigma$, nenhum valor fica a mais de $\sigma\sqrt{n}$ da média.
+Desvio padrão 1 em um grupo de 11 pessoas? Ninguém está a mais de $\sqrt{11} \approx 3{,}3$ unidades
+da média.
+\end{macete}
+
+\begin{atencao}[A soma dos desvios é sempre zero]
+Se você somar os desvios (com sinal) e dividir por $n$, vai obter zero — sempre. Isso \textbf{não}
+significa que não há dispersão. Use valores absolutos (desvio médio) ou quadrados (variância).
+\end{atencao}
+
+\begin{atencao}[Média igual à mediana não é sinal de regularidade]
+Média igual à mediana indica, no máximo, uma distribuição \emph{simétrica}. O conjunto
+$\{0, 10, 20\}$ tem média e mediana iguais a 10 e é bastante disperso. Distrator clássico!
+\end{atencao}
+
+\begin{atencao}[Variância $\ne$ desvio padrão]
+Esquecer de tirar a raiz (ou de elevar ao quadrado) é o erro mais explorado nas alternativas. Lembre:
+$\text{variância} = (\text{desvio padrão})^2$.
+\end{atencao}
+
+\begin{resumo}
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt]
+  \item \textbf{Amplitude:} $A = x_{\text{máx}} - x_{\text{mín}}$ — rápida, mas só olha os extremos.
+  \item \textbf{Desvio:} $d_i = x_i - \bar{x}$; a soma dos desvios é sempre 0.
+  \item \textbf{Desvio médio:} média dos valores absolutos dos desvios.
+  \item \textbf{Variância:} $\sigma^2 = \dfrac{\sum (x_i - \bar{x})^2}{n}$ = média dos quadrados $-$ quadrado da média (unidade ao quadrado).
+  \item \textbf{Desvio padrão:} $\sigma = \sqrt{\sigma^2}$ (mesma unidade dos dados). Menor $\sigma$ = mais regular/homogêneo.
+  \item \textbf{Transformações:} $+c$ não muda $\sigma$; $\times k$ multiplica $\sigma$ por $k$ e $\sigma^2$ por $k^2$.
+  \item \textbf{Coeficiente de variação:} $CV = \sigma / \bar{x}$ — compara grupos com médias ou unidades diferentes.
+  \item \textbf{Teto:} nenhum valor fica a mais de $\sigma\sqrt{n}$ da média.
+\end{itemize}
+\end{resumo}
+
+% =====================================================================
+\secaoenem
+% =====================================================================
+
+\questaoenem{2010-170}
+\begin{resolucao}{B}
+\passo{1. Entendendo o problema.} Os dois candidatos têm a mesma média (15), e o critério de desempate
+é a \textbf{pontuação mais regular}. Regularidade é falta de dispersão — e a medida de dispersão do
+quadro é o desvio padrão.
+
+\passo{2. Comparando.} Marco tem desvio padrão 0,32; Paulo, 4,97. As notas de Marco (14, 15, 16) estão
+coladas na média; as de Paulo (8, 19, 18) se espalham muito.
+
+\passo{3. Conclusão.} O mais regular é quem tem o \textbf{menor desvio padrão}: Marco.
+
+\resposta{alternativa B — Marco, pois obteve menor desvio padrão.}
+
+\textit{Curiosidade para quem gosta de conferir:} com os valores 14, 15 e 16, o desvio padrão
+(dividindo por $n$) é $\sqrt{2/3} \approx 0{,}82$, e não 0,32; já o de Paulo confere:
+$\sqrt{74/3} \approx 4{,}97$. A conclusão não muda, pois $0{,}82$ continua muito menor que $4{,}97$.
+Item de dificuldade média (b = 1,23): basta saber que “mais regular” significa “menor desvio padrão”.
+
+\begin{distratores}
+\alt{A} Média igual à mediana indica simetria, não regularidade (veja a pegadinha do capítulo).
+\alt{C} A maior nota isolada não diz nada sobre regularidade; aliás, a nota 19 contribui para a
+grande dispersão de Paulo.
+\alt{D} Mediana é medida de posição; o desempate é pela regularidade, não pela mediana.
+\alt{E} Inverte o significado: \emph{maior} desvio padrão indica \emph{menos} regularidade.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2021-146}
+\begin{resolucao}{E}
+\passo{1. Entendendo o problema.} A troca de ração ocorre se o coeficiente de variação ($CV$) da nova
+ração for \textbf{menor} que o da atual. Conhecemos o desvio padrão da amostra nova (1,5 kg) e queremos
+descobrir que média ela precisa ter.
+
+\passo{2. CV da ração atual.} $CV_{\text{atual}} = \dfrac{1}{10} = 0{,}1$.
+
+\passo{3. Condição para a nova ração.}
+\[ \frac{1{,}5}{\bar{x}} < 0{,}1 \;\Longleftrightarrow\; 1{,}5 < 0{,}1\,\bar{x} \;\Longleftrightarrow\; \bar{x} > 15. \]
+(Como $\bar{x} > 0$, podemos multiplicar a inequação por $\bar{x}$ sem inverter o sinal.)
+
+\passo{4. Interpretação.} Como o desvio padrão aumentou 50\% (de 1 para 1,5 kg), a média também precisa
+aumentar mais de 50\% para que a dispersão \emph{relativa} diminua.
+
+\resposta{alternativa E — a média deve ser superior a 15,0 kg.}
+
+Item médio (b = 1,93): a fórmula é dada, mas é preciso montar a desigualdade e resolvê-la “de trás
+para a frente”.
+
+\begin{distratores}
+\alt{A} 5,0 é o \emph{aumento} necessário na média ($15 - 10$), e não a média mínima.
+\alt{B} 9,5 sai de subtrair da média a diferença entre os desvios padrão ($10 - 0{,}5$), conta sem
+sentido para o $CV$.
+\alt{C} Com média 10, o $CV$ novo seria $1{,}5/10 = 0{,}15$, \emph{maior} que 0,1: a ração nova seria
+mais dispersa.
+\alt{D} 10,5 vem de somar à média o aumento do desvio padrão ($10 + 0{,}5$); com essa média,
+$CV = 1{,}5/10{,}5 \approx 0{,}14 > 0{,}1$.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2025-165}
+\begin{resolucao}{D}
+\passo{1. Entendendo o problema.} Cada grupo tem 11 mulheres. Queremos um grupo em que,
+\textbf{com certeza}, a maioria (pelo menos 6) tenha entre 20 e 30 anos. Para descartar um grupo, basta
+imaginar uma situação compatível com os dados em que o critério falhe.
+
+\passo{2. O grupo 4 (média 25, desvio padrão 1).} A soma dos quadrados dos desvios é
+$n\,\sigma^2 = 11 \times 1^2 = 11$. Uma mulher com menos de 20 ou mais de 30 anos teria desvio maior
+que 5 e, sozinha, contribuiria com mais de $5^2 = 25 > 11$. Impossível! Pelo “cercado” do desvio
+padrão, todas as idades estão a no máximo $1 \times \sqrt{11} \approx 3{,}3$ anos de 25. (Mesmo que o
+desvio padrão fosse o amostral, a soma seria 10, e a conclusão é a mesma.) Logo,
+\textbf{todas} as 11 mulheres do grupo 4 têm entre 20 e 30 anos.
+
+\passo{3. Os outros grupos podem falhar.}
+\begin{itemize}[nosep,leftmargin=1.2em]
+  \item Grupo 1: cinco mulheres de 15 anos, uma de 25 e cinco de 35 têm média 25 e desvio padrão de
+  cerca de 10 — e só uma está entre 20 e 30.
+  \item Grupo 2: cinco de 16 anos, uma de 25 e cinco de 34 têm mediana 25 e desvio padrão próximo de 9,
+  com apenas uma entre 20 e 30.
+  \item Grupo 3: moda 25 pode significar só duas mulheres com 25 anos e as demais longe disso.
+  \item Grupo 5: a mais nova tem 20 e a mais velha 35; as outras dez podem ter, por exemplo, entre 31 e
+  35 anos.
+\end{itemize}
+
+\resposta{alternativa D — grupo 4.}
+
+Item médio (b = 1,96), mas que exige um raciocínio fino: entender que um desvio padrão
+\emph{pequeno} “prende” todas as idades perto da média.
+
+\begin{distratores}
+\alt{A} Média 25 é compatível com idades muito espalhadas, ainda mais com desvio padrão 10.
+\alt{B} A mediana só garante que a idade central é 25; as cinco menores e as cinco maiores podem estar
+fora do intervalo.
+\alt{C} A moda indica apenas a idade mais frequente, que pode aparecer só duas vezes.
+\alt{E} Mínimo 20 e máximo 35 permitem que a maioria tenha mais de 30 anos.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2017-145}
+\begin{resolucao}{D}
+\passo{1. Entendendo o problema.} O parâmetro $\sigma$ é um desvio padrão, e o erro da pesquisa é
+$|e| < 1{,}96\,\dfrac{\sigma}{\sqrt{N}}$. Queremos a pesquisa cujo erro fique \textbf{abaixo de 0,02}.
+Como o quadro já traz $\sqrt{N}$, basta calcular $1{,}96\,\sigma/\sqrt{N}$ para cada uma.
+
+\passo{2. Calculando.}
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+ & P1 & P2 & P3 & P4 & P5 \\ \midrule
+$1{,}96\,\sigma$ & 0,980 & 0,784 & 0,588 & 0,392 & 0,196 \\
+$\sqrt{N}$ & 42 & 28 & 24 & 21 & 8 \\
+$1{,}96\,\sigma/\sqrt{N}$ & $\approx 0{,}0233$ & $0{,}0280$ & $0{,}0245$ & $\approx 0{,}0187$ & $0{,}0245$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\passo{3. Macete para evitar divisões.} $1{,}96\,\dfrac{\sigma}{\sqrt{N}} < 0{,}02 \iff 98\,\sigma < \sqrt{N}$.
+Para P4: $98 \times 0{,}2 = 19{,}6 < 21$ (ok). Para as demais: $49 > 42$; $39{,}2 > 28$; $29{,}4 > 24$;
+$9{,}8 > 8$ (todas falham).
+
+\resposta{alternativa D — P4, a única com erro menor que 0,02.}
+
+Item difícil (b = 2,04): exige substituir valores em uma fórmula com raiz e comparar decimais pequenos,
+resistindo à intuição de que “mais entrevistados” ou “menor $\sigma$” sempre bastam.
+
+\begin{distratores}
+\alt{A} P1 tem o maior número de entrevistados, mas também o maior $\sigma$: erro $\approx 0{,}0233$.
+\alt{B} P2 tem o maior erro de todos: $0{,}028$.
+\alt{C} P3 dá erro $0{,}0245$, acima de 0,02.
+\alt{E} P5 tem o menor $\sigma$, mas a amostra é minúscula ($N = 64$): erro $0{,}0245$.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2012-176}
+\begin{resolucao}{E}
+\passo{1. Entendendo o problema.} Um produtor de café recebeu o desvio padrão das produções dos seus
+talhões: 90 kg por talhão, e cada talhão tem \num{30000} m$^2$ = 3 hectares. Ele precisa da
+\textbf{variância} na unidade (sacas/hectare)$^2$.
+
+\passo{2. Convertendo o desvio padrão (é uma mudança de escala).} Mudar de unidade é multiplicar
+todos os dados por uma constante — e o desvio padrão é multiplicado pela mesma constante.
+\begin{itemize}[nosep,leftmargin=1.2em]
+  \item De kg para sacas (60 kg): $90 \div 60 = 1{,}5$ saca por talhão.
+  \item De “por talhão” para “por hectare”: cada talhão tem 3 ha, então $1{,}5 \div 3 = 0{,}5$ saca por hectare.
+\end{itemize}
+O desvio padrão é $0{,}5$ saca/ha.
+
+\passo{3. Variância.} $\sigma^2 = 0{,}5^2 = 0{,}25$ (sacas/ha)$^2$.
+
+\resposta{alternativa E — 0,25.}
+
+Item muito difícil (b = 3,24): combina conversão de unidades em duas etapas, o sentido correto da
+conversão “por hectare” e a relação variância $= \sigma^2$.
+
+\begin{distratores}
+\alt{A} 20,25 $= 4{,}5^2$: multiplicou por 3 em vez de dividir ($1{,}5 \times 3 = 4{,}5$) e depois elevou ao quadrado.
+\alt{B} 4,50: o mesmo erro de multiplicar por 3, sem elevar ao quadrado.
+\alt{C} 0,71 $\approx \sqrt{0{,}5}$: tirou a raiz do desvio padrão em vez de elevá-lo ao quadrado.
+\alt{D} 0,50 é o desvio padrão, não a variância.
+\end{distratores}
+\end{resolucao}
+
+% =====================================================================
+\secaoineditas
+% =====================================================================
+
+\begin{questaoinedita}{1}{27}
+A amplitude térmica de um período é a diferença entre a maior e a menor temperatura registradas
+nele. Um aplicativo de previsão do tempo registrou as temperaturas máximas de uma cidade serrana
+durante uma semana de julho:
+\begin{center}
+\begin{tabular}{lccccccc}
+\toprule
+Dia & Dom & Seg & Ter & Qua & Qui & Sex & Sáb \\ \midrule
+Temperatura máxima (°C) & 14 & 9 & 11 & 16 & 12 & 7 & 10 \\ \bottomrule
+\end{tabular}
+\end{center}
+A amplitude das temperaturas máximas registradas nessa semana, em grau Celsius, foi
+\begin{alternativas*}[5]
+\item 4.
+\item 5.
+\item 7.
+\item 9.
+\item 16.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{D}
+\passo{1. O que é pedido.} A amplitude é $x_{\text{máx}} - x_{\text{mín}}$, considerando
+\textbf{todos} os dias da semana.
+
+\passo{2. Identificando os extremos.} A maior temperatura máxima foi 16\,°C (quarta-feira) e a menor
+foi 7\,°C (sexta-feira).
+
+\passo{3. Calculando.} $A = 16 - 7 = 9$\,°C.
+
+\resposta{alternativa D — 9\,°C.}
+\begin{distratores}
+\alt{A} $14 - 10 = 4$: subtraiu a temperatura do último dia da do primeiro, em vez de usar o maior e o
+menor valor.
+\alt{B} $16 - 11 = 5$: subtraiu a mediana (11\,°C) do maior valor.
+\alt{C} 7 é apenas a menor temperatura, não a amplitude.
+\alt{E} 16 é apenas a maior temperatura.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{27}
+Uma padaria registrou a quantidade de dúzias de pães de queijo vendidas em cinco dias de uma semana:
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+Dia & Seg & Ter & Qua & Qui & Sex \\ \midrule
+Dúzias vendidas & 17 & 22 & 20 & 25 & 16 \\ \bottomrule
+\end{tabular}
+\end{center}
+Para avaliar a regularidade das vendas, o gerente calculou o desvio padrão $\sigma$ dessas
+quantidades, dado por
+\[ \sigma = \sqrt{\frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \cdots + (x_n - \bar{x})^2}{n}}, \]
+em que $x_1, \dots, x_n$ são os valores registrados, $n$ é a quantidade de valores e $\bar{x}$ é a
+média aritmética deles.
+
+O valor encontrado, em dúzia, foi aproximadamente
+\begin{alternativas*}[5]
+\item 2,80.
+\item 3,29.
+\item 7,35.
+\item 9,00.
+\item 10,80.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Média.} $\bar{x} = \dfrac{17 + 22 + 20 + 25 + 16}{5} = \dfrac{100}{5} = 20$ dúzias.
+
+\passo{2. Desvios e quadrados.}
+\begin{center}
+\begin{tabular}{cccccc|c}
+\toprule
+$x_i$ & 17 & 22 & 20 & 25 & 16 & \\
+$x_i - \bar{x}$ & $-3$ & 2 & 0 & 5 & $-4$ & soma 0 \\
+$(x_i - \bar{x})^2$ & 9 & 4 & 0 & 25 & 16 & soma 54 \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\passo{3. Variância e desvio padrão.} $\sigma^2 = 54 \div 5 = 10{,}8$ e
+$\sigma = \sqrt{10{,}8} \approx 3{,}29$ dúzias (confira: $3{,}29^2 \approx 10{,}82$).
+
+\resposta{alternativa B — aproximadamente 3,29 dúzias.}
+\begin{distratores}
+\alt{A} 2,80 é o \emph{desvio médio}: $(3 + 2 + 0 + 5 + 4) \div 5 = 2{,}8$. Não é a fórmula pedida.
+\alt{C} $\sqrt{54} \approx 7{,}35$: esqueceu de dividir a soma dos quadrados por $n = 5$.
+\alt{D} 9 é a amplitude ($25 - 16$), outra medida de dispersão.
+\alt{E} 10,80 é a variância: faltou extrair a raiz quadrada.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{29}
+Uma fábrica possui três linhas de montagem, I, II e III. O gráfico mostra quantas unidades cada linha
+produziu de segunda a sexta-feira de uma mesma semana. Nas três linhas, a média diária foi de
+50 unidades.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=11cm,height=5.6cm,ymin=36,ymax=64,ytick={40,45,50,55,60},
+  xtick={1,2,3,4,5},xticklabels={Seg,Ter,Qua,Qui,Sex},
+  ylabel={Unidades produzidas},ylabel style={font=\sffamily\scriptsize},
+  tick label style={font=\sffamily\scriptsize},
+  ymajorgrids,grid style={ebookLine},axis lines=left,xmin=0.6,xmax=5.4,
+  legend style={font=\sffamily\scriptsize,at={(1.02,0.5)},anchor=west,draw=ebookLine},
+  every axis plot/.append style={line width=1.1pt}]
+  \addplot[color=ebookPrim,mark=*] coordinates {(1,48) (2,52) (3,50) (4,49) (5,51)};
+  \addlegendentry{Linha I}
+  \addplot[color=nivelD,mark=square*] coordinates {(1,40) (2,60) (3,50) (4,50) (5,50)};
+  \addlegendentry{Linha II}
+  \addplot[color=ebookAcc,mark=triangle*,mark size=3pt] coordinates {(1,45) (2,47) (3,50) (4,53) (5,55)};
+  \addlegendentry{Linha III}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+O gerente quer premiar a linha que teve a produção diária mais regular nessa semana.
+
+Deve ser premiada a linha
+\begin{alternativas}
+\item I, pois suas produções diárias apresentam os menores afastamentos em relação à média.
+\item II, pois em três dos cinco dias sua produção foi exatamente igual à média.
+\item II, pois atingiu a maior produção diária da semana.
+\item III, pois sua produção aumentou todos os dias, sem quedas.
+\item I, II ou III, indistintamente, pois as três linhas têm a mesma média de produção.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{A}
+\passo{1. O que significa “mais regular”.} É a linha cujas produções ficam mais \textbf{próximas da
+média} (50), ou seja, a de menor dispersão.
+
+\passo{2. Lendo o gráfico.} Linha I: 48, 52, 50, 49, 51 — nunca se afasta mais de 2 unidades da
+média. Linha II: 40, 60, 50, 50, 50 — dois dias com afastamento de 10. Linha III: 45, 47, 50, 53,
+55 — afastamentos de até 5.
+
+\passo{3. Confirmando com o desvio padrão.} Soma dos quadrados dos desvios: I, $4 + 4 + 0 + 1 + 1 = 10$;
+II, $100 + 100 + 0 + 0 + 0 = 200$; III, $25 + 9 + 0 + 9 + 25 = 68$. Desvios padrão: I,
+$\sqrt{2} \approx 1{,}4$; II, $\sqrt{40} \approx 6{,}3$; III, $\sqrt{13{,}6} \approx 3{,}7$. A linha I é,
+de longe, a mais regular (também tem a menor amplitude: 4, contra 20 e 10).
+
+\resposta{alternativa A — linha I.}
+\begin{distratores}
+\alt{B} Ter vários dias iguais à média não compensa os dois dias muito afastados (40 e 60): a linha II
+é a \emph{menos} regular.
+\alt{C} Maior produção em um dia não é critério de regularidade; o pico de 60 aumenta a dispersão.
+\alt{D} Confunde tendência (crescimento) com regularidade: a linha III vai de 45 a 55, afastando-se
+até 5 unidades da média.
+\alt{E} Média igual não implica dispersão igual — é justamente a ideia central do capítulo.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{27}
+Em uma empresa, os salários dos 40 funcionários do setor administrativo têm média de
+R\$~\num{2500,00} e desvio padrão de R\$~\num{400,00}. Após uma negociação coletiva, ficou decidido
+que todos esses salários receberão um reajuste de 8\% e que, depois do reajuste, cada funcionário
+terá incorporado ao salário um abono fixo de R\$~\num{150,00}.
+
+Após essas duas mudanças, o desvio padrão dos salários desse setor passará a ser
+\begin{alternativas*}[3]
+\item R\$~\num{400,00}.
+\item R\$~\num{432,00}.
+\item R\$~\num{466,56}.
+\item R\$~\num{550,00}.
+\item R\$~\num{582,00}.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Traduzindo as mudanças.} Cada salário $x$ vira $y = 1{,}08\,x + 150$: primeiro uma
+multiplicação por 1,08 (reajuste de 8\%), depois a soma de uma constante (abono).
+
+\passo{2. Efeito no desvio padrão.} Multiplicar todos os valores por 1,08 multiplica o desvio padrão
+por 1,08. Somar R\$~150,00 a todos apenas desloca os salários, sem mudar as distâncias entre eles:
+o desvio padrão não se altera.
+
+\passo{3. Calculando.} $\sigma_{\text{novo}} = 1{,}08 \times 400 = 432$ reais. (A média, sim, muda:
+$1{,}08 \times 2\,500 + 150 = 2\,850$ reais.)
+
+\resposta{alternativa B — R\$~432,00.}
+\begin{distratores}
+\alt{A} Supôs que, por ser aplicado igualmente a todos, o reajuste não mudaria o desvio padrão. Isso
+vale só para somas de constantes, não para porcentagens.
+\alt{C} $400 \times 1{,}08^2 = 466{,}56$: aplicou ao desvio padrão a regra da variância (multiplicar por $k^2$).
+\alt{D} $400 + 150 = 550$: somou o abono ao desvio padrão e ignorou o reajuste.
+\alt{E} $432 + 150 = 582$: aplicou corretamente o reajuste, mas também somou o abono, que não altera a
+dispersão.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{29}
+Um técnico de atletismo acompanha dois atletas de provas diferentes. Júlia é velocista e, nos últimos
+treinos de 100 metros rasos, obteve tempo médio de 12,5 segundos, com desvio padrão de 0,25 segundo.
+Marcos é fundista e, nos últimos treinos de \num{10000} metros, obteve tempo médio de 40 minutos, com
+desvio padrão de 36 segundos.
+
+Para saber qual dos dois é mais regular, o técnico usa o coeficiente de variação, definido como
+$CV = \dfrac{\sigma}{\bar{x}}$, em que $\sigma$ é o desvio padrão e $\bar{x}$ é a média dos tempos.
+Quanto menor o $CV$, mais regular é o atleta.
+
+Com base nessas informações, o técnico concluiu corretamente que é mais regular
+\begin{alternativas}
+\item Júlia, pois seu desvio padrão, de 0,25 s, é menor que o de Marcos, de 36 s.
+\item Júlia, pois seu coeficiente de variação é de 2\%, enquanto o de Marcos é de 90\%.
+\item Júlia, pois a razão entre a média e o desvio padrão de seus tempos (50) é menor que a de Marcos (cerca de 67).
+\item qualquer um dos dois, pois ambos têm coeficiente de variação inferior a 15\% e são, portanto, igualmente regulares.
+\item Marcos, pois seu coeficiente de variação é de 1,5\%, menor que o de Júlia, de 2\%.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{E}
+\passo{1. Por que usar o CV.} As médias são muito diferentes (12,5 s contra 40 min), então comparar
+os desvios padrão diretamente não é justo. O $CV$ mede a dispersão \emph{relativa} à média.
+
+\passo{2. Mesma unidade!} Para Marcos, $\sigma$ está em segundos e $\bar{x}$ em minutos. Convertendo:
+40 min $= 2\,400$ s.
+
+\passo{3. Calculando.}
+\[ CV_{\text{Júlia}} = \frac{0{,}25}{12{,}5} = 0{,}02 = 2\% \qquad\qquad CV_{\text{Marcos}} = \frac{36}{2\,400} = 0{,}015 = 1{,}5\%. \]
+(Em minutos, daria o mesmo: $0{,}6 \div 40 = 0{,}015$.)
+
+\passo{4. Conclusão.} O menor $CV$ é o de Marcos: proporcionalmente ao seu tempo de prova, ele varia
+menos.
+
+\resposta{alternativa E.}
+\begin{distratores}
+\alt{A} Compara desvios padrão absolutos de provas com médias completamente diferentes — exatamente
+o que o $CV$ veio corrigir.
+\alt{B} Calculou $36 \div 40 = 0{,}9$, misturando segundos (desvio) com minutos (média).
+\alt{C} Inverteu a razão: calculou $\bar{x}/\sigma$ ($12{,}5/0{,}25 = 50$ e $2\,400/36 \approx 66{,}7$) e
+escolheu o menor; nessa razão, \emph{maior} valor é que indica mais regularidade.
+\alt{D} Estar abaixo de uma faixa de referência não torna dois valores iguais; 1,5\% é menor que 2\%,
+e o enunciado pede o mais regular.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{4}{28}
+Uma escola aplicou o mesmo simulado a duas turmas. Na turma A, com 20 alunos, a média das notas foi
+5,0 e o desvio padrão, 2,0. Na turma B, com 30 alunos, a média foi 7,5 e o desvio padrão, 1,5. Os
+desvios padrão foram calculados com divisão pelo número de alunos de cada turma.
+
+A coordenação quer saber o desvio padrão das notas dos 50 alunos considerados em conjunto. Para isso,
+usará o fato de que, em qualquer conjunto de dados, a variância (o quadrado do desvio padrão) é igual
+à média dos quadrados dos valores menos o quadrado da média dos valores.
+
+O desvio padrão das notas dos 50 alunos é, aproximadamente,
+\begin{alternativas*}[5]
+\item 1,72.
+\item 1,75.
+\item 2,11.
+\item 3,50.
+\item 4,45.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{C}
+\passo{1. Média geral (ponderada).} $\bar{x} = \dfrac{20 \times 5{,}0 + 30 \times 7{,}5}{50} = \dfrac{100 + 225}{50} = 6{,}5$.
+
+\passo{2. Média dos quadrados em cada turma.} Da fórmula
+$\sigma^2 = (\text{média dos quadrados}) - \bar{x}^2$, vem
+$\text{média dos quadrados} = \sigma^2 + \bar{x}^2$.
+\begin{itemize}[nosep,leftmargin=1.2em]
+  \item Turma A: $2{,}0^2 + 5{,}0^2 = 4 + 25 = 29$.
+  \item Turma B: $1{,}5^2 + 7{,}5^2 = 2{,}25 + 56{,}25 = 58{,}5$.
+\end{itemize}
+
+\passo{3. Média dos quadrados dos 50 alunos.} É a média ponderada:
+$\dfrac{20 \times 29 + 30 \times 58{,}5}{50} = \dfrac{580 + 1\,755}{50} = 46{,}7$.
+
+\passo{4. Variância e desvio padrão do conjunto.} $\sigma^2 = 46{,}7 - 6{,}5^2 = 46{,}7 - 42{,}25 = 4{,}45$,
+e $\sigma = \sqrt{4{,}45} \approx 2{,}11$.
+
+\passo{5. Por que o resultado é maior que os dois desvios?} Juntar as turmas acrescenta uma nova fonte
+de dispersão: as médias das turmas são diferentes (5,0 e 7,5). Por isso o desvio padrão do conjunto
+supera os desvios de cada turma — algo que nenhuma “média de desvios” consegue captar.
+
+\resposta{alternativa C — aproximadamente 2,11.}
+\begin{distratores}
+\alt{A} $\sqrt{(20 \times 4 + 30 \times 2{,}25)/50} = \sqrt{2{,}95} \approx 1{,}72$: considerou só a variação
+\emph{dentro} de cada turma e esqueceu a diferença entre as médias.
+\alt{B} $(2{,}0 + 1{,}5) \div 2 = 1{,}75$: fez a média simples dos desvios padrão, o que não tem
+justificativa.
+\alt{D} $2{,}0 + 1{,}5 = 3{,}50$: somou os desvios padrão.
+\alt{E} 4,45 é a variância do conjunto: faltou extrair a raiz quadrada.
+\end{distratores}
+\end{resolucao}

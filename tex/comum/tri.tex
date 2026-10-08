@@ -1,0 +1,143 @@
+\capitulofrontal{O ENEM e a Teoria de Resposta ao Item}{tri}
+
+A prova de Matemática e suas Tecnologias tem \textbf{45 questões} de múltipla escolha e é
+aplicada no segundo dia do exame, junto com as 45 de Ciências da Natureza, em \textbf{5 horas}.
+A sua nota, porém, \emph{não} é o número de acertos: ela é calculada pela
+\textbf{Teoria de Resposta ao Item (TRI)}. Entender a TRI muda a forma de estudar e de fazer a prova.
+
+\secaofrontal{O que é a TRI}
+
+Na TRI, cada questão (item) é descrita por três números, estimados pelo INEP a partir das
+respostas de milhões de participantes, e cada estudante tem uma \textbf{proficiência} $\theta$.
+A probabilidade de um estudante com proficiência $\theta$ acertar o item é modelada pelo
+\textbf{modelo logístico de três parâmetros}:
+
+\begin{formula}[Modelo logístico de 3 parâmetros]
+$\displaystyle P(\theta) \;=\; c \;+\; \frac{1-c}{1+e^{-a\,(\theta-b)}}$
+\end{formula}
+
+{\small\color{ebookMuted}(Em algumas apresentações aparece uma constante de escala multiplicando $a$;
+ela não altera a interpretação dos parâmetros.)}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=0.9\linewidth,height=6.6cm,xmin=300,xmax=1000,ymin=0,ymax=1.02,
+  xlabel={Proficiência do estudante (escala de notas do ENEM)},ylabel={Probabilidade de acerto},
+  grid=major,grid style={ebookLine!60},axis lines=left,tick label style={font=\scriptsize},
+  label style={font=\small},
+  legend style={font=\scriptsize,at={(0.02,0.98)},anchor=north west,draw=ebookLine},
+  yticklabel={\pgfmathprintnumber[fixed,precision=1,use comma]{\tick}},
+  xticklabel style={/pgf/number format/1000 sep={}}]
+  \addplot[nivelA,line width=1.6pt,domain=300:1000,samples=120]
+    {0.20+0.80/(1+exp(-2.5*((x-500)/100-0.5)))};
+  \addlegendentry{item fácil: $a=2{,}5$; $b=0{,}5$; $c=0{,}20$}
+  \addplot[nivelB,line width=1.6pt,domain=300:1000,samples=120]
+    {0.15+0.85/(1+exp(-2.0*((x-500)/100-1.5)))};
+  \addlegendentry{item médio: $a=2{,}0$; $b=1{,}5$; $c=0{,}15$}
+  \addplot[nivelD,line width=1.6pt,domain=300:1000,samples=120]
+    {0.10+0.90/(1+exp(-3.0*((x-500)/100-2.8)))};
+  \addlegendentry{item difícil: $a=3{,}0$; $b=2{,}8$; $c=0{,}10$}
+  \draw[dashed,nivelD] (axis cs:780,0) -- (axis cs:780,0.55);
+  \node[font=\scriptsize,text=nivelD,anchor=south west] at (axis cs:782,0.02) {$b=2{,}8 \Rightarrow \approx 780$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{definicao}[Os três parâmetros de cada questão]
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+  \item[$b$] \textbf{Dificuldade.} Indica em que ponto da escala a curva “sobe”: é a proficiência
+        para a qual a chance de acerto fica a meio caminho entre $c$ e 100\%. Quanto maior o $b$,
+        mais difícil o item.
+  \item[$a$] \textbf{Discriminação.} É a inclinação da curva. Um $a$ alto significa que o item separa
+        bem quem domina o assunto de quem não domina.
+  \item[$c$] \textbf{Acerto ao acaso.} É a chance de acerto de quem não sabe nada (o “chute”).
+        Com cinco alternativas fica perto de $0{,}2$, mas é estimado item a item.
+\end{itemize}
+\end{definicao}
+
+\secaofrontal{Da TRI para a nota}
+
+A escala de notas do ENEM foi construída de modo que a proficiência $\theta = 0$ corresponda a
+\textbf{500 pontos} e cada desvio-padrão corresponda a \textbf{100 pontos}. Por isso, nesta coleção,
+mostramos a posição aproximada de cada questão na escala como $500 + 100b$: uma questão com
+$b = 1{,}5$ fica por volta de 650 pontos.
+
+O gráfico abaixo mostra onde estão as \textbf{\totalbanco\ questões} de Matemática válidas
+(não anuladas) aplicadas no caderno azul entre \anosbanco. A mediana fica em torno de
+\textbf{\trimediana\ pontos}: metade das questões de Matemática exige um desempenho acima
+disso. É por isso que acertar as questões fáceis e médias é tão valioso.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[ybar,bar width=8.5pt,width=0.92\linewidth,height=5.6cm,
+  xmin=300,xmax=1050,ymin=0,axis lines=left,
+  xlabel={Posição da questão na escala ($500+100b$)},ylabel={Nº de questões},
+  tick label style={font=\scriptsize},label style={font=\small},
+  xtick={300,400,...,1000},xticklabel style={/pgf/number format/1000 sep={}},
+  ymajorgrids,grid style={ebookLine!60}]
+  \addplot[fill=ebookPrim,draw=none] coordinates {\trihist};
+  \draw[dashed,ebookAcc,line width=1pt] (axis cs:\trimediana,0) -- (axis cs:\trimediana,175)
+    node[above,font=\scriptsize,text=ebookAcc] {mediana $\approx$ \trimediana};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+Pelos critérios desta coleção, essas questões se distribuem assim:
+\textcolor{nivelA}{\faSquare}\,\textbf{\trinA} fáceis,
+\textcolor{nivelB}{\faSquare}\,\textbf{\trinB} médias,
+\textcolor{nivelC}{\faSquare}\,\textbf{\trinC} difíceis e
+\textcolor{nivelD}{\faSquare}\,\textbf{\trinD} muito difíceis.
+
+\secaofrontal{Coerência pedagógica: por que o mesmo número de acertos dá notas diferentes}
+
+A TRI procura a proficiência que melhor explica o \emph{conjunto} das suas respostas. Quem acerta
+questões difíceis mas erra muitas fáceis apresenta um padrão pouco provável para alguém que domina o
+conteúdo — um padrão típico de chute. Veja um exemplo \emph{ilustrativo}:
+
+\begin{center}
+\renewcommand\arraystretch{1.35}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+& \textbf{Fáceis} (de 15) & \textbf{Médias} (de 15) & \textbf{Difíceis} (de 15) & \textbf{Total} \\
+\midrule
+Ana   & 14 & 9 & 2 & 25 acertos \\
+Bruno & 6  & 9 & 10 & 25 acertos \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Ana e Bruno acertaram 25 questões, mas a nota de Ana tende a ser \textbf{maior}: o padrão dela é
+coerente (acerta o fácil, erra parte do difícil). Os acertos de Bruno nas difíceis “valem menos”,
+porque a TRI considera a chance de que tenham vindo do acaso, e os erros nas fáceis pesam contra ele.
+
+\secaofrontal{Estratégias de prova com a TRI}
+
+\begin{dica}[Garanta as fáceis]
+Errar uma questão fácil custa caro. Leia com calma as questões curtas e diretas e revise as contas
+delas antes de investir tempo nas mais longas.
+\end{dica}
+\begin{dica}[Faça a prova em duas voltas]
+Na primeira volta, resolva tudo o que for rápido e marque as questões trabalhosas. Na segunda, volte
+a elas com o tempo que sobrou. São 5 horas para 90 questões no segundo dia — cerca de
+\textbf{3 minutos por questão}, já descontado o tempo de preencher o cartão-resposta.
+\end{dica}
+\begin{macete}[Nunca deixe em branco]
+Questão em branco conta como erro. Se não souber, \textbf{elimine alternativas} absurdas e marque
+uma das restantes: eliminar duas alternativas eleva a chance de acerto de 20\% para cerca de 33\%.
+\end{macete}
+\begin{atencao}[Chute não substitui estudo]
+Acertos ao acaso em questões difíceis ajudam pouco quando há erros nas fáceis. A melhor estratégia
+de TRI é dominar o básico de \emph{todos} os conteúdos — exatamente a proposta desta coleção.
+\end{atencao}
+
+\secaofrontal{Como esta coleção usa a TRI}
+
+\begin{itemize}[leftmargin=1.4em,itemsep=2pt]
+  \item As questões oficiais vêm dos cadernos azuis do segundo dia (\anosbanco) e trazem os
+        parâmetros $a$, $b$ e $c$ publicados pelo INEP nos \emph{Microdados do ENEM}
+        (arquivo de itens da prova).
+  \item Em cada capítulo, elas aparecem em \textbf{ordem crescente de $b$}. As inéditas seguem a
+        mesma progressão, com o nível estimado a partir das oficiais do mesmo assunto.
+  \item A posição $500 + 100b$ é uma aproximação útil para comparar questões; a dificuldade que
+        você sente depende do seu preparo em cada assunto.
+\end{itemize}

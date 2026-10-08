@@ -17,7 +17,7 @@ OUT_Q = os.path.join(ROOT, 'tex', 'enem')
 OUT_D = os.path.join(ROOT, 'tex', 'dados')
 
 ALVO_PT = 10.6      # tamanho visual desejado do corpo do texto oficial
-MAX_W = 425.0       # largura útil dentro da caixa da questão (pt)
+MAX_W = 412.0       # largura útil dentro da caixa da questão (pt)
 MAX_H = 560.0       # altura máxima de cada trecho (pt)
 
 
@@ -48,6 +48,8 @@ def question_tex(q):
     fonte = q['fonte_pt'] or 10.0
     base = ALVO_PT / fonte
     for k, seg in enumerate(q['segmentos'], 1):
+        if seg['altura'] < 16 and seg['largura'] < 60:
+            continue  # trecho residual (marca de fim de questão)
         s = min(base, MAX_W / seg['largura'], MAX_H / seg['altura'])
         L.append('\\enemseg{%s}{%d}{%.3f}' % (q['id'], k, s))
     return '\n'.join(L) + '\n'
@@ -97,11 +99,32 @@ def main():
             habs[c['primario']][q['habilidade']] += 1
         st = ['% gerado por scripts/gen_enem_tex.py — não editar',
               '\\def\\anosbanco{%d–%d}' % (min(anos), max(anos))]
+        tot = sum(stats[c][0] for c in stats)
+        st.append('\\def\\totalbanco{%d}' % tot)
+        for v, d in caps.items():
+            nv = sum(stats[c[0]][0] for c in d['capitulos'])
+            st.append('\\expandafter\\def\\csname volstats@%s\\endcsname{%d}' % (v[1], nv))
         for v, d in caps.items():
             for cid, _, _ in d['capitulos']:
                 s = stats[cid]
                 top = ''.join('\\habchip{%d}' % h for h, _ in habs[cid].most_common(4))
                 st.append('\\capstats{%s}{%d}{%d}{%d}{%d}{%d}{%s}' % (cid, *s, top or '—'))
+        # histograma da posição dos itens na escala (500 + 100b) e contagem por nível
+        validos = [q for q in bank if not q['anulada']]
+        hist = collections.Counter()
+        niv = collections.Counter()
+        for q in validos:
+            p = 500 + 100 * q['param_b']
+            hist[min(max(int(p // 50) * 50, 300), 1000)] += 1
+            niv[nivel(q['param_b'])] += 1
+        st.append('\\def\\trihist{%s}' % ' '.join('(%d,%d)' % (k + 25, hist[k]) for k in range(300, 1050, 50)))
+        for k, letra in zip(range(1, 5), 'ABCD'):
+            st.append('\\def\\trin%s{%d}' % (letra, niv[k]))
+        hf = collections.Counter(q['habilidade'] for q in validos)
+        for h in range(1, 31):
+            st.append('\\expandafter\\def\\csname habfreq@%d\\endcsname{%d}' % (h, hf[h]))
+        bs = sorted(q['param_b'] for q in validos)
+        st.append('\\def\\trimediana{%d}' % round(500 + 100 * bs[len(bs) // 2]))
         open(os.path.join(OUT_D, 'estatisticas.tex'), 'w', encoding='utf-8').write('\n'.join(st) + '\n')
     print('ok')
 

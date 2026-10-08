@@ -14,3 +14,5 @@ tex/build/
 # Cache gerado (recortes de todos os cadernos, prévias)
 cache/
 __pycache__/
+build-conteudo.log
+tex/volume*.build.log

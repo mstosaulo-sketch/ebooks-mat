@@ -21,6 +21,7 @@
   headheight=14pt,headsep=8mm,footskip=13mm]{geometry}
 \RequirePackage{iftex}
 \RequireLuaTeX
+\pdfvariable minorversion=7
 \RequirePackage{amsmath,amssymb,mathtools}
 \RequirePackage{fontspec}
 \RequirePackage[math-style=ISO,bold-style=ISO]{unicode-math}
@@ -29,12 +30,12 @@
 \RequirePackage{xcolor}
 \RequirePackage{graphicx}
 \RequirePackage{calc,ifthen,etoolbox,xstring}
-\RequirePackage{array,booktabs,tabularx,multirow,colortbl}
+\RequirePackage{array,booktabs,tabularx,multirow,colortbl,longtable}
 \RequirePackage{multicol}
 \RequirePackage{enumitem}
 \RequirePackage{tikz}
 \usetikzlibrary{calc,positioning,shapes.geometric,arrows.meta,patterns,
-  decorations.pathreplacing,angles,quotes,intersections,fadings,shadows}
+  decorations.pathreplacing,angles,quotes,intersections,fadings,shadows,shadings}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepgfplotslibrary{fillbetween}
@@ -174,6 +175,8 @@
 \InputIfFileExists{dados/estatisticas.tex}{}{}
 \edef\ebook@voltitle{\csname vol@\ebook@vol @tit\endcsname}
 \edef\ebook@volshort{\csname vol@\ebook@vol @short\endcsname}
+\let\numvolume\ebook@vol
+\let\titulovolume\ebook@voltitle
 
 \graphicspath{{oficial/}{../cache/oficial/}{figuras/}}
 
@@ -689,6 +692,127 @@
   {\sffamily\small\bfseries\csname cap@\csname capnum@\ebook@vol @#1\endcsname @tit\endcsname}\par\smallskip
   {\raggedright #2\par}\medskip
   \endgroup}
+
+
+%% ---------------------------------------------------------------------
+%% Páginas iniciais e finais (pré-textuais)
+%% ---------------------------------------------------------------------
+\newcommand\capitulofrontal[2]{% {título}{alvo}
+  \chapter*{#1}\markboth{#1}{}%
+  \hypertarget{#2}{}%
+  \addcontentsline{toc}{chapter}{#1}}
+\newcommand\secaofrontal[1]{%
+  \section*{#1}\addcontentsline{toc}{section}{#1}}
+% link para um capítulo de qualquer volume: \caplink{vol}{núm}
+\newcommand\caplink[2]{%
+  \ifnum#1=\ebook@vol\relax
+    \hyperlink{cap-#2}{\chip{ebookPrim}{V#1 · Cap.~#2}}%
+  \else
+    \href{ENEM-Matematica-Volume-#1.pdf\#cap-#2}{\chipborda[ebookPrim]{ebookPrim}{V#1 · Cap.~#2 \faExternalLink*}}%
+  \fi}
+% linha da tabela de habilidades
+\newcommand\habitem[2]{%
+  \textbf{\color{ebookPrim}H#1} & #2 &
+  \tikz[baseline=-0.6ex]{\fill[ebookLight] (0,-.12) rectangle (2.2,.12);
+    \fill[ebookPrim] (0,-.12) rectangle ({2.2*\csname habfreq@#1\endcsname/35},.12);}%
+  \hspace{3pt}{\scriptsize\csname habfreq@#1\endcsname}\\}
+% painel "raio-x": barras empilhadas por capítulo do volume atual
+\newcommand\raioxvolume{%
+  \begin{tikzpicture}[x=0.95mm,y=1mm]
+    \def\ebook@max{0}%
+    \foreach \k in {1,...,\value{ebook@nchap}}{%
+      \edef\ebook@cid{\csname capnum@\ebook@vol @\k\endcsname}%
+      \expandafter\expandafter\expandafter\ebook@raioxlinha\csname cap@\ebook@cid @stats\endcsname{\k}}
+    \draw[ebookLine] (0,0.5) -- (0,{-8.2*\value{ebook@nchap}+1});
+  \end{tikzpicture}}
+\newcommand\ebook@raioxlinha[6]{% {total}{f}{m}{d}{md}{k}
+  \pgfmathsetmacro\ya{-8.2*#6+3}%
+  \node[anchor=east,font=\sffamily\footnotesize,text width=58mm,align=right,inner sep=2pt] at (-1,\ya+1.6)
+    {\hyperlink{cap-#6}{\textcolor{ebookPrim}{\textbf{\twodigit{#6}}}\enspace\csname cap@\csname capnum@\ebook@vol @#6\endcsname @tit\endcsname}};
+  \pgfmathsetmacro\xa{#2}\pgfmathsetmacro\xb{#2+#3}\pgfmathsetmacro\xc{#2+#3+#4}\pgfmathsetmacro\xd{#1}%
+  \fill[nivelA] (0,\ya) rectangle (\xa,\ya+3.4);
+  \fill[nivelB] (\xa,\ya) rectangle (\xb,\ya+3.4);
+  \fill[nivelC] (\xb,\ya) rectangle (\xc,\ya+3.4);
+  \fill[nivelD] (\xc,\ya) rectangle (\xd,\ya+3.4);
+  \node[anchor=west,font=\sffamily\scriptsize\bfseries,text=ebookText] at (\xd+0.5,\ya+1.7) {#1};}
+
+%% ---------------------------------------------------------------------
+%% Capa
+%% ---------------------------------------------------------------------
+\newcommand\ebook@capalista{%
+  \foreach \k in {1,...,\value{ebook@nchap}}{%
+    \edef\ebook@cid{\csname capnum@\ebook@vol @\k\endcsname}%
+    \par\noindent\hangindent=8mm\hangafter=1\raggedright
+    \hyperlink{cap-\k}{\makebox[8mm][l]{\titlefont\color{ebookAcc}\twodigit{\k}}%
+      \titlefontsemi\color{white}\csname cap@\ebook@cid @tit\endcsname}\par\vspace{1.6mm}}}
+\newcommand\ebook@cartao[3]{%
+  \node[anchor=south west,fill=white,fill opacity=.10,text opacity=1,rounded corners=4pt,
+    minimum height=17mm,inner sep=3mm,text=white,text width=34mm,font=\sffamily\footnotesize]
+    at ([xshift=20mm+#1*43.3mm,yshift=66mm]current page.south west)
+    {{\Large\color{ebookAcc}#2}\par\vspace{1mm}\textbf{#3}};}
+\newcommand\capa{%
+  \thispagestyle{vazio}%
+  \begin{tikzpicture}[remember picture,overlay]
+    \shade[upper left=ebookGradA,lower right=ebookGradB,upper right=ebookGradA!70!ebookGradB,
+      lower left=ebookGradB!80!ebookGradA] (current page.south west) rectangle (current page.north east);
+    \begin{scope}[opacity=.07,white,line width=.5pt]
+      \foreach \x in {0,6,...,216}{\draw ([xshift=\x mm]current page.south west) -- ++(0,\paperheight);}
+      \foreach \y in {0,6,...,300}{\draw ([yshift=\y mm]current page.south west) -- ++(\paperwidth,0);}
+    \end{scope}
+    \begin{scope}[shift={([xshift=-58mm,yshift=-95mm]current page.north east)},opacity=.16,white,line width=2pt]
+      \draw (-50mm,-40mm) parabola bend (0,30mm) (50mm,-40mm);
+      \draw (0,-5mm) circle (34mm);
+      \draw (-45mm,-20mm) -- (35mm,-20mm) -- (-10mm,40mm) -- cycle;
+      \draw[domain=-5.5:5.5,samples=60,smooth,x=1cm,y=1cm] plot (\x,{1.2*sin(\x*100)});
+    \end{scope}
+    \node[anchor=north west,inner sep=0pt] at ([xshift=20mm,yshift=-22mm]current page.north west)
+      {\color{ebookAcc}\rule{14mm}{2.2mm}};
+    \node[anchor=north west,inner sep=0pt,text=white,font=\titlefontsemi\large]
+      at ([xshift=38mm,yshift=-20.5mm]current page.north west) {COLEÇÃO \textls[200]{ESCALA TRI}};
+    \node[anchor=north west,inner sep=0pt,text=white,font=\titlefontblack\fontsize{60}{60}\selectfont]
+      at ([xshift=18mm,yshift=-40mm]current page.north west) {\fontsize{50}{50}\selectfont MATEMÁTICA};
+    \node[anchor=north west,inner sep=0pt,text=white,font=\titlefontlight\fontsize{34}{36}\selectfont]
+      at ([xshift=19mm,yshift=-64mm]current page.north west) {PARA O \textbf{ENEM}};
+    \node[circle,fill=ebookAcc,minimum size=34mm,inner sep=0pt,anchor=center]
+      (vol) at ([xshift=-38mm,yshift=-96mm]current page.north east) {};
+    \node[text=ebookDark,font=\titlefontsemi\small,anchor=south] at ([yshift=4mm]vol.center) {VOLUME};
+    \node[text=ebookDark,font=\titlefontblack\fontsize{50}{50}\selectfont,anchor=north] at ([yshift=6mm]vol.center) {\ebook@vol};
+    \node[anchor=north west,inner sep=0pt,text=white,font=\titlefont\fontsize{19}{23}\selectfont,text width=150mm]
+      at ([xshift=20mm,yshift=-84mm]current page.north west) {\ebook@voltitle};
+    \node[anchor=north west,inner sep=0pt,text=white,font=\sffamily\small,text width=95mm,opacity=.92]
+      at ([xshift=20mm,yshift=-100mm]current page.north west)
+      {Teoria completa, dicas, macetes, questões oficiais do ENEM \anosbanco\ ordenadas pela
+       \textbf{dificuldade real da TRI} e questões inéditas do fácil ao muito difícil — todas
+       com resolução comentada.};
+    \node[anchor=north west,inner sep=0pt,text width=172mm]
+      at ([xshift=20mm,yshift=-130mm]current page.north west)
+      {{\titlefontsemi\small\color{ebookAcc}NESTE VOLUME}\par\vspace{3mm}\small
+       \setlength\columnsep{10mm}\begin{multicols}{2}\ebook@capalista\end{multicols}};
+    % destaques
+    \ebook@cartao{0}{\faBookOpen}{Teoria, dicas\newline e macetes}
+    \ebook@cartao{1}{\faUniversity}{Questões oficiais\newline com selo TRI}
+    \ebook@cartao{2}{\faFeather*}{Inéditas: do fácil\newline ao muito difícil}
+    \ebook@cartao{3}{\faCheckCircle}{Resoluções\newline comentadas}
+    % escala TRI
+    \begin{scope}[shift={([xshift=20mm,yshift=40mm]current page.south west)}]
+      \node[anchor=south west,text=white,font=\titlefontsemi\small,inner sep=0pt] at (0,13mm)
+        {ESCALA DE DIFICULDADE DO ENEM (TRI)};
+      \fill[nivelA] (0,0) rectangle (56.67mm,6mm);
+      \fill[nivelB] (56.67mm,0) rectangle (85mm,6mm);
+      \fill[nivelC] (85mm,0) rectangle (113.33mm,6mm);
+      \fill[nivelD] (113.33mm,0) rectangle (170mm,6mm);
+      \foreach \v/\x in {400/0,500/28.33,600/56.67,700/85,800/113.33,900/141.67,1000/170}{
+        \draw[white,line width=.6pt] (\x mm,0) -- (\x mm,-1.5mm);
+        \node[text=white,font=\sffamily\scriptsize,anchor=north] at (\x mm,-1.6mm) {\v};}
+      \foreach \t/\x in {Fácil/28,Média/71,Difícil/99,Muito difícil/142}{
+        \node[text=white,font=\sffamily\scriptsize\bfseries,anchor=south] at (\x mm,6.6mm) {\t};}
+    \end{scope}
+    \node[anchor=south west,inner sep=0pt,text=white,font=\sffamily\scriptsize,opacity=.85,text width=170mm]
+      at ([xshift=20mm,yshift=14mm]current page.south west)
+      {\faMousePointer\ PDF interativo: sumário e abas clicáveis, links questão $\leftrightarrow$ resolução,
+       cartão-resposta e checklist de progresso. \hfill Edição 2026};
+  \end{tikzpicture}%
+  \null\clearpage}
 
 %% ---------------------------------------------------------------------
 %% Outros

@@ -1,0 +1,975 @@
+\capitulo{v1c10}
+
+%% =====================================================================
+\section{Tabelas e quadros: a informação organizada}
+%% =====================================================================
+
+Abra qualquer prova de Matemática do ENEM e conte: em praticamente todas as
+edições, várias questões trazem uma \textbf{tabela} ou um \textbf{gráfico} como
+peça central. O curioso é que muitas delas quase não exigem contas — exigem
+\emph{leitura atenta}. É por isso que este capítulo vale ouro: são itens, em
+geral, fáceis ou médios na escala da TRI, e errar um item fácil derruba a sua
+nota mais do que errar um difícil, porque o modelo interpreta a incoerência como
+sinal de chute.
+
+Neste capítulo você vai aprender a ler, comparar e tirar conclusões de tabelas,
+gráficos de colunas, barras, linhas, setores, pictogramas e histogramas — e a
+desconfiar de conclusões que os dados \emph{não} permitem tirar.
+
+\begin{definicao}[Tabela (ou quadro)]
+Uma \textbf{tabela} organiza dados em \textbf{linhas} e \textbf{colunas}. Ela
+costuma ter: \textbf{título} (o que está sendo medido, onde e quando),
+\textbf{cabeçalho} (o nome de cada coluna, com a \emph{unidade}), \textbf{corpo}
+(os valores) e \textbf{fonte}. Quando cruza duas variáveis ao mesmo tempo — por
+exemplo, turno e meio de transporte —, é chamada de \textbf{tabela de dupla entrada}.
+\end{definicao}
+
+No ENEM, a palavra \emph{quadro} aparece com frequência; para resolver a
+questão, quadro e tabela funcionam exatamente do mesmo jeito.
+
+\subsection{Frequência absoluta, relativa e acumulada}
+
+Quando contamos quantas vezes cada resposta aparece numa pesquisa, obtemos a
+\textbf{frequência absoluta} ($f$). Dividindo pelo total de dados ($n$), obtemos
+a \textbf{frequência relativa}, quase sempre expressa em porcentagem. Somando as
+frequências “até” certa linha, obtemos a \textbf{frequência acumulada}.
+
+\begin{formula}[Frequência relativa]
+$\displaystyle f_r=\frac{f}{n}
+\qquad\text{e}\qquad
+f_r\,(\%)=\frac{f}{n}\times 100\%$
+\end{formula}
+
+A pergunta decisiva em toda questão de porcentagem com tabela é:
+\textbf{“por cento de quê?”}. O total que vai no denominador muda conforme a
+frase — e as alternativas erradas costumam usar o total errado.
+
+\begin{exemplo}[Tabela de dupla entrada]
+Uma escola perguntou aos seus 400 estudantes qual meio de transporte usam para
+chegar às aulas. O resultado, separado por turno, está na tabela.
+
+\begin{center}\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Turno} & \textbf{A pé} & \textbf{Ônibus} & \textbf{Bicicleta} & \textbf{Carro} & \textbf{Total}\\
+\midrule
+Manhã & 60 & 90 & 30 & 40 & 220\\
+Tarde & 50 & 70 & 25 & 35 & 180\\
+\midrule
+\textbf{Total} & 110 & 160 & 55 & 75 & 400\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\alph*),nosep]
+\item Que porcentagem de \emph{todos} os estudantes vai de ônibus?
+\item Entre os estudantes \emph{da tarde}, que porcentagem vai de bicicleta?
+\item Entre os que vão \emph{de bicicleta}, que porcentagem estuda de manhã?
+\end{enumerate}
+\solucao
+Em cada item, o total de referência é diferente — leia o trecho em itálico.
+
+a) Total: todos os 400 estudantes. $\dfrac{160}{400}=0{,}40=40\%$.
+
+b) Total: só os 180 da tarde. $\dfrac{25}{180}\approx 0{,}139\approx 13{,}9\%$.
+
+c) Total: só os 55 ciclistas. $\dfrac{30}{55}\approx 0{,}545\approx 54{,}5\%$.
+
+Repare que os itens b e c usam o mesmo tipo de informação (bicicleta e turno),
+mas respostas completamente diferentes. Um distrator típico do ENEM seria
+$\frac{30}{400}=7{,}5\%$, que mistura o dado de uma célula com o total geral.
+\end{exemplo}
+
+Nas linhas e colunas de “Total” existe uma checagem gratuita: a soma de cada
+linha deve bater com o total da linha, e a soma dos totais deve dar o total
+geral (aqui, $220+180=110+160+55+75=400$). Quando a questão omite um valor, é
+justamente essa soma que permite descobri-lo.
+
+%% =====================================================================
+\section{Gráficos de colunas, barras, linhas e pictogramas}
+%% =====================================================================
+
+Um gráfico é uma tabela desenhada: ele troca a precisão dos números pela
+rapidez da comparação visual. Antes de olhar para as alternativas, identifique
+as peças do gráfico — título, eixos, escala, unidade, legenda e fonte.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=10.5cm, height=5.6cm,
+  ybar, bar width=16pt,
+  ymin=0, ymax=70, ytick={0,10,...,70},
+  symbolic x coords={Seg,Ter,Qua,Qui,Sex}, xtick=data,
+  ylabel={Livros emprestados}, ylabel style={font=\small},
+  title={\small\bfseries Empréstimos da biblioteca escolar (semana de 6 a 10/10)},
+  ymajorgrids, grid style={ebookLine},
+  axis lines*=left, tick label style={font=\small},
+  nodes near coords, nodes near coords style={font=\scriptsize},
+  every axis plot/.append style={fill=ebookPrim!70, draw=ebookPrim},
+  clip=false]
+\addplot coordinates {(Seg,42) (Ter,35) (Qua,58) (Qui,27) (Sex,46)};
+\end{axis}
+\draw[ebookAcc,thick,-{Stealth}] (9.35,4.6) -- (8.6,4.15);
+\node[ebookAcc,font=\scriptsize\bfseries,anchor=west,align=left] at (9.35,4.6) {título:\\o que, onde, quando};
+\draw[ebookAcc,thick,-{Stealth}] (-1.6,1.0) -- (-0.75,1.6);
+\node[ebookAcc,font=\scriptsize\bfseries,align=center] at (-1.6,0.75) {eixo e\\unidade};
+\draw[ebookAcc,thick,-{Stealth}] (9.35,1.6) -- (8.55,2.0);
+\node[ebookAcc,font=\scriptsize\bfseries,anchor=west,align=left] at (9.35,1.5) {escala começa\\no zero?};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{itemize}[itemsep=2pt]
+\item \textbf{Colunas (verticais) e barras (horizontais)} comparam categorias:
+  a altura (ou comprimento) é proporcional ao valor — \emph{desde que o eixo
+  comece no zero}. Colunas \textbf{agrupadas}, com legenda, comparam duas ou
+  mais séries (por exemplo, 2023 e 2024) em cada categoria.
+\item \textbf{Linhas} mostram a \textbf{evolução} de uma grandeza ao longo do
+  tempo. Trecho subindo: crescimento; descendo: queda; horizontal: estabilidade.
+  Quanto mais inclinado o trecho, mais rápida a variação.
+\item \textbf{Pictogramas} usam figuras: cada ícone vale uma quantidade fixa,
+  indicada na legenda. Frações de ícone representam frações dessa quantidade.
+\end{itemize}
+
+\subsection{Variação absoluta e variação percentual}
+
+Em gráficos de linhas e de colunas, o ENEM adora perguntar “quando houve o
+\emph{maior aumento}”. Antes de responder, descubra se a pergunta é sobre
+aumento \textbf{absoluto} (diferença) ou \textbf{relativo} (porcentagem).
+
+\begin{formula}[Variação entre dois valores]
+$\displaystyle \Delta = V_{\text{final}}-V_{\text{inicial}}
+\qquad\qquad
+\Delta\% = \frac{V_{\text{final}}-V_{\text{inicial}}}{V_{\text{inicial}}}\times 100\%$
+\end{formula}
+
+\begin{exemplo}[Lendo um gráfico de linhas]
+O gráfico mostra o número de visitantes, em milhares, de um parque estadual no
+primeiro semestre de um ano.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=10cm, height=5.2cm,
+  ymin=0, ymax=30, ytick={0,5,...,30},
+  xmin=0.5, xmax=6.5, xtick={1,...,6},
+  xticklabels={Jan,Fev,Mar,Abr,Mai,Jun},
+  ylabel={Visitantes (milhar)}, ylabel style={font=\small},
+  ymajorgrids, grid style={ebookLine}, axis lines*=left,
+  tick label style={font=\small},
+  nodes near coords, nodes near coords style={font=\scriptsize,anchor=south}]
+\addplot[ebookPrim, very thick, mark=*, mark options={fill=white}]
+  coordinates {(1,12) (2,15) (3,14) (4,18) (5,25) (6,22)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+a) Entre quais meses consecutivos ocorreu o maior aumento de visitantes? De
+quanto foi esse aumento, em porcentagem?\\
+b) Em quais passagens de um mês para o seguinte houve queda?
+\solucao
+a) Calculamos as diferenças entre meses vizinhos:
+\[
+\text{Jan}\to\text{Fev}: +3;\quad
+\text{Fev}\to\text{Mar}: -1;\quad
+\text{Mar}\to\text{Abr}: +4;\quad
+\text{Abr}\to\text{Mai}: +7;\quad
+\text{Mai}\to\text{Jun}: -3.
+\]
+O maior aumento foi de abril para maio: $+7$ mil visitantes — é também o
+trecho mais inclinado do gráfico. Em porcentagem:
+$\dfrac{25-18}{18}=\dfrac{7}{18}\approx 0{,}389\approx 38{,}9\%$.
+
+b) Houve queda de fevereiro para março ($-1$ mil) e de maio para junho
+($-3$ mil): são os trechos em que a linha desce.
+
+Observe que o mês com mais visitantes (maio) \emph{não} é o mesmo que “o mês
+em que mais cresceu” — são perguntas diferentes, e o ENEM costuma oferecer as
+duas respostas nas alternativas.
+\end{exemplo}
+
+\subsection{Pictogramas}
+
+No pictograma, a primeira coisa a ler é a \textbf{legenda}: quanto vale cada
+ícone. Depois, conte ícones inteiros e frações.
+
+\begin{center}
+\begin{tikzpicture}[font=\small]
+\node[anchor=west,font=\small\bfseries] at (-0.2,3.15) {Árvores plantadas por um projeto ambiental};
+\foreach \ano/\n/\y in {2022/3/2.3, 2023/5/1.5, 2024/4/0.7}{
+  \node[anchor=east] at (0.9,\y) {\ano};
+  \foreach \k in {1,...,\n}{\node[text=nivelA] at (0.9+0.62*\k,\y) {\Large\faTree};}
+}
+% meio ícone em 2024
+\begin{scope}
+  \clip (0.9+0.62*5-0.32,0.3) rectangle (0.9+0.62*5,1.1);
+  \node[text=nivelA] at (0.9+0.62*5,0.7) {\Large\faTree};
+\end{scope}
+\node[anchor=west,draw=ebookLine,rounded corners=2pt,inner sep=3pt] at (5.6,1.5)
+  {\textcolor{nivelA}{\faTree} $=$ 200 árvores};
+\end{tikzpicture}
+\end{center}
+
+Em 2024 há 4 ícones inteiros e meio ícone: $4{,}5\times 200=900$ árvores. No
+triênio, $(3+5+4{,}5)\times 200=12{,}5\times 200=\num{2500}$ árvores. O erro
+clássico é ignorar o meio ícone (800 em 2024) ou contá-lo como inteiro (1\,000).
+
+%% =====================================================================
+\section{Gráficos de setores}
+%% =====================================================================
+
+O gráfico de setores (a “pizza”) mostra como um \textbf{todo} se divide em
+partes. O círculo inteiro representa 100\% e corresponde a $360^\circ$; cada
+setor tem ângulo central proporcional à sua parte.
+
+\begin{formula}[Setor circular]
+$\displaystyle \text{ângulo do setor}=\frac{\text{parte}}{\text{total}}\times 360^\circ
+\qquad\Longleftrightarrow\qquad
+p\% \;\longleftrightarrow\; p\times 3{,}6^\circ$
+\end{formula}
+
+Algumas correspondências valem a pena saber de cor: $50\%=180^\circ$,
+$25\%=90^\circ$, $10\%=36^\circ$, $5\%=18^\circ$ e $1\%=3{,}6^\circ$.
+
+Um caso muito cobrado é o de \textbf{dois gráficos de setores encadeados}: o
+segundo detalha \emph{um setor} do primeiro. Aí a porcentagem do segundo é
+“porcentagem de porcentagem”, e as duas devem ser multiplicadas.
+
+\begin{exemplo}[Setores e porcentagem de porcentagem]
+Uma cidade produz \num{1200} toneladas de lixo por mês, com o destino mostrado
+no gráfico. Dos resíduos enviados à reciclagem, 35\% são plásticos.
+
+\begin{center}
+\begin{tikzpicture}[font=\small]
+\def\raio{1.65}
+\foreach \a/\b/\cor/\txt in {90/-72/ebookPrim!75/{Aterro\\45\%},
+                              -72/-162/nivelA!70/{Compostagem\\25\%},
+                              -162/-234/ebookAcc!80/{Reciclagem\\20\%},
+                              -234/-270/contextoC!60/{}}{
+  \fill[\cor,draw=white,line width=1pt] (0,0) -- (\a:\raio) arc (\a:\b:\raio) -- cycle;
+  \node[align=center,font=\scriptsize\bfseries,text=white] at ({(\a+\b)/2}:{0.58*\raio}) {\txt};
+}
+\draw[ebookMuted] (-252:\raio) -- (-252:{\raio+0.45}) node[anchor=south east,align=right,font=\scriptsize] {Incineração\\10\%};
+\end{tikzpicture}
+\end{center}
+
+a) Quantas toneladas por mês vão para a compostagem?\\
+b) Qual é o ângulo central do setor “Reciclagem”?\\
+c) Quantas toneladas de plástico são recicladas por mês? Que porcentagem do lixo total isso representa?
+\solucao
+a) $25\%$ de \num{1200}: $0{,}25\times\num{1200}=300$ toneladas.
+
+b) $20\%\times 360^\circ=0{,}20\times 360^\circ=72^\circ$ (ou $20\times 3{,}6^\circ=72^\circ$).
+
+c) Primeiro, a reciclagem: $0{,}20\times\num{1200}=240$ t. Desses, 35\% são plástico:
+$0{,}35\times 240=84$ t. Em relação ao total:
+$0{,}20\times0{,}35=0{,}07=7\%$ (confira: $84/\num{1200}=0{,}07$).
+
+O erro mais comum seria calcular $35\%$ de \num{1200} $=420$ t, aplicando a
+porcentagem do segundo gráfico ao total errado.
+\end{exemplo}
+
+%% =====================================================================
+\section{Histogramas e inferências a partir de dados}
+%% =====================================================================
+
+\subsection{Dados agrupados em classes e histogramas}
+
+Quando a variável é numérica e assume muitos valores diferentes (preços,
+tempos, alturas), agrupamos os dados em \textbf{classes} (faixas) de mesma
+\textbf{amplitude}. O gráfico correspondente é o \textbf{histograma}: colunas
+\emph{encostadas umas nas outras}, porque as faixas são contínuas — onde uma
+termina, a outra começa.
+
+\begin{definicao}[Notação das classes]
+A classe $]20,\,30]$ reúne os valores \emph{maiores que} 20 e \emph{menores ou
+iguais a} 30; já $[20,\,30[$ reúne os valores de 20 (inclusive) até 30
+(exclusive). A \textbf{amplitude} da classe é $30-20=10$.
+\end{definicao}
+
+Duas consequências importantes: (1) com dados agrupados, você sabe
+\emph{quantos} dados há em cada faixa, mas não os valores exatos dentro dela;
+(2) perguntas do tipo “que porcentagem está abaixo de tal valor” se resolvem
+com a \textbf{frequência acumulada}.
+
+\begin{exemplo}[Histograma e frequência acumulada]
+Uma unidade de pronto atendimento registrou o tempo de espera de 120 pacientes
+em um dia. As faixas são $[0,10[$, $[10,20[$, $[20,30[$, $[30,40[$, $[40,50[$
+e $[50,60[$, em minuto.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=10cm, height=5.3cm,
+  ybar interval, ymin=0, ymax=40, ytick={0,10,...,40},
+  xtick={0,10,...,60}, xticklabel interval boundaries=false,
+  xticklabel={\pgfmathprintnumber{\tick}},
+  xlabel={Tempo de espera (min)}, ylabel={Pacientes},
+  label style={font=\small}, tick label style={font=\small},
+  ymajorgrids, grid style={ebookLine}, axis lines*=left,
+  nodes near coords, nodes near coords style={font=\scriptsize}]
+\addplot[fill=contextoC!45, draw=contextoC]
+  coordinates {(0,18) (10,30) (20,36) (30,21) (40,9) (50,6) (60,6)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+a) Que porcentagem dos pacientes esperou menos de 30 minutos?\\
+b) A meta da unidade é que pelo menos 85\% dos pacientes esperem menos de $L$
+minutos. Qual é o menor valor de $L$, entre 10, 20, 30, 40, 50 e 60, para o qual
+a meta foi cumprida nesse dia?
+\solucao
+Montamos as frequências acumuladas (somando da esquerda para a direita):
+
+\begin{center}\small
+\begin{tabular}{lcccccc}
+\toprule
+Tempo (min) & $<10$ & $<20$ & $<30$ & $<40$ & $<50$ & $<60$\\
+\midrule
+Pacientes (acumulado) & 18 & 48 & 84 & 105 & 114 & 120\\
+Porcentagem & 15\% & 40\% & 70\% & 87{,}5\% & 95\% & 100\%\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+a) Menos de 30 minutos: $\frac{84}{120}=0{,}70=70\%$.
+
+b) Precisamos de pelo menos $0{,}85\times120=102$ pacientes. Até 30 minutos há
+84 (não basta); até 40 minutos há 105 (basta). Logo, $L=40$ minutos.
+
+Note que o histograma tem a classe mais alta em $[20,30[$, mas isso não responde
+ao item b: o que importa é o \emph{acumulado}.
+\end{exemplo}
+
+\subsection{Inferências: o que os dados permitem — e o que não permitem — concluir}
+
+Nas questões mais difíceis deste conteúdo, a leitura é só o primeiro passo: é
+preciso \textbf{combinar} informações (de dois gráficos, ou de um gráfico e do
+texto) e decidir qual conclusão é válida. Três armadilhas se repetem.
+
+\textbf{1. Absoluto × relativo.} O maior número absoluto nem sempre corresponde
+à maior taxa. Para comparar grupos de tamanhos diferentes, use razões: casos por
+habitante, lucro por real investido, peças por hora, população urbana por
+população total.
+
+\begin{exemplo}[Maior número ou maior taxa?]
+A tabela mostra os casos de uma doença e a população de quatro cidades.
+
+\begin{center}\small
+\begin{tabular}{lcccc}
+\toprule
+Cidade & A & B & C & D\\
+\midrule
+Casos & \num{1200} & 900 & 450 & \num{2000}\\
+População & \num{400000} & \num{150000} & \num{60000} & \num{1000000}\\
+\bottomrule
+\end{tabular}
+\end{center}
+Em qual cidade a doença atinge, proporcionalmente, mais pessoas?
+\solucao
+Calculamos a \emph{incidência} (casos a cada 100 mil habitantes), que é uma razão:
+\[
+\text{A: }\frac{\num{1200}}{\num{400000}}\cdot\num{100000}=300;\quad
+\text{B: }600;\quad
+\text{C: }\frac{450}{\num{60000}}\cdot\num{100000}=750;\quad
+\text{D: }200.
+\]
+A cidade C tem o \emph{menor} número de casos, mas a \emph{maior} incidência. A
+cidade D, com mais casos, tem a menor incidência — ela simplesmente é muito
+maior. Esse é exatamente o raciocínio cobrado em questões sobre taxa de
+urbanização, rentabilidade de aluguel e eficiência de produção.
+\end{exemplo}
+
+\textbf{2. Escala que não começa no zero.} Quando o eixo vertical começa em um
+valor alto, pequenas diferenças parecem enormes. Os dois gráficos abaixo mostram
+\emph{os mesmos dados} (85 e 95 mil clientes).
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[name=g1,
+  width=5.6cm, height=4.6cm, ybar, bar width=18pt,
+  ymin=80, ymax=100, ytick={80,85,...,100},
+  symbolic x coords={2023,2024}, xtick=data, enlarge x limits=0.5,
+  title={\scriptsize\bfseries Eixo começando em 80}, axis lines*=left,
+  tick label style={font=\scriptsize}, ymajorgrids, grid style={ebookLine}]
+\addplot[fill=atencaoC!60,draw=atencaoC] coordinates {(2023,85) (2024,95)};
+\end{axis}
+\begin{axis}[at={(g1.east)}, anchor=west, xshift=1.6cm,
+  width=5.6cm, height=4.6cm, ybar, bar width=18pt,
+  ymin=0, ymax=100, ytick={0,20,...,100},
+  symbolic x coords={2023,2024}, xtick=data, enlarge x limits=0.5,
+  title={\scriptsize\bfseries Eixo começando em 0}, axis lines*=left,
+  tick label style={font=\scriptsize}, ymajorgrids, grid style={ebookLine}]
+\addplot[fill=nivelA!55,draw=nivelA] coordinates {(2023,85) (2024,95)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+À esquerda, a coluna de 2024 parece ter o triplo da altura; na verdade, o
+aumento foi de $\frac{95-85}{85}\approx 11{,}8\%$. Sempre leia os
+\emph{números} do eixo, não o tamanho das figuras.
+
+\textbf{3. Correlação não é causa.} Se duas grandezas crescem juntas num gráfico,
+isso não prova que uma provoca a outra. Questões que pedem “a conclusão que
+\emph{pode} ser tirada dos dados” costumam punir quem extrapola.
+
+\begin{contexto}[Infográficos]
+Jornais e sites combinam, num mesmo \emph{infográfico}, mapas, ícones, setores
+e números soltos. A estratégia é a mesma: descubra o que cada elemento mede
+(e em que unidade), qual é o total de referência e qual pergunta o enunciado
+faz — só então volte aos números.
+\end{contexto}
+
+%% =====================================================================
+\section{Dicas e macetes}
+%% =====================================================================
+
+\begin{dica}[Leia o gráfico antes da pergunta]
+Gaste 15 segundos com título, eixos, \textbf{unidades} (“em milhar”, “em bilhão
+de dólares”, “em \%”), legenda e período. Muitos distratores do ENEM são o
+mesmo número com a unidade errada — por exemplo, 41,74 bilhões escrito como
+41,74 milhões.
+\end{dica}
+
+\begin{dica}[“Por cento de quê?”]
+Antes de calcular uma porcentagem, sublinhe na pergunta o grupo de referência:
+“dos estudantes da tarde”, “dos que usam bicicleta”, “do total reciclado”. Esse
+grupo é o denominador. Em gráficos encadeados, as porcentagens se
+\textbf{multiplicam}.
+\end{dica}
+
+\begin{dica}[Matriz também é tabela]
+O ENEM às vezes apresenta os dados como uma matriz $A=[a_{ij}]$: o elemento
+$a_{ij}$ está na linha $i$ e na coluna $j$. Leia com cuidado o que linha e coluna
+representam (por exemplo, “do banco $i$ para o banco $j$”): somar uma
+\emph{linha} dá o total enviado; somar uma \emph{coluna} dá o total recebido.
+\end{dica}
+
+\begin{dica}[Estime antes de calcular]
+Muitas alternativas podem ser eliminadas só pela ordem de grandeza: se um setor
+ocupa “um pouco menos de um quarto” da pizza, a resposta é um pouco menos de
+25\% do total. Use a estimativa para conferir a conta.
+\end{dica}
+
+\begin{macete}[Compare razões sem dividir]
+Para saber qual é maior, $\frac{a}{b}$ ou $\frac{c}{d}$ (com números positivos),
+compare os produtos cruzados $a\cdot d$ e $b\cdot c$. E para comparar taxas do tipo
+$\frac{U}{U+R}$ (parte sobre o total), basta comparar $\frac{U}{R}$: quanto maior
+a parte em relação ao resto, maior a fração do total.
+\end{macete}
+
+\begin{macete}[Graus e porcentagens]
+Multiplique a porcentagem por 3,6 para obter o ângulo, ou divida o ângulo por
+3,6 para obter a porcentagem: $54^\circ \div 3{,}6=15\%$. Atalhos:
+$90^\circ=25\%$, $36^\circ=10\%$, $72^\circ=20\%$, $120^\circ=\frac13\approx33{,}3\%$.
+\end{macete}
+
+\begin{macete}[Gráfico sem números? Conte quadradinhos]
+Se as colunas não trazem valores, use as linhas de grade como unidade: “o
+futebol vale 7 quadradinhos, o vôlei vale 3”. Depois, uma única informação
+numérica do texto (ou de outro gráfico) diz quanto vale cada quadradinho.
+\end{macete}
+
+\begin{atencao}[Eixo que não começa no zero]
+Num gráfico com eixo truncado, a razão entre as alturas das colunas \emph{não} é
+a razão entre os valores. Calcule sempre com os números do eixo.
+\end{atencao}
+
+\begin{atencao}[Pontos percentuais e porcentagem de porcentagem]
+Passar de 40\% para 35\% é uma queda de 5 \textbf{pontos percentuais}, que
+corresponde a uma queda \emph{relativa} de $\frac{5}{40}=12{,}5\%$. E se o total
+mudou, a quantidade pode até ter aumentado! Sempre volte às quantidades:
+porcentagem $\times$ total.
+\end{atencao}
+
+\begin{atencao}[Maior valor $\neq$ maior crescimento $\neq$ maior taxa]
+“Mês de maior venda”, “mês de maior aumento” e “maior aumento percentual” são
+três perguntas diferentes — e as três respostas costumam estar nas alternativas.
+\end{atencao}
+
+\begin{resumo}
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt]
+\item Leia título, eixos, unidades, legenda e fonte antes de qualquer conta.
+\item Frequência relativa $=\dfrac{f}{n}$; identifique sempre o total de referência (“por cento de quê?”).
+\item Colunas/barras comparam categorias; linhas mostram evolução; pictogramas exigem a legenda (frações de ícone contam!).
+\item Variação absoluta: $V_f-V_i$; variação percentual: $\dfrac{V_f-V_i}{V_i}\times100\%$.
+\item Setores: $p\%\leftrightarrow p\times3{,}6^\circ$; em gráficos encadeados, multiplique as porcentagens.
+\item Histograma: classes contíguas; perguntas “abaixo de…”/“pelo menos x\%” se resolvem com frequência acumulada.
+\item Para comparar grupos de tamanhos diferentes, use razões (taxas), não valores absolutos.
+\item Desconfie de eixo truncado e de conclusões de causa e efeito.
+\end{itemize}
+\end{resumo}
+
+%% =====================================================================
+\secaoenem
+%% =====================================================================
+
+\questaoenem{2012-148}
+\begin{resolucao}{E}
+\passo{1. O que se pede.} O mês de \emph{maior} venda e o de \emph{menor} venda, nessa ordem (“respectivamente”).
+
+\passo{2. Leitura do gráfico.} Não é preciso saber nenhum valor: basta comparar alturas. O ponto mais alto da linha está em \textbf{junho}; o mais baixo, em \textbf{agosto}. Siga as linhas tracejadas até o eixo horizontal para não “escorregar” de mês.
+
+\resposta{alternativa E — junho e agosto.}
+
+Item muito fácil ($b=-1{,}26$): exige apenas localizar o máximo e o mínimo de um gráfico de linhas. É o tipo de questão que você não pode errar.
+\begin{distratores}
+\alt{A} Março é um pico e abril um “vale”, mas apenas \emph{locais}: junho é mais alto que março, e agosto é mais baixo que abril.
+\alt{B} Acerta a menor venda, mas toma o pico de março (que é mais baixo que o de junho) como o maior.
+\alt{C} Agosto é o mês de menor venda, não de maior; além disso, setembro é um pico, não um mínimo. A ordem “respectivamente” foi ignorada.
+\alt{D} Acerta a maior venda, mas desloca a leitura do mínimo em um mês (setembro, logo após agosto, é um dos meses de venda alta).
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2025-163}
+\begin{resolucao}{B}
+\passo{1. O que o gráfico de colunas permite.} As colunas não têm números, mas têm linhas de grade igualmente espaçadas. Usando uma divisão da grade como unidade $u$:
+\begin{center}\small
+\begin{tabular}{lcccc}
+\toprule
+& 1ª série & 2ª série & 3ª série & Total\\
+\midrule
+Futebol & 7 & 6 & 5 & $18u$\\
+Vôlei & 3 & 3 & 4 & $10u$\\
+Basquete & 1 & 3 & 4 & $8u$\\
+\bottomrule
+\end{tabular}
+\end{center}
+O total é $18u+10u+8u=36u$. (Conferência: o futebol, com $18u$, é metade de $36u$ — exatamente como o gráfico de setores mostra.)
+
+\passo{2. Descobrindo o valor da unidade.} O gráfico de setores informa que 80 estudantes jogam basquete: $8u=80\Rightarrow u=10$.
+
+\passo{3. Total.} $36u=36\times10=360$ estudantes.
+
+\resposta{alternativa B — 360.}
+
+Item fácil ($b=0{,}32$), mas que exige combinar os dois gráficos — é o macete de “contar quadradinhos”.
+\begin{distratores}
+\alt{A} 720: considera que os 80 estudantes correspondem apenas à coluna do basquete da 3ª série ($4u=80$, $u=20$), o que dá $36\times20=720$.
+\alt{C} 320: supõe, “de olho”, que o basquete é um quarto da pizza ($4\times80$). Na verdade, ele é $\frac{8}{36}\approx22\%$.
+\alt{D} 288: troca basquete por vôlei, fazendo $10u=80$ ($u=8$) e $36\times8=288$.
+\alt{E} 240: supõe as três modalidades com a mesma quantidade ($3\times80$), ignorando que o futebol ocupa metade do círculo.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2024-152}
+\begin{resolucao}{A}
+\passo{1. A definição.} Saldo $=$ exportações $-$ importações. Ele é positivo quando a linha preta (exportações) está \emph{acima} da cinza, e negativo quando está abaixo.
+
+\passo{2. Leitura dos três meses destacados.}
+\begin{itemize}[nosep]
+\item Junho de 2009: exportações $\approx14{,}5$ e importações $\approx10$ $\Rightarrow S_1\approx+4{,}5$ bilhões.
+\item Janeiro de 2010: a linha preta está \emph{abaixo} da cinza (exportações $\approx11{,}3$; importações $\approx11{,}6$) $\Rightarrow S_2<0$.
+\item Junho de 2010: $17{,}1-14{,}8=2{,}3$ $\Rightarrow S_3=+2{,}3$ bilhões.
+\end{itemize}
+
+\passo{3. Ordenação.} Do maior para o menor: $S_1\;(4{,}5)>S_3\;(2{,}3)>S_2\;(<0)$. Visualmente, o saldo é a “abertura” vertical entre as duas linhas — maior em junho de 2009.
+
+\resposta{alternativa A — $S_1$, $S_3$ e $S_2$.}
+
+Item médio ($b=1{,}04$): a dificuldade está em perceber que o saldo é a \emph{distância} entre as linhas (com sinal), e não a altura de uma delas.
+\begin{distratores}
+\alt{B} Coloca $S_2$ em primeiro, mas $S_2$ é o único saldo negativo — não pode ser o maior.
+\alt{C} É a ordem obtida invertendo a subtração (importações $-$ exportações): $-0{,}3$… vira o “maior”, e $S_1$ vira o menor.
+\alt{D} Ordena pelo valor das \emph{exportações} (17,1; 14,5; 11,3), sem subtrair as importações.
+\alt{E} Ordena pelo valor das \emph{importações} (14,8; 11,6; 10), outra leitura de uma única linha.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2021-151}
+\begin{resolucao}{C}
+\passo{1. Frequências de cada faixa.} Lendo as alturas das colunas, de ]300, 400] a ]1\,200, 1\,300]: 5, 10, 5, 15, 20, 15, 15, 10, 5, 5. A soma é 105, que confere com o total de apartamentos.
+
+\passo{2. Quantos são “pelo menos 50\%”?} $0{,}5\times105=52{,}5$; portanto, precisamos de pelo menos 53 apartamentos com preço abaixo de $p$.
+
+\passo{3. Frequência acumulada.}
+\begin{center}\small
+\begin{tabular}{lccccc}
+\toprule
+Preço até (mil reais) & 400 & 500 & 600 & 700 & 800\\
+\midrule
+Apartamentos (acumulado) & 5 & 15 & 20 & 35 & 55\\
+\bottomrule
+\end{tabular}
+\end{center}
+Até 700 mil há apenas 35 apartamentos ($\approx33\%$); até 800 mil já são 55 ($\approx52\%$). O menor valor das alternativas que atinge os 50\% é 800.
+
+\resposta{alternativa C — 800 mil reais.}
+
+Item médio-alto ($b=1{,}96$): exige transformar o histograma em frequência acumulada e perceber que a pergunta pede o \emph{menor} preço que satisfaz a condição. Note também que a propaganda (“50\% abaixo de 550 mil”) é falsa: abaixo de 600 mil há só 20 apartamentos, cerca de 19\%.
+\begin{distratores}
+\alt{A} 600: aceita a informação da corretora sem conferir. Até 600 mil há apenas 20 dos 105 imóveis.
+\alt{B} 700: escolhe o início da faixa mais alta do histograma (a moda) ou acumula “de trás para a frente” (acima de 700 mil há 70 imóveis). Até 700 mil há só 35 imóveis, menos da metade.
+\alt{D} 900: até 900 mil há 70 imóveis — satisfaz a condição, mas não é o \emph{menor} preço que a satisfaz.
+\alt{E} 1\,000: até 1 milhão há 85 imóveis ($\approx81\%$) — também satisfaz, mas está longe de ser o menor.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2015-169}
+\begin{resolucao}{C}
+\passo{1. Os dois gráficos estão encadeados.} O gráfico da direita detalha apenas o setor “Têxteis” do gráfico da esquerda. Assim, “Tecidos e Malhas” corresponde a 30\% \emph{dos têxteis}, que por sua vez são 37,8\% do total.
+
+\passo{2. Porcentagem de porcentagem.}
+\[
+282\times0{,}378=106{,}596\ \text{kton (têxteis)};\qquad
+106{,}596\times0{,}30\approx31{,}98\ \text{kton}.
+\]
+
+\passo{3. Arredondando.} $\approx32{,}0$ kton.
+
+\resposta{alternativa C — 32,0.}
+
+Item difícil ($b=2{,}04$): a armadilha é aplicar os 30\% diretamente sobre o total de 282 kton, sem perceber que o segundo gráfico é um “zoom” do primeiro.
+\begin{distratores}
+\alt{A} 16,0: aplica os 30\% sobre o setor errado do primeiro gráfico — Resinas (18,9\%): $282\times0{,}189\times0{,}30\approx16{,}0$.
+\alt{B} 22,9: troca os setores nos dois gráficos (Resinas e Não tecidos): $282\times0{,}189\times0{,}43\approx22{,}9$.
+\alt{D} 84,6: calcula 30\% do total, $282\times0{,}30=84{,}6$, ignorando que o segundo gráfico se refere apenas aos têxteis.
+\alt{E} 106,6: para no primeiro passo; essa é a quantidade de \emph{todos} os usos têxteis.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2019-174}
+\begin{resolucao}{C}
+\passo{1. A taxa pedida.} Taxa de urbanização $=\dfrac{U}{U+R}$, em que $U$ é a população urbana (primeiro gráfico) e $R$ a rural (segundo gráfico).
+
+\passo{2. Cálculo para os cinco municípios.}
+\begin{center}\small
+\begin{tabular}{lccccc}
+\toprule
+Município & I & II & III & IV & V\\
+\midrule
+Urbana $U$ & \num{8000} & \num{10000} & \num{11000} & \num{18000} & \num{17000}\\
+Rural $R$ & \num{4000} & \num{8000} & \num{5000} & \num{10000} & \num{12000}\\
+Total $U+R$ & \num{12000} & \num{18000} & \num{16000} & \num{28000} & \num{29000}\\
+Taxa $\frac{U}{U+R}$ & 66,7\% & 55,6\% & \textbf{68,8\%} & 64,3\% & 58,6\%\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\passo{3. Atalho.} Pelo macete do capítulo, basta comparar $\frac{U}{R}$: I: 2; II: 1,25; III: 2,2; IV: 1,8; V: $\approx1{,}42$. O maior é o do município III.
+
+\resposta{alternativa C — município III.}
+
+Item muito difícil ($b=3{,}34$), embora as contas sejam simples: a maioria escolhe pelo valor \emph{absoluto} da população urbana (município IV), sem calcular a razão pedida. É o exemplo perfeito de “absoluto × relativo”.
+\begin{distratores}
+\alt{A} I: é o município com a menor população rural, mas isso não basta — sua taxa (66,7\%) é menor que a do III.
+\alt{B} II: tem a \emph{menor} taxa de urbanização (55,6\%), isto é, a maior proporção rural. Escolhe-o quem inverte a razão (rural/total).
+\alt{D} IV: tem a maior população urbana e a maior diferença $U-R$ (\num{8000}), mas a taxa é só 64,3\%.
+\alt{E} V: tem a maior população total, o que não diz nada sobre a \emph{proporção} urbana (58,6\%).
+\end{distratores}
+\end{resolucao}
+
+%% =====================================================================
+\secaoineditas
+%% =====================================================================
+
+\begin{questaoinedita}{1}{25}
+Uma escola fez uma campanha de coleta de garrafas plásticas durante quatro
+semanas. O resultado foi divulgado no mural por meio de um pictograma.
+
+\begin{center}
+\begin{tikzpicture}[font=\small]
+\foreach \s/\n/\y in {1/4/2.4, 2/6/1.7, 3/3/1.0, 4/5/0.3}{
+  \node[anchor=east] at (1.3,\y) {Semana \s};
+  \foreach \k in {1,...,\n}{\node[text=contextoC] at (1.35+0.55*\k,\y) {\large\faWineBottle};}
+}
+\begin{scope}
+  \clip (1.35+0.55*4-0.3,0.7) rectangle (1.35+0.55*4,1.3);
+  \node[text=contextoC] at (1.35+0.55*4,1.0) {\large\faWineBottle};
+\end{scope}
+\node[anchor=west,draw=ebookLine,rounded corners=2pt,inner sep=3pt] at (5.3,1.35)
+  {\textcolor{contextoC}{\faWineBottle} $=$ 50 kg de plástico};
+\end{tikzpicture}
+\end{center}
+
+Na semana 3, o último ícone aparece cortado ao meio. A quantidade total de
+plástico, em quilograma, arrecadada nas quatro semanas foi
+\begin{alternativas*}[5]
+\item 18,5.
+\item 300.
+\item 900.
+\item 925.
+\item 950.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{D}
+\passo{1. Contando os ícones.} Semana 1: 4; semana 2: 6; semana 3: 3 e meio; semana 4: 5. Total: $4+6+3{,}5+5=18{,}5$ ícones.
+
+\passo{2. Aplicando a legenda.} Cada ícone vale 50 kg: $18{,}5\times50=925$ kg.
+
+\resposta{alternativa D — 925 kg.}
+\begin{distratores}
+\alt{A} 18,5 é o número de ícones; faltou multiplicar pelo valor de cada ícone (50 kg).
+\alt{B} 300 kg é apenas a semana de maior arrecadação ($6\times50$), não o total.
+\alt{C} 900 kg ignora o meio ícone da semana 3: $18\times50$.
+\alt{E} 950 kg conta o meio ícone como se fosse inteiro: $19\times50$.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{25}
+Uma família tem renda mensal de R\$~\num{4800},00 e decidiu acompanhar seus
+gastos. Uma planilha eletrônica gerou o gráfico de setores a seguir, mas, por
+uma falha de configuração, exibiu os ângulos centrais de cada setor em vez das
+porcentagens.
+
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize]
+\def\raio{1.6}
+\foreach \a/\b/\cor/\txt in {90/-36/ebookPrim!75/{Moradia\\$126^\circ$},
+                              -36/-126/ebookAcc!80/{Alimentação\\$90^\circ$},
+                              -126/-180/nivelA!70/{Transporte\\$54^\circ$},
+                              -180/-216/contextoC!65/{Saúde\\$36^\circ$},
+                              -216/-234/maceteC!55/{},
+                              -234/-270/nivelB!70/{Educação\\$36^\circ$}}{
+  \fill[\cor,draw=white,line width=1pt] (0,0) -- (\a:\raio) arc (\a:\b:\raio) -- cycle;
+  \node[align=center,font=\scriptsize\bfseries,text=white] at ({(\a+\b)/2}:{0.62*\raio}) {\txt};
+}
+\draw[ebookMuted] (-225:\raio) -- (-225:{\raio+0.4}) node[anchor=south east,align=right] {Lazer\\$18^\circ$};
+\end{tikzpicture}
+\end{center}
+
+O valor, em real, que essa família gasta mensalmente com transporte é
+\begin{alternativas*}[5]
+\item 480.
+\item 720.
+\item 800.
+\item \num{1440}.
+\item \num{2592}.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. De ângulo para fração.} O círculo inteiro ($360^\circ$) corresponde à renda total. O setor de transporte tem $54^\circ$: $\dfrac{54}{360}=0{,}15=15\%$ (pelo macete, $54\div3{,}6=15$).
+
+\passo{2. Valor em reais.} $0{,}15\times\num{4800}=720$.
+
+\resposta{alternativa B — R\$~720,00.}
+\begin{distratores}
+\alt{A} 480 corresponde a um setor de $36^\circ$ (10\%), como Saúde ou Educação — leitura do setor errado.
+\alt{C} 800 é a renda dividida igualmente entre os 6 setores ($\num{4800}\div6$), ignorando os ângulos.
+\alt{D} \num{1440} usa meia volta como total: $\frac{54}{180}=30\%$ de \num{4800}.
+\alt{E} \num{2592} trata os graus como porcentagem: 54\% de \num{4800}.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{26}
+Uma ONG oferece cursos livres gratuitos. Para premiar a equipe do curso com
+o maior \textbf{crescimento percentual} no número de matrículas de 2023 para
+2024, a coordenação consultou a tabela.
+
+\begin{center}\small
+\begin{tabular}{lcc}
+\toprule
+\textbf{Curso} & \textbf{Matrículas em 2023} & \textbf{Matrículas em 2024}\\
+\midrule
+Informática & 120 & 150\\
+Inglês & 80 & 108\\
+Violão & 40 & 58\\
+Culinária & 60 & 72\\
+Fotografia & 25 & 40\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A equipe premiada deve ser a do curso de
+\begin{alternativas}
+\item Informática.
+\item Inglês.
+\item Violão.
+\item Culinária.
+\item Fotografia.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{E}
+\passo{1. Aumento absoluto de cada curso.} Informática: $+30$; Inglês: $+28$; Violão: $+18$; Culinária: $+12$; Fotografia: $+15$.
+
+\passo{2. Aumento percentual} (aumento dividido pelo valor de 2023):
+\[
+\tfrac{30}{120}=25\%;\quad \tfrac{28}{80}=35\%;\quad \tfrac{18}{40}=45\%;\quad
+\tfrac{12}{60}=20\%;\quad \tfrac{15}{25}=60\%.
+\]
+
+\passo{3. Conclusão.} O maior crescimento percentual é o da Fotografia, que teve um dos \emph{menores} aumentos absolutos — mas partiu de uma base pequena.
+
+\resposta{alternativa E — Fotografia.}
+\begin{distratores}
+\alt{A} Informática teve o maior aumento \emph{absoluto} (30 matrículas), mas só 25\% de crescimento.
+\alt{B} Inglês tem o segundo maior aumento absoluto (28), com 35\% de crescimento.
+\alt{C} Violão tem o segundo maior crescimento percentual (45\%), não o maior.
+\alt{D} Culinária é o curso com a maior razão “2023/2024” ($60/72\approx0{,}83$): quem inverte a divisão escolhe justamente o curso que \emph{menos} cresceu (20\%).
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{24}
+Uma empresa de internet publicou em suas redes sociais o gráfico a seguir, com
+o título “\textit{Triplicamos o número de clientes!}”.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=6.2cm, height=5cm, ybar, bar width=22pt,
+  ymin=80, ymax=100, ytick={80,85,...,100},
+  symbolic x coords={2023,2024}, xtick=data, enlarge x limits=0.5,
+  ylabel={Clientes (milhar)}, label style={font=\small},
+  axis lines*=left, tick label style={font=\small},
+  ymajorgrids, grid style={ebookLine}]
+\addplot[fill=ebookPrim!65,draw=ebookPrim] coordinates {(2023,85) (2024,95)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+Um órgão de defesa do consumidor considerou a publicação enganosa. De acordo
+com os dados do gráfico, de 2023 para 2024 o número de clientes aumentou,
+aproximadamente,
+\begin{alternativas*}[5]
+\item 11,8\%.
+\item 17,6\%.
+\item 111,8\%.
+\item 200\%.
+\item 300\%.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{A}
+\passo{1. Ler os valores, não as alturas.} O eixo vertical começa em 80 mil. A coluna de 2023 vai até 85 mil; a de 2024, até 95 mil. As colunas \emph{desenhadas} têm alturas proporcionais a $85-80=5$ e $95-80=15$, daí a impressão de “triplo”.
+
+\passo{2. Variação percentual real.}
+\[
+\frac{95-85}{85}=\frac{10}{85}\approx0{,}1176\approx11{,}8\%.
+\]
+
+\resposta{alternativa A — cerca de 11,8\%.}
+\begin{distratores}
+\alt{B} 17,6\%: subtrai o início do eixo de um só dos valores, $\frac{95-80}{85}$ — mistura altura desenhada com valor real.
+\alt{C} 111,8\%: calcula $\frac{95}{85}\approx1{,}118$ e lê a razão como se fosse o aumento. A razão 1,118 significa um aumento de 11,8\%.
+\alt{D} 200\%: aceita a ilusão visual ($15\div5=3$, “triplicou”) e converte corretamente “triplicar” em aumento de 200\% — mas com base em alturas, não em valores.
+\alt{E} 300\%: além de cair na ilusão visual, confunde “triplicar” (aumento de 200\%) com aumento de 300\%.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{24}
+Uma cooperativa de reciclagem divulgou a composição do material coletado em
+dois anos. Em 2023, foram coletadas \num{2500} toneladas; em 2024, o total
+coletado foi 20\% maior.
+
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize]
+\def\raio{1.35}
+\begin{scope}
+\node[font=\small\bfseries] at (0,1.75) {2023};
+\foreach \a/\b/\cor/\txt in {90/-54/ebookPrim!75/{Plástico\\40\%},
+                              -54/-162/ebookAcc!80/{Papel\\30\%},
+                              -162/-226.8/nivelA!70/{Vidro\\18\%},
+                              -226.8/-270/contextoC!65/{Metal\\12\%}}{
+  \fill[\cor,draw=white,line width=1pt] (0,0) -- (\a:\raio) arc (\a:\b:\raio) -- cycle;
+  \node[align=center,font=\scriptsize\bfseries,text=white] at ({(\a+\b)/2}:{0.6*\raio}) {\txt};
+}
+\end{scope}
+\begin{scope}[xshift=4.6cm]
+\node[font=\small\bfseries] at (0,1.75) {2024};
+\foreach \a/\b/\cor/\txt in {90/-36/ebookPrim!75/{Plástico\\35\%},
+                              -36/-151.2/ebookAcc!80/{Papel\\32\%},
+                              -151.2/-223.2/nivelA!70/{Vidro\\20\%},
+                              -223.2/-270/contextoC!65/{Metal\\13\%}}{
+  \fill[\cor,draw=white,line width=1pt] (0,0) -- (\a:\raio) arc (\a:\b:\raio) -- cycle;
+  \node[align=center,font=\scriptsize\bfseries,text=white] at ({(\a+\b)/2}:{0.6*\raio}) {\txt};
+}
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+Um jornal local publicou: “a coleta de plástico caiu em 2024”. Com base nos
+dados, de 2023 para 2024 a quantidade de plástico coletada
+\begin{alternativas}
+\item diminuiu 12,5\%.
+\item diminuiu 5\%.
+\item aumentou 5\%.
+\item aumentou 15\%.
+\item aumentou 20\%.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{C}
+\passo{1. Total de cada ano.} 2023: \num{2500} t. 2024: $\num{2500}\times1{,}20=\num{3000}$ t.
+
+\passo{2. Plástico em toneladas.} 2023: $0{,}40\times\num{2500}=\num{1000}$ t. 2024: $0{,}35\times\num{3000}=\num{1050}$ t.
+
+\passo{3. Variação.} $\dfrac{\num{1050}-\num{1000}}{\num{1000}}=\dfrac{50}{\num{1000}}=5\%$ de \emph{aumento}. A fatia do plástico encolheu, mas a pizza inteira cresceu — e cresceu mais do que a fatia encolheu. A manchete está errada.
+
+\resposta{alternativa C — aumentou 5\%.}
+\begin{distratores}
+\alt{A} Diminuiu 12,5\%: é a variação relativa da \emph{participação} ($\frac{35}{40}=0{,}875$), ignorando que o total cresceu.
+\alt{B} Diminuiu 5\%: confunde a queda de 5 \emph{pontos percentuais} (de 40\% para 35\%) com uma queda de 5\% na quantidade.
+\alt{D} Aumentou 15\%: “soma” as porcentagens, $20\%-5\%$, misturando variação do total com pontos percentuais.
+\alt{E} Aumentou 20\%: aplica ao plástico o crescimento do total, supondo que a participação não mudou.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{4}{26}
+Uma indústria tem 200 funcionários. Os gráficos mostram a distribuição dos
+funcionários por setor e o salário mensal de cada setor (todos os funcionários
+de um mesmo setor recebem o mesmo salário).
+
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize]
+\def\raio{1.45}
+\node[font=\small\bfseries,align=center] at (0,2.05) {Funcionários por setor};
+\foreach \a/\b/\cor/\txt in {90/-126/ebookPrim!75/{Produção\\60\%},
+                              -126/-216/ebookAcc!80/{Administr.\\25\%},
+                              -216/-252/nivelA!75/{},
+                              -252/-270/contextoC!70/{}}{
+  \fill[\cor,draw=white,line width=1pt] (0,0) -- (\a:\raio) arc (\a:\b:\raio) -- cycle;
+  \node[align=center,font=\scriptsize\bfseries,text=white] at ({(\a+\b)/2}:{0.58*\raio}) {\txt};
+}
+\draw[ebookMuted] (-234:\raio) -- (-234:{\raio+0.35}) node[anchor=south east,align=right] {Gerência\\10\%};
+\draw[ebookMuted] (-261:\raio) -- (-261:{\raio+0.55}) node[anchor=south,align=center] {Diretoria 5\%};
+\begin{scope}[xshift=2.6cm,yshift=-1.55cm]
+\begin{axis}[
+  width=6.6cm, height=4.6cm, ybar, bar width=15pt,
+  ymin=0, ymax=18000, ytick={0,4000,8000,12000,16000},
+  yticklabel style={/pgf/number format/1000 sep={\,}},
+  symbolic x coords={Produção,Administr.,Gerência,Diretoria}, xtick=data,
+  x tick label style={font=\scriptsize}, tick label style={font=\scriptsize},
+  title={\small\bfseries Salário mensal (R\$)}, axis lines*=left,
+  ymajorgrids, grid style={ebookLine}, enlarge x limits=0.18,
+  nodes near coords, nodes near coords style={font=\scriptsize,/pgf/number format/1000 sep={\,}}]
+\addplot[fill=ebookPrim!60,draw=ebookPrim] coordinates
+  {(Produção,2500) (Administr.,4000) (Gerência,8000) (Diretoria,16000)};
+\end{axis}
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+A diretoria vai conceder um reajuste de 10\% apenas aos funcionários do setor
+de produção. Com esse reajuste, o gasto mensal total da indústria com salários
+aumentará, aproximadamente,
+\begin{alternativas*}[5]
+\item 3,5\%.
+\item 3,7\%.
+\item 6,0\%.
+\item 10,0\%.
+\item 36,6\%.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Quantos funcionários em cada setor.} 60\% de 200 $=120$ (produção); 25\% $=50$ (administração); 10\% $=20$ (gerência); 5\% $=10$ (diretoria).
+
+\passo{2. Folha salarial atual.}
+\[
+120\cdot\num{2500}+50\cdot\num{4000}+20\cdot\num{8000}+10\cdot\num{16000}
+=\num{300000}+\num{200000}+\num{160000}+\num{160000}=\num{820000}.
+\]
+
+\passo{3. Aumento.} 10\% da folha da produção: $0{,}10\times\num{300000}=\num{30000}$ reais.
+
+\passo{4. Aumento relativo da folha total.}
+\[
+\frac{\num{30000}}{\num{820000}}\approx0{,}0366\approx3{,}7\%.
+\]
+Outra forma de ver: a produção, apesar de ter 60\% dos funcionários, responde por apenas $\frac{\num{300000}}{\num{820000}}\approx36{,}6\%$ da folha; 10\% de 36,6\% é cerca de 3,7\%.
+
+\resposta{alternativa B — cerca de 3,7\%.}
+\begin{distratores}
+\alt{A} 3,5\%: divide o aumento pela folha \emph{nova} ($\frac{\num{30000}}{\num{850000}}$); a variação percentual usa o valor inicial.
+\alt{C} 6,0\%: pondera pelo número de funcionários ($10\%\times60\%$), como se todos ganhassem o mesmo salário. O peso correto é a participação na \emph{folha}, não no quadro de pessoal.
+\alt{D} 10,0\%: aplica o reajuste a todos os setores.
+\alt{E} 36,6\%: é a participação da produção na folha; faltou multiplicar pelos 10\% de reajuste.
+\end{distratores}
+\end{resolucao}

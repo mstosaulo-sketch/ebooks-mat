@@ -1,0 +1,1092 @@
+\capitulo{v1c08}
+
+%% =====================================================================
+\section{Sequências e padrões}
+%% =====================================================================
+
+Calendários, tabelas de produção, pilhas de caixas, figuras montadas com
+palitos, parcelas de um financiamento, as fases de um torneio\dots{} Em todas
+essas situações aparece uma \textbf{lista de números que obedece a uma regra}.
+O ENEM gosta muito desse tipo de questão porque ela mede uma habilidade central
+da Matriz de Referência: \emph{identificar padrões numéricos} (H2) e usá-los
+para prever o que ainda não foi observado. Quem descobre a regra não precisa
+listar termo por termo: salta direto para o 20º, o 100º ou o 2\,015º termo.
+
+\begin{definicao}[Sequência]
+Uma \textbf{sequência} é uma lista \emph{ordenada} de números
+$(a_1, a_2, a_3, \dots, a_n, \dots)$. O número $a_n$ é o \textbf{termo de
+posição $n$} (o $n$-ésimo termo), e o índice $n$ indica apenas a sua posição.
+Uma sequência pode ser descrita de dois modos:
+\begin{itemize}[nosep]
+  \item pelo \textbf{termo geral}, uma fórmula que fornece $a_n$ diretamente a
+        partir de $n$ (por exemplo, $a_n = 2n + 1$);
+  \item por uma \textbf{lei de recorrência}, uma regra que obtém cada termo a
+        partir do anterior (por exemplo, $a_1 = 3$ e $a_{n+1} = a_n + 2$).
+\end{itemize}
+\end{definicao}
+
+As duas descrições acima geram a mesma sequência $(3, 5, 7, 9, \dots)$. A
+recorrência é ótima para \emph{entender} o padrão; o termo geral é o que permite
+\emph{saltar} para posições distantes sem calcular todos os termos
+intermediários.
+
+\subsection{Padrões figurais}
+
+Muitas questões mostram as primeiras figuras de uma sequência e perguntam sobre
+uma figura distante. O roteiro é sempre o mesmo:
+\begin{enumerate}[nosep]
+  \item conte os elementos das primeiras figuras;
+  \item observe quanto a contagem muda de uma figura para a seguinte;
+  \item escreva o termo geral e \textbf{confira-o} com as figuras dadas.
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=10mm,
+  palito/.style={line width=2.4pt,ebookAcc,line cap=round,shorten >=1.6pt,shorten <=1.6pt}]
+  \def\h{0.866}
+  \foreach \n/\ox in {1/0,2/2.1,3/4.9,4/8.4}{
+    \begin{scope}[shift={(\ox,0)}]
+      \foreach \k in {1,...,\n}{
+        \pgfmathtruncatemacro\impar{mod(\k,2)}
+        \ifnum\impar=1
+          \pgfmathsetmacro\i{(\k-1)/2}
+          \draw[palito] (\i,0) -- (\i+1,0);
+          \draw[palito] (\i,0) -- (\i+0.5,\h);
+          \draw[palito] (\i+1,0) -- (\i+0.5,\h);
+        \else
+          \pgfmathsetmacro\i{\k/2-1}
+          \draw[palito] (\i+0.5,\h) -- (\i+1.5,\h);
+          \draw[palito] (\i+0.5,\h) -- (\i+1,0);
+          \draw[palito] (\i+1.5,\h) -- (\i+1,0);
+        \fi}
+    \end{scope}}
+  \node[font=\small\sffamily,align=center] at (0.5,-0.55) {Figura 1\\3 palitos};
+  \node[font=\small\sffamily,align=center] at (2.85,-0.55) {Figura 2\\5 palitos};
+  \node[font=\small\sffamily,align=center] at (5.9,-0.55) {Figura 3\\7 palitos};
+  \node[font=\small\sffamily,align=center] at (9.65,-0.55) {Figura 4\\9 palitos};
+\end{tikzpicture}
+\end{center}
+
+Na figura, a primeira figura usa 3 palitos e cada triângulo novo
+\emph{reaproveita} um palito da figura anterior, acrescentando apenas 2. Os
+totais formam a sequência $3, 5, 7, 9, \dots$, que cresce de 2 em 2. Partindo de
+3 e somando 2 a cada nova figura, a figura $n$ recebe $n-1$ acréscimos:
+\[
+P_n = 3 + 2\,(n-1) = 2n + 1 .
+\]
+Teste: $P_4 = 2\cdot 4 + 1 = 9$, como na figura.
+
+\begin{exemplo}[Triângulos de palitos]
+Seguindo o padrão da figura acima, responda: (a) quantos palitos tem a figura
+com 50 triângulos? (b) Com 135 palitos, qual é a maior quantidade de
+triângulos que se pode formar nessa faixa?
+\solucao
+(a) $P_{50} = 2\cdot 50 + 1 = 101$ palitos.
+(b) Precisamos de $2n + 1 \le 135$, ou seja, $2n \le 134$ e $n \le 67$. A faixa
+terá \textbf{67 triângulos}, usando exatamente 135 palitos. Repare que contar
+“3 palitos por triângulo” daria $135 \div 3 = 45$, um erro típico: os palitos
+compartilhados só podem ser contados uma vez.
+\end{exemplo}
+
+\subsection{Diferenças sucessivas}
+
+Quando a regra não é evidente, calcule as \textbf{diferenças} entre termos
+vizinhos:
+\begin{itemize}[nosep]
+  \item se as diferenças são \textbf{constantes}, o termo geral é do 1º grau
+        ($a_n = rn + b$): é uma progressão aritmética (Seção 2);
+  \item se as diferenças \textbf{crescem de forma constante} (as “diferenças das
+        diferenças” são iguais), o termo geral é do 2º grau;
+  \item se o \textbf{quociente} entre termos vizinhos é constante, a sequência é
+        uma progressão geométrica (Seção 3).
+\end{itemize}
+
+Os exemplos mais famosos de diferenças crescentes são os \textbf{números
+figurados}. Os números \emph{triangulares} contam pontos dispostos em
+triângulos:
+
+\begin{center}
+\begin{tikzpicture}[x=10mm,y=10mm]
+  \foreach \n/\ox/\val in {1/0/1,2/1.6/3,3/3.6/6,4/6.1/10,5/9.1/15}{
+    \begin{scope}[shift={(\ox,0)}]
+      \foreach \r in {1,...,\n}{
+        \foreach \c in {1,...,\r}{
+          \fill[ebookPrim] ({(\c-(\r+1)/2)*0.5},{-\r*0.44}) circle (2.7pt);}}
+      \node[font=\small] at (0,-2.75) {$T_{\n} = \val$};
+    \end{scope}}
+\end{tikzpicture}
+\end{center}
+
+As diferenças são $2, 3, 4, 5, \dots$: a figura $n$ ganha uma nova linha com
+$n$ pontos. Por isso, $T_n = 1 + 2 + 3 + \cdots + n$. Com os quadrados
+($1, 4, 9, 16, \dots$) acontece algo parecido: as diferenças são os ímpares
+$3, 5, 7, \dots$.
+
+\begin{formula}[Somas que aparecem em padrões figurais]
+$\displaystyle 1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}
+\qquad\qquad 1 + 3 + 5 + \cdots + (2n-1) = n^2$
+\end{formula}
+
+\subsection{Sequências periódicas}
+
+Se os termos se repetem em blocos (dias da semana, cores de um pisca-pisca,
+$1, 2, 3, 1, 2, 3, \dots$), descubra o tamanho $p$ do ciclo e use o
+\textbf{resto da divisão}: o termo de posição $n$ é igual ao termo de posição
+$r$, em que $r$ é o resto de $n \div p$ (se o resto for 0, é o último termo do
+ciclo). Exemplo: se o 1º dia de um ano caiu numa quarta-feira, o 100º dia cai
+no mesmo dia da semana que o 2º dia, pois $100 = 14\cdot 7 + 2$; logo, numa
+quinta-feira. Ciclos e periodicidade são aprofundados no Capítulo 3.
+
+%% =====================================================================
+\section{Progressão aritmética (PA)}
+%% =====================================================================
+
+Uma prestação que aumenta R\$~15,00 por mês, marcos colocados a cada 20 metros
+numa estrada, um treino que cresce 200 metros por dia, uma produção que aumenta
+sempre a mesma quantidade por ano: em todos esses casos, passamos de um termo ao
+seguinte \textbf{somando sempre o mesmo valor}. Essa é a sequência mais cobrada
+do ENEM.
+
+\begin{definicao}[Progressão aritmética]
+Uma \textbf{progressão aritmética} é uma sequência em que cada termo, a partir
+do segundo, é igual ao anterior somado a uma constante $r$, chamada
+\textbf{razão}:
+\[
+a_{n+1} = a_n + r \qquad\Longleftrightarrow\qquad r = a_2 - a_1 = a_3 - a_2 = \cdots
+\]
+A PA é \emph{crescente} se $r > 0$, \emph{decrescente} se $r < 0$ e
+\emph{constante} se $r = 0$.
+\end{definicao}
+
+\subsection{Termo geral}
+
+Para ir do 1º termo ao termo de posição $n$, damos $n-1$ “saltos” de tamanho
+$r$:
+
+\begin{center}
+\begin{tikzpicture}[x=17mm]
+  \draw[ebookMuted,line width=.8pt,-{Stealth}] (-0.4,0) -- (5.5,0);
+  \foreach \x/\l in {0/a_1,1/a_2,2/a_3,4/a_{n-1},5/a_n}{
+    \fill[ebookPrim] (\x,0) circle (2.6pt);
+    \node[below=3pt] at (\x,0) {$\l$};}
+  \node at (3,-0.35) {$\cdots$};
+  \foreach \a/\b in {0/1,1/2,4/5}{
+    \draw[-{Stealth},ebookAcc,line width=1pt] (\a,0.12) to[bend left=50]
+      node[above,font=\small,text=ebookText]{$+r$} (\b,0.12);}
+  \draw[-{Stealth},ebookAcc,line width=1pt,dashed] (2,0.12) to[bend left=35] (4,0.12);
+  \draw[decorate,decoration={brace,mirror,amplitude=6pt},ebookPrim,line width=.8pt]
+    (0,-0.75) -- node[below=7pt,font=\small,text=ebookText]{$n-1$ saltos de tamanho $r$} (5,-0.75);
+\end{tikzpicture}
+\end{center}
+
+\begin{formula}[Termo geral da PA]
+$\displaystyle a_n = a_1 + (n-1)\,r
+\qquad\text{e, de modo geral,}\qquad a_n = a_k + (n-k)\,r$
+\end{formula}
+
+Isolando $n$, obtemos a fórmula do \textbf{número de termos}, muito útil em
+questões de postes, placas, marcos e calendários:
+\[
+n = \frac{a_n - a_1}{r} + 1 .
+\]
+O “$+1$” é o mesmo de uma cerca: uma cerca de 10 metros com estacas a cada
+metro tem $10 + 1 = 11$ estacas, porque há uma estaca no início e outra no fim.
+
+\begin{exemplo}[Placas em uma ciclovia]
+Uma ciclovia receberá placas de sinalização. A primeira ficará a 300 m do
+início da ciclovia, e as demais serão instaladas a cada 150 m, até a última,
+que ficará a 7,8 km do início. Quantas placas serão instaladas?
+\solucao
+As posições das placas, em metros, formam uma PA com $a_1 = 300$, $r = 150$ e
+último termo $a_n = 7\,800$ (lembre-se: $\SI{7,8}{\km} = \SI{7800}{\m}$). Então
+\[
+n = \frac{7\,800 - 300}{150} + 1 = \frac{7\,500}{150} + 1 = 50 + 1 = 51 .
+\]
+Serão \textbf{51 placas}. Quem divide $7\,800$ por 150 encontra 52 (ignorou que
+a primeira placa não está no início); quem esquece o “$+1$” encontra 50.
+\end{exemplo}
+
+\subsection{Propriedades úteis}
+
+\begin{itemize}
+  \item \textbf{Termo do meio.} Em uma PA, cada termo (exceto o primeiro e o
+        último) é a \textbf{média aritmética} dos seus vizinhos:
+        $a_n = \dfrac{a_{n-1} + a_{n+1}}{2}$. Por isso, três números em PA
+        podem ser escritos como $x - r,\ x,\ x + r$.
+  \item \textbf{Termos equidistantes.} Termos à mesma distância dos extremos
+        têm a mesma soma: $a_1 + a_n = a_2 + a_{n-1} = a_3 + a_{n-2} = \cdots$
+  \item \textbf{Gráfico.} Os pontos $(n, a_n)$ de uma PA ficam \textbf{alinhados}:
+        a PA é uma função afim $a_n = rn + (a_1 - r)$ com domínio nos números
+        naturais. A razão é a inclinação da reta.
+\end{itemize}
+
+\subsection{Soma dos termos de uma PA}
+
+\begin{contexto}[O menino Gauss]
+Conta-se que o matemático alemão Carl Friedrich Gauss (1777--1855), ainda
+criança, recebeu do professor a tarefa de somar os números de 1 a 100. Em
+poucos minutos ele respondeu 5\,050: percebeu que $1 + 100$, $2 + 99$,
+$3 + 98$, \dots{} valem todos 101 e que há 50 desses pares. Logo,
+$50 \cdot 101 = 5\,050$.
+\end{contexto}
+
+A ideia de Gauss funciona para qualquer PA. Escreva a soma duas vezes, uma em
+ordem crescente e outra em ordem decrescente: cada coluna soma
+$a_1 + a_n$, e há $n$ colunas. A figura mostra isso para
+$1 + 2 + 3 + 4 + 5$: duas “escadas” iguais formam um retângulo $5 \times 6$.
+
+\begin{center}
+\begin{tikzpicture}[x=6.5mm,y=6.5mm]
+  \foreach \i in {1,...,5}{
+    \fill[ebookPrim!75] (\i-1,0) rectangle (\i,\i);
+    \fill[ebookAcc!75] (\i-1,\i) rectangle (\i,6);
+    \node[font=\scriptsize\bfseries,text=white] at (\i-0.5,0.5*\i) {\i};
+    \pgfmathtruncatemacro\cima{6-\i}
+    \node[font=\scriptsize\bfseries,text=white] at (\i-0.5,{\i+0.5*(6-\i)}) {\cima};}
+  \draw[white,line width=.8pt] (0,0) grid (5,6);
+  \draw[ebookDark,line width=.8pt] (0,0) rectangle (5,6);
+  \draw[decorate,decoration={brace,mirror,amplitude=5pt},line width=.7pt]
+    (0,-0.25) -- node[below=6pt,font=\small]{$n = 5$ colunas} (5,-0.25);
+  \draw[decorate,decoration={brace,mirror,amplitude=5pt},line width=.7pt]
+    (5.25,0) -- node[right=6pt,font=\small,align=left]{cada coluna:\\$a_1 + a_n = 6$} (5.25,6);
+  \node[anchor=west,font=\small,align=left] at (9.6,3)
+    {$2S = 5 \cdot 6 = 30$\\[2pt] $S = 15$};
+\end{tikzpicture}
+\end{center}
+
+\begin{formula}[Soma dos $n$ primeiros termos da PA]
+$\displaystyle S_n = \frac{(a_1 + a_n)\cdot n}{2}$
+\end{formula}
+
+Leia a fórmula assim: \textbf{soma = (média dos extremos) $\times$ (número de
+termos)}. Ela exige três informações: o primeiro termo, o último termo e
+quantos termos existem. Muitas vezes, o último termo precisa ser calculado antes
+com o termo geral.
+
+\begin{exemplo}[Poupança com depósitos crescentes]
+Júlia decidiu guardar dinheiro todo mês: R\$~50,00 no primeiro mês e, a cada
+mês seguinte, R\$~10,00 a mais do que no mês anterior. Quanto ela terá guardado,
+ao todo, ao completar 2 anos de depósitos (sem considerar juros)?
+\solucao
+Os depósitos formam uma PA com $a_1 = 50$, $r = 10$ e $n = 24$ meses.
+\begin{itemize}[nosep]
+  \item Último depósito: $a_{24} = 50 + 23\cdot 10 = 280$.
+  \item Total: $S_{24} = \dfrac{(50 + 280)\cdot 24}{2} = 330 \cdot 12 = 3\,960$.
+\end{itemize}
+Júlia terá guardado \textbf{R\$~3\,960,00}. Atenção ao que se pede: R\$~280,00
+é apenas o depósito do 24º mês, e não o total guardado.
+\end{exemplo}
+
+%% =====================================================================
+\section{Progressão geométrica (PG)}
+%% =====================================================================
+
+Agora a regra é \textbf{multiplicar} sempre pelo mesmo número: uma população de
+bactérias que dobra a cada hora, uma mensagem que cada pessoa repassa para três
+amigos, um carro que perde 10\% do valor por ano, a luz que perde intensidade a
+cada metro de profundidade. Crescimentos (ou decrescimentos) por um
+\emph{percentual fixo} são sempre progressões geométricas.
+
+\begin{definicao}[Progressão geométrica]
+Uma \textbf{progressão geométrica} é uma sequência de termos não nulos em que
+cada termo, a partir do segundo, é igual ao anterior multiplicado por uma
+constante $q$, chamada \textbf{razão}:
+\[
+a_{n+1} = a_n \cdot q \qquad\Longleftrightarrow\qquad
+q = \frac{a_2}{a_1} = \frac{a_3}{a_2} = \cdots
+\]
+Com termos positivos, a PG é \emph{crescente} se $q > 1$ e
+\emph{decrescente} se $0 < q < 1$.
+\end{definicao}
+
+\begin{formula}[Termo geral da PG]
+$\displaystyle a_n = a_1 \cdot q^{\,n-1}$
+\end{formula}
+
+O expoente é $n - 1$ pelo mesmo motivo da PA: do 1º ao $n$-ésimo termo há
+$n-1$ multiplicações por $q$. Na PG também vale uma propriedade do termo do
+meio: cada termo é a \textbf{média geométrica} dos vizinhos,
+$a_n^2 = a_{n-1}\cdot a_{n+1}$.
+
+\subsection{Porcentagem fixa gera PG}
+
+Aumentar um valor em $i\%$ é multiplicá-lo por $1 + \frac{i}{100}$; reduzir em
+$i\%$ é multiplicá-lo por $1 - \frac{i}{100}$. Assim:
+\begin{itemize}[nosep]
+  \item crescimento de 20\% ao ano $\;\Rightarrow\;$ PG de razão $q = 1{,}2$;
+  \item redução de 10\% ao ano $\;\Rightarrow\;$ PG de razão $q = 0{,}9$;
+  \item “cai pela metade” $\;\Rightarrow\;$ $q = 0{,}5$;\quad “dobra” $\;\Rightarrow\;$ $q = 2$.
+\end{itemize}
+
+\begin{exemplo}[Desvalorização de um carro]
+Um carro novo custa R\$~80\,000,00 e perde 10\% do seu valor a cada ano, sempre
+em relação ao valor do ano anterior. Qual será o valor do carro após 3 anos?
+\solucao
+Perder 10\% é manter 90\%: a cada ano o valor é multiplicado por $q = 0{,}9$.
+Após 3 anos:
+\[
+80\,000 \cdot 0{,}9^3 = 80\,000 \cdot 0{,}729 = 58\,320 .
+\]
+O carro valerá \textbf{R\$~58\,320,00}. Cuidado com a conta “de PA”:
+$80\,000 - 3\cdot 8\,000 = 56\,000$ está errada, porque os 10\% de cada ano
+incidem sobre um valor cada vez menor.
+\end{exemplo}
+
+\subsection{PA ou PG: quem cresce mais?}
+
+O gráfico compara a PA $a_n = 8n$ ($8, 16, 24, \dots$) com a PG
+$b_n = 2^{n-1}$ ($1, 2, 4, \dots$). No início a PA está bem à frente, mas a PG,
+que cresce \emph{multiplicando}, acaba ultrapassando-a (aqui, a partir de
+$n = 7$) e depois dispara. Os pontos da PA ficam sobre uma reta; os da PG, sobre
+uma curva exponencial.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=0.78\linewidth,height=5.6cm,
+  xmin=0.5,xmax=8.5,ymin=0,ymax=135,xtick={1,...,8},ytick={0,20,...,120},
+  axis lines=left,xlabel={posição $n$},ylabel={valor do termo},
+  grid=major,grid style={ebookLine!70},
+  tick label style={font=\small},label style={font=\small},
+  legend pos=north west,legend style={font=\small,draw=ebookLine},
+  /pgf/number format/use comma]
+  \addplot[dashed,ebookPrim,domain=1:8,forget plot] {8*x};
+  \addplot[dashed,ebookAcc,domain=1:8,samples=60,forget plot] {2^(x-1)};
+  \addplot[only marks,mark=*,mark size=2.4pt,ebookPrim,samples at={1,...,8}] {8*x};
+  \addlegendentry{PA: $a_n = 8n$}
+  \addplot[only marks,mark=square*,mark size=2.4pt,ebookAcc,samples at={1,...,8}] {2^(x-1)};
+  \addlegendentry{PG: $b_n = 2^{n-1}$}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\subsection{Soma dos termos de uma PG}
+
+Seja $S_n = a_1 + a_1 q + a_1 q^2 + \cdots + a_1 q^{n-1}$. Multiplicando tudo
+por $q$, obtemos $q S_n = a_1 q + a_1 q^2 + \cdots + a_1 q^{n}$. Subtraindo as
+duas igualdades, quase todos os termos se cancelam:
+$q S_n - S_n = a_1 q^n - a_1$. Daí:
+
+\begin{formula}[Soma dos $n$ primeiros termos da PG ($q \neq 1$)]
+$\displaystyle S_n = \frac{a_1\,(q^{\,n} - 1)}{q - 1}$
+\end{formula}
+
+Um caso particular aparece o tempo todo: $1 + 2 + 4 + \cdots + 2^{n-1} = 2^n - 1$.
+
+\begin{contexto}[A lenda do tabuleiro de xadrez]
+Diz a lenda que o inventor do xadrez pediu ao rei, como recompensa, 1 grão de
+trigo na 1ª casa do tabuleiro, 2 na 2ª, 4 na 3ª, e assim por diante, sempre
+dobrando, até a 64ª casa. O total é $1 + 2 + \cdots + 2^{63} = 2^{64} - 1$,
+cerca de $1{,}8 \cdot 10^{19}$ grãos: muito mais trigo do que a humanidade já
+produziu em toda a sua história. É a força do crescimento geométrico.
+\end{contexto}
+
+\begin{exemplo}[Uma mensagem que se espalha]
+No 1º dia de uma campanha, 5 pessoas receberam uma mensagem. A partir daí, a
+cada dia, o número de pessoas que recebem a mensagem pela primeira vez é o
+triplo do número do dia anterior. Quantas pessoas, ao todo, terão recebido a
+mensagem ao final do 6º dia?
+\solucao
+Os números diários formam uma PG com $a_1 = 5$ e $q = 3$. O total dos 6 dias é
+\[
+S_6 = \frac{5\,(3^6 - 1)}{3 - 1} = \frac{5\cdot 728}{2} = 1\,820 .
+\]
+Conferindo termo a termo: $5 + 15 + 45 + 135 + 405 + 1\,215 = 1\,820$. Só no
+6º dia foram $a_6 = 5\cdot 3^5 = 1\,215$ pessoas; a pergunta, porém, pede o
+\textbf{total}: \textbf{1\,820 pessoas}.
+\end{exemplo}
+
+\subsection{Soma infinita}
+
+Quando $0 < q < 1$, os termos ficam cada vez menores e $q^n$ se aproxima de
+zero à medida que $n$ cresce. A soma de \emph{todos} os termos se aproxima,
+então, de um valor finito:
+
+\begin{formula}[Soma dos infinitos termos de uma PG com $0 < q < 1$]
+$\displaystyle S_\infty = \frac{a_1}{1 - q}$
+\end{formula}
+
+\begin{center}
+\begin{tikzpicture}[x=9mm,y=9mm]
+  \fill[ebookPrim!80] (0,0) rectangle (2,4);
+  \fill[ebookPrim!60] (2,2) rectangle (4,4);
+  \fill[ebookPrim!42] (2,0) rectangle (3,2);
+  \fill[ebookPrim!28] (3,1) rectangle (4,2);
+  \fill[ebookPrim!18] (3,0) rectangle (3.5,1);
+  \fill[ebookPrim!10] (3.5,0.5) rectangle (4,1);
+  \draw[white,line width=1pt] (2,0) -- (2,4) (2,2) -- (4,2) (3,0) -- (3,2)
+    (3,1) -- (4,1) (3.5,0) -- (3.5,1) (3.5,0.5) -- (4,0.5);
+  \draw[ebookDark,line width=.8pt] (0,0) rectangle (4,4);
+  \node[text=white,font=\bfseries] at (1,2) {$\frac12$};
+  \node[text=white,font=\bfseries] at (3,3) {$\frac14$};
+  \node[text=white,font=\small\bfseries] at (2.5,1) {$\frac18$};
+  \node[font=\scriptsize] at (3.5,1.5) {$\frac1{16}$};
+  \node[anchor=west,font=\small,align=left] at (4.6,2)
+    {Quadrado de área 1:\\[2pt]
+     $\frac12 + \frac14 + \frac18 + \frac1{16} + \cdots = \dfrac{1/2}{1 - 1/2} = 1$\\[4pt]
+     as partes coloridas vão\\ preenchendo todo o quadrado.};
+\end{tikzpicture}
+\end{center}
+
+Por exemplo, $3 + 1{,}5 + 0{,}75 + \cdots$ é uma PG infinita com $a_1 = 3$ e
+$q = 0{,}5$, cuja soma é $\dfrac{3}{1 - 0{,}5} = 6$.
+
+%% =====================================================================
+\section{Dicas e macetes}
+%% =====================================================================
+
+\begin{dica}[Diferença ou quociente?]
+Diante de uma sequência numérica, faça dois testes rápidos com os termos
+dados. \textbf{Subtraia} vizinhos: diferença constante indica PA.
+\textbf{Divida} vizinhos: quociente constante indica PG. Se nenhum dos dois
+funcionar, calcule as diferenças das diferenças (padrão do 2º grau, como nos
+números figurados) ou procure um ciclo que se repete.
+\end{dica}
+
+\begin{dica}[Transforme anos e meses em posições]
+Em tabelas com anos, chame o primeiro ano de $n = 1$. A posição de um ano
+qualquer é $n = \text{ano} - \text{ano inicial} + 1$. De 2012 a 2021, por
+exemplo, há $2021 - 2012 + 1 = 10$ anos, e não 9.
+\end{dica}
+
+\begin{dica}[Teste as alternativas com $n = 1$ e $n = 2$]
+Quando a pergunta pede uma \emph{expressão} (“qual expressão fornece\dots”),
+não deduza nada de início: substitua $n = 1$ e $n = 2$ em cada alternativa e
+compare com os valores que você consegue calcular diretamente. Testar só
+$n = 1$ pode não bastar, pois duas expressões diferentes podem coincidir nesse
+valor.
+\end{dica}
+
+\begin{dica}[Termo ou soma?]
+Grife o que o comando pede. “Quanto foi vendido \emph{em julho}?” pede um
+\textbf{termo}; “quanto foi vendido \emph{de janeiro a julho}?” ou “qual o
+total?” pede uma \textbf{soma}. O ENEM costuma colocar as duas respostas entre
+as alternativas.
+\end{dica}
+
+\begin{macete}[Soma de PA sem decorar fórmula]
+Soma de PA $=$ \textbf{média dos extremos $\times$ quantidade de termos}. Se a
+quantidade de termos é ímpar, a média dos extremos é o próprio termo central:
+a soma de $11, 14, 17, 20, 23$ é $5 \times 17 = 85$.
+\end{macete}
+
+\begin{macete}[Torneios eliminatórios]
+Em um torneio de eliminação simples, cada partida elimina \textbf{exatamente
+um} competidor e, no fim, só sobra o campeão. Logo, com $N$ competidores são
+necessárias $N - 1$ partidas. Isso confirma a soma de PG de razão 2: com
+$2^k$ competidores, $2^{k-1} + 2^{k-2} + \cdots + 2 + 1 = 2^k - 1$.
+\end{macete}
+
+\begin{macete}[Saldo por rodada]
+Quando algo entra e sai a cada etapa (moedas, pessoas, litros), calcule o
+\textbf{saldo de uma etapa}. Se o saldo é sempre o mesmo, a quantidade forma
+uma PA: $\text{valor após } n \text{ etapas} = \text{valor inicial} + n \cdot
+\text{saldo}$.
+\end{macete}
+
+\begin{atencao}[O $n - 1$ esquecido]
+Do 1º ao $n$-ésimo termo há $n - 1$ intervalos, e não $n$. Postes, estacas,
+placas e andares são as armadilhas clássicas: se o primeiro poste está a 80 m
+e o último a \num{1380} m, com espaçamento de 20 m, a quantidade de postes é
+$\frac{1\,380 - 80}{20} + 1$. Sem o “$+1$”, você cai num distrator.
+\end{atencao}
+
+\begin{atencao}[Percentual fixo não é PA]
+“Aumento de 5\% ao ano” \textbf{não} significa somar sempre o mesmo valor: os
+5\% incidem sobre um valor cada vez maior, e a sequência é uma PG de razão
+1,05. Somar $5\% + 5\% + 5\%$ e dizer que houve aumento de 15\% em três anos é
+erro (o correto é $1{,}05^3 \approx 1{,}158$, ou seja, cerca de 15,8\%).
+\end{atencao}
+
+\begin{atencao}[Expoente da PG]
+Em $a_n = a_1 \cdot q^{n-1}$, o expoente é $n - 1$. Se a 1ª etapa já tem 3
+elementos e cada etapa dobra, a 20ª etapa tem $3 \cdot 2^{19}$, e não
+$3 \cdot 2^{20}$. Confira sempre com $n = 1$: a fórmula precisa devolver o
+primeiro termo.
+\end{atencao}
+
+\begin{resumo}
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt]
+  \item \textbf{Sequência:} lista ordenada; termo geral $a_n = f(n)$ ou
+        recorrência (cada termo a partir do anterior).
+  \item \textbf{PA} (soma $r$): $a_n = a_1 + (n-1)r$;\quad
+        $n = \frac{a_n - a_1}{r} + 1$;\quad
+        $S_n = \frac{(a_1 + a_n)\,n}{2}$.
+  \item \textbf{PG} (multiplica por $q$): $a_n = a_1\, q^{n-1}$;\quad
+        $S_n = \frac{a_1 (q^n - 1)}{q - 1}$;\quad
+        $S_\infty = \frac{a_1}{1-q}$ se $0 < q < 1$.
+  \item Aumento de $i\%$: $q = 1 + \frac{i}{100}$;\quad redução de $i\%$:
+        $q = 1 - \frac{i}{100}$.
+  \item Termo do meio: média aritmética dos vizinhos (PA); média geométrica
+        dos vizinhos (PG).
+  \item Somas famosas: $1 + 2 + \cdots + n = \frac{n(n+1)}{2}$;\quad
+        $1 + 3 + \cdots + (2n-1) = n^2$;\quad $1 + 2 + \cdots + 2^{n-1} = 2^n - 1$.
+  \item Sempre: confira a fórmula com os primeiros termos e verifique se o
+        comando pede \textbf{termo} ou \textbf{soma}.
+\end{itemize}
+\end{resumo}
+
+%% =====================================================================
+\secaoenem
+%% =====================================================================
+
+\questaoenem{2013-149}
+\begin{resolucao}{D}
+\passo{1. Identificando a progressão.} As diferenças entre anos consecutivos
+do quadro são $51{,}50 - 50{,}25 = 1{,}25$; $52{,}75 - 51{,}50 = 1{,}25$ e
+$54{,}00 - 52{,}75 = 1{,}25$. O crescimento é constante: a produção anual forma
+uma PA com $a_1 = 50{,}25$ e $r = 1{,}25$.
+
+\passo{2. Contando os termos.} De 2012 a 2021 há $2021 - 2012 + 1 = 10$ anos;
+logo, $n = 10$.
+
+\passo{3. Último termo.} $a_{10} = 50{,}25 + 9 \cdot 1{,}25 = 50{,}25 + 11{,}25 = 61{,}50$ t.
+
+\passo{4. Soma.}
+\[
+S_{10} = \frac{(50{,}25 + 61{,}50)\cdot 10}{2} = 111{,}75 \cdot 5 = 558{,}75 \text{ t}.
+\]
+
+\passo{5. Conferência por estimativa.} De 2016 a 2021 são 6 anos, cada um com
+mais de 54 t: mais de $6 \cdot 54 = 324$ t. Somando os quatro anos do quadro
+($50{,}25 + 51{,}50 + 52{,}75 + 54{,}00 = 208{,}50$ t), o total passa de
+532,5 t. Isso já elimina A, B e C.
+
+\resposta{alternativa D — 558,75 toneladas.}
+
+Item fácil ($b = 0{,}70$): os dados estão explícitos e a única armadilha é
+contar corretamente os anos do período.
+
+\begin{distratores}
+\alt{A} 497,25 t é a soma de apenas 9 anos (de 2012 a 2020):
+$\frac{(50{,}25 + 60{,}25)\cdot 9}{2} = 497{,}25$. É o erro de quem calcula
+$2021 - 2012 = 9$ e esquece o “$+1$”.
+\alt{B} Valor menor que o limite mínimo de 532,5 t estimado no passo 5; não
+corresponde a uma soma de 10 anos com crescimento de 1,25 t ao ano.
+\alt{C} Fica muito perto de $10 \cdot 50{,}25 = 502{,}50$, o total que se
+obteria se a produção \emph{não crescesse}. Também está abaixo de 532,5 t.
+\alt{E} Supera o total correto. A soma de 10 termos dessa PA é obrigatoriamente
+$10 \times \frac{50{,}25 + 61{,}50}{2} = 558{,}75$; nem o erro comum de usar
+$a_{10} = a_1 + 10r$ (que daria 565,00) leva a 563,25.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2023-176}
+\begin{resolucao}{E}
+\passo{1. Observando como a figura cresce.} Os números pentagonais dados são
+$1, 5, 12, 22, 35, 51$. As diferenças entre eles são
+\[
+4,\quad 7,\quad 10,\quad 13,\quad 16,
+\]
+que aumentam sempre 3. Geometricamente, cada novo pentágono acrescenta três
+lados com mais pontos do que na figura anterior, e por isso o acréscimo cresce
+de 3 em 3.
+
+\passo{2. Continuando o padrão.} As próximas diferenças são 19 e 22. Assim:
+\[
+P_7 = 51 + 19 = 70 \qquad\text{e}\qquad P_8 = 70 + 22 = 92 .
+\]
+
+\passo{3. Conferindo por outro caminho.} $P_8$ é a soma da PA
+$1 + 4 + 7 + \cdots + 22$, de 8 termos:
+$\frac{(1 + 22)\cdot 8}{2} = 92$. (Também vale a fórmula
+$P_n = \frac{n(3n-1)}{2}$: $P_8 = \frac{8\cdot 23}{2} = 92$.)
+
+\resposta{alternativa E — 92.}
+
+Item de dificuldade média ($b = 1{,}34$): o padrão não está nos números, mas
+nas \emph{diferenças} entre eles (padrão de 2ª ordem).
+
+\begin{distratores}
+\alt{A} $59 = 51 + 8$: somou a posição pedida ao último número, sem relação
+com o padrão.
+\alt{B} $83 = 51 + 16 + 16$: tratou a sequência como uma PA a partir do 6º
+termo, repetindo a última diferença (16) em vez de aumentá-la.
+\alt{C} $86 = 35 + 51$: somou os dois últimos termos, como se fosse uma
+sequência do tipo Fibonacci.
+\alt{D} $89 = 51 + 19 + 19$: acertou a 7ª diferença, mas a repetiu na 8ª,
+esquecendo que ela também cresce 3 (seria 22).
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2024-142}
+\begin{resolucao}{A}
+\passo{1. Contando as figuras em cada etapa.} 1ª etapa: 3 figuras. Na 2ª, a
+criança copia e cola o conteúdo do visor: $3 + 3 = 6$. Na 3ª: $6 + 6 = 12$.
+Copiar e colar ao lado \textbf{dobra} o conteúdo do visor.
+
+\passo{2. Reconhecendo a PG.} As quantidades $3, 6, 12, 24, \dots$ formam uma PG
+com $a_1 = 3$ e $q = 2$. Pelo termo geral,
+\[
+a_{20} = 3 \cdot 2^{20 - 1} = 3 \times 2^{19}.
+\]
+
+\passo{3. Teste rápido.} Para $n = 1$, a expressão $3 \times 2^{n-1}$ dá
+$3 \times 2^0 = 3$ (correto); para $n = 3$, dá $3 \times 4 = 12$ (correto).
+
+\resposta{alternativa A — $3 \times 2^{19}$.}
+
+Item médio ($b = 1{,}62$): a conta é curta, mas exige acertar o expoente
+($n - 1$) e perceber que a mensagem enviada é o conteúdo do visor na 20ª etapa,
+e não a soma de todas as etapas.
+
+\begin{distratores}
+\alt{B} $3 \times 2^{20}$ usa o expoente $n$ em vez de $n - 1$. Para $n = 1$,
+daria 6 figuras na 1ª etapa, o que é falso.
+\alt{C} $3 \times 2^{21}$ erra o expoente em dois: corresponde à 22ª etapa.
+\alt{D} $3 \times 2^{20} - 1$ mistura a resposta com a fórmula
+$2^n - 1$ da soma de potências de 2, aplicada de forma incorreta.
+\alt{E} $3 \times 2^{20} - 3 = 3\,(2^{20} - 1)$ é a soma
+$3 + 6 + 12 + \cdots + 3 \times 2^{19}$, ou seja, o total de figuras somando os
+visores de \emph{todas} as etapas. Mas a mensagem enviada contém apenas o que
+está no visor ao final da 20ª etapa: confundiu termo com soma.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2025-180}
+\begin{resolucao}{D}
+\passo{1. Olhando só para o jogador 1.} Em cada rodada, o jogador na posição 1
+\emph{entrega} 1 moeda ao jogador 2 e \emph{recebe} 4 moedas do jogador 4. As
+demais transferências não o afetam.
+
+\passo{2. Saldo por rodada.} $-1 + 4 = +3$ moedas por rodada. Como o saldo é
+sempre o mesmo, a quantidade de moedas do jogador 1 forma uma PA de razão 3
+que começa em 100.
+
+\passo{3. Expressão.} Após $n$ rodadas: $100 + 3n$.
+
+\passo{4. Conferindo com $n = 1$ e $n = 2$.} Após a 1ª rodada:
+$100 - 1 + 4 = 103$; após a 2ª: $103 - 1 + 4 = 106$. A expressão $100 + 3n$ dá
+103 e 106. (Verificação extra: os jogadores 2, 3 e 4 têm saldo $-1$ por rodada;
+$+3 - 1 - 1 - 1 = 0$, e o total de 400 moedas se conserva.)
+
+\resposta{alternativa D — $100 + 3n$.}
+
+Item difícil ($b = 2{,}27$): o texto descreve as quatro transferências, e
+muitos estudantes tentam acompanhar todos os jogadores. O segredo é isolar o
+saldo do jogador 1 e testar \emph{dois} valores de $n$.
+
+\begin{distratores}
+\alt{A} $103 + 4n$ toma o valor após a 1ª rodada (103) como ponto de partida e
+ainda conta só as moedas recebidas. Para $n = 1$ daria 107.
+\alt{B} $103 + 3n$ tem o saldo correto, mas parte de 103 em vez de 100: conta a
+primeira rodada duas vezes (daria 106 após a 1ª rodada).
+\alt{C} $100 + 4n$ considera apenas as 4 moedas recebidas e esquece a moeda
+entregue ao jogador 2.
+\alt{E} $99 + 4n$ desconta a moeda entregue \emph{uma única vez}, como se o
+jogador 1 só a entregasse na 1ª rodada. Para $n = 1$ dá 103 (coincide com o
+correto!), mas para $n = 2$ dá 107 em vez de 106. É a armadilha para quem testa
+só $n = 1$.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2024-162}
+\begin{resolucao}{A}
+\passo{1. As parcelas formam uma PG crescente.} A partir da segunda, cada
+parcela é a anterior com um acréscimo percentual fixo: $p_k = p_1 \cdot q^{k-1}$,
+com $q > 1$. Portanto, \textbf{quanto mais tarde a parcela, maior o seu valor}.
+O cliente quer que as parcelas pagas pela imobiliária (as de maio) sejam as
+maiores possíveis.
+
+\passo{2. Quantas vezes cada mês aparece.} São 100 parcelas mensais,
+começando no mês da compra. Como $100 = 8 \cdot 12 + 4$, as 100 parcelas
+cobrem 8 anos completos e mais 4 meses. Os 4 meses a partir do mês da compra
+aparecem 9 vezes (e incluem as parcelas 97, 98, 99 e 100, as maiores); os
+demais meses aparecem 8 vezes.
+
+\passo{3. Encaixando maio no fim.} O ideal é que a última parcela, a 100ª (a
+maior de todas), caia em maio. A parcela de número $k$ é paga $k - 1$ meses
+após a compra; a 100ª, 99 meses depois, ou seja, 8 anos e 3 meses depois.
+Assim, a compra deve ocorrer 3 meses antes de maio: em \textbf{fevereiro}.
+Nesse caso, as parcelas de maio são as de números $4, 16, 28, \dots, 100$
+(9 parcelas).
+
+\passo{4. Comparando com outras escolhas.} Comprando em maio, as parcelas
+gratuitas seriam as de números $1, 13, \dots, 97$: também 9, mas cada uma é a
+“vizinha anterior” das do caso fevereiro e, portanto, menor (a PG é crescente).
+Qualquer mês que deixe maio com só 8 parcelas também perde.
+
+\resposta{alternativa A — fevereiro.}
+
+Item difícil ($b = 2{,}61$): não há conta numérica; é preciso perceber que a
+PG é crescente e que 100 parcelas “sobram” 4 meses além de 8 anos completos.
+
+\begin{distratores}
+\alt{B} Abril: as parcelas de maio seriam as de números $2, 14, \dots, 98$.
+São 9, mas cada uma é menor que a correspondente do caso fevereiro
+($4, 16, \dots, 100$).
+\alt{C} Maio é a escolha intuitiva (“comprar no mês do aniversário”), mas
+garante as parcelas $1, 13, \dots, 97$, as menores entre as opções com 9
+parcelas de maio.
+\alt{D} Junho: maio seria o 12º mês do financiamento, com as parcelas
+$12, 24, \dots, 96$, apenas 8 parcelas gratuitas.
+\alt{E} Agosto: maio seria o 10º mês, com as parcelas $10, 22, \dots, 94$,
+também só 8, e menores.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2018-141}
+\begin{resolucao}{C}
+\passo{1. Reconhecendo a PA.} As distâncias dos postes à praça são
+$80, 100, 120, \dots, 1\,380$ metros: uma PA com $a_1 = 80$, $r = 20$ e último
+termo $a_n = 1\,380$.
+
+\passo{2. Número de postes.}
+\[
+1\,380 = 80 + (n - 1)\cdot 20 \;\Rightarrow\; n - 1 = \frac{1\,300}{20} = 65
+\;\Rightarrow\; n = 66 .
+\]
+
+\passo{3. Custo máximo.} $66 \times 8\,000 = 528\,000$ reais.
+
+\resposta{alternativa C — R\$~528\,000,00.}
+
+Item difícil ($b = 2{,}67$): a conta é simples, mas a contagem de termos tem
+duas armadilhas ao mesmo tempo (o primeiro poste não está na praça e há o
+“$+1$” dos extremos), e cada uma delas leva a um distrator.
+
+\begin{distratores}
+\alt{A} $512\,000 = 64 \times 8\,000$: retirou um poste a mais, por exemplo
+calculando $\frac{1\,380 - 80}{20} - 1 = 64$, confundindo o número de intervalos
+com o número de postes “entre” o primeiro e o último.
+\alt{B} $520\,000 = 65 \times 8\,000$: contou os 65 intervalos de 20 m, mas
+esqueceu o “$+1$”.
+\alt{D} $552\,000 = 69 \times 8\,000$: dividiu $1\,380$ por 20, como se houvesse
+um poste a cada 20 m desde a praça, ignorando que o primeiro está a 80 m.
+\alt{E} $584\,000 = 73 \times 8\,000$: somou os 80 m em vez de subtraí-los,
+$\frac{1\,380 + 80}{20} = 73$.
+\end{distratores}
+\end{resolucao}
+
+%% =====================================================================
+\secaoineditas
+%% =====================================================================
+
+\begin{questaoinedita}{1}{3}
+Um aplicativo de corrida propõe um plano de treinos para iniciantes. No 1º
+treino, o usuário deve correr 1,5 km e, a partir do 2º treino, deve correr
+sempre 250 metros a mais do que no treino anterior.
+
+Seguindo esse plano, a distância a ser corrida no 15º treino é de
+\begin{alternativas}
+  \item 3,50 km.
+  \item 5,00 km.
+  \item 5,25 km.
+  \item 36,50 km.
+  \item 48,75 km.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Modelo.} As distâncias formam uma PA com $a_1 = 1{,}5$ km e
+$r = 250 \text{ m} = 0{,}25$ km (sempre converta para a mesma unidade).
+
+\passo{2. Termo geral.} Do 1º ao 15º treino há $15 - 1 = 14$ acréscimos:
+\[
+a_{15} = 1{,}5 + 14 \cdot 0{,}25 = 1{,}5 + 3{,}5 = 5{,}0 \text{ km}.
+\]
+
+\resposta{alternativa B — 5,00 km.}
+
+\begin{distratores}
+\alt{A} 3,50 km é só a soma dos 14 acréscimos ($14 \cdot 0{,}25$): esqueceu o
+1,5 km do primeiro treino.
+\alt{C} 5,25 km $= 1{,}5 + 15 \cdot 0{,}25$: usou $n$ acréscimos em vez de
+$n - 1$.
+\alt{D} 36,50 km $= 1{,}5 + 14 \cdot 2{,}5$: converteu 250 m como 2,5 km.
+\alt{E} 48,75 km é a distância \emph{total} dos 15 treinos,
+$\frac{(1{,}5 + 5)\cdot 15}{2}$: confundiu o termo com a soma.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{2}
+Em uma oficina de artes, os alunos montam faixas decorativas com palitos de
+picolé idênticos, formando hexágonos lado a lado. Hexágonos vizinhos
+compartilham um palito, como mostram as três primeiras faixas da figura.
+
+\begin{center}
+\begin{tikzpicture}[palito/.style={line width=2.3pt,ebookAcc,line cap=round,
+    shorten >=1.5pt,shorten <=1.5pt}]
+  \def\s{0.5}
+  \foreach \m/\ox in {1/0,2/1.9,3/4.7}{
+    \foreach \j in {1,...,\m}{
+      \begin{scope}[shift={({\ox+(\j-1)*1.7320508*\s},0)}]
+        \foreach \ang in {30,90,...,330}{
+          \draw[palito] (\ang:\s) -- (\ang+60:\s);}
+      \end{scope}}}
+  \node[font=\small\sffamily] at (0,-0.95) {Faixa 1};
+  \node[font=\small\sffamily] at ({1.9+0.866*\s},-0.95) {Faixa 2};
+  \node[font=\small\sffamily] at ({4.7+1.7320508*\s},-0.95) {Faixa 3};
+\end{tikzpicture}
+\end{center}
+
+Um grupo recebeu um pacote com 500 palitos e decidiu montar uma única faixa com
+a maior quantidade possível de hexágonos, seguindo esse padrão.
+
+Quantos hexágonos terá essa faixa, e quantos palitos sobrarão?
+\begin{alternativas}
+  \item 99 hexágonos, e sobrarão 4 palitos.
+  \item 99 hexágonos, e sobrarão 5 palitos.
+  \item 100 hexágonos, e não sobrará palito algum.
+  \item 98 hexágonos, e sobrarão 4 palitos.
+  \item 83 hexágonos, e sobrarão 2 palitos.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{A}
+\passo{1. Contando os palitos das primeiras faixas.} Faixa 1: 6 palitos. Cada
+novo hexágono reaproveita o palito compartilhado com o vizinho e acrescenta
+apenas 5. As quantidades são $6, 11, 16, \dots$, uma PA de razão 5.
+
+\passo{2. Termo geral.} $P_n = 6 + 5(n - 1) = 5n + 1$. (Teste: $P_3 = 16$.)
+
+\passo{3. Maior faixa possível.} $5n + 1 \le 500 \Rightarrow 5n \le 499
+\Rightarrow n \le 99{,}8$. Como $n$ é inteiro, $n = 99$ hexágonos, que usam
+$5 \cdot 99 + 1 = 496$ palitos. Sobram $500 - 496 = 4$ palitos.
+
+\resposta{alternativa A — 99 hexágonos, sobrando 4 palitos.}
+
+\begin{distratores}
+\alt{B} Acertou os 99 hexágonos, mas calculou os palitos usados como
+$5 \cdot 99 = 495$, esquecendo o palito inicial ($+1$).
+\alt{C} Usou $P_n = 5n$ (esqueceu o $+1$): $5n \le 500$ dá 100 hexágonos. Mas
+100 hexágonos exigem 501 palitos.
+\alt{D} Escreveu $P_n = 6 + 5n$ (usou $n$ em vez de $n - 1$). De
+$6 + 5n \le 500$ obteve $n = 98$; os palitos estão certos (496), mas a faixa
+com 496 palitos tem 99 hexágonos.
+\alt{E} Contou 6 palitos por hexágono, ignorando os palitos compartilhados:
+$6 \cdot 83 = 498$, sobrando 2.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{3}
+Um teatro de arena tem 24 fileiras de cadeiras dispostas em torno do palco. A
+fileira mais próxima do palco tem 18 cadeiras, e cada uma das demais fileiras
+tem 3 cadeiras a mais do que a fileira imediatamente à sua frente.
+
+A capacidade total desse teatro, em número de cadeiras, é
+\begin{alternativas*}[5]
+  \item 87.
+  \item 432.
+  \item \num{1044}.
+  \item \num{1173}.
+  \item \num{1260}.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{E}
+\passo{1. Modelo.} As quantidades de cadeiras por fileira formam uma PA com
+$a_1 = 18$, $r = 3$ e $n = 24$ termos.
+
+\passo{2. Última fileira.} $a_{24} = 18 + 23 \cdot 3 = 18 + 69 = 87$ cadeiras.
+
+\passo{3. Capacidade total.}
+\[
+S_{24} = \frac{(18 + 87)\cdot 24}{2} = 105 \cdot 12 = 1\,260 .
+\]
+
+\resposta{alternativa E — \num{1260} cadeiras.}
+
+\begin{distratores}
+\alt{A} 87 é o número de cadeiras da última fileira: confundiu termo com soma.
+\alt{B} $432 = 18 \cdot 24$: considerou todas as fileiras iguais à primeira,
+ignorando o acréscimo de 3 cadeiras.
+\alt{C} $1\,044 = \frac{87 \cdot 24}{2}$: aplicou a fórmula da soma sem somar o
+primeiro termo, $S = \frac{a_n \cdot n}{2}$.
+\alt{D} $1\,173 = \frac{(18 + 84)\cdot 23}{2}$: trabalhou com 23 fileiras, como
+se o “$n - 1$” do termo geral também valesse para a quantidade de termos.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{21}
+Em um laboratório de controle de qualidade, uma bola de borracha é solta, sem
+impulso, de uma altura de 3 m sobre um piso rígido. Os técnicos observam que,
+após cada quique, a bola sobe até 60\% da altura máxima atingida imediatamente
+antes. Para simplificar, eles adotam um modelo ideal em que a bola se move
+apenas na vertical e continua quicando indefinidamente, sempre segundo essa
+regra. O esquema ilustra as alturas máximas atingidas, com a bola deslocada
+horizontalmente apenas para facilitar a visualização.
+
+\begin{center}
+\begin{tikzpicture}[x=12mm,y=9mm]
+  \draw[ebookMuted,line width=1pt] (-0.4,0) -- (6.4,0);
+  \fill[pattern=north east lines,pattern color=ebookLine] (-0.4,-0.18) rectangle (6.4,0);
+  \draw[ebookPrim,line width=1pt] (0,3) parabola (1,0);
+  \draw[ebookPrim,line width=1pt] (1,0) parabola bend (1.775,1.8) (2.549,0);
+  \draw[ebookPrim,line width=1pt] (2.549,0) parabola bend (3.149,1.08) (3.749,0);
+  \draw[ebookPrim,line width=1pt] (3.749,0) parabola bend (4.214,0.648) (4.679,0);
+  \draw[ebookPrim,line width=1pt] (4.679,0) parabola bend (5.039,0.389) (5.399,0);
+  \node at (5.85,0.25) {$\cdots$};
+  \shade[ball color=ebookAcc] (0,3) circle (0.13);
+  \draw[dashed,ebookMuted] (-0.25,3) -- (0,3) (1.775,1.8) -- (1.775,0) (3.149,1.08) -- (3.149,0);
+  \node[left,font=\small] at (-0.25,3) {3 m};
+  \node[above,font=\small] at (1.775,1.8) {1,8 m};
+  \node[above,font=\small] at (3.149,1.08) {1,08 m};
+\end{tikzpicture}
+\end{center}
+
+De acordo com esse modelo, a distância vertical total percorrida pela bola,
+em metro, desde o instante em que é solta até parar, é
+\begin{alternativas*}[5]
+  \item 4,8.
+  \item 7,5.
+  \item 9,0.
+  \item 12,0.
+  \item 15,0.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{D}
+\passo{1. Separando o movimento.} A bola desce 3 m uma única vez. Depois, cada
+quique é formado por uma \textbf{subida} e uma \textbf{descida} de mesma
+altura. As alturas dos quiques são $1{,}8;\ 1{,}08;\ 0{,}648; \dots$, uma PG
+infinita com $a_1 = 0{,}6 \cdot 3 = 1{,}8$ e $q = 0{,}6$.
+
+\passo{2. Soma das alturas dos quiques.}
+\[
+S_\infty = \frac{1{,}8}{1 - 0{,}6} = \frac{1{,}8}{0{,}4} = 4{,}5 \text{ m}.
+\]
+
+\passo{3. Distância total.} Cada altura é percorrida duas vezes (sobe e
+desce):
+\[
+D = 3 + 2 \cdot 4{,}5 = 3 + 9 = 12 \text{ m}.
+\]
+
+\resposta{alternativa D — 12,0 m.}
+
+\begin{distratores}
+\alt{A} $4{,}8 = 3 + 1{,}8$: considerou apenas a queda inicial e a primeira
+subida.
+\alt{B} $7{,}5 = \frac{3}{1 - 0{,}6}$: somou só as descidas
+($3 + 1{,}8 + 1{,}08 + \cdots$) e esqueceu as subidas.
+\alt{C} $9{,}0 = 2 \cdot 4{,}5$: contou subidas e descidas dos quiques, mas
+esqueceu a queda inicial de 3 m.
+\alt{E} $15{,}0 = 2 \cdot 7{,}5$: dobrou também a queda inicial, que é
+percorrida uma única vez (a bola não sobe até os 3 m iniciais).
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{2}
+O tapete de Sierpinski é um fractal construído por etapas a partir de um
+quadrado. Na etapa 1, o quadrado é dividido em 9 quadrados iguais, e o quadrado
+central é removido. Em cada etapa seguinte, cada um dos quadrados que restaram
+é dividido em 9 quadrados iguais, e o central de cada um deles é removido. A
+figura mostra o quadrado inicial e as duas primeiras etapas.
+
+\begin{center}
+\begin{tikzpicture}[x=2.6mm,y=2.6mm]
+  % quadrado inicial
+  \fill[ebookPrim] (0,0) rectangle (9,9);
+  \node[font=\small\sffamily] at (4.5,-1.5) {Inicial};
+  % etapa 1
+  \begin{scope}[shift={(13,0)}]
+    \fill[ebookPrim] (0,0) rectangle (9,9);
+    \fill[white] (3,3) rectangle (6,6);
+    \draw[ebookLine] (0,0) rectangle (9,9);
+    \node[font=\small\sffamily] at (4.5,-1.5) {Etapa 1};
+  \end{scope}
+  % etapa 2
+  \begin{scope}[shift={(26,0)}]
+    \fill[ebookPrim] (0,0) rectangle (9,9);
+    \fill[white] (3,3) rectangle (6,6);
+    \foreach \a in {0,3,6}{\foreach \b in {0,3,6}{
+      \fill[white] (\a+1,\b+1) rectangle ++(1,1);}}
+    \draw[ebookLine] (0,0) rectangle (9,9);
+    \node[font=\small\sffamily] at (4.5,-1.5) {Etapa 2};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+Um artista vai pintar, em um painel, um tapete de Sierpinski a partir de um
+quadrado de lado 27 cm e encerrará o trabalho ao concluir a etapa 3. A área da
+região pintada (a que não foi removida), em centímetro quadrado, será
+\begin{alternativas*}[5]
+  \item 217.
+  \item 486.
+  \item 512.
+  \item 576.
+  \item 638.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{C}
+\passo{1. O que acontece em cada etapa.} Cada quadrado restante é dividido em
+9 partes iguais e perde 1 delas; portanto, a área pintada é multiplicada por
+$\frac{8}{9}$ em cada etapa. As áreas formam uma PG de razão $q = \frac89$.
+
+\passo{2. Área inicial.} $27^2 = 729$ cm².
+
+\passo{3. Após a etapa 3.}
+\[
+729 \cdot \left(\frac{8}{9}\right)^3 = 729 \cdot \frac{512}{729} = 512 \text{ cm}^2 .
+\]
+
+\passo{4. Conferência pela área removida.} Etapa 1: remove 1 quadrado de lado
+9 (81 cm²). Etapa 2: remove 8 quadrados de lado 3 ($8 \cdot 9 = 72$ cm²).
+Etapa 3: remove 64 quadrados de lado 1 (64 cm²). Total removido:
+$81 + 72 + 64 = 217$ cm², e $729 - 217 = 512$ cm².
+
+\resposta{alternativa C — 512 cm².}
+
+\begin{distratores}
+\alt{A} 217 cm² é a área \emph{removida}, e não a área pintada.
+\alt{B} $486 = 729 - 3\cdot 81$: supôs que cada etapa remove 81 cm², como a
+primeira, sem perceber que os quadrados removidos ficam menores (e mais
+numerosos).
+\alt{D} $576 = 729 \cdot \left(\frac89\right)^2$: parou na etapa 2.
+\alt{E} $638 = 729 - (81 + 9 + 1)$: removeu um único quadrado por etapa,
+esquecendo que a etapa 2 remove 8 quadrados e a etapa 3 remove 64.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{4}{21}
+Um nadador iniciou um programa de treinamento de 30 dias. No 1º dia, nadou
+400 m e, em cada dia seguinte, nadou uma distância maior que a do dia
+anterior, sempre com o mesmo acréscimo. Ao final do 20º dia, ele verificou que,
+somando as distâncias nadadas nesses 20 dias, havia percorrido
+\num{17500} m.
+
+Seu técnico estabeleceu, então, um limite: assim que a distância diária
+atingisse \num{1500} m, ela deixaria de aumentar, e o nadador passaria a nadar
+exatamente \num{1500} m por dia até o fim do programa.
+
+Mantido o mesmo acréscimo diário até que o limite seja atingido, a distância
+total nadada nos 30 dias do programa, em metro, será
+\begin{alternativas*}[5]
+  \item \num{21850}.
+  \item \num{32350}.
+  \item \num{33750}.
+  \item \num{33850}.
+  \item \num{45000}.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Descobrindo o acréscimo (raciocínio inverso).} As distâncias formam
+uma PA com $a_1 = 400$. Pela soma dos 20 primeiros dias:
+\[
+\frac{(400 + a_{20})\cdot 20}{2} = 17\,500 \;\Rightarrow\; 400 + a_{20} = 1\,750
+\;\Rightarrow\; a_{20} = 1\,350 .
+\]
+Como $a_{20} = 400 + 19r$, temos $19r = 950$ e $r = 50$ m por dia. (Note que
+$1\,350 < 1\,500$: o limite ainda não tinha sido atingido no 20º dia.)
+
+\passo{2. Dia em que o limite é atingido.}
+$400 + (n - 1)\cdot 50 = 1\,500 \Rightarrow n - 1 = 22 \Rightarrow n = 23$.
+No 23º dia ele nada exatamente \num{1500} m.
+
+\passo{3. Dias 1 a 23 (PA).}
+$S_{23} = \frac{(400 + 1\,500)\cdot 23}{2} = 1\,900 \cdot 11{,}5 = 21\,850$ m.
+
+\passo{4. Dias 24 a 30 (constante).} São $30 - 23 = 7$ dias de \num{1500} m:
+$7 \cdot 1\,500 = 10\,500$ m.
+
+\passo{5. Total.} $21\,850 + 10\,500 = 32\,350$ m.
+
+\resposta{alternativa B — \num{32350} m.}
+
+\begin{distratores}
+\alt{A} \num{21850} m é só a parte em PA (dias 1 a 23): esqueceu os 7 dias
+finais com \num{1500} m.
+\alt{C} \num{33750} m ignora o limite e soma a PA até o 30º dia:
+$a_{30} = 400 + 29 \cdot 50 = 1\,850$ e $\frac{(400 + 1\,850)\cdot 30}{2} = 33\,750$.
+\alt{D} \num{33850} m $= 21\,850 + 8 \cdot 1\,500$: contou os dias 23 a 30 como
+8 dias de \num{1500} m, somando o 23º dia duas vezes (ele já está na PA).
+\alt{E} \num{45000} m $= 30 \cdot 1\,500$: supôs que ele nadou \num{1500} m em
+todos os dias.
+\end{distratores}
+\end{resolucao}

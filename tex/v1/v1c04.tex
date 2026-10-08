@@ -1,0 +1,961 @@
+\capitulo{v1c04}
+
+%% =====================================================================
+\section{Razão: comparar dividindo}
+%% =====================================================================
+
+Quantos candidatos disputam cada vaga? Quantos quilômetros um carro roda com
+um litro de combustível? Qual time teve o melhor aproveitamento no campeonato?
+Todas essas perguntas têm a mesma resposta matemática: uma \textbf{razão}.
+Razão é a maneira de comparar duas quantidades por meio de uma
+\emph{divisão} — e é uma das ideias mais cobradas no ENEM, quase sempre
+disfarçada de ``taxa'', ``índice'', ``densidade'', ``rendimento'',
+``aproveitamento'' ou ``proporção''.
+
+Por que dividir, e não subtrair? Veja: Ana acertou 18 das 20 questões de um
+simulado; Bruno acertou 40 das 50 questões de outro. Bruno acertou mais
+questões ($40 > 18$), mas quem teve o melhor desempenho? A diferença não
+responde a isso. A razão responde:
+\[
+  \text{Ana: } \frac{18}{20} = 0{,}90 = 90\%
+  \qquad\qquad
+  \text{Bruno: } \frac{40}{50} = 0{,}80 = 80\%.
+\]
+Ana acertou 9 de cada 10 questões; Bruno, 8 de cada 10. Quando os
+``tamanhos'' das situações são diferentes, só a razão permite uma comparação
+justa.
+
+\begin{definicao}[Razão]
+Dados dois números $a$ e $b$, com $b \neq 0$, a \textbf{razão de $a$ para $b$}
+é o quociente
+\[
+  \frac{a}{b} \qquad\text{ou}\qquad a : b \qquad (\text{lê-se ``$a$ está para $b$''}).
+\]
+O número $a$ é o \textbf{antecedente} e $b$ é o \textbf{consequente}. A razão
+$\frac{b}{a}$ (com $a \neq 0$) é a \textbf{razão inversa} de $\frac{a}{b}$.
+\end{definicao}
+
+A ordem importa! As expressões ``razão entre $A$ e $B$'', ``razão de $A$ para
+$B$'', ``$A$ em relação a $B$'', ``$A$ por $B$'' e ``$A$ para cada $B$''
+significam todas $\dfrac{A}{B}$: o que vem primeiro no texto vai para o
+numerador.
+
+\subsection{Razão entre grandezas de mesma natureza}
+
+Quando as duas quantidades são da mesma espécie (comprimento com comprimento,
+pessoas com pessoas, reais com reais), elas precisam estar na
+\textbf{mesma unidade}. Aí as unidades se cancelam e a razão é um
+\textbf{número puro}, que pode ser escrito como fração, decimal, porcentagem
+ou na forma ``$1 : n$''.
+
+Por exemplo, a razão entre a altura da tela de um celular (15~cm) e a altura de
+um telão de shows (6~m) \emph{não} é $15/6$. Primeiro convertemos: $6~\text{m} = 600~\text{cm}$. Então
+\[
+  \frac{15~\text{cm}}{600~\text{cm}} = \frac{1}{40} = 1 : 40,
+\]
+ou seja, o telão é 40 vezes mais alto que a tela do celular.
+
+\subsection{Comparando razões}
+
+Para descobrir qual de duas ou mais razões é a maior, há três caminhos:
+\begin{enumerate}[leftmargin=1.6em,itemsep=2pt]
+  \item \textbf{Transformar em decimal ou porcentagem}: $\frac{3}{8} = 0{,}375$ e
+        $\frac{5}{12} \approx 0{,}417$; logo $\frac{5}{12}$ é maior.
+  \item \textbf{Igualar os consequentes} (denominadores): $\frac{3}{8} = \frac{9}{24}$
+        e $\frac{5}{12} = \frac{10}{24}$; logo $\frac{5}{12}$ é maior.
+  \item \textbf{Produto cruzado}: para $b, d > 0$, $\frac{a}{b} > \frac{c}{d}$ exatamente
+        quando $a \cdot d > b \cdot c$. Como $3 \cdot 12 = 36 < 8 \cdot 5 = 40$, temos
+        $\frac{3}{8} < \frac{5}{12}$.
+\end{enumerate}
+
+\begin{exemplo}[Aproveitamento nos lances livres]
+Em um torneio de basquete, três jogadoras tiveram o seguinte desempenho nos
+lances livres: Clara converteu 18 de 25 arremessos; Débora, 21 de 30; e Elisa,
+26 de 40. Qual delas teve o melhor aproveitamento? E qual converteu mais
+lances livres?
+\solucao
+O aproveitamento é a razão entre os lances convertidos e os lances tentados:
+\[
+  \text{Clara: } \frac{18}{25} = 0{,}72 \qquad
+  \text{Débora: } \frac{21}{30} = 0{,}70 \qquad
+  \text{Elisa: } \frac{26}{40} = 0{,}65.
+\]
+Clara teve o melhor aproveitamento (72\%), embora Elisa tenha convertido mais
+lances (26). As duas perguntas têm respostas \emph{diferentes} — e o ENEM adora
+colocar a resposta da pergunta errada entre as alternativas. Conferindo Clara
+e Débora pelo produto cruzado: $18 \cdot 30 = 540 > 25 \cdot 21 = 525$.
+\end{exemplo}
+
+\subsection{Parte-parte e parte-todo}
+
+Considere a frase ``em uma turma, há 3 meninas para cada 2 meninos''. Ela
+compara uma \textbf{parte} com outra \textbf{parte}: meninas $:$ meninos $= 3 : 2$.
+Mas que fração da turma é formada por meninas? Basta juntar as partes: em cada
+grupo de $3 + 2 = 5$ estudantes, 3 são meninas.
+
+\begin{center}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \foreach \i in {0,1,2}{
+    \node[fill=ebookPrim,text=white,rounded corners=2pt,minimum size=9mm,font=\large]
+      at (\i*1.05,0) {\faFemale};}
+  \foreach \i in {3,4}{
+    \node[fill=ebookAcc,text=white,rounded corners=2pt,minimum size=9mm,font=\large]
+      at (\i*1.05,0) {\faMale};}
+  \draw[decorate,decoration={brace,amplitude=5pt,mirror},thick,ebookPrim]
+    (-0.45,-0.6) -- (2.55,-0.6) node[midway,below=6pt,font=\small\sffamily]{meninas: 3 partes};
+  \draw[decorate,decoration={brace,amplitude=5pt,mirror},thick,ebookAcc!80!black]
+    (2.7,-0.6) -- (4.65,-0.6) node[midway,below=6pt,font=\small\sffamily]{meninos: 2 partes};
+  \draw[decorate,decoration={brace,amplitude=5pt},thick,ebookMuted]
+    (-0.45,0.6) -- (4.65,0.6) node[midway,above=6pt,font=\small\sffamily]{turma: $3+2=5$ partes};
+  \node[anchor=west,font=\small,align=left] at (5.4,0.1)
+    {parte-parte: $\dfrac{\text{meninas}}{\text{meninos}} = \dfrac{3}{2}$\\[8pt]
+     parte-todo: $\dfrac{\text{meninas}}{\text{turma}} = \dfrac{3}{5} = 60\%$};
+\end{tikzpicture}
+\end{center}
+
+\begin{formula}[Da razão parte-parte à fração do todo]
+Se $A : B = m : n$, então
+$\displaystyle \frac{A}{A+B} = \frac{m}{m+n}$ \quad e \quad
+$\displaystyle \frac{B}{A+B} = \frac{n}{m+n}$.
+\end{formula}
+
+\begin{exemplo}[Aprovados e reprovados]
+Em um concurso, a razão entre o número de candidatos aprovados e o de
+reprovados foi de $2 : 7$. Sabendo que 1\,260 candidatos fizeram a prova,
+quantos foram aprovados?
+\solucao
+A razão $2 : 7$ é parte-parte. Juntando as partes, o total corresponde a
+$2 + 7 = 9$ partes iguais. Cada parte vale $1\,260 \div 9 = 140$ candidatos.
+Logo, foram aprovados $2 \cdot 140 = \mathbf{280}$ candidatos (e reprovados
+$7 \cdot 140 = 980$; confira: $280 + 980 = 1\,260$).
+
+\textbf{Cuidado:} calcular $\frac{2}{7}$ de $1\,260$ (que dá 360) é tratar a razão
+parte-parte como se fosse parte-todo — um distrator clássico.
+\end{exemplo}
+
+%% =====================================================================
+\section{Taxas: razões com unidade}
+%% =====================================================================
+
+Quando as duas quantidades comparadas são de \emph{naturezas diferentes}, a
+razão carrega uma unidade, e a lemos com a palavra ``por'': quilômetros
+\emph{por} hora, habitantes \emph{por} quilômetro quadrado, miligramas
+\emph{por} mililitro. Essas razões costumam ser chamadas de \textbf{taxas}.
+
+A grande vantagem: \textbf{a unidade diz qual é a conta}. Se a resposta deve
+sair em km/h, é porque você vai dividir uma distância em km por um tempo em
+horas. Se sair em L/100\,km, divide litros por ``centenas de quilômetros''.
+
+\begin{formula}[As taxas mais cobradas no ENEM]
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{2.9cm}}
+\toprule
+\textbf{Taxa} & \textbf{Razão} & \textbf{Unidades usuais}\\
+\midrule
+Velocidade média & distância $\div$ tempo & km/h, m/s\\
+Densidade (de um material) & massa $\div$ volume & g/cm³, kg/L, kg/m³\\
+Densidade demográfica & número de habitantes $\div$ área & hab/km²\\
+Rendimento de combustível & distância $\div$ volume de combustível & km/L\\
+Consumo de combustível & volume de combustível $\div$ distância & L/100\,km\\
+Vazão & volume $\div$ tempo & L/min, m³/h\\
+Concentração & massa de soluto $\div$ volume da solução & g/L, mg/mL\\
+Produtividade & produção $\div$ área (ou $\div$ trabalhador) & t/ha\\
+Renda \emph{per capita} & renda total $\div$ número de pessoas & R\$/pessoa\\
+\bottomrule
+\end{tabularx}
+\end{formula}
+
+\subsection{Velocidade média}
+
+A velocidade média é a razão entre a distância percorrida e o tempo total gasto
+para percorrê-la — \emph{incluindo} paradas, se elas fizerem parte do intervalo
+considerado.
+
+\begin{formula}[Velocidade média]
+$\displaystyle v_m = \frac{\Delta s}{\Delta t}
+ \qquad\qquad 1~\text{m/s} = \frac{3\,600~\text{m}}{1~\text{h}} = 3{,}6~\text{km/h}$
+\end{formula}
+
+No gráfico da posição em função do tempo, a velocidade média é a
+\emph{inclinação} do segmento que liga o ponto de partida ao de chegada. O
+gráfico abaixo representa a viagem do próximo exemplo.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=10.5cm,height=6.2cm,xmin=0,xmax=3.3,ymin=0,ymax=230,
+  axis lines=left,xlabel={tempo (h)},ylabel={posição (km)},
+  xtick={0,0.5,1,1.5,2,2.5,3},ytick={0,40,80,120,160,200},
+  xticklabel style={/pgf/number format/use comma},
+  grid=major,grid style={ebookLine!60},
+  label style={font=\small\sffamily},tick label style={font=\scriptsize\sffamily}]
+  \addplot[very thick,ebookPrim,mark=*,mark size=1.6pt] coordinates {(0,0) (1.5,120) (2,120) (3,200)};
+  \addplot[thick,dashed,ebookAcc] coordinates {(0,0) (3,200)};
+  \node[font=\scriptsize\sffamily,fill=white,inner sep=1.5pt,anchor=south east] at (axis cs:1.45,125) {80~km/h};
+  \node[font=\scriptsize\sffamily,fill=white,inner sep=1.5pt,anchor=south] at (axis cs:1.75,122) {parada};
+  \node[font=\scriptsize\sffamily,fill=white,inner sep=1.5pt,anchor=north west] at (axis cs:2.55,158) {80~km/h};
+  \node[font=\scriptsize\sffamily,text=ebookAcc!70!black,fill=white,inner sep=1.5pt,anchor=west] at (axis cs:1.55,75)
+    {$v_m = \frac{200}{3} \approx 66{,}7$~km/h};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{exemplo}[Viagem com parada]
+Uma família percorreu 120~km em 1~h~30~min, parou 30~min para almoçar e,
+depois, percorreu os 80~km restantes em 1~h. Qual foi a velocidade média na
+viagem inteira?
+\solucao
+A distância total é $\Delta s = 120 + 80 = 200$~km. O tempo total, incluindo a
+parada, é $\Delta t = 1{,}5 + 0{,}5 + 1 = 3$~h (lembre: 30~min $= 0{,}5$~h). Então
+\[
+  v_m = \frac{200~\text{km}}{3~\text{h}} \approx 66{,}7~\text{km/h}.
+\]
+Repare que, nos dois trechos em movimento, a família andou a 80~km/h
+($120 \div 1{,}5$ e $80 \div 1$), mas a parada ``puxou'' a velocidade média para
+baixo. Velocidade média não é a média das velocidades!
+\end{exemplo}
+
+Outro caso clássico: ir a uma cidade a 60~km de distância a 60~km/h (1~h) e
+voltar a 30~km/h (2~h). A velocidade média é $\frac{120~\text{km}}{3~\text{h}} = 40$~km/h,
+e não $\frac{60+30}{2} = 45$~km/h. Como o carro passa \emph{mais tempo} no
+trecho lento, esse trecho ``pesa mais'' no resultado.
+
+\subsection{Densidade}
+
+A \textbf{densidade} de um material é a razão entre sua massa e seu volume,
+$d = \dfrac{m}{V}$. Ela diz ``quanto de massa cabe em cada unidade de volume''.
+Algumas equivalências muito úteis:
+\[
+  1~\text{g/cm}^3 = 1~\text{kg/L} = 1\,000~\text{kg/m}^3 .
+\]
+A água tem densidade de aproximadamente 1~kg/L; a gasolina, cerca de 0,75~kg/L;
+o óleo de cozinha, cerca de 0,9~kg/L (por isso flutua na água). A mesma ideia
+aparece em outros contextos:
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt]
+  \item \textbf{densidade demográfica} $=\dfrac{\text{habitantes}}{\text{área}}$ (hab/km²);
+  \item \textbf{densidade superficial} $=\dfrac{\text{massa}}{\text{área}}$ (por exemplo, papel de 75~g/m²).
+\end{itemize}
+
+\begin{exemplo}[Carga de um caminhão-tanque]
+Um caminhão-tanque, cuja massa vazio é de 16~t, transporta \num{25000}~L de
+etanol, que tem densidade de 0,79~kg/L. Nessa rodovia, o peso bruto total
+máximo permitido (caminhão mais carga) é de 36~t. O caminhão está dentro do
+limite? Qual é o maior volume de etanol que ele poderia transportar?
+\solucao
+Da densidade, $m = d \cdot V$:
+\[
+  m = 0{,}79~\tfrac{\text{kg}}{\text{L}} \cdot 25\,000~\text{L} = 19\,750~\text{kg} = 19{,}75~\text{t}.
+\]
+Total: $16 + 19{,}75 = 35{,}75$~t $\leq 36$~t. Está dentro do limite.
+A carga máxima é $36 - 16 = 20$~t $= 20\,000$~kg, o que corresponde a
+$V = \dfrac{m}{d} = \dfrac{20\,000}{0{,}79} \approx 25\,316$~L.
+Note como as unidades guiaram a conta: kg/L vezes L dá kg; kg dividido por
+kg/L dá L.
+\end{exemplo}
+
+\subsection{Consumo, vazão e taxas ``por mil''}
+
+\textbf{Rendimento e consumo de combustível.} Há duas formas de informar a
+eficiência de um veículo, e elas são \emph{inversas} uma da outra:
+o rendimento $r$, em km/L (quantos quilômetros por litro), e o consumo $c$, em
+L/100\,km (quantos litros para rodar 100~km). Como 100~km exigem
+$100 \div r$ litros,
+\[
+  c = \frac{100}{r} \qquad\text{e}\qquad r = \frac{100}{c}.
+\]
+Assim, 12,5~km/L equivale a 8~L/100\,km. \textbf{Maior rendimento significa
+menor consumo.} O gráfico mostra essa relação inversa.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=9.5cm,height=5.6cm,xmin=4,xmax=26,ymin=0,ymax=26,
+  axis lines=left,xlabel={rendimento $r$ (km/L)},ylabel={consumo $c$ (L/100 km)},
+  xtick={5,10,15,20,25},ytick={0,5,10,15,20,25},
+  grid=major,grid style={ebookLine!60},
+  label style={font=\small\sffamily},tick label style={font=\scriptsize\sffamily}]
+  \addplot[very thick,ebookPrim,domain=4.2:25,samples=80] {100/x};
+  \addplot[only marks,mark=*,mark size=2pt,ebookAcc] coordinates {(5,20) (10,10) (12.5,8) (20,5)};
+  \node[font=\scriptsize\sffamily,anchor=south west] at (axis cs:10,10) {(10; 10)};
+  \node[font=\scriptsize\sffamily,anchor=south west] at (axis cs:12.5,8) {(12,5; 8)};
+  \node[font=\scriptsize\sffamily,anchor=south west] at (axis cs:20,5) {(20; 5)};
+  \node[font=\scriptsize\sffamily,anchor=west] at (axis cs:5.3,20) {(5; 20)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\textbf{Vazão.} É a razão entre o volume que passa (ou que entra em um
+reservatório) e o tempo: $Q = \dfrac{V}{t}$. Um chuveiro com vazão de
+12~L/min, ligado durante um banho de 15~min, gasta $12 \cdot 15 = 180$~L.
+
+\textbf{Taxas ``por mil'' e ``por 100 mil''.} Para comparar cidades com
+populações muito diferentes, órgãos de saúde e de segurança usam índices como
+``casos por 100 mil habitantes''. Uma cidade com 45 casos em \num{300000}
+habitantes tem taxa de
+\[
+  \frac{45}{300\,000} = \frac{15}{100\,000} \;\Longrightarrow\; 15~\text{casos por 100 mil habitantes.}
+\]
+
+\begin{contexto}[Por que os jornais falam em ``por 100 mil habitantes''?]
+Uma capital com 3 milhões de habitantes e 600 casos de uma doença tem mais
+casos do que uma cidade de 50 mil habitantes com 40 casos. Mas o risco é maior
+na cidade pequena: $600 \div 30 = 20$ casos por 100 mil contra
+$40 \div 0{,}5 = 80$ casos por 100 mil. Sem a razão, a comparação engana.
+\end{contexto}
+
+%% =====================================================================
+\section{Proporção e suas propriedades}
+%% =====================================================================
+
+Quando duas razões são iguais, dizemos que elas formam uma \textbf{proporção}.
+É o que acontece quando ampliamos uma receita, quando mantemos o ``sabor'' de
+um refresco ou quando duas cidades têm a mesma densidade demográfica.
+
+\begin{definicao}[Proporção]
+Os números $a, b, c, d$ (com $b, d \neq 0$) formam uma \textbf{proporção},
+nessa ordem, quando
+\[
+  \frac{a}{b} = \frac{c}{d} \qquad (\text{lê-se ``$a$ está para $b$ assim como $c$ está para $d$''}).
+\]
+Os termos $a$ e $d$ são os \textbf{extremos}; $b$ e $c$ são os \textbf{meios}.
+\end{definicao}
+
+\begin{formula}[Propriedade fundamental]
+$\displaystyle \frac{a}{b} = \frac{c}{d} \iff a \cdot d = b \cdot c$
+\qquad (produto dos extremos $=$ produto dos meios)
+\end{formula}
+
+É ela que permite achar um termo desconhecido (a ``quarta proporcional''): se
+$\frac{x}{12} = \frac{5}{8}$, então $8x = 60$ e $x = 7{,}5$.
+
+\subsection{Outras propriedades úteis}
+
+\begin{formula}[Propriedades das proporções]
+Se $\displaystyle \frac{a}{b} = \frac{c}{d}$, então:\\[6pt]
+$\displaystyle \text{(P1)}\quad \frac{a+b}{b} = \frac{c+d}{d}
+  \quad\text{e}\quad \frac{a-b}{b} = \frac{c-d}{d}$\\[8pt]
+$\displaystyle \text{(P2)}\quad \frac{a+c}{b+d} = \frac{a-c}{b-d} = \frac{a}{b} = \frac{c}{d}
+  \quad (\text{com } b+d \neq 0 \text{ e } b-d \neq 0)$\\[8pt]
+Em geral, se $\dfrac{a}{x} = \dfrac{b}{y} = \dfrac{c}{z} = k$, então
+$\dfrac{a+b+c}{x+y+z} = k$.
+\end{formula}
+
+A propriedade (P2) diz que, em uma sequência de razões iguais, ``somar os
+numeradores e somar os denominadores'' preserva a razão. É o que justifica o
+método das partes: se $\frac{a}{x} = \frac{b}{y} = k$, então $a = kx$ e $b = ky$.
+
+\begin{exemplo}[Eleição no condomínio]
+Na eleição para síndico de um condomínio, os votos dos candidatos A e B ficaram
+na razão $5 : 3$, e A recebeu 84 votos a mais que B. Quantos votos teve cada
+candidato?
+\solucao
+Escreva $A = 5k$ e $B = 3k$. A diferença é $A - B = 2k = 84$, logo $k = 42$.
+Assim, $A = 5 \cdot 42 = \mathbf{210}$ votos e $B = 3 \cdot 42 = \mathbf{126}$ votos.
+
+Pela propriedade (P2): $\dfrac{A}{5} = \dfrac{B}{3} = \dfrac{A - B}{5 - 3} = \dfrac{84}{2} = 42$.
+É a mesma conta, agora justificada.
+\end{exemplo}
+
+\subsection{Razões de mistura}
+
+Na construção civil, na cozinha, na farmácia e na agricultura, misturas são
+descritas por razões como ``1 : 2 : 6''. Isso significa que a mistura é formada
+por \textbf{partes iguais de volume (ou de massa)}: 1 parte do primeiro
+componente, 2 do segundo e 6 do terceiro — ao todo, $1 + 2 + 6 = 9$ partes.
+
+\begin{center}
+\begin{tikzpicture}[x=1.15cm,y=1cm]
+  \fill[ebookMuted!70] (0,0) rectangle (1,0.8);
+  \fill[ebookLine] (1,0) rectangle (3,0.8);
+  \fill[ebookAcc!55] (3,0) rectangle (9,0.8);
+  \foreach \i in {0,...,9}{\draw[white,line width=1.2pt] (\i,0) -- (\i,0.8);}
+  \draw[ebookText!60,line width=.5pt,rounded corners=1pt] (0,0) rectangle (9,0.8);
+  \draw[decorate,decoration={brace,amplitude=4pt,mirror},thick] (0.02,-0.12) -- (0.98,-0.12)
+    node[midway,below=5pt,font=\scriptsize\sffamily,align=center]{cimento\\1 parte};
+  \draw[decorate,decoration={brace,amplitude=4pt,mirror},thick] (1.02,-0.12) -- (2.98,-0.12)
+    node[midway,below=5pt,font=\scriptsize\sffamily,align=center]{cal\\2 partes};
+  \draw[decorate,decoration={brace,amplitude=4pt,mirror},thick] (3.02,-0.12) -- (8.98,-0.12)
+    node[midway,below=5pt,font=\scriptsize\sffamily,align=center]{areia\\6 partes};
+  \draw[decorate,decoration={brace,amplitude=5pt},thick,ebookPrim] (0,0.92) -- (9,0.92)
+    node[midway,above=6pt,font=\small\sffamily,text=ebookPrim]{argamassa: $1+2+6 = 9$ partes iguais};
+\end{tikzpicture}
+\end{center}
+
+\begin{formula}[Método das partes]
+valor de uma parte $=\dfrac{\text{total da mistura}}{\text{soma das partes}}$
+\qquad;\qquad
+componente $=$ (número de partes) $\times$ (valor de uma parte)
+\end{formula}
+
+\begin{exemplo}[Argamassa de assentamento]
+Uma argamassa é preparada com cimento, cal e areia na razão $1 : 2 : 6$, em
+volume. Para obter 4,5~m³ de argamassa, quantos metros cúbicos de cada material
+são necessários?
+\solucao
+São $1 + 2 + 6 = 9$ partes. Cada parte vale $4{,}5 \div 9 = 0{,}5$~m³. Assim:
+cimento $= 1 \cdot 0{,}5 = 0{,}5$~m³; cal $= 2 \cdot 0{,}5 = 1$~m³;
+areia $= 6 \cdot 0{,}5 = 3$~m³. Conferência: $0{,}5 + 1 + 3 = 4{,}5$~m³.
+\end{exemplo}
+
+E quando juntamos \emph{duas misturas diferentes}? Aí não se somam razões:
+somam-se as \textbf{quantidades} de cada componente.
+
+\begin{exemplo}[Juntando dois refrescos]
+A jarra A contém 2~L de um refresco preparado com xarope e água na razão
+$1 : 4$; a jarra B contém 3~L de refresco na razão $1 : 2$. Despejando as duas
+jarras em um recipiente maior, qual será a razão entre xarope e água da
+mistura?
+\solucao
+Jarra A: $1 + 4 = 5$ partes de $2 \div 5 = 0{,}4$~L $\Rightarrow$ xarope 0,4~L e água 1,6~L.\\
+Jarra B: $1 + 2 = 3$ partes de $3 \div 3 = 1$~L $\Rightarrow$ xarope 1~L e água 2~L.\\
+Mistura: xarope $= 0{,}4 + 1 = 1{,}4$~L e água $= 1{,}6 + 2 = 3{,}6$~L. A razão é
+\[
+  \frac{1{,}4}{3{,}6} = \frac{14}{36} = \frac{7}{18}, \quad\text{ou seja, } 7 : 18.
+\]
+Somar as razões ``de cabeça'' — $(1+1) : (4+2) = 1 : 3$ — está \textbf{errado},
+porque as jarras têm volumes diferentes. A propriedade (P2) só vale quando as
+razões somadas são \emph{iguais}.
+\end{exemplo}
+
+%% =====================================================================
+\section{Dicas e macetes}
+%% =====================================================================
+
+\begin{dica}[Leia a razão na ordem do texto]
+``Razão entre $X$ e $Y$'', ``$X$ em relação a $Y$'', ``$X$ por $Y$'', ``$X$ para cada
+$Y$'': em todos os casos, $X$ vai no numerador. Antes de fazer contas, escreva a
+razão \emph{em palavras} — por exemplo, $\dfrac{\text{assentos vendidos}}{\text{total de assentos}}$.
+As alternativas costumam trazer a razão invertida como distrator.
+\end{dica}
+
+\begin{dica}[Deixe a unidade guiar a conta]
+Se a resposta é pedida em gotas por minuto, você vai dividir um número de gotas
+por um número de minutos. Se é pedida em kg, e você tem kg/L e L, vai multiplicar
+($\frac{\text{kg}}{\text{L}} \cdot \text{L} = \text{kg}$). Essa ``análise
+dimensional'' evita a maioria dos erros de montagem.
+\end{dica}
+
+\begin{dica}[Só há relações? Atribua valores]
+Quando o enunciado não dá números, apenas relações (``a área de $Q$ é três
+quartos da área de $R$'', ``a massa de $A$ é 1,5 vez a de $B$''), invente valores
+convenientes: área de $R$ igual a 4, população igual a 100\ldots{} Calcule as razões
+com esses números e compare. O resultado não depende dos valores escolhidos.
+\end{dica}
+
+\begin{dica}[Gráfico de barras com eixo cortado]
+A razão entre as \emph{alturas} de duas barras só é igual à razão entre os
+\emph{valores} quando o eixo vertical começa em zero. Se o eixo começa em 20,
+uma barra de valor 30 aparece com altura proporcional a $30 - 20 = 10$.
+\end{dica}
+
+\begin{macete}[Produto cruzado para comparar frações]
+Para $b, d > 0$: $\dfrac{a}{b} > \dfrac{c}{d} \iff a \cdot d > b \cdot c$.
+Exemplo: $\frac{7}{12}$ ou $\frac{11}{19}$? Como $7 \cdot 19 = 133 > 12 \cdot 11 = 132$,
+temos $\frac{7}{12} > \frac{11}{19}$ — sem calcular nenhum decimal.
+\end{macete}
+
+\begin{macete}[km/h e m/s: o fator 3,6]
+De m/s para km/h, multiplique por 3,6; de km/h para m/s, divida por 3,6.
+Exemplos: $20~\text{m/s} = 72~\text{km/h}$; $\;90~\text{km/h} = 25~\text{m/s}$.
+Lembre também: $1~\text{h}\,12~\text{min} = 1{,}2~\text{h}$, porque
+$12~\text{min} = \frac{12}{60}~\text{h}$.
+\end{macete}
+
+\begin{macete}[Ida e volta: a média harmônica]
+Se um percurso de ida e um de volta têm a \emph{mesma distância} e são feitos às
+velocidades $v_1$ e $v_2$, a velocidade média total é
+$\displaystyle v_m = \frac{2\,v_1 v_2}{v_1 + v_2}$.
+Exemplo: 60~km/h e 30~km/h dão $\frac{2 \cdot 60 \cdot 30}{90} = 40$~km/h.
+\end{macete}
+
+\begin{atencao}[Parte-parte não é parte-todo]
+Se a razão entre aprovados e reprovados é $2 : 7$, os aprovados são
+$\frac{2}{9}$ do total, e não $\frac{2}{7}$. Sempre que precisar da fração do
+todo, \textbf{some as partes} para obter o denominador.
+\end{atencao}
+
+\begin{atencao}[Velocidade média não é média das velocidades]
+A velocidade média é sempre \emph{distância total} dividida por \emph{tempo
+total}, incluindo paradas que estejam dentro do intervalo. A média aritmética
+das velocidades dos trechos só coincide com ela quando os trechos duram o mesmo
+\emph{tempo}.
+\end{atencao}
+
+\begin{atencao}[Unidades antes da divisão]
+Em razões entre grandezas de mesma natureza, converta tudo para a mesma
+unidade (cm com cm, minuto com minuto). E não confunda km/L com L/100\,km:
+são grandezas inversas — quanto maior o rendimento, menor o consumo.
+\end{atencao}
+
+\begin{resumo}
+\begin{itemize}[leftmargin=1.3em,itemsep=2pt]
+  \item \textbf{Razão} de $a$ para $b$: $\frac{a}{b}$ (o primeiro citado vai no numerador).
+        Mesma natureza $\Rightarrow$ mesma unidade e número puro.
+  \item \textbf{Comparar razões}: decimal/porcentagem, denominador comum ou produto cruzado.
+  \item \textbf{Parte-parte} $m : n$ $\Rightarrow$ fração do todo $\frac{m}{m+n}$.
+  \item \textbf{Taxas}: $v_m = \frac{\Delta s}{\Delta t}$; $d = \frac{m}{V}$;
+        densidade demográfica $=\frac{\text{hab}}{\text{área}}$; vazão $=\frac{V}{t}$;
+        consumo $c = \frac{100}{r}$ (L/100\,km $\leftrightarrow$ km/L).
+  \item $1~\text{m/s} = 3{,}6~\text{km/h}$; $\;1~\text{g/cm}^3 = 1~\text{kg/L} = 1\,000~\text{kg/m}^3$.
+  \item \textbf{Proporção}: $\frac{a}{b} = \frac{c}{d} \iff ad = bc$; razões iguais
+        $\Rightarrow$ $\frac{a+c}{b+d}$ também é igual a elas.
+  \item \textbf{Misturas}: valor de uma parte $=$ total $\div$ soma das partes; ao juntar
+        misturas, some \emph{quantidades}, nunca razões.
+\end{itemize}
+\end{resumo}
+
+%% =====================================================================
+\secaoenem
+%% =====================================================================
+
+\questaoenem{2014-154}
+\begin{resolucao}{D}
+\passo{1. Entendendo o problema.} O próprio texto define o desempenho: é a razão
+entre o número de vezes em que o jogador derrubou todos os pinos e o número de
+jogadas. Precisamos calcular essa razão para os cinco jogadores e escolher a maior.
+
+\passo{2. Calculando as razões.}
+\[
+\text{I: } \tfrac{50}{85} \approx 0{,}588 \quad
+\text{II: } \tfrac{40}{65} \approx 0{,}615 \quad
+\text{III: } \tfrac{20}{65} \approx 0{,}308 \quad
+\text{IV: } \tfrac{30}{40} = 0{,}75 \quad
+\text{V: } \tfrac{48}{90} \approx 0{,}533
+\]
+
+\passo{3. Conclusão.} O maior desempenho é o do jogador IV: ele derrubou todos os
+pinos em 75\% das jogadas. Repare que IV foi o que \emph{menos jogou} e um dos que
+\emph{menos} derrubaram todos os pinos em números absolutos — é exatamente por isso
+que se usa a razão. Item fácil ($b = -0{,}36$): a razão está definida no
+enunciado e basta aplicá-la.
+\resposta{alternativa D — jogador IV.}
+\begin{distratores}
+\alt{A} Quem compara apenas os números absolutos escolhe o jogador I, que derrubou
+todos os pinos mais vezes (50). Mas ele também jogou muito (85 vezes): $50/85 \approx 0{,}59$.
+\alt{B} O jogador II tem a segunda maior razão ($\approx 0{,}62$). Quem estima ``no
+olho'' em vez de calcular, ou compara apenas II e III (mesmo número de jogadas), pode
+parar aqui.
+\alt{C} Quem inverte a razão (jogadas $\div$ acertos) encontra o maior valor para o
+jogador III: $65/20 = 3{,}25$. Mas essa razão mede quantas jogadas ele precisa para
+cada acerto — quanto maior, \emph{pior}.
+\alt{E} O jogador V tem 48 acertos e o maior número de jogadas (90), o que pode
+impressionar; porém sua razão é só $\approx 0{,}53$, a segunda menor.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2025-176}
+\begin{resolucao}{C}
+\passo{1. Entendendo o problema.} O jogador participou do segundo tempo (45~min) e da
+prorrogação (30~min). No segundo tempo, percorreu 4,5~km; na prorrogação, manteve a
+\emph{mesma velocidade média}. Queremos a distância total durante a participação dele.
+
+\passo{2. Velocidade média no segundo tempo.}
+\[
+v_m = \frac{4{,}5~\text{km}}{45~\text{min}} = 0{,}1~\text{km/min} \quad(= 6~\text{km/h}).
+\]
+
+\passo{3. Distância na prorrogação e total.} Em 30~min, à mesma taxa:
+$0{,}1 \cdot 30 = 3$~km. Total: $4{,}5 + 3 = 7{,}5$~km.
+
+Atalho: como a velocidade é a mesma, distância e tempo são proporcionais; ele jogou
+$45 + 30 = 75$~min no total, ou seja, $\frac{75}{45} = \frac{5}{3}$ do tempo do segundo
+tempo. Logo, percorreu $\frac{5}{3} \cdot 4{,}5 = 7{,}5$~km. Item de dificuldade média
+($b = 1{,}06$): exige notar que o jogador \emph{não} jogou o primeiro tempo.
+\resposta{alternativa C — 7,5~km.}
+\begin{distratores}
+\alt{A} 4,5~km é apenas a distância do segundo tempo; esquece a prorrogação.
+\alt{B} 6,0 é a velocidade média em km/h ($4{,}5 \div 0{,}75$~h), não a distância.
+Confundir a taxa com a grandeza pedida é um erro comum.
+\alt{D} 9,0~km supõe que a prorrogação durou tanto quanto o segundo tempo
+($4{,}5 + 4{,}5$), ignorando que ela tem só 30~min.
+\alt{E} 12,0~km corresponde a 120~min à taxa de 0,1~km/min — como se o jogador tivesse
+participado da partida inteira, inclusive do primeiro tempo.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2013-159}
+\begin{resolucao}{B}
+\passo{1. Entendendo a proporção.} ``1 parte de cimento, 4 de areia e 2 de brita''
+significa que o concreto é formado por $1 + 4 + 2 = 7$ partes iguais de volume.
+
+\passo{2. Valor de cada parte.} $14~\text{m}^3 \div 7 = 2~\text{m}^3$ por parte.
+
+\passo{3. Cimento.} O cimento corresponde a 1 parte: $1 \cdot 2 = 2$~m³.
+(Areia: $4 \cdot 2 = 8$~m³; brita: $2 \cdot 2 = 4$~m³; total: 14~m³.)
+Item de dificuldade média ($b = 1{,}15$): é a aplicação direta do método das partes,
+mas exige transformar a razão parte-parte em fração do todo ($\frac{1}{7}$).
+\resposta{alternativa B — 2,00~m³.}
+\begin{distratores}
+\alt{A} 1,75 é $14 \div 8$: surge de quem conta errado o total de partes (por
+exemplo, multiplicando $4 \cdot 2$ em vez de somar $1 + 4 + 2$).
+\alt{C} 2,33 é $14 \div 6$: o aluno divide pelo número de partes de areia e brita
+($4 + 2$), esquecendo de incluir a própria parte de cimento no total.
+\alt{D} 4,00~m³ é o volume de \emph{brita} (2 partes), não de cimento.
+\alt{E} 8,00~m³ é o volume de \emph{areia} (4 partes).
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2024-166}
+\begin{resolucao}{E}
+\passo{1. Escrevendo as densidades.} Sejam $H$ o número de habitantes de $R$ e $A$ a
+área de $R$. Então $d(R) = \dfrac{H}{A}$. Para $Q$: habitantes $=\dfrac{H}{2}$ e área
+$=\dfrac{3A}{4}$.
+
+\passo{2. Calculando $d(Q)$.}
+\[
+d(Q) = \frac{H/2}{3A/4} = \frac{H}{2} \cdot \frac{4}{3A} = \frac{4}{6} \cdot \frac{H}{A} = \frac{2}{3}\,d(R).
+\]
+
+\passo{3. Conferindo com números (macete de atribuir valores).} Suponha que $R$ tem
+área 4~km² e 120 habitantes: $d(R) = 30$. Então $Q$ tem área 3~km² e 60 habitantes:
+$d(Q) = 20 = \frac{2}{3} \cdot 30$. Item médio ($b = 1{,}74$): a dificuldade está em
+lidar com uma fração \emph{dividida} por outra fração — o número de habitantes cai à
+metade, mas a área também diminui, o que ``compensa'' parcialmente.
+\resposta{alternativa E — $d(Q) = \frac{2}{3}\,d(R)$.}
+\begin{distratores}
+\alt{A} $\frac{1}{4}$ vem de subtrair as frações ($\frac{3}{4} - \frac{1}{2}$), operação
+que não tem relação com a definição de densidade.
+\alt{B} $\frac{1}{2}$ considera apenas a redução do número de habitantes e esquece que a
+área de $Q$ também é menor.
+\alt{C} $\frac{3}{4}$ considera apenas a área, e ainda como se a densidade fosse
+\emph{diretamente} proporcional a ela (na verdade, a área está no denominador).
+\alt{D} $\frac{3}{2}$ é a razão invertida: $\frac{3/4}{1/2}$, área sobre habitantes.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2020-147}
+\begin{resolucao}{C}
+\passo{1. Interpretando a tela do tipo A.} A informação ``$X/100$'' significa que o
+veículo gastou $X$ litros para percorrer 100~quilômetros: é um consumo em L/100\,km.
+
+\passo{2. O que o tipo B informa.} O tipo B mostra quantos quilômetros o veículo
+percorre com \emph{um} litro (rendimento em km/L). É a razão inversa:
+\[
+\frac{X~\text{litros}}{100~\text{km}} \;\Longrightarrow\; \frac{100~\text{km}}{X~\text{litros}} = \frac{100}{X}~\text{km/L}.
+\]
+Conferindo com um número: se $X = 8$ (8~L a cada 100~km), o carro roda
+$100 \div 8 = 12{,}5$~km com 1~L. De fato, $\frac{100}{8} = 12{,}5$.
+
+\passo{3. Por que é difícil.} Item difícil ($b = 2{,}78$): é uma questão de
+\emph{taxa} em linguagem algébrica, sem números. A notação ``$X/100$'' na tela
+induz o aluno a repeti-la ou a operá-la sem pensar no significado de cada termo.
+Testar com um valor concreto, como fizemos, desfaz a confusão.
+\resposta{alternativa C — $\dfrac{100}{X}$.}
+\begin{distratores}
+\alt{A} $X \cdot 100$ multiplica as grandezas em vez de inverter a razão; com $X = 8$,
+daria 800~km/L, um absurdo.
+\alt{B} $\frac{X}{100}$ apenas repete a informação do tipo A (litros por quilômetro),
+que é o inverso do que se pede.
+\alt{D} $\frac{1}{X}$ inverte, mas esquece os 100~km: seria correto apenas se $X$ fosse o
+gasto para 1~km.
+\alt{E} $1 \cdot X = X$ trata o consumo em L/100\,km como se já fosse o rendimento em km/L.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2017-165}
+\begin{resolucao}{E}
+\passo{1. Alturas no Gráfico 1.} O eixo começa em 0, então as alturas das colunas
+são os próprios valores: A $= 70$ e B $= 30$. Razão B/A:
+$\frac{30}{70} = \frac{3}{7}$.
+
+\passo{2. Alturas no Gráfico 2.} O eixo foi cortado e começa em 20. A altura
+\emph{visível} de cada coluna é o valor menos 20: A $\to 70 - 20 = 50$ e
+B $\to 30 - 20 = 10$. Razão B/A: $\frac{10}{50} = \frac{1}{5}$.
+
+\passo{3. Diferença.}
+\[
+\frac{3}{7} - \frac{1}{5} = \frac{15}{35} - \frac{7}{35} = \frac{8}{35}.
+\]
+No Gráfico 2, a coluna B parece ter $\frac{1}{5}$ da altura de A, quando deveria ter
+$\frac{3}{7}$ (quase metade) — daí a crítica dos leitores. Item muito difícil
+($b = 3{,}63$): o aluno precisa perceber que a pergunta é sobre \emph{alturas
+desenhadas}, não sobre os percentuais, e ainda operar frações.
+\resposta{alternativa E — $\frac{8}{35}$.}
+\begin{distratores}
+\alt{A} 0 é a resposta de quem compara os \emph{valores} (que são os mesmos nos dois
+gráficos) em vez das alturas das colunas.
+\alt{B} $\frac{1}{2}$ não corresponde a nenhuma comparação coerente das alturas; é um
+valor ``redondo'' que atrai quem estima no olho.
+\alt{C} $\frac{1}{5}$ é só a razão do Gráfico 2; faltou subtraí-la da razão do Gráfico 1.
+\alt{D} $\frac{2}{15} = \frac{1}{3} - \frac{1}{5}$: aparece para quem também ``corta'' o
+Gráfico 1, lendo as alturas a partir da linha do 10 ($\frac{20}{60} = \frac{1}{3}$).
+\end{distratores}
+\end{resolucao}
+
+%% =====================================================================
+\secaoineditas
+%% =====================================================================
+
+\begin{questaoinedita}{1}{12}
+Aplicativos de exercício físico registram a distância percorrida e o tempo de
+cada treino. Em um domingo, o aplicativo de uma ciclista exibiu o resumo a seguir.
+
+\begin{center}
+\begin{tikzpicture}
+  \node[draw=ebookLine,line width=.8pt,rounded corners=6pt,fill=ebookSoft,inner sep=8pt,
+    font=\sffamily,align=center,text width=6.2cm] {%
+    {\small\color{ebookMuted}TREINO DE DOMINGO \enspace\faBicycle}\\[4pt]
+    \begin{tabular}{@{}c@{\hspace{18pt}}c@{}}
+      {\Large\bfseries 30,0 km} & {\Large\bfseries 1 h 12 min}\\
+      {\scriptsize\color{ebookMuted}distância} & {\scriptsize\color{ebookMuted}tempo em movimento}
+    \end{tabular}};
+\end{tikzpicture}
+\end{center}
+
+A velocidade média dessa ciclista nesse treino, em quilômetro por hora, foi de
+\begin{alternativas*}[5]
+  \item 0,42.
+  \item 25,0.
+  \item 26,8.
+  \item 30,0.
+  \item 36,0.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Convertendo o tempo.} A velocidade deve sair em km/h, então o tempo precisa
+estar em horas: $12~\text{min} = \frac{12}{60}~\text{h} = 0{,}2~\text{h}$. Logo,
+$1~\text{h}\,12~\text{min} = 1{,}2~\text{h}$.
+
+\passo{2. Calculando.}
+\[
+v_m = \frac{30~\text{km}}{1{,}2~\text{h}} = 25~\text{km/h}.
+\]
+\resposta{alternativa B — 25,0~km/h.}
+\begin{distratores}
+\alt{A} 0,42 é $30 \div 72$: o aluno usou o tempo em minutos (72~min) e obteve uma
+velocidade em km/\emph{min}, não em km/h.
+\alt{C} 26,8 é $30 \div 1{,}12$: leu ``1~h~12~min'' como 1,12~h. Mas 12~min são $0{,}2$~h,
+e não $0{,}12$~h.
+\alt{D} 30,0 ignora os 12 minutos, como se a ciclista tivesse pedalado exatamente 1~hora.
+\alt{E} 36,0 é $30 \cdot 1{,}2$: multiplicou a distância pelo tempo, em vez de dividir.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{16}
+Em uma loja de tintas, o tom ``verde-folha'' é obtido misturando tinta amarela e
+tinta azul na razão de $3 : 2$, nessa ordem, em volume. Um pintor precisa de
+18 litros de verde-folha para pintar a fachada de uma casa. Ele já tem guardados
+5 litros de tinta azul, que sobraram de outro serviço, e vai comprar apenas o que
+faltar de cada cor.
+
+Quantos litros de tinta azul esse pintor ainda precisa comprar?
+\begin{alternativas*}[5]
+  \item 2,2
+  \item 4,0
+  \item 5,8
+  \item 7,0
+  \item 7,2
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{A}
+\passo{1. Método das partes.} A razão amarela : azul $= 3 : 2$ indica $3 + 2 = 5$ partes
+iguais. Para 18~L, cada parte vale $18 \div 5 = 3{,}6$~L.
+
+\passo{2. Tinta azul necessária.} Azul $= 2 \cdot 3{,}6 = 7{,}2$~L (e amarela
+$= 3 \cdot 3{,}6 = 10{,}8$~L).
+
+\passo{3. Descontando o estoque.} Como o pintor já tem 5~L de azul, precisa comprar
+$7{,}2 - 5 = 2{,}2$~L.
+\resposta{alternativa A — 2,2~litros.}
+\begin{distratores}
+\alt{B} 4,0 é $9 - 5$: o aluno dividiu os 18~L igualmente entre as duas cores (9~L de
+cada), ignorando a razão $3 : 2$.
+\alt{C} 5,8 é $10{,}8 - 5$: calculou corretamente as partes, mas usou a quantidade de
+tinta \emph{amarela} (3 partes) no lugar da azul.
+\alt{D} 7,0 é $12 - 5$: tratou a razão parte-parte $\frac{2}{3}$ como fração do todo,
+calculando $\frac{2}{3}$ de 18~L. O correto é $\frac{2}{5}$ de 18~L.
+\alt{E} 7,2~L é a quantidade total de azul da mistura; faltou descontar os 5~L que o
+pintor já tinha.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{16}
+A bula de um antibiótico em suspensão oral informa que cada 5~mL do medicamento
+contêm 250~mg do princípio ativo. Para uma criança com 24~kg de massa corporal, o
+pediatra prescreveu 25~mg do princípio ativo por quilograma de massa corporal por
+dia, divididos em doses iguais, administradas de 8 em 8 horas.
+
+O volume, em mililitro, de cada dose que essa criança deve tomar é
+\begin{alternativas*}[5]
+  \item 0,8.
+  \item 1,5.
+  \item 4,0.
+  \item 12,0.
+  \item 40,0.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{C}
+\passo{1. Dose diária.} $25~\tfrac{\text{mg}}{\text{kg}} \cdot 24~\text{kg} = 600$~mg por dia.
+
+\passo{2. Número de doses.} De 8 em 8 horas são $24 \div 8 = 3$ doses por dia. Cada
+dose tem $600 \div 3 = 200$~mg.
+
+\passo{3. Concentração e volume.} A concentração é
+$\frac{250~\text{mg}}{5~\text{mL}} = 50~\text{mg/mL}$. Logo, cada dose ocupa
+\[
+\frac{200~\text{mg}}{50~\text{mg/mL}} = 4~\text{mL}.
+\]
+\resposta{alternativa C — 4,0~mL.}
+\begin{distratores}
+\alt{A} 0,8 é $200 \div 250$: o aluno tratou a concentração como 250~mg \emph{por mL},
+esquecendo que os 250~mg estão em 5~mL.
+\alt{B} 1,5 vem de dividir a dose diária por 8 ($600 \div 8 = 75$~mg, que ocupam 1,5~mL):
+confundiu ``de 8 em 8 horas'' com ``8 doses por dia''.
+\alt{D} 12,0~mL é o volume da dose \emph{diária} ($600 \div 50$); faltou dividir em 3 doses.
+\alt{E} 40,0 é $200 \div 5$: dividiu a dose em miligramas pelo volume de 5~mL, sem
+construir a concentração corretamente.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{17}
+Um entregador sai do centro de distribuição de uma empresa e vai até uma cidade
+vizinha, a 90~km de distância, dirigindo a uma velocidade média de 90~km/h. Lá,
+ele permanece 30 minutos descarregando as encomendas e, em seguida, retorna ao
+centro de distribuição pelo mesmo caminho, a uma velocidade média de 60~km/h,
+por causa do trânsito intenso.
+
+Considerando todo o período entre a saída e a chegada de volta ao centro de
+distribuição, incluindo o tempo de descarga, a velocidade média do entregador,
+em quilômetro por hora, foi de
+\begin{alternativas*}[5]
+  \item 50,0.
+  \item 60,0.
+  \item 64,3.
+  \item 72,0.
+  \item 75,0.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Tempo de cada etapa.} Ida: $\frac{90~\text{km}}{90~\text{km/h}} = 1$~h.
+Descarga: 30~min $= 0{,}5$~h. Volta: $\frac{90~\text{km}}{60~\text{km/h}} = 1{,}5$~h.
+
+\passo{2. Totais.} Distância: $90 + 90 = 180$~km. Tempo: $1 + 0{,}5 + 1{,}5 = 3$~h.
+
+\passo{3. Velocidade média.}
+\[
+v_m = \frac{180~\text{km}}{3~\text{h}} = 60~\text{km/h}.
+\]
+A velocidade média é sempre distância total sobre tempo total — e o enunciado pediu
+explicitamente para incluir a descarga.
+\resposta{alternativa B — 60,0~km/h.}
+\begin{distratores}
+\alt{A} 50,0 é $\frac{90 + 0 + 60}{3}$: média aritmética das velocidades das três etapas,
+contando a parada como ``velocidade zero''. As etapas têm durações diferentes, então
+essa média não faz sentido.
+\alt{C} 64,3 é $180 \div 2{,}8$: o aluno escreveu 30~min como 0,3~h.
+\alt{D} 72,0 é $180 \div 2{,}5$: velocidade média correta \emph{sem} contar a descarga,
+contrariando o enunciado.
+\alt{E} 75,0 é $\frac{90 + 60}{2}$: a média aritmética das velocidades de ida e volta,
+o erro mais comum. Mesmo sem a parada, ela não seria a velocidade média (que daria 72).
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{5}
+Uma empresa de entregas vai comprar um veículo utilitário e escolherá o modelo com o
+\textbf{menor custo de combustível por quilômetro rodado}. Os fabricantes, porém, não
+informam o consumo da mesma maneira: alguns indicam quantos quilômetros o veículo
+percorre com uma unidade de combustível; outros, quantos litros ele gasta para
+percorrer 100 quilômetros. O quadro reúne essas informações e o preço do combustível
+usado por cada modelo.
+
+\begin{center}
+\small
+\begin{tabular}{cccc}
+\toprule
+\textbf{Modelo} & \textbf{Combustível} & \textbf{Consumo informado} & \textbf{Preço do combustível}\\
+\midrule
+I   & Gasolina & 15~km/L       & R\$~6,30 por litro\\
+II  & Etanol   & 11~km/L       & R\$~4,10 por litro\\
+III & Gasolina & 6,0~L/100\,km & R\$~6,30 por litro\\
+IV  & Diesel   & 7,0~L/100\,km & R\$~5,20 por litro\\
+V   & GNV      & 9~km/m³       & R\$~3,80 por metro cúbico\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+O modelo escolhido pela empresa será o
+\begin{alternativas*}[5]
+  \item I.
+  \item II.
+  \item III.
+  \item IV.
+  \item V.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{D}
+\passo{1. A taxa que importa.} Queremos reais por quilômetro (R\$/km). Para quem informa
+km/L: custo $=\dfrac{\text{preço por litro}}{\text{km por litro}}$. Para quem informa
+L/100\,km: custo $=\dfrac{\text{litros para 100 km} \times \text{preço}}{100}$.
+
+\passo{2. Calculando.}
+\begin{center}
+\begin{tabular}{ll}
+I: $6{,}30 \div 15 = 0{,}420$ & II: $4{,}10 \div 11 \approx 0{,}373$\\[2pt]
+III: $6{,}0 \cdot 6{,}30 \div 100 = 0{,}378$ & IV: $7{,}0 \cdot 5{,}20 \div 100 = 0{,}364$\\[2pt]
+V: $3{,}80 \div 9 \approx 0{,}422$ &
+\end{tabular}
+\end{center}
+
+\passo{3. Conclusão.} O menor custo é o do modelo IV: cerca de R\$~0,36 por km.
+Em \num{10000}~km, a diferença para o modelo II já passa de R\$~90.
+\resposta{alternativa D — modelo IV.}
+\begin{distratores}
+\alt{A} O modelo I tem o maior rendimento entre os informados em km/L (15~km/L), mas usa
+o combustível mais caro: custa R\$~0,42 por km. Rendimento sozinho não decide.
+\alt{B} Quem lê ``6,0~L/100\,km'' e ``7,0~L/100\,km'' como se fossem km/L acha que III e IV
+são péssimos ($6{,}30 \div 6 = 1{,}05$ e $5{,}20 \div 7 \approx 0{,}74$~R\$/km) e escolhe o
+melhor entre os demais, o II ($\approx 0{,}373$).
+\alt{C} O modelo III tem, de fato, o maior rendimento de todos ($100 \div 6 \approx 16{,}7$~km/L)
+e o menor número na coluna de consumo, mas a gasolina cara o deixa em R\$~0,378 por km.
+\alt{E} O modelo V usa o combustível de menor preço por unidade (R\$~3,80), porém rende
+apenas 9~km por m³: R\$~0,42 por km, o mais caro.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{4}{18}
+Para comparar a ocorrência de uma doença em locais com populações diferentes, os
+órgãos de saúde usam a \textbf{taxa de incidência}, definida como o número de casos
+novos registrados em um ano para cada 100 mil habitantes.
+
+Uma região de saúde é formada apenas por dois municípios, P e Q. No último ano, o
+município P, com 400 mil habitantes, teve taxa de incidência de 25 casos por 100 mil
+habitantes, e o município Q, com 100 mil habitantes, teve taxa de 70 casos por
+100 mil habitantes. Para o próximo ano, a meta é que a taxa de incidência da região
+como um todo seja de, no máximo, 30 casos por 100 mil habitantes. Os gestores preveem
+que as populações dos dois municípios e a taxa de incidência de P não se alterarão;
+por isso, todas as ações de prevenção serão concentradas em Q.
+
+Para que a meta seja cumprida, a taxa de incidência do município Q, no próximo ano,
+deverá ser de, no máximo,
+\begin{alternativas}
+  \item 10 casos por 100 mil habitantes.
+  \item 20 casos por 100 mil habitantes.
+  \item 30 casos por 100 mil habitantes.
+  \item 35 casos por 100 mil habitantes.
+  \item 50 casos por 100 mil habitantes.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{E}
+\passo{1. Transformando taxas em casos.} P tem $400$ mil $= 4 \times 100$ mil habitantes;
+com 25 casos por 100 mil, são $4 \cdot 25 = 100$ casos por ano. Q tem hoje
+$1 \cdot 70 = 70$ casos. A região tem 500 mil habitantes e $170$ casos: taxa atual de
+$170 \div 5 = 34$ casos por 100 mil.
+
+\passo{2. Limite de casos da região.} Para a taxa da região ser no máximo 30 por 100 mil,
+com 500 mil habitantes, o total de casos pode ser no máximo $5 \cdot 30 = 150$.
+
+\passo{3. Limite para Q.} Como P continuará com 100 casos, Q pode ter no máximo
+$150 - 100 = 50$ casos em seus 100 mil habitantes: taxa máxima de
+\textbf{50 casos por 100 mil habitantes}.
+
+\passo{4. Por que é difícil.} A taxa da região é uma média \emph{ponderada} pelas
+populações, e não a média simples das taxas. Como P é quatro vezes mais populoso, sua
+taxa baixa ``pesa'' muito, e Q não precisa chegar a 30.
+\resposta{alternativa E — 50 casos por 100 mil habitantes.}
+\begin{distratores}
+\alt{A} 10 é $50 \div 5$: o aluno encontrou corretamente os 50 casos permitidos em Q, mas
+calculou a taxa usando a população da \emph{região} (500 mil) em vez da de Q.
+\alt{B} 20 é a \emph{redução} necessária (de 70 para 50 casos), e não a nova taxa.
+\alt{C} 30 supõe que cada município, isoladamente, precisa atingir a meta da região.
+\alt{D} 35 vem de tratar a taxa da região como média simples: $\frac{25 + x}{2} = 30$.
+Isso ignora que as populações são diferentes.
+\end{distratores}
+\end{resolucao}

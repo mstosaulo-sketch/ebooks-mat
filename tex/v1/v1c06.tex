@@ -1,0 +1,909 @@
+\capitulo{v1c06}
+
+% =====================================================================
+\section{O que é porcentagem}
+% =====================================================================
+
+Desconto na loja, imposto na nota fiscal, reajuste do aluguel, taxa de
+desemprego, eficácia de vacina, resultado de pesquisa eleitoral\ldots{} A
+porcentagem é, provavelmente, a ferramenta matemática que você mais encontra
+fora da escola, e o ENEM sabe disso: no banco de questões oficiais deste livro,
+\textbf{50 itens} têm a porcentagem como foco principal, e dezenas de outros a
+usam como etapa intermediária. A boa notícia é que quase tudo se resume a
+\textbf{uma única ideia}: porcentagem é uma fração de denominador 100.
+
+\begin{definicao}[Porcentagem]
+A expressão \textbf{$p$ por cento}, escrita $p\%$, significa \textbf{$p$ partes em
+cada 100}. Toda porcentagem pode ser escrita de três formas equivalentes:
+\[
+  p\% \;=\; \frac{p}{100} \qquad\text{por exemplo,}\qquad
+  35\% = \frac{35}{100} = 0{,}35 = \frac{7}{20}.
+\]
+Para passar da forma percentual para a decimal, basta \textbf{deslocar a vírgula
+duas casas para a esquerda}: $8\% = 0{,}08$, $\;0{,}5\% = 0{,}005$,
+$\;135\% = 1{,}35$.
+\end{definicao}
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{scope}[scale=0.34]
+    \fill[ebookPrim!75] (0,7) rectangle (10,10);
+    \fill[ebookPrim!75] (0,6) rectangle (5,7);
+    \draw[step=1,ebookLine,line width=.5pt] (0,0) grid (10,10);
+    \draw[ebookDark,line width=.9pt] (0,0) rectangle (10,10);
+  \end{scope}
+  \node[anchor=west,align=left,font=\small] at (4.0,1.7)
+    {\textbf{35 quadradinhos pintados em 100:}\\[3pt]
+     $35\% \;=\; \dfrac{35}{100} \;=\; 0{,}35 \;=\; \dfrac{7}{20}$\\[6pt]
+     {\color{ebookMuted}O quadrado inteiro representa o \textbf{todo}}\\
+     {\color{ebookMuted}(100\%), seja ele uma turma, um salário}\\
+     {\color{ebookMuted}ou o volume de uma solução.}};
+\end{tikzpicture}
+\end{center}
+
+Vale a pena memorizar algumas equivalências, porque elas aparecem o tempo todo
+e permitem fazer contas de cabeça:
+
+\begin{center}
+\small
+\begin{tabular}{l*{9}{c}}
+\toprule
+Porcentagem & 1\% & 5\% & 10\% & 12,5\% & 20\% & 25\% & 50\% & 75\% & 100\%\\
+\midrule
+Fração & $\frac{1}{100}$ & $\frac{1}{20}$ & $\frac{1}{10}$ & $\frac{1}{8}$ &
+  $\frac{1}{5}$ & $\frac{1}{4}$ & $\frac{1}{2}$ & $\frac{3}{4}$ & $1$\\[2pt]
+Decimal & 0,01 & 0,05 & 0,1 & 0,125 & 0,2 & 0,25 & 0,5 & 0,75 & 1\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Porcentagem de uma quantidade}
+
+Calcular $p\%$ de um valor $V$ é multiplicar $V$ pela fração $\frac{p}{100}$ (ou
+pelo decimal correspondente). A palavra \emph{de} vira multiplicação.
+
+\begin{formula}[Porcentagem de um valor]
+$\displaystyle p\%\ \text{de}\ V \;=\; \frac{p}{100}\cdot V$
+\qquad\qquad
+$\displaystyle \text{taxa} \;=\; \frac{\text{parte}}{\text{todo}}\times 100\%$
+\end{formula}
+
+A segunda fórmula responde à pergunta inversa: \emph{que porcentagem uma parte
+representa do todo?} Basta dividir a parte pelo todo e escrever o resultado com
+denominador 100.
+
+\begin{exemplo}[Pesquisa de mobilidade na escola]
+Uma escola tem \num{1250} estudantes. Uma pesquisa mostrou que 18\% deles vão
+para a escola de bicicleta e que 75 estudantes usam ônibus intermunicipal.
+(a) Quantos estudantes vão de bicicleta? (b) Que porcentagem do total usa ônibus
+intermunicipal?
+\solucao
+(a) $18\%$ de $\num{1250} = 0{,}18\cdot\num{1250} = 225$ estudantes.
+Sem calculadora: $10\%$ de \num{1250} é 125, $8\%$ é $8\times 12{,}5 = 100$; somando,
+$125+100=225$.
+
+(b) A parte é 75 e o todo é \num{1250}:
+$\dfrac{75}{\num{1250}} = 0{,}06 = \dfrac{6}{100} = 6\%$.
+\resposta{225 estudantes vão de bicicleta, e 6\% usam ônibus intermunicipal.}
+\end{exemplo}
+
+\subsection{Porcentagem de porcentagem e misturas}
+
+Quando o enunciado fala em ``$a\%$ \emph{dos} que \ldots{}'', a base mudou: a
+porcentagem incide sobre uma parte, e não sobre o todo. Para voltar ao todo,
+\textbf{multiplique as taxas}. Se 30\% dos alunos de uma escola estão no 3.º ano
+e 40\% \emph{desses} fazem cursinho, então os alunos do 3.º ano que fazem
+cursinho são $0{,}4\times 0{,}3 = 0{,}12 = 12\%$ do total da escola.
+
+O mesmo raciocínio resolve os problemas de \textbf{misturas e concentrações}:
+se uma solução tem 70\% de álcool, então 70\% do seu volume é álcool. Em
+problemas em que se acrescenta ou se retira um componente, o segredo é
+\textbf{ancorar a conta na substância cuja quantidade não muda}.
+
+\begin{exemplo}[Diluindo uma solução]
+Um frasco contém 500~mL de uma solução em que 70\% do volume é álcool e o
+restante é água. Quantos mililitros de água devem ser acrescentados para que o
+álcool passe a representar 50\% do volume?
+\solucao
+\passo{Âncora.} A quantidade de álcool não muda: $0{,}7\times 500 = 350$~mL.
+
+\passo{Novo todo.} Esses 350~mL devem ser 50\% da nova solução, então o novo
+volume total é $\dfrac{350}{0{,}5} = 700$~mL.
+
+\passo{Resposta.} Devem ser acrescentados $700 - 500 = 200$~mL de água.
+\resposta{200 mL. Observe que \emph{não} basta ``tirar 20\%'': a concentração
+cai 20 pontos percentuais, mas o volume cresce 40\%.}
+\end{exemplo}
+
+% =====================================================================
+\section{Aumentos, descontos e variação percentual}
+% =====================================================================
+
+Uma calça de R\$~120,00 com desconto de 15\%: você pode calcular o desconto
+($0{,}15\times 120 = 18$) e subtrair ($120-18=102$). Mas há um caminho mais curto
+e muito mais poderoso: se o desconto é de 15\%, você \textbf{paga 85\%} do preço,
+ou seja, $0{,}85\times 120 = 102$. O número $0{,}85$ é o \textbf{fator
+multiplicativo} do desconto.
+
+\begin{definicao}[Fator multiplicativo]
+Um \textbf{aumento} de taxa $i$ multiplica o valor por $(1+i)$; um
+\textbf{desconto} (ou redução) de taxa $i$ multiplica o valor por $(1-i)$.
+\begin{center}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Variação & $+15\%$ & $-15\%$ & $+3\%$ & $-40\%$ & $+100\%$\\
+\midrule
+Fator & 1,15 & 0,85 & 1,03 & 0,60 & 2\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{definicao}
+
+\begin{formula}[Aumento e desconto em um passo]
+$\displaystyle V_{\text{final}} = V_{\text{inicial}}\cdot(1+i)$
+\qquad\qquad
+$\displaystyle V_{\text{final}} = V_{\text{inicial}}\cdot(1-i)$
+\end{formula}
+
+\begin{center}
+\begin{tikzpicture}[x=0.058cm,y=0.62cm,font=\small]
+  % original
+  \fill[ebookPrim!25] (0,2.2) rectangle (100,2.9);
+  \node at (50,2.55) {100\%};
+  \node[anchor=east] at (-3,2.55) {Valor inicial};
+  % aumento
+  \fill[ebookPrim!25] (0,1.1) rectangle (100,1.8);
+  \fill[ebookAcc!70] (100,1.1) rectangle (120,1.8);
+  \node at (50,1.45) {100\%};
+  \node at (110,1.45) {\textbf{+20\%}};
+  \node[anchor=east] at (-3,1.45) {Aumento de 20\%};
+  \node[anchor=west,text=ebookDark] at (124,1.45) {$120\% \Rightarrow \times\,1{,}20$};
+  % desconto
+  \fill[ebookPrim!25] (0,0) rectangle (80,0.7);
+  \draw[atencaoC,pattern=north east lines,pattern color=atencaoC!60] (80,0) rectangle (100,0.7);
+  \node at (40,0.35) {80\%};
+  \node[text=atencaoC] at (90,0.35) {\textbf{$-$20\%}};
+  \node[anchor=east] at (-3,0.35) {Desconto de 20\%};
+  \node[anchor=west,text=ebookDark] at (124,0.35) {$\phantom{1}80\% \Rightarrow \times\,0{,}80$};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Voltando ao valor original}
+
+Se o valor final é o valor inicial \emph{multiplicado} pelo fator, então o valor
+inicial é o valor final \emph{dividido} pelo fator:
+\[
+  V_{\text{inicial}} = \frac{V_{\text{final}}}{1+i}
+  \qquad\text{ou}\qquad
+  V_{\text{inicial}} = \frac{V_{\text{final}}}{1-i}.
+\]
+
+\begin{exemplo}[Mensalidade antes do reajuste]
+Após um reajuste de 8\%, a mensalidade de um curso passou a custar
+R\$~\num{1188,00}. Qual era o valor antes do reajuste?
+\solucao
+O valor novo é o antigo multiplicado por $1{,}08$. Então
+$V = \dfrac{\num{1188}}{1{,}08} = \num{1100}$. A mensalidade era de
+R\$~\num{1100,00}. Confira: $8\%$ de \num{1100} é 88, e $\num{1100}+88=\num{1188}$.
+
+\textbf{Erro clássico:} ``tirar 8\% de \num{1188}'', isto é,
+$\num{1188}\times 0{,}92 = \num{1092,96}$. Isso está errado porque os 8\% foram
+calculados sobre o valor \emph{antigo}, e não sobre \num{1188}.
+\end{exemplo}
+
+\subsection{Variação percentual: sempre em relação a alguém}
+
+Quando uma grandeza passa de $V_i$ para $V_f$, a variação percentual compara a
+diferença com o \textbf{valor de referência}, que é o valor inicial:
+
+\begin{formula}[Variação percentual]
+$\displaystyle \Delta\% \;=\; \frac{V_f - V_i}{V_i}\times 100\%
+\;=\;\Bigl(\frac{V_f}{V_i}-1\Bigr)\times 100\%$
+\end{formula}
+
+Se o resultado for positivo, houve aumento; se for negativo, redução. A forma
+$\frac{V_f}{V_i}-1$ é ótima para a prova: a razão $\frac{V_f}{V_i}$ é o próprio
+fator. Se $\frac{V_f}{V_i}=1{,}35$, o aumento foi de 35\%; se
+$\frac{V_f}{V_i}=0{,}9$, a redução foi de 10\%.
+
+\begin{exemplo}[A referência muda tudo]
+O litro de um combustível passou de R\$~5,00 para R\$~6,00. Depois de alguns
+meses, voltou a custar R\$~5,00. (a) Qual foi o aumento percentual? (b) Qual foi
+a redução percentual na volta?
+\solucao
+(a) $\dfrac{6-5}{5} = 0{,}2 = 20\%$ de aumento.
+
+(b) Agora a referência é R\$~6,00: $\dfrac{5-6}{6} = -\dfrac{1}{6}\approx -16{,}7\%$.
+
+A diferença em reais é a mesma (R\$~1,00), mas as porcentagens são diferentes,
+porque as bases são diferentes. Pela mesma razão, dizer que ``$A$ é 20\% maior
+que $B$'' (base $B$) \textbf{não} equivale a dizer que ``$B$ é 20\% menor que
+$A$'' (base $A$).
+\resposta{aumento de 20\% e redução de aproximadamente 16,7\%.}
+\end{exemplo}
+
+\begin{contexto}[Preço com imposto ``por dentro'']
+No Brasil, alguns tributos sobre o consumo são calculados ``por dentro'': o
+imposto é uma porcentagem do \emph{preço final}, e não do preço sem imposto. Se o
+imposto é de 20\% do preço final e o valor sem imposto é R\$~80,00, então
+R\$~80,00 corresponde a 80\% do preço final, que é
+$\frac{80}{0{,}8}=\text{R\$~}100{,}00$ (e não $80\times 1{,}2 = 96$). A
+diferença está, mais uma vez, na base sobre a qual a porcentagem incide.
+\end{contexto}
+
+% =====================================================================
+\section{Variações sucessivas e pontos percentuais}
+% =====================================================================
+
+Um produto sobe 20\% e, depois, entra em promoção com 20\% de desconto. Ele
+volta ao preço original? Muita gente responde ``sim'', e é exatamente essa
+intuição que o ENEM explora. Usando fatores, a resposta aparece na hora:
+
+\begin{center}
+\begin{tikzpicture}[font=\small,
+  caixa/.style={draw=ebookPrim,fill=ebookSoft,rounded corners=4pt,minimum width=22mm,
+    minimum height=9mm,font=\sffamily\bfseries\color{ebookDark}}]
+  \node[caixa] (a) at (0,0) {R\$ 100,00};
+  \node[caixa] (b) at (4.6,0) {R\$ 120,00};
+  \node[caixa] (c) at (9.2,0) {R\$ 96,00};
+  \draw[-{Stealth[length=2.6mm]},thick,ebookAcc] (a) -- node[above]{$+20\%$} node[below]{$\times\,1{,}2$} (b);
+  \draw[-{Stealth[length=2.6mm]},thick,atencaoC] (b) -- node[above]{$-20\%$} node[below]{$\times\,0{,}8$} (c);
+  \draw[-{Stealth[length=2.6mm]},thick,ebookPrim,rounded corners=6pt]
+    (a.south) -- ++(0,-0.9) -| node[pos=0.25,below]{$\times\,1{,}2\times 0{,}8 = \times\,0{,}96
+    \quad\Rightarrow\quad$ redução total de 4\%} (c.south);
+\end{tikzpicture}
+\end{center}
+
+O segundo percentual incide sobre um valor que já foi alterado (R\$~120,00, e não
+R\$~100,00). Por isso, \textbf{porcentagens sucessivas não se somam: os fatores
+se multiplicam}.
+
+\begin{formula}[Variações sucessivas]
+$\displaystyle V_f = V_i\cdot(1\pm i_1)\cdot(1\pm i_2)\cdots(1\pm i_n)$
+\par\smallskip
+$\displaystyle \text{taxa acumulada} = (1\pm i_1)(1\pm i_2)\cdots(1\pm i_n) - 1$
+\end{formula}
+
+Dois casos especiais aparecem muito:
+\begin{itemize}[itemsep=2pt]
+  \item \textbf{Mesmo aumento repetido $n$ vezes:} o fator é $(1+i)^n$. Por
+    exemplo, três aumentos de 10\% dão $1{,}1^3 = 1{,}331$, isto é, 33,1\% (e não
+    30\%). É a ideia dos juros compostos, tema do próximo capítulo.
+  \item \textbf{Desfazer uma variação:} para anular um aumento de taxa $i$, o
+    desconto necessário é $\dfrac{i}{1+i}$; para anular um desconto $d$, o aumento
+    necessário é $\dfrac{d}{1-d}$. Assim, um aumento de 25\% é desfeito por um
+    desconto de 20\%, e uma queda de 50\% só é recuperada com uma alta de 100\%.
+\end{itemize}
+
+\begin{exemplo}[Remarcação antes da liquidação]
+Uma loja aumentou todos os preços em 30\% e, uma semana depois, anunciou uma
+liquidação com ``40\% de desconto''. Em relação ao preço anterior à remarcação,
+qual foi o desconto efetivo?
+\solucao
+O fator total é $1{,}3\times 0{,}6 = 0{,}78$. O cliente paga 78\% do preço
+original, ou seja, o desconto efetivo é de $1-0{,}78 = 0{,}22 = 22\%$.
+
+Quem faz $40\%-30\% = 10\%$ erra porque os 40\% incidem sobre o preço já
+aumentado. Teste com R\$~100,00: $100\to 130\to 130\times 0{,}6 = 78$.
+\resposta{desconto efetivo de 22\%.}
+\end{exemplo}
+
+\subsection{Pontos percentuais}
+
+Quando a própria grandeza é uma porcentagem (taxa de desemprego, de juros, de
+inadimplência, de cobertura vacinal), há \textbf{duas formas diferentes} de
+descrever a variação, e confundi-las é um dos erros mais explorados pelo ENEM.
+
+\begin{definicao}[Ponto percentual (p.p.)]
+A \textbf{diferença} entre duas taxas percentuais é medida em \textbf{pontos
+percentuais}. Se uma taxa passa de $a\%$ para $b\%$:
+\begin{itemize}[itemsep=1pt,topsep=2pt]
+  \item a variação \textbf{absoluta} é de $(b-a)$ pontos percentuais;
+  \item a variação \textbf{relativa} é de $\dfrac{b-a}{a}\times 100\%$.
+\end{itemize}
+\end{definicao}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[ybar, width=10.5cm, height=5.6cm, bar width=22pt,
+  symbolic x coords={2016,2018,2020,2022}, xtick=data, enlarge x limits=0.18,
+  ymin=0, ymax=112, ytick={0,20,40,60,80,100}, axis lines*=left,
+  ylabel={\small domicílios (\%)}, ylabel style={font=\small},
+  tick label style={font=\small}, ymajorgrids, grid style={ebookLine!60},
+  nodes near coords={\pgfmathprintnumber{\pgfplotspointmeta}\%},
+  nodes near coords style={font=\small\bfseries,text=ebookDark},
+  title={\small\sffamily Domicílios com acesso à internet em um município (dados fictícios)}]
+  \addplot[fill=ebookPrim!70,draw=none] coordinates {(2016,60) (2018,70) (2020,80) (2022,90)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+No gráfico, a cobertura passou de 60\% (2016) para 90\% (2022). Houve um
+aumento de \textbf{30 pontos percentuais}, mas a variação relativa foi de
+$\frac{90-60}{60} = 50\%$: o número de domicílios conectados cresceu 50\% (se o
+total de domicílios não mudou). E repare que cada intervalo tem o mesmo aumento
+de 10 p.p., mas variações relativas cada vez menores: $\frac{10}{60}\approx
+16{,}7\%$, $\frac{10}{70}\approx 14{,}3\%$ e $\frac{10}{80}=12{,}5\%$.
+
+\begin{exemplo}[A manchete do desemprego]
+A taxa de desemprego de uma cidade passou de 8\% para 10\% da população
+economicamente ativa, que permaneceu com o mesmo tamanho. Um jornal noticiou:
+``desemprego sobe 2\%''. A manchete está correta?
+\solucao
+A taxa subiu $10-8 = 2$ \textbf{pontos percentuais}. Já o número de
+desempregados cresceu $\frac{10-8}{8} = 0{,}25 = 25\%$. Se a cidade tem
+\num{100000} pessoas economicamente ativas, os desempregados passaram de
+\num{8000} para \num{10000}: mais \num{2000} pessoas, um aumento de 25\%.
+\resposta{não. O correto seria ``desemprego sobe 2 pontos percentuais'' ou ``o
+número de desempregados cresce 25\%''.}
+\end{exemplo}
+
+% =====================================================================
+\section{Dicas e macetes}
+% =====================================================================
+
+\begin{dica}[Pense em fatores, não em ``tirar e pôr'']
+Antes de calcular, escreva o fator de cada variação: $+12\%\to 1{,}12$,
+$-7\%\to 0{,}93$, $+0{,}5\%\to 1{,}005$. Com fatores, aumentos e descontos
+viram multiplicações, voltar ao valor original vira divisão, e variações
+sucessivas viram um produto. Isso elimina a maior parte dos distratores.
+\end{dica}
+
+\begin{dica}[Pergunte sempre: por cento de quê?]
+Toda porcentagem tem uma base. Procure no texto as expressões ``de'', ``do
+total'', ``em relação a'', ``sobre o valor de'', ``dos que'', ``a menos que''.
+Em ``30\% a menos que a quantidade de João'', a base é a quantidade de João, e
+não o total de questões.
+\end{dica}
+
+\begin{dica}[Quando não há valores, invente 100]
+Se o enunciado só fala em porcentagens (``o preço subiu $x\%$ e depois
+caiu $y\%$''), atribua 100 ao valor inicial. As contas ficam simples e o
+resultado final já sai em porcentagem do valor inicial.
+\end{dica}
+
+\begin{dica}[Use as alternativas a seu favor]
+Estime antes de calcular: um aumento de 7,2\% seguido de outro de 10\% deve dar
+algo um pouco acima de 17\%. Alternativas muito distantes da estimativa são
+descartadas sem conta. E, quando duas alternativas forem muito próximas,
+\textbf{substitua} o valor no enunciado para conferir qual delas funciona
+exatamente.
+\end{dica}
+
+\begin{macete}[10\%, 5\% e 1\% de cabeça]
+10\% é deslocar a vírgula uma casa; 1\% é deslocar duas casas; 5\% é a metade
+de 10\%. Com isso você monta qualquer porcentagem: 15\% = 10\% + 5\%;
+35\% = $3\times 10\%$ + 5\%; 18\% = 20\% $-$ 2\%.
+Exemplo: 35\% de 240 $= 3\times 24 + 12 = 84$.
+\end{macete}
+
+\begin{macete}[Troca de lugar]
+$a\%$ de $b$ é igual a $b\%$ de $a$, pois $\frac{a}{100}\cdot b = \frac{b}{100}\cdot a$.
+Assim, 8\% de 25 é o mesmo que 25\% de 8, isto é, 2. Escolha a ordem mais fácil!
+\end{macete}
+
+\begin{macete}[Duas variações sucessivas sem multiplicar fatores]
+Para duas variações de taxas $a\%$ e $b\%$ (use sinal negativo para
+descontos), a variação total é
+\[ a + b + \frac{a\cdot b}{100}\ \ (\text{em }\%). \]
+$+20\%$ e $+10\%$: $20+10+2 = 32\%$. \quad $+20\%$ e $-20\%$: $20-20-4 = -4\%$.
+\quad $+30\%$ e $-40\%$: $30-40-12 = -22\%$.
+\end{macete}
+
+\begin{atencao}[Porcentagens sucessivas não se somam]
+Dois descontos sucessivos de 10\% e 20\% \textbf{não} equivalem a 30\%:
+$0{,}9\times 0{,}8 = 0{,}72$, desconto total de 28\%. Um aumento de $x\%$ seguido de
+um desconto de $x\%$ \textbf{sempre} deixa o valor menor que o original. O
+ENEM coloca a soma das taxas como distrator em praticamente toda questão de
+variações sucessivas.
+\end{atencao}
+
+\begin{atencao}[Pontos percentuais $\times$ porcentagem]
+Se uma taxa passa de 4\% para 5\%, ela subiu \textbf{1 ponto percentual}, mas
+cresceu \textbf{25\%}. ``Subiu 1\%'' estaria errado: 1\% de 4\% é 0,04 ponto
+percentual. Leia com atenção se a pergunta quer a diferença entre as taxas ou a
+variação relativa.
+\end{atencao}
+
+\begin{atencao}[Taxa não é fator]
+Um crescimento \emph{de} 135\% leva o valor a $100\% + 135\% = 235\%$ do original
+(fator 2,35), mas a taxa \emph{em si} é $135\% = 1{,}35$. E, para voltar ao
+valor anterior a um aumento, divida pelo fator; nunca aplique ``o mesmo
+percentual ao contrário''.
+\end{atencao}
+
+\begin{resumo}
+\begin{itemize}[leftmargin=1.3em,itemsep=2pt]
+  \item $p\% = \frac{p}{100}$: desloque a vírgula duas casas para a esquerda.
+  \item $p\%$ de $V$ $= \frac{p}{100}\cdot V$; \quad taxa $=\frac{\text{parte}}{\text{todo}}$.
+  \item Aumento de $i$: $\times(1+i)$. \quad Desconto de $i$: $\times(1-i)$.
+  \item Valor original $=$ valor final $\div$ fator.
+  \item Variação percentual $=\frac{V_f}{V_i}-1$ (a base é o valor \emph{inicial}).
+  \item Variações sucessivas: \textbf{multiplique os fatores}; nunca some as taxas.
+  \item Desfazer um aumento $i$: desconto de $\frac{i}{1+i}$ (ex.: $+25\%$ é desfeito por $-20\%$).
+  \item Diferença entre taxas: \textbf{pontos percentuais}; variação relativa: \textbf{porcentagem}.
+  \item Misturas: ancore a conta no componente cuja quantidade não muda.
+\end{itemize}
+\end{resumo}
+
+% =====================================================================
+\secaoenem
+% =====================================================================
+
+\questaoenem{2014-171}
+\begin{resolucao}{C}
+\passo{1. Entendendo o problema.} A carga total é de 12~t. O ponto central
+recebe 60\% dela, e o restante é dividido igualmente entre os dois pontos das
+extremidades. Nas alternativas, o valor do meio corresponde ao ponto central, e os
+outros dois, aos pontos das extremidades (que recebem cargas iguais).
+
+\passo{2. Ponto central.} $60\%$ de $12 = 0{,}6\times 12 = 7{,}2$~t. (De cabeça:
+10\% de 12 é 1,2; então 60\% é $6\times 1{,}2 = 7{,}2$.)
+
+\passo{3. Pontos das extremidades.} Sobram $12 - 7{,}2 = 4{,}8$~t (ou seja, 40\% da
+carga), divididas igualmente: $4{,}8 \div 2 = 2{,}4$~t para cada um (20\% da carga
+para cada).
+
+\passo{4. Conferência.} $2{,}4 + 7{,}2 + 2{,}4 = 12$~t.
+
+\resposta{alternativa C --- 2,4~t; 7,2~t; 2,4~t.}
+
+Item fácil ($b = 0{,}35$): exige apenas calcular a porcentagem de uma quantidade
+e dividir o restante em partes iguais.
+\begin{distratores}
+\alt{A} A soma dá 12~t, mas o ponto central ficaria com $8{,}4 \div 12 = 70\%$ da
+carga, e não 60\%. Não corresponde ao enunciado.
+\alt{B} Dá ao ponto central metade da carga (50\%). É o erro de quem associa
+``a maior parte'' a ``metade'' sem usar o percentual dado.
+\alt{D} Inverte os papéis: dá ao centro os 40\% restantes (4,8~t) e divide os
+60\% (7,2~t) entre as extremidades.
+\alt{E} Dá ao centro apenas 30\% (3,6~t), como se os 60\% fossem repartidos
+entre dois pontos, e divide o resto entre as extremidades.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2024-153}
+\begin{resolucao}{D}
+\passo{1. O que se pede.} A \emph{representação decimal} da taxa de 135,25\%,
+isto é, o número que essa porcentagem representa.
+
+\passo{2. Convertendo.} Por definição, $p\% = \frac{p}{100}$. Então
+\[ 135{,}25\% = \frac{135{,}25}{100} = 1{,}3525. \]
+Na prática, basta deslocar a vírgula duas casas para a esquerda:
+$135{,}25 \to 1{,}3525$.
+
+\passo{3. Interpretando.} Uma taxa maior que 100\% é representada por um
+decimal maior que 1, o que é perfeitamente possível: a população mais que
+dobrou. Cuidado para não confundir a \emph{taxa} (1,3525) com o \emph{fator} de
+crescimento ($1 + 1{,}3525 = 2{,}3525$), que não é o que o item pede.
+
+\resposta{alternativa D --- 1,3525.}
+
+Item médio ($b = 1{,}23$): a conta é imediata, mas muitos estudantes estranham
+uma porcentagem maior que 100\% e hesitam em escrever um decimal maior que 1.
+\begin{distratores}
+\alt{A} Multiplica por 100 em vez de dividir ($135{,}25\times 100 = \num{13525}$).
+\alt{B} Apenas retira o símbolo \%, sem fazer a divisão por 100.
+\alt{C} Desloca a vírgula só uma casa (divide por 10).
+\alt{E} Desloca a vírgula três casas (divide por \num{1000}), talvez por achar
+que toda taxa precisa ficar entre 0 e 1.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2024-140}
+\begin{resolucao}{B}
+\passo{1. João.} João acertou 75\% de 200 questões: $0{,}75\times 200 = 150$
+questões. Seu percentual é $P = 75$, e a faixa $75 \le P < 90$ corresponde a
+\textbf{muito bom} (o valor 75 está incluído nessa faixa, e não na anterior).
+
+\passo{2. Felipe: identifique a base.} Felipe acertou ``30\% a menos \emph{que
+a quantidade de questões que João acertou}''. A base é 150 (e não 200):
+\[ 150\times(1-0{,}30) = 150\times 0{,}7 = 105 \text{ questões}. \]
+
+\passo{3. Percentual de Felipe.} $P = \dfrac{105}{200} = 0{,}525 = 52{,}5\%$,
+que está na faixa $50 \le P < 60$: \textbf{regular}.
+
+\resposta{alternativa B --- muito bom e regular.}
+
+Item médio ($b = 1{,}61$): o ponto central é perceber que os 30\% incidem sobre
+os acertos de João, e não são pontos percentuais a subtrair de 75\%.
+\begin{distratores}
+\alt{A} Interpreta que Felipe acertou $100\% - 30\% = 70\%$ das questões
+(140 acertos), o que daria ``bom''.
+\alt{C} Subtrai 30 pontos percentuais: $75\% - 30\% = 45\%$, que seria
+``insatisfatório''. É o erro de confundir porcentagem com pontos percentuais.
+\alt{D} Classifica João como ``bom'', lendo errado o limite $60 \le P < 75$ (o 75
+não pertence a essa faixa).
+\alt{E} Combina os dois erros anteriores: João como ``bom'' e Felipe com 45\%.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2019-153}
+\begin{resolucao}{E}
+\passo{1. Os dados.} Em 2000, o rendimento era de R\$~\num{1250,00}. De 2000 para
+2010 houve aumento de 7,2\%; de 2010 para 2020, projeta-se aumento de 10\%
+\emph{em relação a 2010}. São duas variações sucessivas.
+
+\passo{2. Rendimento em 2010.} $\num{1250}\times 1{,}072 = \num{1340}$.
+
+\passo{3. Rendimento em 2020.} $\num{1340}\times 1{,}10 = \num{1474}$.
+
+\passo{4. Atalho com o macete.} Variação total: $7{,}2 + 10 + \frac{7{,}2\times
+10}{100} = 17{,}92\%$, e $\num{1250}\times 1{,}1792 = \num{1474}$.
+
+\resposta{alternativa E --- R\$~\num{1474,00}.}
+
+Item difícil ($b = 2{,}36$): as contas são simples, mas é preciso perceber que
+os 10\% incidem sobre o valor de 2010 (já aumentado), e não sobre o de 2000.
+\begin{distratores}
+\alt{A} R\$~\num{1340,00} é o rendimento de 2010: o estudante parou na metade.
+\alt{B} Aplica ``10\% a mais'' sobre a \emph{taxa}: $7{,}2\%\times 1{,}1 = 7{,}92\%$ e
+$\num{1250}\times 1{,}0792 = \num{1349}$.
+\alt{C} Aplica os 10\% sobre o valor de 2000: $\num{1250}\times 1{,}1 = \num{1375}$.
+\alt{D} Soma as taxas: $7{,}2\% + 10\% = 17{,}2\%$ e $\num{1250}\times 1{,}172 =
+\num{1465}$. É o distrator clássico das variações sucessivas.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2025-140}
+\begin{resolucao}{E}
+\passo{1. A âncora.} Retira-se apenas $S_1$; a quantidade de $S_2$ não muda.
+Inicialmente, $S_2$ corresponde a $100\% - 99{,}95\% = 0{,}05\%$ de 10~L:
+\[ 0{,}0005\times 10 = 0{,}005 \text{ L de } S_2. \]
+
+\passo{2. O novo total.} Na nova solução, $S_1$ deve ser 99,90\%, logo $S_2$
+será $0{,}10\%$ do total. Se $0{,}005$~L é 0,1\% do novo volume $V$:
+\[ 0{,}001\cdot V = 0{,}005 \;\Rightarrow\; V = 5 \text{ L}. \]
+
+\passo{3. Quanto sai.} O volume caiu de 10~L para 5~L, e tudo o que saiu foi
+$S_1$: retiram-se $10 - 5 = 5$~L de $S_1$.
+
+\passo{4. Visão rápida.} A participação de $S_2$ \emph{dobrou} (de 0,05\% para
+0,10\%) sem que sua quantidade mudasse; então o total precisa cair pela metade.
+
+\passo{5. Conferência.} Restam $9{,}995 - 5 = 4{,}995$~L de $S_1$ em 5~L de
+solução: $\frac{4{,}995}{5} = 0{,}999 = 99{,}90\%$.
+
+\resposta{alternativa E --- 5,0000 L.}
+
+Item difícil ($b = 2{,}92$): o resultado contraria a intuição (uma mudança de
+apenas 0,05 ponto percentual exige retirar metade da solução) e só sai com
+facilidade para quem ancora a conta na substância que não muda.
+\begin{distratores}
+\alt{A} Aplica a diferença de 0,05 ponto percentual sobre os 10~L:
+$0{,}0005\times 10 = 0{,}005$. Retirando só isso, $S_1$ ficaria com
+$\approx 99{,}9499\%$.
+\alt{B} Calcula 0,10\% de 10~L, isto é, a quantidade de $S_2$ que haveria
+\emph{se o volume não mudasse}.
+\alt{C} Usa 0,05 como se fosse a taxa decimal (5\%) e calcula $0{,}05\times 10$.
+\alt{D} Valor próximo, mas não exato: retirando 4,9775~L, sobrariam 5,0225~L
+com $S_1 \approx 99{,}9004\%$. Quem só estima ``um pouco menos de 5'' cai aqui; a
+substituição no enunciado mostra que apenas 5~L dá exatamente 99,90\%.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2015-159}
+\begin{resolucao}{E}
+\passo{1. Duas bases diferentes.} ``Os 10\% mais pobres'' é uma fração da
+\emph{população}; ``1,1\% do total de rendimentos'' é uma fração da
+\emph{renda}. Chame de $N$ o número de pessoas e de $T$ o total de rendimentos.
+A renda média geral é $\frac{T}{N} = \num{1202}$.
+
+\passo{2. Renda média de cada grupo.} A média de um grupo é a renda do grupo
+dividida pelo número de pessoas do grupo:
+\[
+  \text{10\% mais ricos: } \frac{0{,}445\,T}{0{,}1\,N} = 4{,}45\cdot\frac{T}{N}
+  = 4{,}45\times\num{1202} = \num{5348,90};
+\]
+\[
+  \text{10\% mais pobres: } \frac{0{,}011\,T}{0{,}1\,N} = 0{,}11\cdot\frac{T}{N}
+  = 0{,}11\times\num{1202} = 132{,}22.
+\]
+
+\passo{3. Diferença.} $\num{5348,90} - 132{,}22 = \num{5216,68}$. (Ou, direto:
+$(4{,}45 - 0{,}11)\times\num{1202} = 4{,}34\times\num{1202} = \num{5216,68}$.)
+
+\passo{4. Observação.} O número de pessoas (101,8 milhões) não é necessário:
+ele se cancela. Esse dado está no texto para distrair.
+
+\resposta{alternativa E --- R\$~\num{5216,68}.}
+
+Item muito difícil ($b = 3{,}03$): exige modelar a média de um subgrupo
+combinando duas porcentagens com bases diferentes (população e renda).
+\begin{distratores}
+\alt{A} $240{,}40 = 0{,}2\times\num{1202}$: usa apenas os 10\% + 10\% de pessoas
+e ignora as frações da renda.
+\alt{B} $548{,}11 = (0{,}445 + 0{,}011)\times\num{1202}$: aplica as porcentagens da
+renda diretamente à média, somando em vez de subtrair, e esquece de dividir
+pela fração da população (0,1).
+\alt{C} $\num{1723,67} = 1{,}445\times\num{1202} - 0{,}011\times\num{1202}$: trata
+44,5\% como um acréscimo sobre a média e 1,1\% como fração da média.
+\alt{D} $\num{4026,70} = 4{,}45\times\num{1202} - 1{,}1\times\num{1202}$: faz a
+conta certa para os mais ricos, mas, para os mais pobres, lê 1,1\% como 11\%
+(ou divide por 1\% em vez de 10\%), obtendo 1,1 vez a média.
+\end{distratores}
+\end{resolucao}
+
+% =====================================================================
+\secaoineditas
+% =====================================================================
+
+\begin{questaoinedita}{1}{3}
+Uma loja de artigos esportivos oferece, para pagamentos via Pix, um desconto
+de 15\% sobre o preço de etiqueta. Um par de tênis tem preço de etiqueta de
+R\$~280,00.
+
+Um cliente que comprar esse par de tênis pagando via Pix desembolsará
+\begin{alternativas*}[3]
+  \item R\$~42,00.
+  \item R\$~238,00.
+  \item R\$~252,00.
+  \item R\$~265,00.
+  \item R\$~322,00.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Fator do desconto.} Com 15\% de desconto, o cliente paga
+$100\% - 15\% = 85\%$ do preço: fator 0,85.
+
+\passo{2. Cálculo.} $280\times 0{,}85 = 238$. (Ou: 10\% de 280 é 28; 5\% é 14;
+o desconto é $28 + 14 = 42$, e $280 - 42 = 238$.)
+
+\resposta{alternativa B --- R\$~238,00.}
+\begin{distratores}
+\alt{A} R\$~42,00 é o valor do \emph{desconto}, e não o valor pago.
+\alt{C} Aplica um desconto de 10\% ($280\times 0{,}9 = 252$), usando o
+percentual mais ``fácil'' em vez de 15\%.
+\alt{D} Subtrai 15 reais em vez de 15\%: $280 - 15 = 265$.
+\alt{E} Acrescenta 15\% em vez de descontar: $280\times 1{,}15 = 322$.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{25}
+Um instituto de pesquisa acompanha mensalmente o preço de itens da cesta
+básica em uma cidade. O quadro apresenta o preço médio de cinco desses itens
+em janeiro e em dezembro de um mesmo ano.
+
+\begin{center}
+\small
+\begin{tabular}{lcc}
+\toprule
+\textbf{Item} & \textbf{Janeiro (R\$)} & \textbf{Dezembro (R\$)}\\
+\midrule
+Arroz (pacote de 5 kg) & 24,00 & 28,80\\
+Feijão (1 kg) & 8,00 & 10,00\\
+Café (500 g) & 16,00 & 19,20\\
+Leite (1 L) & 4,50 & 5,85\\
+Carne (1 kg) & 40,00 & 46,00\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+O item que teve o maior aumento percentual de preço nesse período, e o valor
+desse aumento, são
+\begin{alternativas}
+  \item a carne, com aumento de R\$~6,00.
+  \item o feijão, com aumento de 25\%.
+  \item o leite, com aumento de 23\%, aproximadamente.
+  \item o leite, com aumento de 30\%.
+  \item o leite, com aumento de 130\%.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{D}
+\passo{1. O que comparar.} O aumento \emph{percentual} compara o aumento em
+reais com o preço \emph{inicial} (janeiro) de cada item:
+$\frac{\text{dez} - \text{jan}}{\text{jan}}$.
+
+\passo{2. Calculando item a item.}
+\begin{center}
+\small
+\begin{tabular}{lccc}
+\toprule
+Item & Aumento (R\$) & Razão dez/jan & Aumento (\%)\\
+\midrule
+Arroz & 4,80 & 1,20 & 20\%\\
+Feijão & 2,00 & 1,25 & 25\%\\
+Café & 3,20 & 1,20 & 20\%\\
+Leite & 1,35 & 1,30 & \textbf{30\%}\\
+Carne & 6,00 & 1,15 & 15\%\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\passo{3. Conclusão.} O leite teve o \emph{menor} aumento em reais de todos os
+itens, mas o maior aumento percentual, porque partiu de um preço baixo:
+$\frac{1{,}35}{4{,}50} = 0{,}30$.
+
+\resposta{alternativa D --- o leite, com aumento de 30\%.}
+\begin{distratores}
+\alt{A} A carne teve o maior aumento \emph{em reais}, mas, em relação ao seu
+preço, subiu só 15\%. Confunde variação absoluta com variação percentual.
+\alt{B} O feijão subiu 25\%, o segundo maior percentual. Quem calcula apenas os
+itens de preço ``redondo'' e não faz a conta do leite escolhe esta opção.
+\alt{C} Usa o preço de \emph{dezembro} como base: $\frac{1{,}35}{5{,}85}\approx
+23\%$. A referência correta é o valor inicial.
+\alt{E} Confunde o fator ($\frac{5{,}85}{4{,}50} = 1{,}30$, isto é, 130\% do preço
+inicial) com a taxa de aumento (30\%).
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{4}
+Uma rede de lojas tinha \num{60000} clientes com crediário ativo em 2023 e
+manteve exatamente esse número em 2024. A taxa de inadimplência desses clientes
+passou de 4\% em 2023 para 5\% em 2024. Um portal de notícias publicou a
+manchete: ``Inadimplência na rede sobe 1\%''.
+
+Um leitor escreveu ao portal pedindo a correção da manchete. Para descrever
+corretamente a mudança, o portal deveria informar que a taxa de inadimplência
+subiu
+\begin{alternativas}
+  \item 1 ponto percentual e que o número de clientes inadimplentes aumentou 25\%.
+  \item 1 ponto percentual e que o número de clientes inadimplentes aumentou 20\%.
+  \item 1 ponto percentual e que o número de clientes inadimplentes aumentou 125\%.
+  \item 25 pontos percentuais e que o número de clientes inadimplentes aumentou 1\%.
+  \item 1 ponto percentual e que o número de clientes inadimplentes aumentou 1\%.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{A}
+\passo{1. Diferença entre as taxas.} De 4\% para 5\%: $5 - 4 = 1$ ponto
+percentual.
+
+\passo{2. Número de inadimplentes.} Em 2023: $0{,}04\times\num{60000} = \num{2400}$.
+Em 2024: $0{,}05\times\num{60000} = \num{3000}$. Aumento de 600 clientes.
+
+\passo{3. Variação relativa.} $\frac{600}{\num{2400}} = 0{,}25 = 25\%$. (Direto
+pelas taxas: $\frac{5-4}{4} = 25\%$, já que a base de clientes não mudou.)
+
+\resposta{alternativa A --- 1 ponto percentual; aumento de 25\%.}
+\begin{distratores}
+\alt{B} Usa a taxa \emph{final} como base: $\frac{1}{5} = 20\%$ (ou
+$\frac{600}{\num{3000}}$).
+\alt{C} Confunde o fator $\frac{5}{4} = 1{,}25$ (125\% do valor inicial) com a
+taxa de aumento.
+\alt{D} Inverte os dois conceitos: chama a variação relativa de pontos
+percentuais e a diferença de taxas de porcentagem.
+\alt{E} Repete o erro da manchete: trata a diferença de 1 ponto percentual como
+um aumento de 1\%.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{3}
+No início de março, a ação de uma empresa era negociada na bolsa de valores a
+R\$~40,00. Ao longo de março, a ação desvalorizou 25\%. Em abril, valorizou
+20\% em relação ao preço do fim de março. Um investidor que comprou ações no
+início de março deseja vendê-las sem prejuízo, isto é, pelo menos pelo preço
+que pagou.
+
+Para isso, em maio, a valorização mínima da ação, em relação ao preço do fim de
+abril, deverá ser de, aproximadamente,
+\begin{alternativas*}[5]
+  \item 5,0\%.
+  \item 10,0\%.
+  \item 11,1\%.
+  \item 33,3\%.
+  \item 45,0\%.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{C}
+\passo{1. Fim de março.} Queda de 25\%: $40\times 0{,}75 = 30$ reais.
+
+\passo{2. Fim de abril.} Alta de 20\% sobre 30: $30\times 1{,}2 = 36$ reais.
+(Fator acumulado: $0{,}75\times 1{,}2 = 0{,}9$, ou seja, a ação ainda está 10\%
+abaixo do preço inicial.)
+
+\passo{3. Quanto falta.} Para voltar a R\$~40,00, a ação precisa subir
+R\$~4,00 \emph{a partir de R\$~36,00}:
+\[ \frac{4}{36} = \frac{1}{9}\approx 0{,}111 = 11{,}1\%. \]
+
+\passo{4. Pelo macete.} Para desfazer uma queda acumulada de 10\%, o aumento
+necessário é $\frac{0{,}1}{1-0{,}1} = \frac{1}{9}\approx 11{,}1\%$.
+
+\resposta{alternativa C --- aproximadamente 11,1\%.}
+\begin{distratores}
+\alt{A} Subtrai as taxas: $25\% - 20\% = 5\%$, como se as duas incidissem sobre
+o mesmo valor.
+\alt{B} Calcula corretamente a perda acumulada (10\%), mas supõe que uma alta de
+10\% a recupera. Na verdade, $36\times 1{,}1 = 39{,}60 < 40$.
+\alt{D} Calcula a alta necessária para desfazer apenas a queda de março
+($\frac{10}{30}\approx 33{,}3\%$), ignorando a valorização de abril.
+\alt{E} Soma as taxas ($25\% + 20\%$), sem significado no problema.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{3}
+Uma empresa tem 400 funcionários, dos quais 25\% vão ao trabalho de bicicleta.
+Para receber um selo de ``empresa amiga da mobilidade'', ela precisa que pelo
+menos 32\% de todos os seus funcionários usem a bicicleta como meio de
+transporte. A empresa vai contratar mais 100 funcionários e decidiu dar
+preferência, nesse processo seletivo, a candidatos que já usam a bicicleta.
+Considere que nenhum dos funcionários atuais mudará seu meio de transporte.
+
+Para que a empresa obtenha o selo, o percentual mínimo dos novos contratados
+que devem ir ao trabalho de bicicleta é
+\begin{alternativas*}[5]
+  \item 7\%.
+  \item 28\%.
+  \item 32\%.
+  \item 39\%.
+  \item 60\%.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{E}
+\passo{1. Situação atual.} $25\%$ de $400 = 100$ ciclistas.
+
+\passo{2. Meta sobre o novo total.} Após as contratações, a empresa terá
+$400 + 100 = 500$ funcionários. A meta é $32\%$ de $500 = 160$ ciclistas.
+
+\passo{3. Quantos novos ciclistas.} Faltam $160 - 100 = 60$ ciclistas, que
+precisam estar entre os 100 contratados: $\frac{60}{100} = 60\%$.
+
+\passo{4. Interpretação.} Repare que a base mudou (de 400 para 500): os 100
+ciclistas atuais passarão a ser só $\frac{100}{500} = 20\%$ do total. Por isso,
+os novos contratados precisam ``puxar'' bastante a média.
+
+\resposta{alternativa E --- 60\%.}
+\begin{distratores}
+\alt{A} Toma a diferença de $32 - 25 = 7$ pontos percentuais como se fosse a
+resposta.
+\alt{B} Esquece que o total de funcionários aumenta: calcula a meta sobre 400
+($0{,}32\times 400 = 128$) e obtém $128 - 100 = 28$ ciclistas, ou seja, 28\%.
+\alt{C} Supõe que basta os novos contratados terem a mesma taxa da meta (32\%).
+Assim, haveria apenas $100 + 32 = 132$ ciclistas, ou 26,4\% do total.
+\alt{D} Usa a média simples das taxas, $\frac{25 + x}{2} = 32$, que dá $x = 39$.
+A média correta é ponderada pelos tamanhos dos grupos (400 e 100).
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{4}{5}
+Uma confeiteira vende bolos por meio de um aplicativo de entregas. Cada bolo
+tem custo de produção de R\$~48,00 (ingredientes, embalagem e energia). Sobre o
+\textbf{preço de venda}, o aplicativo retém uma comissão de 12\%, e a
+confeiteira recolhe 8\% de imposto, também calculado sobre o preço de venda.
+
+Ela quer definir o preço de venda de modo que, depois de descontados a
+comissão e o imposto, o valor que recebe por bolo cubra o custo de produção e
+ainda lhe garanta um lucro de 25\% sobre esse custo.
+
+O menor preço de venda que atende a essa condição é
+\begin{alternativas*}[5]
+  \item R\$~69,60.
+  \item R\$~72,00.
+  \item R\$~72,58.
+  \item R\$~75,00.
+  \item R\$~87,27.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{D}
+\passo{1. Quanto ela precisa receber.} Custo mais 25\% de lucro sobre o custo:
+$48\times 1{,}25 = 60$ reais por bolo.
+
+\passo{2. Quanto sobra do preço de venda.} Comissão e imposto somam
+$12\% + 8\% = 20\%$ \emph{do mesmo valor} (o preço de venda $P$), então podem ser
+somados: sobram $80\%$ de $P$, ou $0{,}8P$.
+
+\passo{3. Equação.} $0{,}8P = 60 \;\Rightarrow\; P = \frac{60}{0{,}8} = 75$.
+
+\passo{4. Conferência.} Comissão: $0{,}12\times 75 = 9$; imposto:
+$0{,}08\times 75 = 6$. Ela recebe $75 - 9 - 6 = 60 = 48 + 12$, e
+$\frac{12}{48} = 25\%$.
+
+\resposta{alternativa D --- R\$~75,00.}
+
+Por que é difícil: os percentuais têm bases diferentes (comissão e imposto
+incidem sobre o preço de venda; o lucro, sobre o custo). Só se pode somar
+porcentagens que incidem sobre a mesma base.
+\begin{distratores}
+\alt{A} Soma tudo sobre o custo: $48\times(1 + 0{,}12 + 0{,}08 + 0{,}25) = 48\times
+1{,}45 = 69{,}60$. Com esse preço, ela receberia $0{,}8\times 69{,}60 = 55{,}68$,
+um lucro de só 16\%.
+\alt{B} Acrescenta 20\% ``por fora'' ao valor desejado: $60\times 1{,}2 = 72$. Mas
+20\% de 72 é 14,40, e sobrariam apenas 57,60.
+\alt{C} Aplica os três percentuais como aumentos sucessivos sobre o custo:
+$48\times 1{,}25\times 1{,}12\times 1{,}08\approx 72{,}58$, novamente com bases
+erradas.
+\alt{E} Trata também o lucro como porcentagem do preço de venda:
+$\frac{48}{1 - 0{,}45}\approx 87{,}27$. Isso dá lucro de 25\% do preço de venda,
+e não do custo, como foi pedido; não é o \emph{menor} preço que atende à condição.
+\end{distratores}
+\end{resolucao}

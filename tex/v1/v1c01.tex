@@ -1,0 +1,756 @@
+\capitulo{v1c01}
+
+%% =====================================================================
+\section{Os conjuntos numéricos}
+%% =====================================================================
+
+Antes de qualquer fórmula, o ENEM quer saber se você \textbf{lê bem os números do dia a dia}: o
+preço com centavos no cardápio, a temperatura negativa na previsão do tempo, o ``R\$~1,35 bilhão''
+da manchete, o ``0,00011~mm'' do diâmetro de um vírus. Quase todas as questões de Matemática passam
+por aqui, e muitas são resolvidas \emph{só} com isso. Por isso, vale organizar os números em
+``famílias'', os \textbf{conjuntos numéricos}, e saber como cada uma se comporta nas operações.
+
+\subsection{Naturais, inteiros, racionais e reais}
+
+\begin{definicao}[Os conjuntos numéricos]
+\begin{itemize}[leftmargin=1.4em,itemsep=2pt]
+  \item \textbf{Naturais:} $\mathbb{N}=\{0,1,2,3,\dots\}$ --- servem para \emph{contar}.
+  \item \textbf{Inteiros:} $\mathbb{Z}=\{\dots,-3,-2,-1,0,1,2,3,\dots\}$ --- acrescentam os negativos
+        (dívidas, temperaturas abaixo de zero, andares de subsolo).
+  \item \textbf{Racionais:} $\mathbb{Q}=\left\{\dfrac{a}{b}\;\middle|\;a,b\in\mathbb{Z},\ b\neq 0\right\}$ ---
+        todo número que pode ser escrito como \emph{fração} de inteiros. Na forma decimal, ou a
+        representação \textbf{termina} ($\frac{3}{4}=0,75$) ou é uma \textbf{dízima periódica}
+        ($\frac{1}{3}=0,333\ldots$).
+  \item \textbf{Irracionais:} números cuja forma decimal é \textbf{infinita e não periódica}, como
+        $\sqrt{2}=1,41421\ldots$ e $\pi=3,14159\ldots$ Não podem ser escritos como fração de inteiros.
+  \item \textbf{Reais:} $\mathbb{R}$ reúne racionais e irracionais: são todos os pontos da reta numérica.
+\end{itemize}
+\end{definicao}
+
+Cada conjunto ``cabe'' dentro do seguinte: $\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}$.
+A figura resume essa organização.
+
+\begin{center}
+\begin{tikzpicture}[font=\small]
+  \draw[rounded corners=12pt,fill=ebookSoft,draw=ebookPrim,line width=.9pt] (0,0) rectangle (12,5.4);
+  \node[anchor=north west,text=ebookPrim,font=\sffamily\bfseries] at (0.2,5.3) {$\mathbb{R}$ \ reais};
+  % racionais
+  \draw[rounded corners=10pt,fill=ebookLight!70,draw=ebookPrim,line width=.7pt] (0.4,0.35) rectangle (8.1,4.75);
+  \node[anchor=north west,text=ebookDark,font=\sffamily\bfseries] at (0.55,4.7) {$\mathbb{Q}$ \ racionais};
+  % inteiros
+  \draw[rounded corners=9pt,fill=white,draw=ebookPrim,line width=.7pt] (0.75,0.7) rectangle (5.6,4.05);
+  \node[anchor=north west,text=ebookDark,font=\sffamily\bfseries] at (0.9,4.0) {$\mathbb{Z}$ \ inteiros};
+  % naturais
+  \draw[rounded corners=8pt,fill=ebookAcc!18,draw=ebookAcc,line width=.7pt] (1.1,1.05) rectangle (3.3,3.3);
+  \node[anchor=north west,text=ebookDark,font=\sffamily\bfseries] at (1.2,3.25) {$\mathbb{N}$ \ naturais};
+  \node at (2.2,2.2) {$0\quad 1\quad 7$};
+  \node at (2.2,1.55) {$2\,026$};
+  \node at (4.45,2.6) {$-3$};
+  \node at (4.45,1.7) {$-12$};
+  \node at (6.85,3.4) {$\dfrac{1}{2}$};
+  \node at (6.85,2.35) {$-0,75$};
+  \node at (6.85,1.3) {$0,333\ldots$};
+  % irracionais
+  \draw[rounded corners=10pt,fill=white,draw=ebookAcc,dashed,line width=.8pt] (8.45,0.35) rectangle (11.6,4.75);
+  \node[anchor=north,text=ebookDark,font=\sffamily\bfseries] at (10.02,4.7) {irracionais};
+  \node at (10.02,3.35) {$\sqrt{2}$};
+  \node at (10.02,2.45) {$\pi$};
+  \node at (10.02,1.45) {$1,01001000\ldots$};
+\end{tikzpicture}
+\end{center}
+
+Todo real ocupa um lugar na \textbf{reta numérica}: os números crescem da esquerda para a direita e
+os negativos ficam à esquerda do zero. Os irracionais também têm lugar marcado: $\sqrt{2}\approx 1,41$
+fica entre 1 e 2, e $\pi\approx 3,14$ fica logo depois do 3.
+
+\begin{center}
+\begin{tikzpicture}[x=1.65cm,font=\small]
+  \draw[-{Latex[length=2.5mm]},line width=.8pt,ebookText] (-3.4,0) -- (3.7,0);
+  \foreach \x in {-3,...,3}{\draw[line width=.7pt] (\x,0.09) -- (\x,-0.09) node[below=2pt] {$\x$};}
+  \foreach \p/\r/\c in {-2.5/{-\frac{5}{2}}/ebookPrim, -0.75/{-0,75}/ebookPrim, 0.5/{\frac{1}{2}}/ebookPrim, 1.4142/{\sqrt{2}}/ebookAcc, 3.1416/{\pi}/ebookAcc}{
+    \fill[\c] (\p,0) circle (2.6pt);
+    \node[above=4pt,text=\c] at (\p,0) {$\r$};}
+\end{tikzpicture}
+\end{center}
+
+\subsection{Operações com inteiros: subir e descer}
+
+Somar um número negativo é ``andar para a esquerda'' na reta; subtrair um negativo é ``andar para a
+direita''. Em contextos do ENEM (saldo bancário, temperatura, andares de um prédio, gols marcados e
+sofridos), pense sempre em \textbf{deslocamentos} sobre a reta.
+
+\begin{formula}[Regras de sinais]
+$a-(-b)=a+b \qquad (+)\cdot(+)=+ \qquad (-)\cdot(-)=+ \qquad (+)\cdot(-)=(-)\cdot(+)=-$
+\end{formula}
+
+A mesma regra de sinais vale para a divisão. Para a \textbf{variação} entre dois valores, use sempre
+``final menos inicial'': se o resultado for positivo, houve aumento; se negativo, diminuição.
+
+\begin{exemplo}[Variação de temperatura]
+Em uma cidade serrana, o termômetro marcou $\SI{-4}{\celsius}$ às 6~h e $\SI{11}{\celsius}$ às 14~h.
+Depois, à meia-noite, a temperatura estava $\SI{6}{\celsius}$ abaixo da marcada às 6~h. Qual foi a
+variação entre as 6~h e as 14~h e qual era a temperatura à meia-noite?
+\solucao
+A variação é final menos inicial: $11-(-4)=11+4=\SI{15}{\celsius}$ (aumento de 15 graus). À meia-noite,
+a temperatura estava 6 graus abaixo de $-4$: $-4-6=\SI{-10}{\celsius}$. Repare que ``abaixo'' de um
+negativo leva a um número \emph{ainda menor}, mais à esquerda na reta.
+\end{exemplo}
+
+%% =====================================================================
+\section{Frações, decimais e arredondamentos}
+%% =====================================================================
+
+Frações aparecem em receitas, em medidas de polegadas, em ``dois terços da turma'', em partituras
+musicais. O ENEM gosta de misturar representações: a mesma quantidade pode surgir como fração,
+decimal, porcentagem ou número misto, e você precisa reconhecer que são \emph{o mesmo número}.
+
+\subsection{Frações equivalentes e operações}
+
+Multiplicar ou dividir numerador e denominador pelo mesmo número (não nulo) não muda a fração:
+$\frac{18}{4}=\frac{9}{2}=4,5$. Para operar:
+
+\begin{formula}[Operações com frações]
+$\dfrac{a}{b}\pm\dfrac{c}{d}=\dfrac{ad\pm bc}{bd} \qquad\quad
+\dfrac{a}{b}\cdot\dfrac{c}{d}=\dfrac{ac}{bd} \qquad\quad
+\dfrac{a}{b}\div\dfrac{c}{d}=\dfrac{a}{b}\cdot\dfrac{d}{c}$
+\end{formula}
+
+Na soma e na subtração, é mais econômico usar o \textbf{MMC dos denominadores}:
+$\frac{5}{6}-\frac{1}{2}=\frac{5}{6}-\frac{3}{6}=\frac{2}{6}=\frac{1}{3}$.
+Um \textbf{número misto} como $3\frac{1}{2}$ significa $3+\frac{1}{2}=\frac{7}{2}=3,5$ (é uma
+\emph{soma}, não um produto).
+
+\subsection{Fração, decimal e porcentagem}
+
+Para passar de fração a decimal, divida o numerador pelo denominador. Vale a pena ter de cabeça as
+equivalências mais comuns:
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{l*{8}{c}}
+\toprule
+\textbf{Fração} & $\frac{1}{2}$ & $\frac{1}{4}$ & $\frac{3}{4}$ & $\frac{1}{5}$ & $\frac{1}{8}$ & $\frac{1}{10}$ & $\frac{1}{3}$ & $\frac{2}{3}$\\
+\midrule
+\textbf{Decimal} & 0,5 & 0,25 & 0,75 & 0,2 & 0,125 & 0,1 & $0,333\ldots$ & $0,666\ldots$\\
+\textbf{Porcentagem} & 50\% & 25\% & 75\% & 20\% & 12,5\% & 10\% & $\approx 33,3\%$ & $\approx 66,7\%$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+O caminho inverso também é útil. Um decimal \textbf{finito} vira fração com denominador 10, 100,
+1\,000\ldots: $0,125=\frac{125}{1000}=\frac{1}{8}$. Uma \textbf{dízima periódica} simples vira
+fração com o período no numerador e tantos \textbf{noves} quantos forem os algarismos do período.
+
+\begin{exemplo}[Dízima periódica]
+Escreva $0,454545\ldots$ e $2,777\ldots$ na forma de fração irredutível.
+\solucao
+Em $0,4545\ldots$ o período é $45$ (dois algarismos), então $0,\overline{45}=\frac{45}{99}=\frac{5}{11}$.
+Conferindo pelo método algébrico: se $x=0,4545\ldots$, então $100x=45,4545\ldots$ e, subtraindo,
+$99x=45$, logo $x=\frac{45}{99}$. Para $2,777\ldots$, separe a parte inteira:
+$2+0,\overline{7}=2+\frac{7}{9}=\frac{25}{9}$.
+\end{exemplo}
+
+\subsection{Arredondar e truncar}
+
+\textbf{Arredondar} para uma casa decimal: olhe a casa seguinte; se ela for 5 ou mais, aumente
+uma unidade; se for menor que 5, mantenha. Assim, $1,333\ldots\approx 1,3$ e $4,8333\ldots\approx 4,8$,
+mas $2,46\approx 2,5$. \textbf{Truncar} é simplesmente cortar as casas extras ($2,46\to 2,4$).
+Em problemas com várias etapas, \textbf{arredonde só no final}: arredondamentos intermediários
+acumulam erro e podem levar a um distrator.
+
+\begin{exemplo}[Orçamento doméstico]
+Joana gasta $\frac{1}{3}$ do salário com aluguel e $\frac{1}{4}$ com alimentação. Sobram
+R\$~1\,250,00 para as demais despesas. Qual é o salário de Joana?
+\solucao
+A fração gasta é $\frac{1}{3}+\frac{1}{4}=\frac{4}{12}+\frac{3}{12}=\frac{7}{12}$; logo, sobram
+$1-\frac{7}{12}=\frac{5}{12}$ do salário. Se $\frac{5}{12}$ do salário valem R\$~1\,250, então
+$\frac{1}{12}$ vale $1\,250\div 5=250$ e o salário inteiro vale $12\cdot 250=$ R\$~3\,000,00.
+\emph{Conferência:} $\frac{1}{3}$ de 3\,000 é 1\,000 e $\frac{1}{4}$ é 750; $3\,000-1\,000-750=1\,250$. \checkmark
+\end{exemplo}
+
+%% =====================================================================
+\section{Potências, raízes e notação científica}
+%% =====================================================================
+
+Distâncias astronômicas, tamanhos de vírus, população mundial, dados de um celular: números muito
+grandes ou muito pequenos são escritos com \textbf{potências de 10}. O ENEM cobra isso com
+frequência, quase sempre com uma conversão de unidades no meio do caminho.
+
+\subsection{Propriedades das potências e raízes}
+
+\begin{formula}[Propriedades (para $a\neq 0$)]
+$a^m\cdot a^n=a^{m+n} \qquad \dfrac{a^m}{a^n}=a^{m-n} \qquad (a^m)^n=a^{m\cdot n} \qquad
+a^0=1 \qquad a^{-n}=\dfrac{1}{a^n} \qquad a^{\frac{m}{n}}=\sqrt[n]{a^m}$
+\end{formula}
+
+A última propriedade mostra que \textbf{expoente fracionário é raiz}: $4^{\frac{1}{2}}=\sqrt{4}=2$,
+$8^{\frac{2}{3}}=\sqrt[3]{8^2}=\left(\sqrt[3]{8}\right)^2=2^2=4$ e
+$27^{-\frac{1}{3}}=\frac{1}{\sqrt[3]{27}}=\frac{1}{3}$. Para raízes, valem
+$\sqrt{a\cdot b}=\sqrt{a}\cdot\sqrt{b}$ e $\sqrt{\frac{a}{b}}=\frac{\sqrt{a}}{\sqrt{b}}$ (com $a,b\ge 0$),
+mas \textbf{não} vale $\sqrt{a+b}=\sqrt{a}+\sqrt{b}$: veja que $\sqrt{9+16}=5$, e não $3+4=7$.
+
+\subsection{Notação científica}
+
+\begin{definicao}[Notação científica]
+Um número positivo está em notação científica quando escrito como
+\[ N = a\times 10^{n}, \qquad\text{com } 1\le a<10 \text{ e } n \text{ inteiro.} \]
+Exemplos: $1\,350\,000\,000=1,35\times 10^{9}$ \quad e \quad $0,00011=1,1\times 10^{-4}$.
+\end{definicao}
+
+Para converter, conte quantas casas a vírgula ``anda'' até ficar logo depois do primeiro algarismo
+não nulo: se ela andar para a \textbf{esquerda}, o expoente é \textbf{positivo}; se andar para a
+\textbf{direita}, é \textbf{negativo}. As palavras do noticiário e os prefixos das unidades já são
+potências de 10:
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcl@{\hspace{2.2em}}lcl}
+\toprule
+\textbf{Palavra/prefixo} & \textbf{Potência} & \textbf{Exemplo} & \textbf{Prefixo} & \textbf{Potência} & \textbf{Exemplo}\\
+\midrule
+mil, quilo (k) & $10^{3}$ & km, kg & mili (m) & $10^{-3}$ & mm, mL\\
+milhão, mega (M) & $10^{6}$ & MB, MW & micro ($\mu$) & $10^{-6}$ & $\mu$m\\
+bilhão, giga (G) & $10^{9}$ & GB, GW & nano (n) & $10^{-9}$ & nm\\
+trilhão, tera (T) & $10^{12}$ & TB & centi (c) & $10^{-2}$ & cm, cL\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A régua abaixo mostra a \textbf{ordem de grandeza} de alguns comprimentos, em metros. Cada marca
+corresponde a multiplicar por 10.
+
+\begin{center}
+\begin{tikzpicture}[x=0.78cm,font=\footnotesize]
+  \shade[left color=ebookLight,right color=ebookPrim!70,rounded corners=2pt] (-9,-0.12) rectangle (9,0.12);
+  \foreach \e in {-9,...,9}{\draw[ebookDark] (\e,0.12) -- (\e,-0.2);}
+  \foreach \e/\pre in {-9/nano,-6/micro,-3/mili,0/{},3/quilo,6/mega,9/giga}{
+    \node[below=3pt,text=ebookDark] at (\e,-0.2) {$10^{\e}$};
+    \node[below=15pt,text=ebookMuted,font=\scriptsize\itshape] at (\e,-0.2) {\pre};}
+  \foreach \p/\t/\h in {-6.96/{vírus da gripe}/1.25, -4.1/{fio de cabelo}/0.55, -2.3/{formiga}/1.25,
+                        0.23/{pessoa}/0.55, 3.94/{monte Everest}/1.25, 7.1/{diâmetro da Terra}/0.55}{
+    \draw[ebookAcc,line width=.7pt] (\p,0.12) -- (\p,\h);
+    \fill[ebookAcc] (\p,0) circle (2.2pt);
+    \node[above,text=ebookText,font=\scriptsize] at (\p,\h) {\t};}
+\end{tikzpicture}
+\end{center}
+
+\textbf{Ordem de grandeza} é a potência de 10 mais próxima de um número. Na prática, escreva o
+número em notação científica $a\times 10^n$: se $a$ for menor que $\sqrt{10}\approx 3,16$, a ordem de
+grandeza é $10^n$; caso contrário, é $10^{n+1}$. O ENEM costuma pedir apenas que você identifique
+a potência adequada ou compare números ``pela potência''.
+
+\begin{exemplo}[Operando em notação científica]
+Um laboratório estima que uma colônia tem $3,8$ bilhões de bactérias e que cada uma tem massa de
+$0,000\,045$ micrograma. Expresse a massa total da colônia, em micrograma, em notação científica.
+\solucao
+Escreva cada fator em notação científica: $3,8\ \text{bilhões}=3,8\times 10^{9}$ e
+$0,000\,045=4,5\times 10^{-5}$ (a vírgula andou 5 casas para a direita). Multiplique mantissas e
+some expoentes:
+\[(3,8\times 10^{9})\cdot(4,5\times 10^{-5})=(3,8\cdot 4,5)\times 10^{9-5}=17,1\times 10^{4}.\]
+Como $17,1$ não está entre 1 e 10, ajuste: $17,1\times 10^4=1,71\times 10^{1}\times 10^{4}=1,71\times 10^{5}$
+micrograma (ou seja, 171\,000~µg $\approx$ 0,17~g).
+\end{exemplo}
+
+%% =====================================================================
+\section{Contas do cotidiano: dinheiro e tempo}
+%% =====================================================================
+
+\subsection{Dinheiro, troco e cardápios}
+
+Em problemas de compra, organize os dados em uma pequena tabela (quantidade $\times$ preço unitário)
+e some no final. Para conferir o troco, ``complete'' o valor pago a partir do total, como faz o
+caixa: de R\$~53,55 até R\$~70,00 faltam R\$~0,45 (até 54), mais R\$~16 (até 70), isto é, R\$~16,45.
+Se os centavos atrapalharem, trabalhe em \textbf{centavos inteiros} (5\,355 centavos) e volte para
+reais só no fim.
+
+\subsection{Tempo: o sistema sexagesimal}
+
+Horas e minutos \textbf{não} são decimais: $1~\text{h}=60~\text{min}$ e $1~\text{min}=60~\text{s}$.
+Por isso, ``vai um'' na soma de minutos acontece ao chegar a 60, e não a 100.
+
+\begin{formula}[Hora decimal $\to$ horas e minutos]
+$0,1~\text{h}=6~\text{min} \qquad 0,25~\text{h}=15~\text{min} \qquad 0,5~\text{h}=30~\text{min}
+\qquad 0,75~\text{h}=45~\text{min} \qquad t~\text{h}\;\longrightarrow\; t\times 60~\text{min}$
+\end{formula}
+
+\textbf{Fusos horários.} O horário de cada lugar é dado em relação ao UTC (o horário de referência
+mundial). Brasília usa UTC$-3$; Lisboa, no inverno, UTC$+0$; Tóquio, UTC$+9$. A diferença entre dois
+lugares é a diferença dos números: de Brasília para Tóquio são $9-(-3)=12$ horas. Quem viaja para
+o leste \textbf{adianta} o relógio; para o oeste, \textbf{atrasa}.
+
+\begin{exemplo}[Horário de término]
+Um filme de $2,8$ horas começa às 19h35min. A que horas ele termina?
+\solucao
+Primeiro, converta a parte decimal: $0,8~\text{h}=0,8\times 60=48~\text{min}$; o filme dura 2h48min.
+Some separando horas e minutos: $19\text{h}35\text{min}+2\text{h}48\text{min}=21\text{h}83\text{min}$.
+Como $83~\text{min}=1\text{h}23\text{min}$, o filme termina às \textbf{22h23min}. Quem lê $2,8$~h como
+``2h80min'' ou ``2h8min'' chega a horários errados, e o ENEM costuma colocá-los nas alternativas.
+\end{exemplo}
+
+\begin{contexto}[Por que 60?]
+A divisão da hora em 60 minutos vem dos babilônios, que contavam em base 60. O número 60 tem muitos
+divisores (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 e 60), o que facilita dividir a hora em partes iguais:
+meia hora, um terço de hora (20~min), um quarto de hora (15~min)\ldots
+\end{contexto}
+
+%% =====================================================================
+\section{Dicas e macetes}
+%% =====================================================================
+
+\begin{dica}[Troque a palavra pela potência]
+Ao ler ``mil'', ``milhão'', ``bilhão'' ou ``trilhão'', substitua imediatamente por $10^3$, $10^6$,
+$10^9$ e $10^{12}$. Assim, ``R\$~1,35 bilhão'' vira $1,35\times 10^9=1\,350\,000\,000$ e
+``4,129 milhões de toneladas'' vira $4,129\times 10^6$ toneladas $=4,129\times 10^{9}$~kg.
+\end{dica}
+
+\begin{dica}[Confira a unidade pedida]
+Muitos distratores são o valor certo na \emph{unidade errada}. Antes de marcar, releia o comando:
+``em metro'', ``em hora'', ``em quilograma''. Se o texto dá micrômetros e a resposta é em metros,
+há uma conversão a fazer.
+\end{dica}
+
+\begin{dica}[Estime antes de calcular]
+Uma estimativa grosseira elimina alternativas: $4\frac{5}{6}-3\frac{1}{2}$ é ``quase 5 menos 3,5'',
+ou seja, perto de 1,3; nenhuma resposta perto de 0,1 ou de 1,8 pode estar certa. A miniatura de um
+carro feita em impressora 3D microscópica não pode ter 10~cm ($10^{-1}$~m).
+\end{dica}
+
+\begin{dica}[Desenhe a reta]
+Em problemas com subidas e descidas (andares, temperaturas, saldos), marque as posições numa reta
+ou numa tabela. Você enxerga o maior e o menor valor atingidos, que costumam ser a pergunta.
+\end{dica}
+
+\begin{macete}[Dízima periódica em um passo]
+Período sobre noves: $0,\overline{3}=\frac{3}{9}=\frac{1}{3}$, $\ 0,\overline{36}=\frac{36}{99}=\frac{4}{11}$,
+$\ 0,\overline{142857}=\frac{142857}{999999}=\frac{1}{7}$. Se houver parte inteira, separe-a antes.
+\end{macete}
+
+\begin{macete}[Andar com a vírgula]
+Em $a\times 10^n$, cada casa que a vírgula anda para a \textbf{esquerda} soma 1 ao expoente; para a
+\textbf{direita}, subtrai 1. Exemplo: $25\times 10^{12}=2,5\times 10^{13}$ e
+$0,04\times 10^{5}=4\times 10^{3}$. A mantissa diminui, o expoente aumenta, e vice-versa: o número
+não muda.
+\end{macete}
+
+\begin{macete}[Hora decimal]
+Multiplique por 6 o algarismo dos décimos: $0,6$~h $=36$~min, $0,8$~h $=48$~min. Para minutos em
+hora, divida por 60: $45~\text{min}=0,75~\text{h}$, $12~\text{min}=0,2~\text{h}$.
+\end{macete}
+
+\begin{atencao}[Número misto não é produto]
+$4\frac{5}{6}$ significa $4+\frac{5}{6}$, e não $4\cdot\frac{5}{6}$. Da mesma forma, $4^{\frac{1}{2}}$
+é $\sqrt{4}=2$, e não ``quatro e meio''. Questões sobre representações de racionais exploram
+exatamente essas confusões.
+\end{atencao}
+
+\begin{atencao}[1,5 hora não é 1h50min]
+$1,5~\text{h}=1\text{h}30\text{min}$. E $2,6~\text{h}$ não é 2h6min nem 2h60min: é 2h36min. Sempre
+multiplique a parte decimal da hora por 60.
+\end{atencao}
+
+\begin{atencao}[A mantissa precisa ficar entre 1 e 10]
+$25\times 10^{12}$ e $0,25\times 10^{14}$ representam o mesmo número, mas \emph{não} estão em notação
+científica. As alternativas do ENEM costumam trazer a mantissa certa com o expoente errado:
+ajuste o expoente sempre que mover a vírgula.
+\end{atencao}
+
+\begin{resumo}
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt]
+  \item $\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}$; racionais têm decimal finita
+        ou periódica; irracionais ($\sqrt{2}$, $\pi$) têm decimal infinita não periódica.
+  \item Variação $=$ final $-$ inicial; subtrair negativo é somar: $11-(-4)=15$.
+  \item Frações: MMC para somar; multiplique ``em linha''; para dividir, inverta a segunda.
+        Número misto: $3\frac{1}{2}=3+\frac{1}{2}=\frac{7}{2}$.
+  \item Potências: $a^{-n}=\frac{1}{a^n}$, $a^{\frac{m}{n}}=\sqrt[n]{a^m}$; $\sqrt{a+b}\neq\sqrt{a}+\sqrt{b}$.
+  \item Notação científica: $a\times 10^n$ com $1\le a<10$. Mil $=10^3$, milhão $=10^6$, bilhão $=10^9$;
+        mili $=10^{-3}$, micro $=10^{-6}$, nano $=10^{-9}$.
+  \item Tempo é base 60: $0,1~\text{h}=6~\text{min}$. Fuso: diferença entre os UTC; para o leste, adiante.
+  \item Arredonde só no fim e confira a unidade pedida no comando.
+\end{itemize}
+\end{resumo}
+
+%% =====================================================================
+\secaoenem
+%% =====================================================================
+
+\questaoenem{2022-175}
+\begin{resolucao}{E}
+\passo{1. Entendendo o problema.} A notícia usa a forma abreviada ``1,35 bilhão''; o estudante
+escreveu o número com todos os algarismos. Basta lembrar que 1 bilhão $=1\,000\,000\,000=10^9$.
+\passo{2. Calculando.} $1,35\ \text{bilhão}=1,35\times 10^{9}$. Multiplicar por $10^9$ é deslocar a
+vírgula 9 casas para a direita:
+\[1,35\times 10^{9}=1\,350\,000\,000.\]
+Com os centavos, como nas alternativas: R\$~1\,350\,000\,000,00.
+\resposta{alternativa E --- 1\,350\,000\,000,00.}
+
+\textit{Por que é um item fácil (b $\approx 0$)?} Exige apenas o significado de ``bilhão''. O
+cuidado está em não confundir os zeros dos centavos (,00) com as casas da parte inteira.
+\begin{distratores}
+\alt{A} $135\,000,00$ é 135 \emph{mil}: quem lê ``1,35'' como ``135'' e acrescenta só três zeros.
+\alt{B} $1\,350\,000,00$ é 1,35 \emph{milhão}: confusão entre milhão ($10^6$) e bilhão ($10^9$).
+\alt{C} $13\,500\,000,00$ é 13,5 milhões: a vírgula foi deslocada apenas 7 casas.
+\alt{D} $135\,000\,000,00$ é 135 milhões: erro de uma casa (8 em vez de 9); note que
+1,35 bilhão $=$ \emph{1\,350} milhões.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2024-147}
+\begin{resolucao}{B}
+\passo{1. Entendendo o problema.} São seis representações de números racionais; é preciso achar
+\emph{três} que valham o mesmo. A estratégia mais segura é converter tudo para a forma decimal.
+\passo{2. Convertendo cada compartimento.}
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=2pt]
+  \item I: $4^{\frac{1}{2}}=\sqrt{4}=2$ (expoente fracionário é raiz);
+  \item II: $4\frac{1}{2}=4+\frac{1}{2}=4,5$ (número misto é soma);
+  \item III: $\frac{10}{45}=\frac{2}{9}=0,222\ldots$;
+  \item IV: $\frac{18}{4}=\frac{9}{2}=4,5$;
+  \item V: $4,5$;
+  \item VI: $\frac{4}{5}=0,8$.
+\end{itemize}
+\passo{3. Concluindo.} Valem 4,5 as posições II, IV e V.
+\resposta{alternativa B --- II, IV e V.}
+
+\textit{Item médio (b $=1,02$):} cada conversão é simples, mas o estudante precisa dominar quatro
+representações diferentes ao mesmo tempo, e o visor foi montado para provocar confusões visuais.
+\begin{distratores}
+\alt{A} Inclui I: quem lê $4^{\frac{1}{2}}$ como ``quatro e meio'', confundindo expoente
+fracionário com número misto. Na verdade, $4^{\frac{1}{2}}=2$.
+\alt{C} Inclui III: quem inverte a divisão e calcula $45\div 10=4,5$ em vez de $10\div 45\approx 0,22$.
+\alt{D} III, V e VI: além de inverter $\frac{10}{45}$, lê $\frac{4}{5}$ como ``4,5'' (trata o traço
+de fração como vírgula). Na verdade, $\frac{4}{5}=0,8$.
+\alt{E} III, IV e VI: combina as duas leituras erradas de C e D; só IV vale de fato 4,5.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2018-164}
+\begin{resolucao}{C}
+\passo{1. Entendendo o problema.} Não sabemos em que andar a criança entrou. Sabemos os
+deslocamentos (subidas positivas, descidas negativas) e o andar final (5º). O último andar do prédio
+é aquele em que o elevador parou uma vez, e nenhum andar visitado pode estar acima dele.
+\passo{2. Andar de partida.} Se a criança entrou no andar $x$:
+\[x+7-10-13+9-4=5 \;\Longrightarrow\; x-11=5 \;\Longrightarrow\; x=16.\]
+\passo{3. Trajeto completo.} $16 \xrightarrow{+7} 23 \xrightarrow{-10} 13 \xrightarrow{-13} 0\ (\text{térreo})
+\xrightarrow{+9} 9 \xrightarrow{-4} 5$.
+
+O andar mais alto visitado foi o 23º. Como o elevador parou no último andar e nunca passou do 23º,
+o último andar é o 23º.
+\passo{Macete.} Dá para fazer de trás para a frente, ``desfazendo'' os movimentos a partir do 5º:
+$5+4=9$, $9-9=0$, $0+13=13$, $13+10=23$, $23-7=16$.
+\resposta{alternativa C --- 23º andar.}
+
+\textit{Item médio (b $=1,57$):} as contas são pequenas, mas é preciso modelar com inteiros e
+interpretar a informação ``parou uma vez no último andar''.
+\begin{distratores}
+\alt{A} 16º é o andar em que a criança \emph{entrou}, não o último andar do prédio.
+\alt{B} 22º aparece quando, ao desfazer os movimentos, a subida de 9 andares é esquecida:
+$5+4=9$ e $9+13=22$. Também surge de um erro de uma unidade no saldo dos deslocamentos
+($-10$ em vez de $-11$), que leva a partida ao 15º e o máximo ao 22º.
+\alt{D} 25º resulta de somar ao andar de partida a subida de 9 ($16+9$), misturando etapas do trajeto.
+\alt{E} 32º continua o erro de B: sem descontar a subida de 9, obtém-se $5+4+13+10=32$.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2024-167}
+\begin{resolucao}{D}
+\passo{1. Entendendo o problema.} As medidas estão em números mistos: $3\frac{1}{2}$ e $4\frac{5}{6}$
+polegadas. Pede-se a diferença, com \emph{uma casa decimal}.
+\passo{2. Transformando em frações.}
+$3\frac{1}{2}=3+\frac{1}{2}=\frac{7}{2}$ \quad e \quad $4\frac{5}{6}=4+\frac{5}{6}=\frac{29}{6}$.
+\passo{3. Subtraindo.} Com denominador comum 6:
+\[\frac{29}{6}-\frac{7}{2}=\frac{29}{6}-\frac{21}{6}=\frac{8}{6}=\frac{4}{3}=1,333\ldots\]
+Arredondando para uma casa decimal: $1,3$.
+(Pelos decimais: $4,8333\ldots-3,5=1,3333\ldots$)
+\resposta{alternativa D --- 1,3 polegada.}
+
+\textit{Item difícil (b $=2,02$):} a operação com números mistos e a passagem para decimal, com
+arredondamento, são exatamente os pontos em que muitos estudantes tropeçam.
+\begin{distratores}
+\alt{A} 0,1 não vem de um caminho razoável: a estimativa ``quase 5 menos 3,5'' já mostra que a
+diferença passa de 1.
+\alt{B} 0,5 surge de operar só as partes fracionárias de modo errado, ``subtraindo em cima e somando
+embaixo'': $\frac{5-1}{6+2}=\frac{4}{8}=0,5$, esquecendo as partes inteiras.
+\alt{C} 1,0 é a diferença só das partes inteiras ($4-3$), desprezando as frações.
+\alt{E} 1,8 aparece quando o número misto é lido como produto: $4\cdot\frac{5}{6}\approx 3,33$ e
+$3\cdot\frac{1}{2}=1,5$, cuja diferença é $1,83\approx 1,8$.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2020-154}
+\begin{resolucao}{C}
+\passo{1. Entendendo o problema.} A miniatura mede 100 micrômetros, e o texto informa que
+1 micrômetro é a milionésima parte do metro: $1~\mu\text{m}=10^{-6}~\text{m}$.
+\passo{2. Convertendo.}
+\[100~\mu\text{m}=100\times 10^{-6}~\text{m}=10^{2}\times 10^{-6}~\text{m}=10^{2-6}~\text{m}=10^{-4}~\text{m}.\]
+Em notação científica: $1,0\times 10^{-4}$~m (isto é, 0,0001~m $=$ 0,1~mm).
+\resposta{alternativa C --- $1,0\times 10^{-4}$.}
+
+\textit{Item difícil (b $=2,31$):} exige interpretar ``milionésima parte'' como $10^{-6}$ e operar
+expoentes de sinais diferentes; um erro em qualquer etapa leva a outra alternativa.
+\begin{distratores}
+\alt{A} $10^{-1}$~m $=10$~cm: quem confunde micro com mili ($100~\text{mm}=0,1~\text{m}$). Além disso,
+10~cm é um tamanho absurdo para uma escultura microscópica.
+\alt{B} $10^{-3}$~m $=1$~mm: quem toma 100~µm por 1~mm, errando a relação entre os prefixos
+(na verdade, $100~\mu\text{m}=0,1~\text{mm}$).
+\alt{D} $10^{-6}$~m é o valor de \emph{um} micrômetro: esqueceu-se de multiplicar por 100.
+\alt{E} $10^{-7}$ resulta de combinar os expoentes com o sinal trocado (dividir por 10 em vez de
+multiplicar por 100) ou de escrever zeros a mais em 0,000\,000\,1.
+\end{distratores}
+\end{resolucao}
+
+\questaoenem{2009-172}
+\begin{resolucao}{C}
+\passo{1. Entendendo o problema.} Queremos, para o ano todo de 2009, a diferença entre o que foi
+gasto com importações e o que foi gerado com exportações. O ano está dividido em duas partes:
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=2pt]
+  \item \textbf{janeiro a maio:} os valores em dólares já estão no texto;
+  \item \textbf{junho a dezembro:} os \emph{volumes} serão $\frac{7}{5}$ dos volumes de janeiro a maio,
+        e os preços serão os de maio (340 e 230 dólares por m$^3$).
+\end{itemize}
+\passo{2. Janeiro a maio.} Diferença: $2,84-2,24=0,60$ bilhão de dólares $=600$ milhões.
+\passo{3. Volumes de junho a dezembro (tabela, linha 2009*).}
+Importação: $\frac{7}{5}\cdot 9,00=12,6$ milhões de m$^3$; \quad
+exportação: $\frac{7}{5}\cdot 11,00=15,4$ milhões de m$^3$.
+\passo{4. Valores de junho a dezembro.}
+Importação: $12,6\times 10^6\ \text{m}^3\cdot 340\ \tfrac{\text{dólares}}{\text{m}^3}=4\,284$ milhões de dólares;\\
+exportação: $15,4\times 10^6\cdot 230=3\,542$ milhões de dólares.\\
+Diferença: $4\,284-3\,542=742$ milhões de dólares.
+\passo{5. Ano todo.} $600+742=1\,342$ milhões $\approx 1,34$ bilhão de dólares.
+\resposta{alternativa C --- 1,34 bilhão de dólares.}
+
+\textit{Item muito difícil (b $=4,28$):} o texto é longo, a tabela traz anos que não interessam, é
+preciso combinar ``milhões de m$^3$'' com ``dólares por m$^3$'' e, principalmente, perceber que a
+fração $\frac{7}{5}$ vale para os \emph{volumes}, e não para os valores em dólares (os preços médios
+de janeiro a maio eram diferentes dos de maio).
+\begin{distratores}
+\alt{A} 600 milhões é só a diferença de janeiro a maio; faltou o restante do ano.
+\alt{B} 840 milhões é $\frac{7}{5}\cdot 600$: aplicou a fração aos dólares e considerou só junho a
+dezembro. Também atrai quem calcula corretamente só o segundo período (742 milhões) e marca o valor
+mais próximo.
+\alt{D} 1,44 bilhão é $600+840$: somou os dois períodos, mas aplicou $\frac{7}{5}$ aos valores em
+dólares, ignorando a mudança de preço.
+\alt{E} 2,00 bilhões não corresponde a uma modelagem coerente; aparece, por exemplo, ao somar o
+número $1,4$ (valor da fração $\frac{7}{5}$) aos 0,6 bilhão, misturando razão com dinheiro.
+\end{distratores}
+\end{resolucao}
+
+%% =====================================================================
+\secaoineditas
+%% =====================================================================
+
+\begin{questaoinedita}{1}{3}
+Em uma lanchonete, o cardápio exibe os seguintes preços:
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lr}
+\rowcolor{ebookLight}\textbf{Item} & \textbf{Preço (R\$)}\\
+Sanduíche natural & 14,90\\
+Suco de laranja (500 mL) & 8,50\\
+Pão de queijo (porção) & 6,75\\
+Água mineral & 4,25\\
+\end{tabular}
+\end{center}
+Um casal pediu dois sanduíches naturais, dois sucos de laranja, uma porção de pão de queijo e uma
+água mineral. Nesse dia, a lanchonete oferecia a água como cortesia, sem cobrança, a quem pedisse
+pelo menos dois sanduíches. Para pagar a conta, o casal entregou uma nota de R\$~50,00 e uma nota
+de R\$~20,00.
+
+Quanto o casal recebeu de troco?
+\begin{alternativas*}[5]
+\item R\$~12,20.
+\item R\$~16,45.
+\item R\$~17,55.
+\item R\$~39,85.
+\item R\$~53,55.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Valor da conta.} A água não é cobrada (o casal pediu dois sanduíches). Então:
+\[2\cdot 14,90+2\cdot 8,50+6,75=29,80+17,00+6,75=53,55.\]
+\passo{2. Troco.} O casal pagou $50+20=70$ reais: $70,00-53,55=16,45$.
+Conferindo ``à moda do caixa'': de 53,55 até 54,00 faltam 0,45; de 54 até 70 faltam 16;
+total, R\$~16,45.
+\resposta{alternativa B --- R\$~16,45.}
+\begin{distratores}
+\alt{A} R\$~12,20: cobrou a água ($53,55+4,25=57,80$), sem ler a condição da cortesia.
+\alt{C} R\$~17,55: erro na subtração com centavos: fez $70-53=17$ e ``juntou'' os 55 centavos, em vez
+de descontá-los.
+\alt{D} R\$~39,85: contou apenas um item de cada ($14,90+8,50+6,75=30,15$).
+\alt{E} R\$~53,55 é o valor da conta, e não o troco.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{3}
+Em uma corrida de rua, o aplicativo de uma atleta registrou que ela largou às 7h45min e completou
+o percurso em 2,6 horas.
+
+O horário em que essa atleta cruzou a linha de chegada foi
+\begin{alternativas*}[5]
+\item 9h21min.
+\item 9h51min.
+\item 10h21min.
+\item 10h45min.
+\item 12h05min.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{C}
+\passo{1. Convertendo a duração.} A parte decimal da hora deve ser multiplicada por 60:
+$0,6~\text{h}=0,6\cdot 60=36~\text{min}$. Logo, $2,6~\text{h}=2\text{h}36\text{min}$.
+\passo{2. Somando ao horário de largada.}
+$7\text{h}45\text{min}+2\text{h}36\text{min}=9\text{h}81\text{min}$. Como
+$81~\text{min}=1\text{h}21\text{min}$, o horário é $10\text{h}21\text{min}$.
+\resposta{alternativa C --- 10h21min.}
+\begin{distratores}
+\alt{A} 9h21min: retirou 60 dos 81 minutos, mas esqueceu de acrescentar a hora correspondente.
+\alt{B} 9h51min: leu 2,6~h como 2h6min.
+\alt{D} 10h45min: leu 2,6~h como 2h60min, isto é, 3 horas.
+\alt{E} 12h05min: tratou 2,6~h como 260 minutos (4h20min).
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{2}{1}
+Uma receita de bolo de fubá, que rende uma forma, leva $\frac{3}{4}$ de xícara de açúcar. Para uma
+festa, uma confeiteira vai preparar duas receitas e meia desse bolo. A única medida de que ela dispõe
+é uma colher-medida com capacidade de $\frac{1}{8}$ de xícara, e por isso ela vai contar quantas
+colheres-medida rasas de açúcar deve usar.
+
+A quantidade de colheres-medida de açúcar que a confeiteira usará é
+\begin{alternativas*}[5]
+\item 12.
+\item 15.
+\item 16.
+\item 18.
+\item 20.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{B}
+\passo{1. Açúcar necessário.} Duas receitas e meia correspondem a $2\frac{1}{2}=\frac{5}{2}$ receitas:
+\[\frac{5}{2}\cdot\frac{3}{4}=\frac{15}{8}\ \text{de xícara}.\]
+\passo{2. Número de colheres.} Cada colher tem $\frac{1}{8}$ de xícara:
+$\frac{15}{8}\div\frac{1}{8}=\frac{15}{8}\cdot 8=15$ colheres.
+\passo{Atalho.} Uma receita usa $\frac{3}{4}=\frac{6}{8}$ de xícara, ou seja, 6 colheres. Duas
+receitas e meia: $6+6+3=15$ colheres.
+\resposta{alternativa B --- 15 colheres-medida.}
+\begin{distratores}
+\alt{A} 12 corresponde a apenas duas receitas ($2\cdot 6$), esquecendo a ``meia''.
+\alt{C} 16 surge ao interpretar a meia receita como meia \emph{xícara}: $2\cdot\frac{3}{4}+\frac{1}{2}=2$
+xícaras $=16$ colheres.
+\alt{D} 18 corresponde a três receitas (arredondou 2,5 para cima).
+\alt{E} 20 é $\frac{5}{2}\div\frac{1}{8}$: esqueceu de multiplicar pela quantidade de açúcar por receita.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{3}
+O hemograma de um adulto saudável indica, em média, 5 milhões de hemácias (glóbulos vermelhos) em
+cada milímetro cúbico de sangue. O corpo desse adulto contém cerca de 5 litros de sangue.
+
+Considere que $1~\text{L}=1~\text{dm}^3$ e que $1~\text{dm}=100~\text{mm}$.
+
+O número aproximado de hemácias no sangue desse adulto é
+\begin{alternativas*}[5]
+\item $2,5\times 10^{7}$.
+\item $2,5\times 10^{9}$.
+\item $2,5\times 10^{10}$.
+\item $2,5\times 10^{12}$.
+\item $2,5\times 10^{13}$.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{E}
+\passo{1. Convertendo o volume para mm$^3$.} Como $1~\text{dm}=100~\text{mm}=10^2~\text{mm}$, um
+decímetro cúbico tem
+\[1~\text{dm}^3=(10^2~\text{mm})^3=10^6~\text{mm}^3.\]
+Logo, $5~\text{L}=5~\text{dm}^3=5\times 10^6~\text{mm}^3$.
+\passo{2. Contando as hemácias.} São $5\times 10^6$ hemácias por mm$^3$:
+\[(5\times 10^6)\cdot(5\times 10^6)=25\times 10^{12}.\]
+\passo{3. Ajustando a notação científica.} $25\times 10^{12}=2,5\times 10^{13}$ (a vírgula andou uma
+casa para a esquerda, e o expoente aumentou 1).
+\resposta{alternativa E --- $2,5\times 10^{13}$ hemácias (25 trilhões).}
+\begin{distratores}
+\alt{A} $2,5\times 10^{7}$: multiplicou 5 milhões por 5 sem converter litros em mm$^3$.
+\alt{B} $2,5\times 10^{9}$: usou $1~\text{dm}^3=100~\text{mm}^3$, sem elevar o fator 100 ao cubo.
+\alt{C} $2,5\times 10^{10}$: usou $1~\text{L}=1\,000~\text{mm}^3$, confundindo com $1~\text{L}=1\,000~\text{cm}^3$.
+\alt{D} $2,5\times 10^{12}$: obteve $25\times 10^{12}$, mas moveu a vírgula sem corrigir o expoente.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{3}{3}
+O horário oficial de Brasília está 3 horas atrás do horário de referência mundial (UTC), o que se
+indica por UTC$-3$. Já o Japão adota UTC$+9$, isto é, seu horário está 9 horas à frente do UTC.
+
+Um voo parte de São Paulo, que segue o horário de Brasília, às 22h40min de uma segunda-feira, com
+destino a Tóquio. Somando o tempo de voo e o de uma escala, a viagem dura 24 horas e 35 minutos.
+
+No horário local de Tóquio, o avião chegará
+\begin{alternativas}
+\item às 11h15min de terça-feira.
+\item às 23h15min de terça-feira.
+\item às 5h15min de quarta-feira.
+\item às 11h15min de quarta-feira.
+\item às 23h15min de quarta-feira.
+\end{alternativas}
+\end{questaoinedita}
+\begin{resolucao}{D}
+\passo{1. Diferença de fuso.} De UTC$-3$ para UTC$+9$ são $9-(-3)=12$ horas: Tóquio está 12 horas
+\emph{à frente} de Brasília.
+\passo{2. Chegada no horário de Brasília.} $22\text{h}40\text{min}+24\text{h}35\text{min}$: somar
+24 horas leva às 22h40min de terça; mais 35 minutos, às \textbf{23h15min de terça} (horário de Brasília).
+\passo{3. Convertendo para Tóquio.} $23\text{h}15\text{min}+12\text{h}=35\text{h}15\text{min}$ de
+terça, isto é, \textbf{11h15min de quarta-feira}.
+
+\emph{Outro caminho:} converta primeiro a partida. 22h40min de segunda em Brasília são 10h40min de
+terça em Tóquio; somando 24h35min, chega-se às 11h15min de quarta.
+\resposta{alternativa D --- às 11h15min de quarta-feira (horário de Tóquio).}
+\begin{distratores}
+\alt{A} Subtraiu as 12 horas de fuso em vez de somá-las ($23\text{h}15\text{min}-12\text{h}$ na terça).
+\alt{B} É o horário de chegada em \emph{Brasília}: esqueceu o fuso.
+\alt{C} Usou diferença de 6 horas ($9-3$), em vez de $9-(-3)=12$.
+\alt{E} Aplicou o fuso duas vezes: converteu a partida para Tóquio e, depois de somar a duração,
+acrescentou outras 12 horas.
+\end{distratores}
+\end{resolucao}
+
+\begin{questaoinedita}{4}{21}
+Em Biologia, a lei de Kleiber afirma que a taxa metabólica basal $T$ de um mamífero (a energia que
+ele gasta por dia em repouso) é aproximadamente dada por
+\[T=k\cdot m^{\frac{3}{4}},\]
+em que $m$ é a massa do animal e $k$ é uma constante positiva, igual para todos os mamíferos.
+
+Um cavalo de 400~kg e um cão de 25~kg foram comparados quanto à energia gasta em repouso
+\emph{por quilograma de massa corporal}, isto é, quanto ao valor de $\frac{T}{m}$ de cada um.
+
+A razão entre a energia gasta por quilograma pelo cavalo e a energia gasta por quilograma pelo
+cão é
+\begin{alternativas*}[5]
+\item $\frac{1}{2}$.
+\item $\frac{3}{4}$.
+\item $1$.
+\item $2$.
+\item $8$.
+\end{alternativas*}
+\end{questaoinedita}
+\begin{resolucao}{A}
+\passo{1. Energia por quilograma.} Dividindo a lei por $m$ e usando $\frac{a^p}{a^q}=a^{p-q}$:
+\[\frac{T}{m}=\frac{k\cdot m^{\frac{3}{4}}}{m^{1}}=k\cdot m^{\frac{3}{4}-1}=k\cdot m^{-\frac{1}{4}}.\]
+\passo{2. Razão cavalo/cão.} A constante $k$ se cancela:
+\[\frac{k\cdot 400^{-\frac{1}{4}}}{k\cdot 25^{-\frac{1}{4}}}=\left(\frac{400}{25}\right)^{-\frac{1}{4}}
+=16^{-\frac{1}{4}}=\frac{1}{\sqrt[4]{16}}=\frac{1}{2}.\]
+\passo{Interpretação.} O cavalo gasta, no total, mais energia que o cão ($16^{\frac{3}{4}}=8$ vezes
+mais), mas, \emph{por quilograma}, gasta só a metade. Animais grandes são ``mais econômicos'' por
+unidade de massa.
+\resposta{alternativa A --- $\frac{1}{2}$.}
+
+\textit{Por que é muito difícil?} A informação decisiva (``por quilograma'') está no meio do texto;
+é preciso transformar a lei em $\frac{T}{m}$, operar com expoente fracionário negativo e montar a
+razão na ordem pedida.
+\begin{distratores}
+\alt{B} $\frac{3}{4}$: calculou $16^{\frac{3}{4}}$ como $16\cdot\frac{3}{4}=12$ (multiplicou a base
+pelo expoente) e, depois, dividiu por 16.
+\alt{C} 1: supôs que, por haver uma constante comum, a energia por quilograma seria igual para
+todos os mamíferos; isso só valeria se o expoente fosse 1.
+\alt{D} 2: inverteu a razão (cão/cavalo) ou calculou $16^{\frac{1}{4}}$ em vez de $16^{-\frac{1}{4}}$.
+\alt{E} 8 é a razão entre as energias \emph{totais}, $16^{\frac{3}{4}}=(\sqrt[4]{16})^3=8$: ignorou
+o ``por quilograma''.
+\end{distratores}
+\end{resolucao}

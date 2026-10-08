@@ -1,0 +1,118 @@
+\capitulofrontal{Como usar este ebook}{como-usar}
+
+Este é um ebook \textbf{interativo}: quase tudo o que você vê com cor pode ser clicado.
+Ele foi pensado para ser estudado no computador, no tablet ou no celular, mas também
+funciona impresso. Antes de começar, vale entender a lógica da coleção.
+
+\secaofrontal{A trilha de cada capítulo}
+
+Todos os capítulos seguem a mesma trilha, que acompanha a forma como o ENEM avalia você:
+
+\begin{center}
+\begin{tikzpicture}[
+  etapa/.style={rounded corners=5pt,fill=ebookSoft,draw=ebookLight,line width=.7pt,
+    minimum height=17mm,text width=25mm,align=center,font=\sffamily\footnotesize},
+  seta/.style={-{Stealth[length=2.6mm]},ebookPrim,line width=1.1pt}]
+  \node[etapa] (a) at (0,0) {{\color{ebookPrim}\Large\faBookOpen}\\[1mm]\textbf{Teoria}\\exemplos resolvidos};
+  \node[etapa] (b) at (3.05,0) {{\color{dicaC}\Large\faLightbulb}\\[1mm]\textbf{Dicas e macetes}\\pegadinhas e resumo};
+  \node[etapa] (c) at (6.1,0) {{\color{ebookDark}\Large\faUniversity}\\[1mm]\textbf{Questões do ENEM}\\em ordem de TRI};
+  \node[etapa] (d) at (9.15,0) {{\color{ebookAcc}\Large\faFeather*}\\[1mm]\textbf{Inéditas}\\fácil $\to$ muito difícil};
+  \node[etapa] (e) at (12.2,0) {{\color{nivelA}\Large\faCheckCircle}\\[1mm]\textbf{Resoluções}\\comentadas};
+  \foreach \u/\v in {a/b,b/c,c/d,d/e} \draw[seta] (\u) -- (\v);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=2pt]
+  \item \textbf{Teoria.} Explicação do conteúdo com exemplos resolvidos, do simples ao típico de prova.
+  \item \textbf{Dicas e macetes.} Estratégias de leitura, atalhos de cálculo, as pegadinhas mais comuns
+        e um resumo para revisar na véspera.
+  \item \textbf{Questões de edições anteriores.} Questões \emph{oficiais} do ENEM (\anosbanco), reproduzidas
+        do caderno original do INEP e organizadas da \textbf{mais fácil para a mais difícil} segundo a
+        dificuldade \emph{real} medida pela TRI.
+  \item \textbf{Questões inéditas.} Questões originais no estilo do ENEM, também em ordem crescente de
+        dificuldade, para você treinar sem “já ter visto a resposta”.
+  \item \textbf{Resoluções comentadas.} No fim de cada capítulo, com o passo a passo e a explicação de
+        \emph{por que cada alternativa errada está errada} — é ali que você aprende com os distratores.
+\end{enumerate}
+
+\secaofrontal{O que significa cada caixa}
+
+\begin{multicols}{2}
+\begin{definicao}[exemplo]
+Definições e conceitos que você precisa dominar.
+\end{definicao}
+\begin{dica}
+Estratégias de prova e de leitura de enunciados.
+\end{dica}
+\begin{macete}
+Atalhos de cálculo e de raciocínio que economizam tempo.
+\end{macete}
+\columnbreak
+\begin{atencao}
+Erros comuns e armadilhas que viram alternativas erradas.
+\end{atencao}
+\begin{contexto}
+Aplicações do conteúdo no mundo real.
+\end{contexto}
+\begin{formula}[Fórmula-chave]
+$\text{o que você precisa saber de cor}$
+\end{formula}
+\end{multicols}
+
+\secaofrontal{Os selos de dificuldade}
+
+Cada questão traz um selo com quatro barras. Nas questões oficiais, o nível vem do
+\textbf{parâmetro $b$ da TRI}, calculado pelo INEP e publicado nos microdados do ENEM; nas
+inéditas, é uma estimativa calibrada pelas questões oficiais do mesmo assunto.
+
+\begin{center}
+\renewcommand\arraystretch{1.5}
+\begin{tabular}{@{}l l l@{}}
+\toprule
+\textbf{Selo} & \textbf{Parâmetro $b$} & \textbf{Posição aproximada na escala do ENEM} \\
+\midrule
+\selonivel{1} & $b < 1$ & abaixo de 600 pontos \\
+\selonivel{2} & $1 \le b < 2$ & de 600 a 700 pontos \\
+\selonivel{3} & $2 \le b < 3$ & de 700 a 800 pontos \\
+\selonivel{4} & $b \ge 3$ & acima de 800 pontos \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+O cabeçalho de cada questão oficial mostra ainda o ano, o número da questão no caderno azul, a
+\textbf{habilidade} da Matriz de Referência (H1 a H30) e os três parâmetros da TRI ($a$, $b$ e $c$),
+explicados no próximo capítulo.
+
+\secaofrontal{Navegação interativa}
+
+\begin{itemize}[leftmargin=1.4em,itemsep=3pt]
+  \item[\textcolor{ebookPrim}{\faListUl}] \textbf{Sumário e marcadores.} Clique em qualquer linha do
+        \hyperlink{sumario}{sumário}. O painel de marcadores (\emph{bookmarks}) do seu leitor de PDF
+        mostra capítulos, seções e cada questão.
+  \item[\textcolor{ebookPrim}{\faBookmark}] \textbf{Abas laterais.} As abas numeradas na borda direita
+        das páginas levam direto ao início de cada capítulo; a aba destacada é o capítulo atual.
+  \item[\textcolor{ebookPrim}{\faHome}] \textbf{Botões do rodapé.} Sumário, início do capítulo,
+        resoluções do capítulo e \hyperlink{gabarito-geral}{gabarito geral} — em todas as páginas.
+  \item[\textcolor{ebookPrim}{\faExchange*}] \textbf{Questão $\leftrightarrow$ resolução.} O botão
+        \chip{ebookPrim}{Resolução comentada \faArrowRight} abre a resolução; o botão
+        \chipborda[ebookPrim]{ebookPrim}{\faUndo\ Voltar à questão} traz você de volta.
+  \item[\textcolor{ebookPrim}{\faEdit}] \textbf{Cartão-resposta e progresso.} Marque a alternativa
+        escolhida em cada questão e registre seu avanço na caixa \emph{Meu progresso} da abertura
+        de cada capítulo. Esses campos funcionam no Adobe Acrobat Reader, nos navegadores
+        (Chrome, Edge, Firefox), no Foxit e no Okular; salve o arquivo para guardar suas marcações.
+        Alguns leitores de celular mostram os campos mas não os salvam.
+\end{itemize}
+
+\secaofrontal{Como estudar com este material}
+
+\begin{dica}[A trilha TRI de estudo]
+\begin{enumerate}[leftmargin=1.4em,itemsep=1pt,topsep=0pt]
+  \item Leia a teoria e refaça os exemplos sem olhar a solução.
+  \item Resolva as questões oficiais \textbf{na ordem}: as primeiras consolidam o básico, que é o que
+        mais pesa na TRI; as últimas mostram o teto do assunto.
+  \item Resolva as inéditas cronometrando: a meta é em torno de 3 minutos por questão.
+  \item Confira no gabarito rápido e leia \emph{todas} as resoluções, inclusive as das questões que
+        você acertou — a análise dos distratores mostra os erros que a prova espera que você cometa.
+  \item Uma semana depois, refaça as que errou e marque \emph{Refiz as que errei}.
+\end{enumerate}
+\end{dica}
